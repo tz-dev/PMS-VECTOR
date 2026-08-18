@@ -58,7 +58,7 @@ VECTOR theoretical validation
 
 ![PMS-VECTOR Reader interface](reader/screenshot01.png)
 
-### 3D Case Tree
+### Graph Interface
 
 ![PMS-VECTOR Graph interface](reader/screenshot02.png)
 
