@@ -1,0 +1,282 @@
+case_metadata:
+  case_id: E01
+  paper_ref: Appendix E.1
+  title: Rotation Confirms DIR under Serious Rival Pressure
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: Adversarial A
+  load_bearing: false
+  pressure_families:
+    - rotation_pressure
+    - serious_rival_pressure
+    - non_compensation_pressure
+  constructs_under_test:
+    - DIR
+    - ROT
+    - RobustOrientation
+    - SeriousRivalPressure
+    - NonCompensation
+  theoretical_function: >-
+    Tests whether a bounded DIR can survive materially relevant ROT and a serious
+    rival with a credible route to win without assimilating the rival into VECTOR.
+  artifact_pair:
+    yaml: cases/E01.yaml
+    markdown: cases/E01.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - Procedure Y is not thereby the universally superior reporting system.
+    - Richer records are not thereby always better.
+    - The serious rival R is not thereby generally inferior.
+    - A different question or evidence pattern could reverse the bounded result.
+    - Survival under relevant ROT and rival pressure does not establish final truth.
+
+vector_record:
+  reference:
+    object: >-
+      Incident-reporting procedures X and Y for a small organization facing a
+      recurring safety problem, with rival procedure R admitted under the same
+      bounded corrective-learning question.
+    object_type: bounded reporting-procedure comparison
+
+  frame:
+    included:
+      - Procedure X records only incidents that caused immediate operational failure.
+      - Procedure Y records failures and near-misses, preserves which roles were exposed, and keeps the report open to later correction when additional information arrives.
+      - The current safety-review process and initial operations perspective.
+      - Reporting completeness, recoverability of role-specific exposure, participation burden, and actual later corrective use as warrant-bearing conditions.
+      - An affected-role ROT and a temporal ROT under the same reference and question.
+      - Serious rival R, a compact hazard-control record using exposure counts, event severity, and corrective-action closure.
+      - R's real administrative advantages and its claim-critical loss of repeated role-specific near-miss exposure in the bounded fixture.
+    excluded:
+      - Any universal ranking of reporting systems.
+      - Any rule that more detailed or richer reporting is always better.
+      - Any claim that R is generally inferior outside the declared question and evidence pattern.
+
+  question:
+    scope: >-
+      Which procedure better preserves the consequence and exposure structure
+      needed for later corrective learning without creating a claim-critical
+      reporting burden?
+    claim_ceiling: >-
+      The case may support a Robust Orientation only for the declared safety-review
+      question, procedures, perspective tests, and current evidence pattern. It
+      does not establish universal superiority, final truth, or general inferiority
+      of the rival.
+
+  position:
+    perspective: >-
+      Initial operations perspective, subsequently pressured by an affected-role
+      position and a temporal reconstruction across several review cycles.
+    temporal_position: >-
+      Current safety-review comparison with the temporal ROT testing whether the
+      same claim-relevant difference survives across several review cycles.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Under the initial operations perspective and declared safety-review question,
+    Procedure Y is directionally favored over Procedure X: X ≺_{V,C} Y.
+
+  dir:
+    relation: 'X ≺_{V,C} Y'
+    comparison_basis: >-
+      Y preserves failures, near-miss exposure, role-specific exposure relations,
+      and later corrective revisability in a way that supports the declared
+      corrective-learning question without, in the bounded fixture, imposing a
+      claim-critical reporting burden.
+    warrant:
+      source_types:
+        - case-supplied reporting completeness
+        - case-supplied role-specific exposure recoverability
+        - case-supplied reporting-participation condition
+        - case-supplied later corrective use
+        - materially relevant ROT pressure
+        - serious rival pressure
+      external_premises:
+        - >-
+          The paper fixture supplies the operational facts about reporting
+          completeness, participation burden, later corrective use, and the
+          information preserved or lost by X, Y, and R; VECTOR notation does not
+          generate those facts.
+      unresolved_dependencies: []
+    critical_regressions:
+      - The extra near-miss layer materially reduces reporting quality.
+      - The added reporting burden suppresses participation or hides rather than reveals hazards.
+      - The retained additional information accumulates as unused record volume rather than supporting later correction.
+      - A simpler rival preserves the same role-specific exposure and correction pathways more reliably with less reporting friction.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: actor_affected_role
+        vulnerability: >-
+          Whether the initial operations-centered DIR omits safety exposure that
+          matters to affected staff because no immediate outage occurred.
+        purpose: >-
+          Test whether Y remains favored when the same procedures are examined
+          from the position of staff bearing the safety exposure.
+        changed:
+          - Perspective changes from the initial operations view to affected staff who bear the safety exposure.
+        held_constant:
+          - Procedures X and Y.
+          - The current safety-review frame.
+          - The declared corrective-learning question.
+          - The relevant temporal position for the same comparison.
+        reference_continuity: true
+        material_distinctness: >-
+          The affected-role view makes near-miss exposure legible even where no
+          operational outage occurred and therefore exposes a relation that X
+          systematically fails to preserve.
+        loss_route: >-
+          If the additional near-miss layer materially reduced reporting quality,
+          suppressed participation, or failed to preserve/use the exposure
+          relation needed for correction, the baseline DIR would weaken or fail.
+        result: invariant
+        robustness_relevance: >-
+          The comparison does not reverse. Y continues to preserve claim-relevant
+          exposure structure under the affected-role pressure.
+      - family: temporal
+        vulnerability: >-
+          Whether Y's additional near-miss information supports correction across
+          repeated review cycles or merely accumulates as unused reporting volume.
+        purpose: >-
+          Test whether the claim-relevant difference between X and Y survives
+          across several review cycles rather than depending on a one-cycle snapshot.
+        changed:
+          - The comparison is extended across several review cycles.
+        held_constant:
+          - Procedures X and Y.
+          - The current safety-review frame.
+          - The declared corrective-learning question.
+          - The role-specific exposure relation under test.
+        reference_continuity: true
+        material_distinctness: >-
+          The temporal pressure tests persistence and use of the additional
+          information rather than simply repeating the affected-role perspective.
+        loss_route: >-
+          If Y's additional information ceased to support correction and instead
+          accumulated as unused record volume or produced claim-critical burden,
+          the baseline DIR would no longer earn the same robustness status.
+        result: invariant
+        robustness_relevance: >-
+          Across the declared review cycles, Y's additional information continues
+          to support correction rather than becoming unused record volume.
+    untested_relevant: []
+    stop_basis: >-
+      The fixture applies the materially relevant affected-role and temporal ROTs
+      identified by the baseline vulnerabilities and also subjects the claim to a
+      serious rival with a credible winning condition. No known claim-critical
+      pressure remains open inside the declared fixture scope; this stop is not
+      truth finality.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals:
+      - >-
+        Rival procedure R uses a compact hazard-control record based on exposure
+        counts, event severity, and corrective-action closure rather than
+        preserving every near-miss narrative. R remains in its own operational
+        vocabulary, is simpler and cheaper to administer, and would defeat Y for
+        the declared question if its aggregation preserved the same role-specific
+        exposure and correction pathways with less reporting friction. In the
+        bounded fixture, however, R removes which role repeatedly bears the
+        near-miss exposure and thereby prevents recognition of a recurring
+        transferred-risk pattern.
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns the DIR / ROT / Robust Orientation architecture used in
+        this fixture; the operational facts that carry the comparison remain
+        case-supplied rather than generated by VECTOR notation.
+    non_compensation: >-
+      R's lower administrative burden remains a real advantage, but it does not
+      compensate for losing the repeated role-specific exposure relation because
+      that relation is claim-critical to the declared corrective-learning question.
+    critical_open_tests: []
+
+  result:
+    status: Robust Orientation
+    surviving_claim: >-
+      Within the declared safety-review frame, question, perspectives, review
+      cycles, and evidence pattern, Procedure Y remains directionally favored
+      over Procedure X: X ≺_{V,C} Y. The claim-relevant core survives the applied
+      affected-role ROT, temporal ROT, and serious rival pressure without material
+      revision.
+    revisions: []
+    scope: >-
+      The Robust Orientation is restricted to the declared reporting procedures,
+      current safety-review process, corrective-learning question, materially
+      relevant role and temporal pressures, and the bounded evidence pattern in
+      which R loses the recurring role-specific exposure relation.
+    residue:
+      - R's lower administrative burden remains a real local advantage.
+      - A different question focused on administrative load could change the comparison.
+      - A different evidence pattern in which R preserved the same role-specific exposure and correction pathways could reverse the result.
+    stop_reason: >-
+      The baseline DIR survives the materially relevant current ROT pressures and
+      a serious rival with a credible route to win, while the rival's actual loss
+      is claim-critical and non-compensable under the declared question. The
+      result therefore qualifies as Robust Orientation within scope; survival
+      under this burden does not establish final truth.

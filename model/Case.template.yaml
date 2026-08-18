@@ -1,0 +1,477 @@
+# =============================================================================
+# PMS-VECTOR — CASE TEMPLATE
+# =============================================================================
+#
+# Role:
+#   Paper-linked discriminative case scaffold for Appendix E.
+#
+# Theoretical owner:
+#   PMS-VECTOR.md — Appendix E
+#
+# Record grammar:
+#   model/VECTOR-Record.template.yaml
+#
+# Machine-readable VECTOR model:
+#   model/PMS-VECTOR.yaml
+#
+# PMS semantic dependency:
+#   PMS.yaml
+#
+# Boundary:
+#   CaseRecord = CaseMetadata + VECTORRecord.
+#   Case metadata does not redefine VECTOR semantics.
+#
+#   case count != evidential weight
+#   case suite != empirical validation
+#   case outcome != VECTOR validity
+#
+#   A collapse, reduction, rival victory, suspension, or Non-Capture may be
+#   the correct discriminative result. The suite succeeds by preserving
+#   structurally different outputs under structurally different pressures,
+#   not by making VECTOR win every case.
+#
+# Appendix E cases are discriminative fixtures, not population observations.
+# The VECTOR content of a case is carried by vector_record below.
+#
+# Structural rule:
+#   The vector_record block is the same 17-block envelope used by
+#   VECTOR-Record.template.yaml. Visible conditional fields are not thereby
+#   required to be populated in every case. Requiredness follows claim type,
+#   claim strength, and the pressure actually under test.
+#
+# No case-level score, pass/fail flag, expected answer, confidence percentage,
+# or theory-validity field is licensed by this template.
+# =============================================================================
+
+case_metadata:
+  # ---------------------------------------------------------------------------
+  # IDENTITY
+  # case_id is the repository identifier (for example: E22).
+  # paper_ref preserves the paper designation (for example: Appendix E.22).
+  # Keep the two distinct rather than silently normalizing one into the other.
+  #
+  # case_format records the paper-facing presentation form. Current intended
+  # values are full_minimal_case or micro_countercase where applicable; this
+  # field does not create a new theoretical case taxonomy.
+  # ---------------------------------------------------------------------------
+  case_id:
+  paper_ref:
+  title:
+  case_format:
+
+  # ---------------------------------------------------------------------------
+  # ADVERSARIAL STATUS
+  # Records whether the paper explicitly marks the case as adversarial and,
+  # where present, preserves the paper's own label. Do not infer or reconstruct
+  # an adversarial label that the paper does not declare.
+  # ---------------------------------------------------------------------------
+  adversarial:
+    marked:
+    paper_label:
+
+  # ---------------------------------------------------------------------------
+  # LOAD-BEARING STATUS
+  # Distinct from adversarial status. A case may be adversarial without carrying
+  # the same repository/theory load as the explicitly load-bearing cases.
+  # ---------------------------------------------------------------------------
+  load_bearing:
+
+  # ---------------------------------------------------------------------------
+  # PRESSURE CLASSIFICATION
+  # Navigation/classification only. This list does not replace the actual
+  # pressure content in vector_record.pressure or the applied ROT profile.
+  # Multiple pressure families may apply. Keep only declared, case-relevant
+  # families; do not infer from term co-occurrence.
+  # ---------------------------------------------------------------------------
+  pressure_families:
+    -
+
+  # ---------------------------------------------------------------------------
+  # CONSTRUCTS UNDER TEST
+  # Declared targets for navigation, indexing, and Reader views. This field is
+  # not a statement that every mentioned construct is independently validated.
+  # ---------------------------------------------------------------------------
+  constructs_under_test:
+    -
+
+  # ---------------------------------------------------------------------------
+  # THEORETICAL FUNCTION
+  # Why this case exists in Appendix E. This is not the local case result and
+  # must not be used as a hidden expected-answer field.
+  # ---------------------------------------------------------------------------
+  theoretical_function:
+
+  # ---------------------------------------------------------------------------
+  # ARTIFACT PAIR
+  # Explicit paths support index/case/Markdown consistency checks without
+  # requiring the Reader to infer paths from identifiers.
+  # ---------------------------------------------------------------------------
+  artifact_pair:
+    yaml:
+    markdown:
+
+  # ---------------------------------------------------------------------------
+  # ARCHITECTURE EFFECT
+  # Records whether the case changes the standing architecture/status/scope of
+  # VECTOR beyond its local case result.
+  #
+  # local case result != architecture effect
+  #
+  # Examples of architecture effects include core reduction, scope narrowing,
+  # or retained-but-reduced status. Most cases should leave applies false.
+  # Do not invent an architecture effect merely because a case is difficult.
+  # ---------------------------------------------------------------------------
+  architecture_effect:
+    applies:
+    targets:
+      -
+    effect:
+
+  # ---------------------------------------------------------------------------
+  # CASE-LEVEL NON-IMPLICATIONS
+  # Explicitly records what the case result does NOT license. This supports the
+  # Reader's "What does not follow" trace without inferring boundaries from
+  # prose. These statements must mirror the paper/case analysis, not extend it.
+  # ---------------------------------------------------------------------------
+  non_implications:
+    -
+
+# =============================================================================
+# VECTOR RECORD
+# =============================================================================
+# The full 17-block VECTOR Record envelope follows unchanged from
+# VECTOR-Record.template.yaml. Case metadata above classifies and indexes the
+# case; it does not redefine, duplicate, or override VECTOR semantics.
+# =============================================================================
+
+vector_record:
+  # ---------------------------------------------------------------------------
+  # CLAIM-BEARING MINIMUM — REFERENCE (O)
+  # What is being evaluated? Type the object explicitly enough that later
+  # rotation, revision, or comparison cannot silently replace the reference.
+  # O != person worth.
+  # ---------------------------------------------------------------------------
+  reference:
+    object:
+    object_type:
+
+  # ---------------------------------------------------------------------------
+  # CLAIM-BEARING MINIMUM — FRAME (F)
+  # Declare what is included and excluded from the bounded evaluation.
+  # F != PMS □ (Base boundary operator).
+  # ---------------------------------------------------------------------------
+  frame:
+    included:
+    excluded:
+
+  # ---------------------------------------------------------------------------
+  # CLAIM-BEARING MINIMUM — QUESTION (Q)
+  # Keep the directional/orientational question bounded and declare the
+  # strongest conclusion that the record does NOT license.
+  # ---------------------------------------------------------------------------
+  question:
+    scope:
+    claim_ceiling:
+
+  # ---------------------------------------------------------------------------
+  # CLAIM-BEARING MINIMUM — POSITION (π, t)
+  # Perspective and temporal position are material claim coordinates.
+  # π != P_MIP; t != PMS Θ.
+  #
+  # scene_time / analysis_time are CONDITIONAL. Populate where retrospective
+  # actor-facing, uptake, option, or praxis claims make the distinction material.
+  #
+  # Legibility_analyst(t_a) does not imply Legibility_actor(t_s).
+  # knowledge_at_t_a does not imply effective_capacity_at_t_s.
+  # ---------------------------------------------------------------------------
+  position:
+    perspective:
+    temporal_position:
+    scene_time:
+    analysis_time:
+
+  # ---------------------------------------------------------------------------
+  # CLAIM-BEARING MINIMUM — BASELINE CLAIM (S_0)
+  # Preserve the proposition actually being tested. Later revision must not
+  # overwrite the original baseline. Revision != Survival.
+  # ---------------------------------------------------------------------------
+  baseline_claim:
+
+  # ---------------------------------------------------------------------------
+  # DIR (Direction)
+  # RESULT / CLAIM-DEPENDENT.
+  #
+  # DIR is local, reference-bounded, frame-bounded, question-bounded,
+  # non-compensatory, and warrant-dependent. It is not a universal scalar.
+  #
+  # relation may record a bounded direction, trade-off, incomparability, or
+  # absence of warranted DIR. Do not insert a numeric DIR score by default.
+  #
+  # Warrant fields expose support and unresolved dependencies; they do not
+  # manufacture support. Notation reuse != warrant generation.
+  # ---------------------------------------------------------------------------
+  dir:
+    relation:
+    comparison_basis:
+    warrant:
+      source_types:
+      external_premises:
+      unresolved_dependencies:
+    critical_regressions:
+
+  # ---------------------------------------------------------------------------
+  # CALIBRATION
+  # CONDITIONAL — populate only where a material distinction depends on a
+  # threshold, calibration source, or defensible competing calibration.
+  #
+  # Calibration may be externally supplied. VECTOR notation does not convert
+  # imported calibration into VECTOR-generated warrant.
+  #
+  # CalibrationFailure -> ClaimReduction or Suspend.
+  # ---------------------------------------------------------------------------
+  calibration:
+    threshold:
+    basis:
+    domain_source:
+    competing_calibration:
+    unresolved:
+
+  # ---------------------------------------------------------------------------
+  # ROT PROFILE (RP)
+  # REQUIRED for robustness-bearing claims; otherwise claim-type dependent.
+  #
+  # ROT = operation/test family.
+  # RP  = stored audit state containing applied and open ROT pressure.
+  # ROT != RP.
+  #
+  # A robustness-bearing ROT must expose:
+  #   declared change + declared constants + reference continuity +
+  #   question relevance + loss capacity, with operational purpose visible.
+  #
+  # Rotation selection follows claim vulnerability, not desired outcome.
+  # Known material pressure must not disappear merely because it is untested.
+  # ---------------------------------------------------------------------------
+  rot_profile:
+    applied:
+      - family:
+        vulnerability:
+        purpose:
+        changed:
+        held_constant:
+        reference_continuity:
+        material_distinctness:
+        loss_route:
+        result:
+        robustness_relevance:
+    untested_relevant:
+    stop_basis:
+
+  # ---------------------------------------------------------------------------
+  # DERIVED DIST (Distance)
+  # CONDITIONAL / OPTIONAL SUPPORTING SHORTHAND ONLY.
+  #
+  # DIST is not in VECTOR core and does not add independent warrant.
+  # A DIST label without its source relations adds no warrant.
+  # DIST != PMS Χ (distance).
+  # DIST != REV_avail.
+  # ---------------------------------------------------------------------------
+  dist_derived:
+    effective_separation:
+    source_relations:
+    role_variation:
+
+  # ---------------------------------------------------------------------------
+  # REVERSIBILITY
+  # CONDITIONAL — use where correction, exit, redirection, enacted commitment,
+  # or restoration claims are material.
+  #
+  # C_ROT = practical friction attached to reorientation.
+  # C_REV = cost attached to changing enacted or bound praxis.
+  # C_ROT != C_REV.
+  # reversibility != restoration.
+  # REV_avail increasing does not imply praxis quality increasing.
+  # ---------------------------------------------------------------------------
+  reversibility:
+    available:
+    rotation_cost:
+    reversal_cost:
+    restoration_possible:
+
+  # ---------------------------------------------------------------------------
+  # OPTION SPACE
+  # CONDITIONAL — use where possibility, actionability, viability, invisibility,
+  # illusion, or special-case probes are material.
+  #
+  # Keep OPTION STATUS separate from EVIDENCE STATUS.
+  # Unknown != Available.
+  # Unknown != Unavailable.
+  #
+  # No automatic implication ladder is licensed:
+  # conceivable -> visible -> structurally available -> effectively actionable
+  # -> structurally viable is NOT automatic.
+  #
+  # For actionability, populate material authority/access/means/information/
+  # window/dependency/control/cost/permission fields rather than inferring
+  # actionability from mere conceivability.
+  # ---------------------------------------------------------------------------
+  option_space:
+    actor_or_role:
+    options:
+      - option:
+        status:
+        evidence_status:
+        authority:
+        access:
+        means:
+        information:
+        window:
+        dependencies:
+        practical_control:
+        relevant_cost:
+        procedural_permission:
+        viability_relative_to:
+    option_invisibility:
+    option_illusion:
+    special_case_probes:
+
+  # ---------------------------------------------------------------------------
+  # TRANSFORMABILITY / SECOND-ORDER AGENCY
+  # CONDITIONAL — use for claims that actors or actor configurations can alter
+  # option nodes, option relations, constraints, or the conditions of action.
+  #
+  # Conceivable transformation != available transformation.
+  # A material second-order claim should expose mechanism, effective capacity,
+  # dependencies, temporal window, evidence, and resulting node/relation change.
+  # Formal target where useful: ΔN and/or ΔR_O.
+  # Without sufficient mechanism/capacity support, retain the item as a probe.
+  # ---------------------------------------------------------------------------
+  transformability:
+    actor_configuration:
+    target_change:
+    mechanism:
+    authority_capacity:
+    dependencies:
+    window:
+    evidence:
+    node_changes:
+    relation_changes:
+
+  # ---------------------------------------------------------------------------
+  # CONSEQUENCE TOPOLOGY
+  # CONDITIONAL — record claim-critical consequences and costs without forcing
+  # heterogeneous items into a universal aggregate.
+  #
+  # Recommended evidence statuses include:
+  #   observed/directly established;
+  #   externally supported;
+  #   traceably inferred;
+  #   hypothetical;
+  #   unknown/residual.
+  #
+  # unknown_residue (Λ) is remainder/non-event, not a positive hidden-cost claim.
+  # ---------------------------------------------------------------------------
+  consequence_topology:
+    items:
+      - type:
+        bearer:
+        temporal_relation:
+        mechanism_source:
+        evidence_status:
+    unknown_residue:
+
+  # ---------------------------------------------------------------------------
+  # CONSTRAINT RECORD
+  # CONDITIONAL — populate only for constraint-level claims.
+  #
+  # claimed_authority records authority that is asserted or under examination;
+  # the field does not validate that authority.
+  #
+  # Source(G) != Legitimacy(G).
+  # SystemCarriageRequired != PersonXMustCarry.
+  # FixpointRequirement != BearerAuthority.
+  # A Tragic Constraint claim remains evidentially bounded and is defeated by an
+  # evidenced effective non-lossful route/transformation; it is not a claim of
+  # metaphysical impossibility.
+  # ---------------------------------------------------------------------------
+  constraint:
+    G:
+    maintained_by:
+    modifiable_by:
+    claimed_authority:
+    burden_bearers:
+    exit_relations:
+    alternative_carriers:
+    transformation_routes:
+    abandon_or_revision_consequences:
+    unknowns:
+    external_legitimacy_question:
+
+  # ---------------------------------------------------------------------------
+  # ORIENTATION UPTAKE
+  # CONDITIONAL — use only where orientation-mediated attribution increase is
+  # claimed.
+  #
+  # presented != actor_accessible != understood != praxis_available != enacted.
+  # Being told is not uptake.
+  #
+  # BaselineAttributability_LOGIC != ΔAttributability_orientation.
+  # Missing uptake must not erase baseline structural attributability already
+  # supported independently under PMS-LOGIC.
+  # ---------------------------------------------------------------------------
+  orientation_uptake:
+    presented:
+    actor_accessible:
+    understood:
+    praxis_available:
+    actor_response:
+
+  # ---------------------------------------------------------------------------
+  # PRESSURE
+  # CLAIM-STRENGTH DEPENDENT.
+  #
+  # Use this block for serious rival pressure, counter-scenes/counter-positions,
+  # provenance dependence, non-compensation, and known critical open tests.
+  # ROT pressure itself remains recorded in rot_profile.
+  #
+  # A serious rival must be capable of materially changing or defeating the
+  # relevant claim in its own vocabulary. Critical open tests do not disappear
+  # merely because a current iteration has a stop basis.
+  # ---------------------------------------------------------------------------
+  pressure:
+    rivals:
+    counter_scenes:
+    provenance_dependencies:
+    non_compensation:
+    critical_open_tests:
+
+  # ---------------------------------------------------------------------------
+  # RESULT
+  # REQUIRED for a completed record state.
+  #
+  # Use a typed paper-compatible result where applicable, including:
+  #   Robust Orientation;
+  #   Revised Robust Orientation;
+  #   Bounded Orientation;
+  #   Revision Required;
+  #   Trade-Off / Multidirectional;
+  #   Incomparable;
+  #   Suspend;
+  #   Non-Capture.
+  #
+  # surviving_claim records what remains after pressure.
+  # revisions must preserve the fact that Revision != Survival.
+  # scope carries explicit narrowing or other boundedness.
+  # residue carries Λ_remaining and unresolved dependence.
+  # stop_reason explains responsible closure, suspension, or refusal; it does not
+  # mean "tests passed, therefore true".
+  #
+  # Non-Capture may terminate before a full downstream option/cost/constraint map
+  # is populated. Absence of irrelevant conditional fields is not a defect.
+  # ---------------------------------------------------------------------------
+  result:
+    status:
+    surviving_claim:
+    revisions:
+    scope:
+    residue:
+    stop_reason:

@@ -1,0 +1,134 @@
+case_metadata:
+  case_id: E10
+  paper_ref: Appendix E.10
+  title: Real Option-Space Transformation
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+  - option_space_transformation_pressure
+  - second_order_agency_pressure
+  - mechanism_pressure
+  constructs_under_test:
+  - OptionSpace
+  - SecondOrderAgency
+  theoretical_function: Tests whether a supported mechanism with effective authority can materially change option relations rather than merely relabel or imagine the field.
+  artifact_pair:
+    yaml: cases/E10.yaml
+    markdown: cases/E10.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+  - A change in option relations does not require creation of a new option node.
+  - Analytic redescription of a field does not by itself constitute praxis transformation.
+  - Second-Order Agency does not imply sovereignty over the total option field.
+vector_record:
+  reference:
+    object: The implemented temporary compatibility layer that changes the relation between legacy-system option A and new-system option B during a technical migration.
+    object_type: effective option-relation transformation / Second-Order Agency claim
+  frame:
+    included:
+    - 'The migration initially contains two existing long-term options: A = keep the legacy system and B = move to the new system.'
+    - Under the current data interface, A excludes B because the systems cannot run simultaneously.
+    - A team with real technical authority builds a temporary compatibility layer.
+    - The compatibility layer does not create a new long-term destination.
+    - After implementation, the organization can run A during staged preparation and later migrate to B.
+    - The relevant option relation changes from A excludes B to A precedes B.
+    excluded:
+    - Any claim that the compatibility layer creates a new long-term option node.
+    - Any treatment of a merely hypothetical design document as an effective transformation.
+    - Any claim that the team authors or controls the total option field.
+  question:
+    scope: Does the implemented compatibility layer count as real Second-Order Agency because it effectively changes the relation among the existing migration options?
+    claim_ceiling: The case can establish only the bounded relation transformation produced by the evidenced mechanism and authority. It cannot establish general control over the option field or treat hypothetical redesign as practical transformation.
+  position:
+    perspective: Analysis of the technically empowered team and the migration option field before and after implementation of the compatibility layer.
+    temporal_position: The relation is compared across the pre-layer state t and the implemented post-layer state t+1.
+    scene_time: null
+    analysis_time: null
+  baseline_claim: The team has effective Second-Order Agency if its implemented compatibility layer changes the existing option relation from A excludes B to A precedes B while the option nodes A and B remain the same.
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: No robustness-bearing DIR claim is at issue. The fixture is decided by whether the Second-Order Agency mechanism burden is positively satisfied and a real relation change is produced.
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+  option_space:
+    actor_or_role: The technically authorized migration team acting on the organization's existing migration option field.
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+  transformability:
+    actor_configuration: A technical team with real authority to build and implement the temporary compatibility layer.
+    target_change: 'Change the relation among the existing options without creating a new long-term destination: R_{O,t} -> R_{O,t+1}.'
+    mechanism: Build and implement a temporary compatibility layer across the current data interface.
+    authority_capacity: 'Established in the fixture: the team has real technical authority and actually builds the layer.'
+    dependencies: []
+    window: null
+    evidence: The synthetic fixture stipulates both effective technical authority and implemented construction of the compatibility layer, together with the resulting sequencing relation.
+    node_changes:
+    - No new long-term option node is created; the relevant option set remains A and B.
+    relation_changes:
+    - A excludes B -> A precedes B.
+  consequence_topology:
+    items: []
+    unknown_residue: null
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+  pressure:
+    rivals: []
+    counter_scenes:
+    - A hypothetical compatibility design that is only described but not effectively implementable would fail the praxis-transformation claim.
+    provenance_dependencies:
+    - PMS-VECTOR owns the Second-Order Agency distinction, the mechanism burden, and the boundary analytic transformation != praxis transformation.
+    non_compensation: null
+    critical_open_tests: []
+  result:
+    status: Bounded Orientation
+    surviving_claim: The implemented compatibility layer constitutes genuine Second-Order Agency in this fixture because an actor configuration with effective authority uses a traceable mechanism to change R_O from exclusion to sequence while leaving the option nodes unchanged.
+    revisions: []
+    scope: The result is bounded to the declared migration field, the implemented compatibility mechanism, and the relation A excludes B -> A precedes B.
+    residue: []
+    stop_reason: The fixture positively supplies the actor configuration, target change, mechanism, effective authority/capacity, implementation evidence, and resulting relation change required for a bounded Second-Order Agency claim.

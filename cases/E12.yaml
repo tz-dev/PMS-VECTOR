@@ -1,0 +1,129 @@
+case_metadata:
+  case_id: E12
+  paper_ref: Appendix E.12
+  title: Distributed Agency
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+  - distributed_agency_pressure
+  - responsibility_boundary_pressure
+  constructs_under_test:
+  - DistributedAgency
+  - SecondOrderAgency
+  - EffectiveCapacity
+  theoretical_function: Tests whether effective transformative capacity may exist only in an actor configuration while remaining distinct from equal individual responsibility.
+  artifact_pair:
+    yaml: cases/E12.yaml
+    markdown: cases/E12.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+  - Distributed collective capacity does not imply equal individual capacity.
+  - Distributed collective capacity does not imply equal or undifferentiated individual responsibility.
+vector_record:
+  reference:
+    object: The coordinated capacity of three departments to authorize, fund, and implement a needed change that no department can produce alone.
+    object_type: distributed Second-Order Agency / effective-capacity configuration claim
+  frame:
+    included:
+    - No individual department can by itself authorize, fund, and implement the needed change.
+    - Three departments acting together can produce the needed change.
+    - Each individual unit falls below the relevant capacity requirement while the coordinated configuration meets it.
+    excluded:
+    - Any inference that each department individually possesses the collective capacity.
+    - Any inference that collective capacity distributes responsibility equally across the individual departments.
+  question:
+    scope: Can effective transformative capacity exist only at the level of a coordinated multi-department actor configuration while individual capacity remains below the requirement?
+    claim_ceiling: The case can establish distributed Second-Order Agency at the configuration level. It cannot infer equal individual capacity or equal / undifferentiated individual responsibility from the collective capacity relation.
+  position:
+    perspective: Analysis of the effective capacity of each department separately and of the coordinated three-department configuration.
+    temporal_position: The fixture concerns the same bounded transformation requirement for the individual and coordinated capacity comparisons.
+    scene_time: null
+    analysis_time: null
+  baseline_claim: For the needed change, Capacity(a_i) < Requirement for each individual department, while Capacity(a_1+a_2+a_3) >= Requirement for the coordinated configuration.
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: No robustness-bearing DIR claim is made. The fixture is decided by actor-configuration typing and the supplied effective-capacity relation.
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+  option_space:
+    actor_or_role: The three departments considered individually and as the coordinated actor configuration relevant to the needed change.
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+  transformability:
+    actor_configuration: The coordinated configuration a_1 + a_2 + a_3. No individual a_i independently meets the transformation requirement.
+    target_change: The needed change; Appendix E.12 does not specify its detailed option-node or option-relation form.
+    mechanism: Coordinated contribution of the capacities needed to authorize, fund, and implement the change.
+    authority_capacity: Distributed across the three departments. The combined configuration meets the requirement even though each individual department remains below it.
+    dependencies:
+    - Effective coordination among the departments whose capacities are jointly required for authorization, funding, and implementation.
+    window: null
+    evidence: The synthetic fixture stipulates the individual insufficiency relations and the sufficiency of the coordinated configuration. PMS-LOGIC supplies lineage for effective frame-bound capacity; PMS-VECTOR owns the distributed Second-Order Agency distinction.
+    node_changes: []
+    relation_changes: []
+  consequence_topology:
+    items: []
+    unknown_residue: null
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+    - PMS-LOGIC supplies lineage for effective, frame-bound capacity rather than abstract possibility.
+    - PMS-VECTOR owns the distributed Second-Order Agency claim and the boundary distributed capacity != undifferentiated individual responsibility.
+    - The LOGIC capacity lineage does not by itself determine equal responsibility or independently warrant the broader VECTOR distributed-agency architecture.
+    non_compensation: null
+    critical_open_tests: []
+  result:
+    status: Bounded Orientation
+    surviving_claim: The field contains distributed Second-Order Agency at the level of the coordinated three-department configuration because the combined effective capacity meets the transformation requirement while each individual department remains below it.
+    revisions: []
+    scope: The result is bounded to the supplied capacity relation for the needed change. It does not allocate responsibility equally across the individual departments.
+    residue: []
+    stop_reason: The fixture directly supplies the discriminating relation between individual insufficiency and coordinated sufficiency. That is enough to classify the capacity as distributed while preserving the responsibility boundary.

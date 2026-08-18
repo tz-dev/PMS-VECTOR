@@ -1,0 +1,780 @@
+dependency_map:
+  meta:
+    artifact: PMS-VECTOR Dependency Map
+    role: declared dependency, vulnerability, prohibited-inference, and enacted-reduction topology
+    paper_source: PMS-VECTOR.md — Appendix F.9
+    model_reference: model/PMS-VECTOR.yaml
+    governing_rule: dependency transmits vulnerability, not automatic warrant
+    inferred_edges_allowed: false
+    cooccurrence_edges_allowed: false
+    shared_provenance_creates_dependency: false
+    graph_centrality_has_theoretical_meaning: false
+    edge_count_has_evidential_meaning: false
+    non_equivalences:
+    - dependency != warrant
+    - graph depth != theoretical importance
+    - node degree != epistemic strength
+    - visual adjacency != undeclared dependency
+  load_bearing_roots:
+  - RobustOrientation
+  - OUGHT_account
+  - OUGHT_constraint
+  - TragicConstraint
+  - CorrigibleConsequenceCarryingPraxis
+  - StandaloneVECTOR
+  dependency_nodes:
+    RobustOrientation:
+      kind: claim
+      description: robust orientation result
+      load_bearing_root: true
+    TypedDIR:
+      kind: construct
+      description: typed bounded DIR relation
+    RelevantROT:
+      kind: construct
+      description: materially relevant ROT burden
+    DeclaredChange:
+      kind: condition
+      description: ROT declares what changes
+    DeclaredConstants:
+      kind: condition
+      description: ROT declares what is held constant
+    ReferenceContinuity:
+      kind: condition
+      description: ROT preserves relevant reference continuity
+    LossCapacity:
+      kind: condition
+      description: ROT has credible capacity to weaken, revise, collapse, or retype the claim
+    SeriousRivalPressure:
+      kind: condition
+      description: serious rival pressure can materially defeat or reduce the claim
+    ProvenanceEchoAudit:
+      kind: condition
+      description: provenance and echo control are audited
+    NonCompensation:
+      kind: condition
+      description: loss in one relation is not silently compensated by another
+    NoUnresolvedClaimCriticalRegression:
+      kind: condition
+      description: no unresolved claim-critical regression remains hidden
+    PreservedResidue:
+      kind: condition
+      description: remaining residue / Λ is preserved rather than erased
+    BoundedOrientation:
+      kind: result
+      description: bounded orientation without full robustness status
+    NonCapture:
+      kind: result
+      description: positive boundary result where required claim conditions cannot responsibly be preserved
+    Revision:
+      kind: result
+      description: materially revised claim state
+    Collapse:
+      kind: result
+      description: claim collapse
+    OUGHT_account:
+      kind: claim
+      description: orientation-mediated practical accounting relation
+      load_bearing_root: true
+    RelevantOrientation:
+      kind: condition
+      description: relevant bounded orientation
+    ExternalPremiseSupport:
+      kind: condition
+      description: material external premises are supported
+    ActorUptake:
+      kind: condition
+      description: orientation is actor-accessible and sufficiently understood for contest or response
+    EffectiveCapacity:
+      kind: condition
+      description: actor or role has relevant effective capacity
+    ConsequenceRelation:
+      kind: condition
+      description: capacity is connected to subsequent praxis through attributable consequence
+    RoleTimeConditions:
+      kind: condition
+      description: role and scene-time conditions keep the relation materially live
+    BaselineAttributability_LOGIC:
+      kind: external_relation
+      description: baseline PMS-LOGIC attributability relation
+    OrientationMediatedAttributionUplift:
+      kind: derived_relation
+      description: VECTOR-specific change in attributability attributable to relevant orientation and uptake
+    OUGHT_constraint:
+      kind: claim
+      description: constraint-relative must-like practical relation
+      load_bearing_root: true
+    OperativeG:
+      kind: condition
+      description: G is actually operative
+    EffectiveOptionField:
+      kind: condition
+      description: effective option field is correctly typed
+    NonEmptyResponseClass:
+      kind: condition
+      description: response class R_G is non-empty
+    ResponsesSatisfyG:
+      kind: condition
+      description: each member of R_G satisfies the relevant G-condition
+    ConstraintActorRelationsVisible:
+      kind: condition
+      description: maintainer, modifier, and claimed authority are visible
+    ConstraintBurdenExitAlternativesVisible:
+      kind: condition
+      description: burden bearers, exit relations, and alternative carriers are visible
+    TransformationRoutesConsidered:
+      kind: condition
+      description: evidenced transformation routes are considered
+    LegitimacyQuestionExternalized:
+      kind: boundary
+      description: legitimacy remains external unless separately warranted
+    SystemCarriageRequired:
+      kind: relation
+      description: system-level carriage requirement
+    PersonXMustCarry:
+      kind: relation
+      description: person-specific bearer assignment
+    TragicConstraint:
+      kind: claim
+      description: evidentially bounded tragic constraint
+      load_bearing_root: true
+    ValidOUGHTConstraint:
+      kind: condition
+      description: valid OUGHT_constraint configuration
+    ResidualLossAcrossRG:
+      kind: condition
+      description: residual loss remains across all responses in R_G
+    SecondOrderMechanismAudit:
+      kind: condition
+      description: second-order transformation mechanisms are audited
+    CapacityAuthorityDependencyWindowAudit:
+      kind: condition
+      description: capacity, authority, dependency, and window conditions are audited
+    NoEvidencedNonLossfulRoute:
+      kind: condition
+      description: no currently evidenced effective non-lossful route exists in the declared field
+    EvidencedNonLossfulRoute:
+      kind: falsifier
+      description: real effective no-loss route evidenced within the bounded field
+    ImaginedRescueRoute:
+      kind: probe
+      description: merely imagined rescue route
+    CorrigibleConsequenceCarryingPraxis:
+      kind: claim
+      description: corrigible consequence-carrying praxis; Adult Orientation is supporting shorthand only
+      load_bearing_root: true
+    BoundedRelevantOrientation:
+      kind: condition
+      description: bounded relevant orientation
+    PreservedCorrigibility:
+      kind: condition
+      description: corrigibility remains available
+    CarriesRelevantConsequence:
+      kind: condition
+      description: relevant consequence is carried rather than externalized or erased
+    CapacityLimitsAwareness:
+      kind: condition
+      description: capacity limits remain visible
+    OrientationEnactmentSourceConditions:
+      kind: condition
+      description: orientation–enactment source conditions are handled without reifying derived DIST
+    DistributedAgencyRecognition:
+      kind: condition
+      description: distributed agency is recognized where relevant
+    NoOrientationAuthorityConversion:
+      kind: boundary
+      description: orientation is not converted into authority over others
+    AdultOrientation:
+      kind: supporting_shorthand
+      description: supporting shorthand only; no independent dependency root
+      independent_dependency_root: false
+    StandaloneVECTOR:
+      kind: claim
+      description: standalone VECTOR theory claim
+      load_bearing_root: true
+    DIRAddsDiscrimination:
+      kind: condition
+      description: DIR adds discrimination not losslessly supplied elsewhere
+    ROTAddsBeyondReframing:
+      kind: condition
+      description: ROT adds more than ordinary reframing
+    DISTCoreReductionAccepted:
+      kind: condition
+      description: prior DIST core claim is genuinely reduced rather than protected
+    AdultOrientationReductionAccepted:
+      kind: condition
+      description: Adult Orientation is reduced to supporting shorthand after deletion testing
+    OptionStatusDiscrimination:
+      kind: condition
+      description: option-status architecture discriminates real from illusory possibility
+    SecondOrderAgencyMechanismDiscrimination:
+      kind: condition
+      description: second-order agency adds field-transformation discrimination under mechanism evidence
+    CostTopologyDiscrimination:
+      kind: condition
+      description: cost topology adds non-fungible consequence discrimination without speculative inflation
+    ConvergenceClosureClaimLossAndStop:
+      kind: condition
+      description: convergence / closure machinery produces real claim loss and bounded stop
+    SpecialistRivalCanWin:
+      kind: condition
+      description: specialist rivals can win specialist burdens without assimilation
+    SameBurdenRivalCanReduce:
+      kind: condition
+      description: same-burden non-PMS rivals can reduce DIR / ROT / standalone scope
+    OughtTypologyPreventsConflation:
+      kind: condition
+      description: Ought typology prevents rather than causes normative conflation
+    CoreRemainsReducible:
+      kind: condition
+      description: remaining DIR–ROT core remains reducible if its contributions fail
+    Reduction:
+      kind: result
+      description: theory or component reduction
+    DIR:
+      kind: construct
+      description: Direction core component
+    ROT:
+      kind: construct
+      description: Rotation core component
+    DIST:
+      kind: construct
+      description: derived supporting orientation–enactment separation descriptor
+    REV_avail:
+      kind: construct
+      description: effective reversibility availability
+    SourceG:
+      kind: relation
+      description: source or maintenance origin of G
+    LegitimacyG:
+      kind: external_relation
+      description: legitimacy of G
+    FixpointRequirement:
+      kind: relation
+      description: functional fixpoint requirement
+    BearerAuthority:
+      kind: external_relation
+      description: authority of a bearer
+    PresentedOrientation:
+      kind: relation
+      description: orientation presented to an actor
+    DecisionAuthority:
+      kind: external_relation
+      description: authority to decide for or bind others
+  dependency_edges:
+  - edge_id: robustorientation.depends.typeddir
+    dependent: RobustOrientation
+    dependency: TypedDIR
+    relation: depends_on
+    role: bounded Direction must be typed and warranted
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.relevantrot
+    dependent: RobustOrientation
+    dependency: RelevantROT
+    relation: depends_on
+    role: materially relevant ROT burden must be discharged
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.seriousrivalpressure
+    dependent: RobustOrientation
+    dependency: SeriousRivalPressure
+    relation: depends_on
+    role: serious rival pressure must be allowed to change or defeat the claim
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.provenanceechoaudit
+    dependent: RobustOrientation
+    dependency: ProvenanceEchoAudit
+    relation: depends_on
+    role: provenance and echo control must prevent recurrence from masquerading as independent support
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.noncompensation
+    dependent: RobustOrientation
+    dependency: NonCompensation
+    relation: depends_on
+    role: loss in one relation cannot be silently offset by another
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.nounresolvedclaimcriticalregression
+    dependent: RobustOrientation
+    dependency: NoUnresolvedClaimCriticalRegression
+    relation: depends_on
+    role: known claim-critical regression cannot remain unresolved
+    paper_ref: Appendix F.9
+  - edge_id: robustorientation.depends.preservedresidue
+    dependent: RobustOrientation
+    dependency: PreservedResidue
+    relation: depends_on
+    role: remaining residue / Λ must stay visible
+    paper_ref: Appendix F.9
+  - edge_id: relevantrot.depends.declaredchange
+    dependent: RelevantROT
+    dependency: DeclaredChange
+    relation: depends_on
+    role: what changes is declared
+    paper_ref: Appendix F.9
+  - edge_id: relevantrot.depends.declaredconstants
+    dependent: RelevantROT
+    dependency: DeclaredConstants
+    relation: depends_on
+    role: what remains constant is declared
+    paper_ref: Appendix F.9
+  - edge_id: relevantrot.depends.referencecontinuity
+    dependent: RelevantROT
+    dependency: ReferenceContinuity
+    relation: depends_on
+    role: relevant reference continuity is preserved
+    paper_ref: Appendix F.9
+  - edge_id: relevantrot.depends.losscapacity
+    dependent: RelevantROT
+    dependency: LossCapacity
+    relation: depends_on
+    role: test has credible claim-loss capacity
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.relevantorientation
+    dependent: OUGHT_account
+    dependency: RelevantOrientation
+    relation: depends_on
+    role: R is relevantly oriented under bounded DIR/ROT pressure
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.externalpremisesupport
+    dependent: OUGHT_account
+    dependency: ExternalPremiseSupport
+    relation: depends_on
+    role: material external premises are supported
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.actoruptake
+    dependent: OUGHT_account
+    dependency: ActorUptake
+    relation: depends_on
+    role: orientation is actor-accessible and sufficiently understood for contest or response
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.effectivecapacity
+    dependent: OUGHT_account
+    dependency: EffectiveCapacity
+    relation: depends_on
+    role: actor/role has relevant effective capacity
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.consequencerelation
+    dependent: OUGHT_account
+    dependency: ConsequenceRelation
+    relation: depends_on
+    role: consequence relation connects capacity to subsequent praxis
+    paper_ref: Appendix F.9
+  - edge_id: ought_account.depends.roletimeconditions
+    dependent: OUGHT_account
+    dependency: RoleTimeConditions
+    relation: depends_on
+    role: role and scene-time conditions keep the relation materially live
+    paper_ref: Appendix F.9
+  - edge_id: orientationmediatedattributionuplift.depends.ought_account
+    dependent: OrientationMediatedAttributionUplift
+    dependency: OUGHT_account
+    relation: depends_on
+    role: uplift is the VECTOR-specific attribution change governed by the OUGHT_account dependency bundle
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.operativeg
+    dependent: OUGHT_constraint
+    dependency: OperativeG
+    relation: depends_on
+    role: G is actually operative
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.externalpremisesupport
+    dependent: OUGHT_constraint
+    dependency: ExternalPremiseSupport
+    relation: depends_on
+    role: material factual premises about G are supported
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.effectiveoptionfield
+    dependent: OUGHT_constraint
+    dependency: EffectiveOptionField
+    relation: depends_on
+    role: effective option field is correctly typed
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.nonemptyresponseclass
+    dependent: OUGHT_constraint
+    dependency: NonEmptyResponseClass
+    relation: depends_on
+    role: response class R_G is non-empty
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.responsessatisfyg
+    dependent: OUGHT_constraint
+    dependency: ResponsesSatisfyG
+    relation: depends_on
+    role: each member of R_G satisfies the relevant G-condition
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.constraintactorrelationsvisible
+    dependent: OUGHT_constraint
+    dependency: ConstraintActorRelationsVisible
+    relation: depends_on
+    role: maintainer / modifier / claimed authority are visible
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.constraintburdenexitalternativesvisible
+    dependent: OUGHT_constraint
+    dependency: ConstraintBurdenExitAlternativesVisible
+    relation: depends_on
+    role: burden bearers / exit / alternative carriers are visible
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.transformationroutesconsidered
+    dependent: OUGHT_constraint
+    dependency: TransformationRoutesConsidered
+    relation: depends_on
+    role: evidenced transformation routes are considered
+    paper_ref: Appendix F.9
+  - edge_id: ought_constraint.depends.legitimacyquestionexternalized
+    dependent: OUGHT_constraint
+    dependency: LegitimacyQuestionExternalized
+    relation: depends_on
+    role: legitimacy remains external unless separately warranted
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.validoughtconstraint
+    dependent: TragicConstraint
+    dependency: ValidOUGHTConstraint
+    relation: depends_on
+    role: valid OUGHT_constraint configuration is required
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.effectiveoptionfield
+    dependent: TragicConstraint
+    dependency: EffectiveOptionField
+    relation: depends_on
+    role: effective option field must be correctly typed
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.residuallossacrossrg
+    dependent: TragicConstraint
+    dependency: ResidualLossAcrossRG
+    relation: depends_on
+    role: residual loss remains across R_G
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.secondordermechanismaudit
+    dependent: TragicConstraint
+    dependency: SecondOrderMechanismAudit
+    relation: depends_on
+    role: second-order transformations are mechanism-audited
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.capacityauthoritydependencywindowaudit
+    dependent: TragicConstraint
+    dependency: CapacityAuthorityDependencyWindowAudit
+    relation: depends_on
+    role: capacity / authority / dependency / window conditions are audited
+    paper_ref: Appendix F.9
+  - edge_id: tragicconstraint.depends.noevidencednonlossfulroute
+    dependent: TragicConstraint
+    dependency: NoEvidencedNonLossfulRoute
+    relation: depends_on
+    role: no currently evidenced non-lossful route exists in the declared field
+    paper_ref: Appendix F.9
+  - edge_id: validoughtconstraint.depends.ought_constraint
+    dependent: ValidOUGHTConstraint
+    dependency: OUGHT_constraint
+    relation: depends_on
+    role: validity of the tragic configuration presupposes the underlying constraint relation
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.boundedrelevantorientation
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: BoundedRelevantOrientation
+    relation: depends_on
+    role: bounded relevant orientation
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.preservedcorrigibility
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: PreservedCorrigibility
+    relation: depends_on
+    role: corrigibility remains preserved
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.carriesrelevantconsequence
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: CarriesRelevantConsequence
+    relation: depends_on
+    role: willingness to carry relevant consequence
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.capacitylimitsawareness
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: CapacityLimitsAwareness
+    relation: depends_on
+    role: capacity limits remain visible
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.preservedresidue
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: PreservedResidue
+    relation: depends_on
+    role: Λ / residue remains visible
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.orientationenactmentsourceconditions
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: OrientationEnactmentSourceConditions
+    relation: depends_on
+    role: orientation–enactment source conditions are handled without reifying DIST
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.distributedagencyrecognition
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: DistributedAgencyRecognition
+    relation: depends_on
+    role: distributed agency is recognized where relevant
+    paper_ref: Appendix F.9
+  - edge_id: corrigibleconsequencecarryingpraxis.depends.noorientationauthorityconversion
+    dependent: CorrigibleConsequenceCarryingPraxis
+    dependency: NoOrientationAuthorityConversion
+    relation: depends_on
+    role: orientation is not converted into authority over others
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.diraddsdiscrimination
+    dependent: StandaloneVECTOR
+    dependency: DIRAddsDiscrimination
+    relation: depends_on
+    role: DIR adds discriminative purchase
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.rotaddsbeyondreframing
+    dependent: StandaloneVECTOR
+    dependency: ROTAddsBeyondReframing
+    relation: depends_on
+    role: ROT adds more than ordinary reframing
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.distcorereductionaccepted
+    dependent: StandaloneVECTOR
+    dependency: DISTCoreReductionAccepted
+    relation: depends_on
+    role: DIST core claim is genuinely reduced
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.adultorientationreductionaccepted
+    dependent: StandaloneVECTOR
+    dependency: AdultOrientationReductionAccepted
+    relation: depends_on
+    role: Adult Orientation is reduced after deletion testing
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.optionstatusdiscrimination
+    dependent: StandaloneVECTOR
+    dependency: OptionStatusDiscrimination
+    relation: depends_on
+    role: option taxonomy distinguishes real from illusory possibility
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.secondorderagencymechanismdiscrimination
+    dependent: StandaloneVECTOR
+    dependency: SecondOrderAgencyMechanismDiscrimination
+    relation: depends_on
+    role: second-order agency adds mechanism-supported discrimination
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.costtopologydiscrimination
+    dependent: StandaloneVECTOR
+    dependency: CostTopologyDiscrimination
+    relation: depends_on
+    role: cost topology adds non-fungible consequence discrimination
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.convergenceclosureclaimlossandstop
+    dependent: StandaloneVECTOR
+    dependency: ConvergenceClosureClaimLossAndStop
+    relation: depends_on
+    role: convergence and closure create real claim loss and bounded stop
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.specialistrivalcanwin
+    dependent: StandaloneVECTOR
+    dependency: SpecialistRivalCanWin
+    relation: depends_on
+    role: specialist rival victory is permitted without assimilation
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.sameburdenrivalcanreduce
+    dependent: StandaloneVECTOR
+    dependency: SameBurdenRivalCanReduce
+    relation: depends_on
+    role: same-burden rival superiority can reduce DIR / ROT / standalone scope
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.oughttypologypreventsconflation
+    dependent: StandaloneVECTOR
+    dependency: OughtTypologyPreventsConflation
+    relation: depends_on
+    role: Ought typology prevents normative conflation
+    paper_ref: Appendix F.9
+  - edge_id: standalonevector.depends.coreremainsreducible
+    dependent: StandaloneVECTOR
+    dependency: CoreRemainsReducible
+    relation: depends_on
+    role: remaining DIR–ROT core can still be reduced
+    paper_ref: Appendix F.9
+  failure_routes:
+  - route_id: robust_orientation.missing_relevant_rot
+    root: RobustOrientation
+    trigger: materially relevant ROT is missing
+    response: reduce_to
+    target: BoundedOrientation
+    paper_ref: Appendix F.9
+  - route_id: robust_orientation.reference_continuity_failure
+    root: RobustOrientation
+    trigger: reference continuity fails
+    response: reduce_or_retype
+    targets:
+    - NonCapture
+    - Revision
+    paper_ref: Appendix F.9
+  - route_id: robust_orientation.rival_defeats_baseline
+    root: RobustOrientation
+    trigger: serious rival defeats the baseline
+    response: revise_or_collapse
+    targets:
+    - Revision
+    - Collapse
+    paper_ref: Appendix F.9
+  - route_id: ought_account.missing_uptake
+    root: OUGHT_account
+    trigger: relevant actor uptake is missing
+    response: remove_orientation_mediated_uplift
+    target: BaselineAttributability_LOGIC
+    boundary: baseline LOGIC attributability may remain independently supported
+    paper_ref: Appendix F.9
+  - route_id: ought_account.missing_effective_capacity
+    root: OUGHT_account
+    trigger: effective capacity falls away
+    response: reduce_or_retype
+    target: OUGHT_account
+    paper_ref: Appendix F.9
+  - route_id: ought_account.defeated_external_relation
+    root: OUGHT_account
+    trigger: external premise or consequence relation is defeated by a rival explanation
+    response: weaken
+    target: OUGHT_account
+    paper_ref: Appendix F.9
+  - route_id: ought_constraint.real_invisible_option_discovered
+    root: OUGHT_constraint
+    trigger: a previously invisible but real effective option is discovered
+    response: revise_response_class
+    target: EffectiveOptionField
+    paper_ref: Appendix F.9
+  - route_id: ought_constraint.g_revised
+    root: OUGHT_constraint
+    trigger: G is revised
+    response: new_constraint_claim_required
+    target: OUGHT_constraint
+    paper_ref: Appendix F.9
+  - route_id: ought_constraint.unsupported_bearer_assignment
+    root: OUGHT_constraint
+    trigger: system-level carriage is real but bearer assignment is unsupported
+    response: collapse_person_assignment_preserve_system_relation
+    targets:
+    - SystemCarriageRequired
+    - PersonXMustCarry
+    paper_ref: Appendix F.9
+  - route_id: tragic_constraint.real_no_loss_option
+    root: TragicConstraint
+    trigger: a previously invisible effective no-loss option is evidenced
+    response: collapse
+    target: TragicConstraint
+    paper_ref: Appendix F.9
+  - route_id: tragic_constraint.second_order_opens_no_loss
+    root: TragicConstraint
+    trigger: Second-Order Agency can create or open a non-lossful route in time
+    response: collapse
+    target: TragicConstraint
+    paper_ref: Appendix F.9
+  - route_id: tragic_constraint.field_misdescribed
+    root: TragicConstraint
+    trigger: a rival demonstrates that the option/constraint field was materially misdescribed
+    response: collapse_or_retype
+    target: TragicConstraint
+    paper_ref: Appendix F.9
+  - route_id: tragic_constraint.imagined_rescue_only
+    root: TragicConstraint
+    trigger: only an imagined rescue route exists
+    response: no_current_option_status_change
+    target: ImaginedRescueRoute
+    paper_ref: Appendix F.9
+  - route_id: standalone_vector.lossless_reducibility
+    root: StandaloneVECTOR
+    trigger: every major component becomes losslessly reducible to pre-existing PMS terms
+    response: reduce_to
+    target: Reduction
+    paper_ref: Appendix F.9
+  - route_id: standalone_vector.component_failure
+    root: StandaloneVECTOR
+    trigger: one component fails its independent discrimination burden
+    response: component_reduction
+    target: Reduction
+    paper_ref: Appendix F.9
+  - route_id: standalone_vector.narrower_domain
+    root: StandaloneVECTOR
+    trigger: VECTOR works only in a narrower domain
+    response: scope_reduction_or_domain_non_capture
+    targets:
+    - Reduction
+    - NonCapture
+    paper_ref: Appendix F.9
+  - route_id: standalone_vector.same_burden_rival
+    root: StandaloneVECTOR
+    trigger: same-burden rival provides same or better discrimination with less complexity
+    response: stronger_scope_reduction
+    target: Reduction
+    case_ref: cases/E23.yaml
+    paper_ref: Appendix E.23 / Appendix F.9
+  prohibited_inferences:
+  - inference_id: orientation_to_authority
+    source: RelevantOrientation
+    target: DecisionAuthority
+    relation: does_not_imply
+    reason: orientation does not increase authority by itself
+  - inference_id: presented_to_uptake
+    source: PresentedOrientation
+    target: ActorUptake
+    relation: does_not_imply
+    reason: being told is not uptake
+  - inference_id: system_carriage_to_person_bearer
+    source: SystemCarriageRequired
+    target: PersonXMustCarry
+    relation: does_not_imply
+    reason: system-level carriage does not specify a person-level bearer
+  - inference_id: fixpoint_to_authority
+    source: FixpointRequirement
+    target: BearerAuthority
+    relation: does_not_imply
+    reason: functional necessity does not create bearer authority or legitimacy
+  - inference_id: constraint_source_to_legitimacy
+    source: SourceG
+    target: LegitimacyG
+    relation: does_not_imply
+    reason: source or maintenance of G does not establish legitimacy of G
+  - inference_id: dependency_to_warrant
+    source: ExternalPremiseSupport
+    target: OUGHT_account
+    relation: does_not_warrant_by_dependency_alone
+    reason: a dependency relation transmits vulnerability, not automatic warrant
+  - inference_id: uptake_into_logic_baseline
+    source: ActorUptake
+    target: BaselineAttributability_LOGIC
+    relation: not_required_for_baseline
+    reason: VECTOR uptake gates orientation-mediated uplift only; it does not rewrite LOGIC baseline attributability
+  - inference_id: dist_to_reversibility
+    source: DIST
+    target: REV_avail
+    relation: not_equivalent_to
+    reason: derived orientation–enactment separation is not effective reversibility availability
+  enacted_reductions:
+  - target: DIST
+    from: core_component
+    to: derived_supporting_only
+    paper_ref: Appendix F.9
+    pressure_ref:
+      case: E22
+      paper: Appendix E.22 / Chapter 19.5
+  - target: AdultOrientation
+    from: independent_construct_candidate
+    to: supporting_shorthand_only
+    paper_ref: Appendix F.9
+    pressure_ref:
+      paper: Chapter 19.12 deletion / discrimination test
+  - target: DIR
+    from: core
+    to: retain_scope_narrowed
+    paper_ref: Appendix F.9
+    pressure_ref:
+      case: E23
+      paper: Appendix E.23 same-burden rival superiority
+  - target: ROT
+    from: core
+    to: retain_scope_narrowed
+    paper_ref: Appendix F.9
+    pressure_ref:
+      case: E23
+      paper: Appendix E.23 same-burden rival superiority
+  - target: StandaloneVECTOR
+    from: standalone_theory_candidate
+    to: provisional_retain_scope_reduced
+    paper_ref: Appendix F.9
+    pressure_ref:
+      case: E23
+      paper: Appendix E.23 same-burden rival superiority
+    related_domain_deference:
+      case: E21
+      meaning: specialist-domain deference only; not by itself a same-burden standalone scope reduction

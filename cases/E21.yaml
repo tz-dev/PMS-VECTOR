@@ -1,0 +1,293 @@
+case_metadata:
+  case_id: E21
+  paper_ref: Appendix E.21
+  title: Serious Rival Wins
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: Adversarial C
+  load_bearing: true
+  pressure_families:
+    - specialist_rival_pressure
+    - domain_task_deference_pressure
+  constructs_under_test:
+    - RivalSuperiority
+    - StandaloneVECTOR
+    - DIR
+    - ROT
+  theoretical_function: >-
+    Tests whether VECTOR yields a specialist technical burden to a better calibrated
+    domain-specific rival without treating local deference as same-burden reduction
+    of DIR–ROT.
+  artifact_pair:
+    yaml: cases/E21.yaml
+    markdown: cases/E21.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      The specialist rival's victory on queue-delay minimization does not show that
+      it answers questions about legitimacy, burden distribution, hidden options,
+      or practical attribution.
+    - >-
+      Local domain-task deference does not by itself narrow DIR or ROT on VECTOR's
+      own bounded orientation burden and is not the same-burden reduction enacted
+      in E23.
+    - >-
+      VECTOR does not assimilate the calibrated queueing model as "really" a VECTOR
+      model merely because the rival result can be described as a local superiority
+      relation.
+    - >-
+      Superiority for this specialist burden does not establish universal
+      superiority of the queueing model over VECTOR.
+
+vector_record:
+  reference:
+    object: >-
+      The declared technical burden of choosing among staffing schedules by expected
+      queue delay under measured arrival and service distributions while meeting a
+      fixed staffing constraint.
+    object_type: specialist domain-task method comparison
+
+  frame:
+    included:
+      - A service team choosing among staffing schedules for a measured arrival pattern.
+      - Measured arrival rates and service-time distributions.
+      - A fixed staffing constraint.
+      - Expected queue delay as the declared technical objective.
+      - A calibrated domain-specific queueing model with out-of-sample queue-delay predictions for the candidate schedules.
+      - >-
+        VECTOR's ability to reconstruct role exposure, option availability,
+        trade-offs, staffing constraints, and consequences as broader contextual
+        distinctions.
+    excluded:
+      - Any claim that the queueing model answers legitimacy questions.
+      - Any claim that the queueing model exhausts burden distribution, hidden options, or practical attribution.
+      - Any requirement that the specialist rival use DIR, ROT, option topology, or PMS operators.
+      - Any conversion of local domain-task superiority into universal method superiority.
+      - Any E23-style same-burden reduction of DIR, ROT, or Standalone VECTOR.
+
+  question:
+    scope: >-
+      Which analytical architecture should carry the primary burden of determining
+      which staffing schedule minimizes expected queue delay under the measured
+      arrival and service distributions while meeting the fixed staffing constraint?
+    claim_ceiling: >-
+      The case can establish only local method superiority and domain-task deference
+      for this specialist queue-delay burden. It does not establish universal
+      superiority, answer broader normative or praxeological questions, or enact a
+      same-burden reduction of DIR, ROT, or Standalone VECTOR.
+
+  position:
+    perspective: >-
+      Service-team decision perspective focused on the narrow technical queue-delay
+      objective, with the specialist rival applied to the same candidate schedules
+      and measured operating conditions.
+    temporal_position: >-
+      At the staffing-schedule choice point represented by the supplied measured
+      arrival pattern, service-time distributions, and fixed staffing constraint.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    VECTOR should retain primary analytical status for the declared queue-delay
+    minimization burden because it can reconstruct the staffing constraint, role
+    exposure, option availability, trade-offs, and consequences of the candidate
+    schedules.
+
+  dir:
+    relation: >-
+      For the declared specialist burden, primary analytic status shifts from VECTOR
+      to the calibrated domain-specific queueing model: the rival is locally superior
+      for queue-delay minimization under the supplied conditions.
+    comparison_basis: >-
+      Direct discrimination of candidate staffing schedules by expected queue delay
+      under the measured arrival rates, service-time distributions, and fixed staffing
+      constraint, including the rival's supplied out-of-sample predictions.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+        - calibrated domain-specific queueing model
+        - measured arrival rates and service-time distributions
+        - out-of-sample queue-delay predictions
+      external_premises:
+        - >-
+          The supplied arrival-rate and service-time measurements are adequate inputs
+          for the bounded queue-delay comparison represented by the fixture.
+        - >-
+          The supplied out-of-sample queue-delay predictions provide the relevant
+          technical discrimination among the candidate schedules for this burden.
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        If the queueing model did not discriminate the candidate schedules directly
+        under the measured distributions and staffing constraint, the claimed local
+        rival superiority would not follow.
+      - >-
+        If the declared question materially included legitimacy, burden distribution,
+        hidden options, or practical attribution, the specialist queue-delay burden
+        would no longer exhaust the relevant comparison.
+
+  calibration:
+    threshold: null
+    basis: >-
+      The rival is supplied as a calibrated domain-specific queueing model using the
+      measured arrival rates, service-time distributions, staffing limits, and
+      out-of-sample queue-delay prediction. No additional VECTOR threshold is
+      generated by the case.
+    domain_source: calibrated domain-specific queueing analysis
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: rival_model
+        vulnerability: >-
+          VECTOR may be unnecessary as the primary architecture for a narrow
+          specialist burden when a calibrated domain model directly predicts the
+          target variable with stronger task-specific discrimination.
+        purpose: >-
+          Test whether VECTOR can yield the declared queue-delay question to a
+          specialist rival without assimilating the rival or converting local
+          deference into a same-burden core reduction.
+        changed:
+          - >-
+            The primary analytical architecture changes from VECTOR reconstruction
+            to a calibrated queueing model operating in its own technical vocabulary.
+        held_constant:
+          - The candidate staffing schedules.
+          - The measured arrival rates.
+          - The service-time distributions.
+          - The fixed staffing constraint.
+          - The declared expected queue-delay objective.
+        reference_continuity: true
+        material_distinctness: >-
+          The rival directly predicts queue delay from domain-specific measured
+          distributions and staffing limits; it does not redescribe the burden using
+          DIR, ROT, option topology, or PMS operators.
+        loss_route: >-
+          If the rival performs the declared discriminative work more directly and
+          with stronger domain calibration while VECTOR's broader distinctions do not
+          improve the queue-delay prediction, VECTOR loses primary status for this
+          bounded technical task.
+        result: collapse
+        robustness_relevance: >-
+          The baseline claim to primary VECTOR ownership collapses locally. The loss
+          establishes specialist-domain deference only; it does not pressure DIR or
+          ROT on VECTOR's own same-burden orientation task.
+    untested_relevant: []
+    stop_basis: >-
+      The declared question is deliberately limited to queue-delay minimization, and
+      the supplied calibrated rival directly discriminates that target under the same
+      schedules and operating constraints. Broader VECTOR questions would constitute
+      different burdens rather than claim-critical missing tests of this one.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals:
+      - >-
+        A calibrated domain-specific queueing model supplied with measured arrival
+        rates, service-time distributions, and staffing limits. It produces
+        out-of-sample predictions for queue delay that discriminate the candidate
+        schedules directly while remaining in its own technical vocabulary.
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS Base governs PMS operator semantics and does not warrant VECTOR ownership
+        of specialist technical burdens.
+      - >-
+        PMS-VECTOR requires serious rivals to retain real winning conditions and
+        records E21 as specialist-domain deference rather than same-burden DIR–ROT
+        scope reduction.
+      - >-
+        The queueing model's calibration and predictive discrimination remain
+        external domain warrant; translating the rival result into VECTOR notation
+        would not make that warrant endogenous to VECTOR.
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      For the declared queue-delay minimization burden, the calibrated domain-specific
+      queueing model should carry primary analytic status and VECTOR should yield
+      locally. VECTOR may still address broader role, option, consequence, legitimacy,
+      or attribution questions only when those become part of a different declared
+      burden.
+    revisions:
+      - >-
+        Baseline claim to primary VECTOR ownership for the specialist queue-delay
+        task -> local domain-task deference to the calibrated queueing model.
+    scope: >-
+      The result is restricted to the narrow specialist burden of minimizing expected
+      queue delay under the supplied measured distributions and fixed staffing
+      constraint. It does not enact architecture-level narrowing of DIR, ROT, or
+      Standalone VECTOR.
+    residue:
+      - >-
+        Questions about legitimacy, burden distribution, hidden options, role-specific
+        costs, and practical attribution remain outside the rival's declared technical
+        objective.
+      - >-
+        Local specialist superiority does not establish that the queueing model is
+        superior for broader or same-burden orientation questions.
+    stop_reason: >-
+      The calibrated domain-specific rival performs the declared technical
+      discrimination more directly and with stronger task-specific calibration, while
+      VECTOR's broader machinery does not improve the queue-delay prediction for this
+      question. The responsible result is local domain-task deference, not rival
+      assimilation or E23-style core scope reduction.

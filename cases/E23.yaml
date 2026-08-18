@@ -1,0 +1,399 @@
+case_metadata:
+  case_id: E23
+  paper_ref: Appendix E.23
+  title: Same-Burden Core Rival — Calibrated MCDA Reduces DIR–ROT Scope
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: Adversarial F
+  load_bearing: true
+  pressure_families:
+    - same_burden_rival_pressure
+    - calibration_pressure
+    - sensitivity_pressure
+    - scope_reduction_pressure
+  constructs_under_test:
+    - DIR
+    - ROT
+    - StandaloneVECTOR
+    - Calibration
+    - RivalSuperiority
+  theoretical_function: >-
+    Tests whether an externally calibrated non-PMS rival addressing the same
+    bounded orientation burden can supply the primary discrimination and thereby
+    pressure DIR, ROT, and standalone VECTOR scope.
+  artifact_pair:
+    yaml: cases/E23.yaml
+    markdown: cases/E23.md
+  architecture_effect:
+    applies: true
+    targets:
+      - DIR
+      - ROT
+      - StandaloneVECTOR
+    effect: >-
+      DIR: core -> retain_scope_narrowed; ROT: core -> retain_scope_narrowed;
+      StandaloneVECTOR: standalone_theory_candidate ->
+      provisional_retain_scope_reduced.
+  non_implications:
+    - >-
+      The case does not show that MCDA replaces VECTOR across non-commensurable,
+      poorly calibrated, category-sensitive, or Non-Capture cases.
+    - The case does not show that every perspective can be represented as a weight.
+    - A decision score does not become moral authority.
+    - The case does not establish the legitimacy of the externally supplied priority range.
+    - >-
+      Same-burden rival superiority in E23 is not the specialist-domain deference
+      recorded in E21.
+
+vector_record:
+  reference:
+    object: >-
+      The bounded choice between public-service intake Procedures A and B for a
+      six-month pilot under the supplied operational and affected-role criteria
+      and the externally elicited priority range.
+    object_type: externally calibrated same-burden multi-criteria orientation comparison
+
+  frame:
+    included:
+      - A public service choosing between Procedures A and B for a six-month pilot.
+      - Both procedures are technically feasible.
+      - The operating team and affected service users are included in the declared frame.
+      - >-
+        Externally supplied normalized 0–100 performance values for processing
+        efficiency, error reduction, accessibility, and reversibility, with
+        higher values better for this case.
+      - >-
+        Procedure A values: processing efficiency 95, error reduction 65,
+        accessibility 55, reversibility 50.
+      - >-
+        Procedure B values: processing efficiency 80, error reduction 85,
+        accessibility 90, reversibility 90.
+      - >-
+        Externally elicited priority path w(lambda) =
+        (0.55-0.25lambda, 0.15+0.05lambda, 0.15+0.10lambda,
+        0.15+0.10lambda) for lambda in [0,1].
+      - >-
+        For this fixture only, the four declared criteria are treated as
+        commensurable on the supplied normalized scale.
+    excluded:
+      - Any claim that VECTOR generated or validated the criterion values.
+      - Any claim that VECTOR generated or validated the elicited priority range.
+      - Any extension of the supplied commensurability assumption beyond this bounded case.
+      - Any conversion of the weighted decision result into moral authority.
+      - Any claim of universal MCDA superiority over VECTOR.
+
+  question:
+    scope: >-
+      Which procedure is better supported for the pilot under the declared
+      operational and affected-role criteria, while preserving the externally
+      elicited priority range attached to those criteria?
+    claim_ceiling: >-
+      The record may carry only the bounded externally calibrated orientation
+      for this commensurable multi-criteria fixture and the resulting VECTOR
+      scope reduction. It does not establish the legitimacy of the supplied
+      priorities, universal commensurability, universal MCDA superiority, or
+      moral authority.
+
+  position:
+    perspective: >-
+      Initial operations-centered perspective, then affected-role,
+      reversibility-sensitive, and same-burden rival pressure over the same
+      bounded pilot question.
+    temporal_position: >-
+      Pre-pilot selection for the declared six-month public-service intake trial.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    From the initial operations perspective, Procedure A is directionally
+    preferred because it has the highest supplied processing-efficiency value:
+    B ≺_{V,C_ops} A.
+
+  dir:
+    relation: >-
+      The initial operations-centered relation B ≺_{V,C_ops} A collapses. Under
+      the supplied external calibration, the carried bounded relation is
+      A ≺_{V,Q} B.
+    comparison_basis: >-
+      The four externally supplied commensurable normalized criteria and the
+      externally elicited one-parameter priority range lambda in [0,1], evaluated
+      by the same-burden MCDA sensitivity model.
+    warrant:
+      source_types:
+        - supplied external decision record
+        - externally supported criterion performance
+        - externally elicited criterion priorities
+        - externally calibrated decision model
+      external_premises:
+        - >-
+          The four supplied criterion values are externally supported and may be
+          treated as normalized performance inputs for this bounded decision record.
+        - >-
+          The four criteria are genuinely commensurable for this fixture on the
+          declared common 0–100 scale.
+        - >-
+          The elicited priority path over lambda in [0,1] is externally warranted
+          strongly enough to be assumed for the case comparison.
+        - >-
+          The declared criterion set and affected-role inclusion are adequate for
+          the bounded pilot question under test.
+      unresolved_dependencies:
+        - >-
+          VECTOR does not establish the legitimacy of the priority range merely
+          because the range is supplied and used in the fixture.
+    critical_regressions:
+      - >-
+        Rival superiority would fail if a claim-critical affected role or
+        consequence were omitted from the criterion set.
+      - >-
+        Rival superiority would fail if the normalized scores lacked external
+        support or if the weight path were analyst-invented rather than externally
+        elicited.
+      - >-
+        Rival superiority would fail if a material relation could not responsibly
+        be represented on the declared commensurable scale.
+
+  calibration:
+    threshold: >-
+      Admitted external sensitivity parameter lambda in [0,1]. Extending the same
+      linear trade-off path outside the admitted range yields a score switch at
+      approximately lambda* = -0.49.
+    basis: >-
+      Externally supplied normalized criterion values plus the organization-elicited
+      priority path w(lambda). Procedure B is ahead at both admitted endpoints,
+      so the linear score difference remains positive throughout [0,1].
+    domain_source: >-
+      Supplied external public-service decision record and externally elicited
+      criterion-priority range.
+    competing_calibration: >-
+      No supplied competing calibration inside lambda in [0,1] reverses the
+      ordering. The modeled switch appears only outside the admitted range at
+      approximately lambda* = -0.49.
+    unresolved: >-
+      VECTOR exposes but does not itself warrant the substantive legitimacy of
+      the supplied commensurability and priority calibration.
+
+  rot_profile:
+    applied:
+      - family: actor_affected_role
+        vulnerability: >-
+          The operations-centered DIR may depend on treating processing
+          efficiency as if it exhausted the bounded orientation burden.
+        purpose: >-
+          Test whether the initial direction survives when the same procedures
+          are examined from the affected-role side of the declared frame.
+        changed:
+          - >-
+            Perspective shifts from operations-centered processing efficiency to
+            affected service users and the supplied accessibility/error relations.
+        held_constant:
+          - Procedures A and B.
+          - The six-month pilot question.
+          - The supplied criterion values.
+          - The externally elicited priority range.
+          - The declared commensurability assumption for this fixture.
+        reference_continuity: true
+        material_distinctness: >-
+          Procedure B is substantially better on the supplied accessibility and
+          error-reduction criteria even though Procedure A is better on processing
+          efficiency.
+        loss_route: >-
+          If the affected-role relations are claim-critical under the declared
+          calibration, the initial operations-centered direction toward A can
+          weaken or collapse.
+        result: variant
+        robustness_relevance: >-
+          The rotation exposes a real vulnerability in the baseline DIR but does
+          not by itself supply the external criterion weighting required to carry
+          the broader direction.
+      - family: reversibility
+        vulnerability: >-
+          The operations-centered DIR may omit the declared reversal-performance
+          difference between the procedures.
+        purpose: >-
+          Test whether reversal performance creates claim-critical counterpressure
+          against the initial efficiency-centered direction.
+        changed:
+          - Focal emphasis shifts to the supplied reversibility criterion.
+        held_constant:
+          - Procedures A and B.
+          - The six-month pilot question.
+          - The supplied normalized criterion values.
+          - The externally elicited priority range.
+        reference_continuity: true
+        material_distinctness: >-
+          Procedure B has supplied reversibility performance 90 compared with 50
+          for Procedure A on the case-specific normalized scale.
+        loss_route: >-
+          If reversal performance carries sufficient externally calibrated
+          priority, the initial efficiency-centered direction toward A can fail.
+        result: variant
+        robustness_relevance: >-
+          The rotation adds material counterpressure but does not endogenously
+          generate the calibration needed to aggregate the declared criteria.
+      - family: rival_model
+        vulnerability: >-
+          DIR–ROT may add no primary standalone discrimination once the same
+          bounded orientation burden is already carried by an externally calibrated
+          sensitivity architecture.
+        purpose: >-
+          Test whether the calibrated weighted-sum MCDA can answer the same
+          bounded question more directly while preserving the admitted priority
+          variation and exposing the condition of reversal.
+        changed:
+          - >-
+            The analytical architecture changes from VECTOR DIR–ROT to a
+            non-PMS weighted-sum MCDA with one-parameter sensitivity analysis.
+        held_constant:
+          - Procedures A and B.
+          - The bounded pilot question.
+          - The four normalized criterion values.
+          - The externally elicited priority range lambda in [0,1].
+          - The declared commensurability assumption.
+        reference_continuity: true
+        material_distinctness: >-
+          The rival remains in its own vocabulary of alternatives, normalized
+          criteria, weights, aggregate scores, and sensitivity rather than being
+          translated into VECTOR as a condition of comparison.
+        loss_route: >-
+          If the rival carries the same directional and priority-sensitivity
+          burden with less unsupported machinery, VECTOR must yield primary status
+          for that bounded class.
+        result: collapse
+        robustness_relevance: >-
+          The rival defeats the initial operations-centered baseline and directly
+          triggers current scope reduction for DIR, ROT, and standalone VECTOR.
+    untested_relevant: []
+    stop_basis: >-
+      The same-burden rival evaluates the complete supplied calibration over the
+      admitted interval, carries Procedure B throughout that interval, and makes
+      the reversal condition explicit. The declared burden can therefore close at
+      rival superiority and scope reduction without treating that closure as finality.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: >-
+      The external decision record supplies case-specific normalized
+      reversibility performance of 50 for Procedure A and 90 for Procedure B.
+      These are external criterion inputs for this fixture, not a universal
+      VECTOR reversibility metric.
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals:
+      - >-
+        Calibrated weighted-sum MCDA with one-parameter sensitivity analysis.
+        It keeps its own vocabulary, computes S(A|0)=77.75 and S(B|0)=83.75,
+        computes S(A|1)=67.75 and S(B|1)=86.00, preserves B as preferred for
+        every lambda in [0,1], and exposes the extended-path switch at
+        approximately lambda*=-0.49.
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS Base governs PMS operator semantics and application boundaries; Base
+        openness or portability supplies no warrant for VECTOR's E23 claim.
+      - >-
+        PMS-VECTOR owns the same-burden rival scope boundary and the enacted E23
+        reductions of DIR, ROT, and standalone VECTOR scope.
+      - >-
+        The criterion values, commensurability assumption, and priority path are
+        external decision inputs. Re-expression of their result in DIR notation
+        does not convert them into endogenous VECTOR warrant.
+    non_compensation: >-
+      VECTOR's default non-compensation rule is not bypassed by unexplained
+      aggregation here: this fixture explicitly assumes external warrant for the
+      four criteria's commensurability and calibration. If that assumption fails
+      for a material relation, the weighted aggregation no longer carries the
+      same-burden result.
+    critical_open_tests:
+      - A claim-critical affected role is omitted from the criteria.
+      - The normalized criterion values lack external support.
+      - The admitted weight path is invented or selected only to protect one outcome.
+      - A material relation cannot responsibly be represented on the commensurable scale.
+      - >-
+        VECTOR exposes an omitted relation, option illusion, false
+        commensurability assumption, or claim-critical consequence outside the
+        supplied criterion set.
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      For the declared calibrated question, Procedure B is better supported than
+      Procedure A throughout the externally admitted lambda interval: A ≺_{V,Q} B.
+      VECTOR may record this as a bounded DIR only while preserving the external
+      MCDA calibration as its warrant source.
+    revisions:
+      - 'Initial operations-centered DIR: B ≺_{V,C_ops} A -> Collapse.'
+      - 'Carried bounded relation under external calibration: A ≺_{V,Q} B.'
+    scope: >-
+      The result is limited to externally calibrated, genuinely commensurable
+      multi-criteria orientation of the kind instantiated here. In that class,
+      VECTOR cedes primary directional and perspectival status unless DIR or ROT
+      exposes material discrimination not already supplied by the rival.
+    residue:
+      - >-
+        The legitimacy of the externally elicited priority range remains outside
+        VECTOR and is not established by the decision score.
+      - >-
+        Rival superiority remains conditional on supported criterion values,
+        supported calibration, adequate affected-role representation, and genuine
+        commensurability for the bounded question.
+      - >-
+        VECTOR may still audit omitted roles, false commensurability, option
+        illusion, claim-critical consequences outside the criterion set, or later
+        practical-attribution questions that exceed the rival's decision burden.
+    stop_reason: >-
+      The non-PMS rival addresses the same bounded orientation burden, carries
+      Procedure B throughout the admitted calibration interval, and exposes the
+      reversal condition with less unsupported machinery. The responsible result
+      is bounded orientation plus enacted scope reduction, not protection of the
+      original DIR–ROT standalone claim.

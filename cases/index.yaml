@@ -1,0 +1,559 @@
+# =============================================================================
+# PMS-VECTOR — APPENDIX E CASE INDEX
+# =============================================================================
+#
+# Role:
+#   Paper-linked inventory and Reader navigation registry for Appendix E.
+#
+# Boundary:
+#   index = inventory / navigation
+#   case YAML = structured case record
+#   case Markdown = human-readable case companion
+#   paper = theoretical authority
+#
+#   case count != evidential weight
+#   case suite != empirical validation
+#   case outcome != VECTOR validity
+#
+# Pressure-family labels below are navigational classifications, not a new
+# theoretical taxonomy. Local case results and architecture effects belong in
+# the individual case artifacts, not in this index.
+# =============================================================================
+
+case_index:
+  meta:
+    artifact: PMS-VECTOR Appendix E Case Index
+    role: paper-linked inventory and Reader navigation registry
+    paper_source: PMS-VECTOR.md — Appendix E
+    case_template: model/Case.template.yaml
+    vector_record_template: model/VECTOR-Record.template.yaml
+    model_reference: model/PMS-VECTOR.yaml
+    hard_pms_dependency: PMS.yaml
+    paper_linked_case_count: 23
+    case_count_is_evidence_weight: false
+    case_suite_is_empirical_validation: false
+    index_is_theoretical_authority: false
+    pressure_families_are_navigation_labels: true
+    constructs_under_test_are_validation_claims: false
+    local_case_result_stored_here: false
+    architecture_effect_stored_here: false
+    notes:
+    - The index inventories Appendix E; case YAML files carry structured case content.
+    - Pressure-family labels support navigation and do not constitute a new theoretical taxonomy.
+    - A collapse, rival victory, suspension, reduction, or Non-Capture may be the correct discriminative case result.
+    - case count != evidential weight
+    - case suite != empirical validation
+  formats:
+    full_minimal_case: Develops enough structure to show why the output changes.
+    micro_countercase: Isolates a tempting misclassification and the correction VECTOR must make.
+  adversarial_subset:
+    paper_declared_cases:
+    - E01
+    - E04
+    - E11
+    - E21
+    - E22
+    - E23
+    note: E04 is explicitly included in the paper adversarial subset although its Type line carries no lettered
+      Adversarial label; no missing label is inferred.
+  load_bearing_subset:
+    model_declared_cases:
+    - E20
+    - E21
+    - E22
+    - E23
+    roles:
+      E20: Non-Capture
+      E21: specialist rival superiority / domain-task deference
+      E22: DIST necessity test and architecture reduction
+      E23: same-burden rival superiority and DIR/ROT/standalone scope reduction
+  cases:
+  - case_id: E01
+    paper_ref: Appendix E.1
+    title: Rotation Confirms DIR under Serious Rival Pressure
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: Adversarial A
+    load_bearing: false
+    pressure_families:
+    - rotation_pressure
+    - serious_rival_pressure
+    - non_compensation_pressure
+    constructs_under_test:
+    - DIR
+    - ROT
+    - RobustOrientation
+    - SeriousRivalPressure
+    - NonCompensation
+    theoretical_function: Tests whether a bounded DIR can survive materially relevant ROT and a serious rival with
+      a credible route to win without assimilating the rival into VECTOR.
+    artifact_pair:
+      yaml: cases/E01.yaml
+      markdown: cases/E01.md
+  - case_id: E02
+    paper_ref: Appendix E.2
+    title: Rotation Collapses DIR
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - rotation_pressure
+    - claim_regression_pressure
+    - non_compensation_pressure
+    constructs_under_test:
+    - DIR
+    - ROT
+    - Collapse
+    - Revision
+    theoretical_function: Tests whether affected-role ROT can expose a claim-critical externalized load and collapse
+      an initial DIR rather than preserve it through revision.
+    artifact_pair:
+      yaml: cases/E02.yaml
+      markdown: cases/E02.md
+  - case_id: E03
+    paper_ref: Appendix E.3
+    title: Incomparability
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - incomparability_pressure
+    - total_order_pressure
+    constructs_under_test:
+    - DIR
+    - Incomparability
+    theoretical_function: Tests whether the architecture preserves incomparability when no warranted priority relation
+      supports dominance, rather than misclassifying the result as equality.
+    artifact_pair:
+      yaml: cases/E03.yaml
+      markdown: cases/E03.md
+  - case_id: E04
+    paper_ref: Appendix E.4
+    title: Trade-Off
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - tradeoff_pressure
+    - total_order_pressure
+    - non_compensation_pressure
+    constructs_under_test:
+    - DIR
+    - TradeOff
+    - NonCompensation
+    theoretical_function: Tests whether opposed warranted relations remain a Trade-Off when no warranted rule licenses
+      their collapse into a total order.
+    artifact_pair:
+      yaml: cases/E04.yaml
+      markdown: cases/E04.md
+  - case_id: E05
+    paper_ref: Appendix E.5
+    title: Premature Enactment
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - enactment_timing_pressure
+    - correction_space_pressure
+    - reversibility_pressure
+    constructs_under_test:
+    - DIR
+    - ROT
+    - DIST
+    - Reversibility
+    - Timing
+    theoretical_function: Tests the distinction between a robust directional result and the timing of enactment
+      when cheap, materially relevant correction remains available.
+    artifact_pair:
+      yaml: cases/E05.yaml
+      markdown: cases/E05.md
+  - case_id: E06
+    paper_ref: Appendix E.6
+    title: Missed Window under Excessive Delay / Preserved Analytical Distance
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - timing_window_pressure
+    - option_status_pressure
+    - dist_pressure
+    constructs_under_test:
+    - Timing
+    - OptionSpace
+    - DIST
+    theoretical_function: Tests whether continued analysis can destroy a real option window and whether preserved
+      analytical distance must remain distinct from preserved practical possibility.
+    artifact_pair:
+      yaml: cases/E06.yaml
+      markdown: cases/E06.md
+  - case_id: E07
+    paper_ref: Appendix E.7
+    title: Option Invisibility
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - option_visibility_pressure
+    - rotation_pressure
+    constructs_under_test:
+    - OptionSpace
+    - OptionInvisibility
+    - ROT
+    theoretical_function: Tests whether ROT can reveal an already available actionable path without misclassifying
+      increased legibility as creation of a new option.
+    artifact_pair:
+      yaml: cases/E07.yaml
+      markdown: cases/E07.md
+  - case_id: E08
+    paper_ref: Appendix E.8
+    title: Option Illusion
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - option_status_pressure
+    - evidence_status_pressure
+    - effective_capacity_pressure
+    constructs_under_test:
+    - OptionSpace
+    - OptionIllusion
+    - EffectiveCapacity
+    theoretical_function: Tests whether a visible and superficially plausible alternative is rejected as effectively
+      unavailable when authority, access, means, timing, or dependencies are missing.
+    artifact_pair:
+      yaml: cases/E08.yaml
+      markdown: cases/E08.md
+  - case_id: E09
+    paper_ref: Appendix E.9
+    title: Special-Case Probe Produces Orientation
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - special_case_probe_pressure
+    - frame_pressure
+    - option_status_pressure
+    constructs_under_test:
+    - OptionSpace
+    - DIR
+    - Frame
+    theoretical_function: Tests whether a special-case probe can identify the asymmetry blocking a current option
+      without converting the hypothetical option into present availability.
+    artifact_pair:
+      yaml: cases/E09.yaml
+      markdown: cases/E09.md
+  - case_id: E10
+    paper_ref: Appendix E.10
+    title: Real Option-Space Transformation
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - option_space_transformation_pressure
+    - second_order_agency_pressure
+    - mechanism_pressure
+    constructs_under_test:
+    - OptionSpace
+    - SecondOrderAgency
+    theoretical_function: Tests whether a supported mechanism with effective authority can materially change option
+      relations rather than merely relabel or imagine the field.
+    artifact_pair:
+      yaml: cases/E10.yaml
+      markdown: cases/E10.md
+  - case_id: E11
+    paper_ref: Appendix E.11
+    title: Second-Order Agency Claim Collapses
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: Adversarial D
+    load_bearing: false
+    pressure_families:
+    - second_order_agency_pressure
+    - mechanism_pressure
+    - authority_capacity_pressure
+    - timing_window_pressure
+    constructs_under_test:
+    - SecondOrderAgency
+    - EffectiveCapacity
+    - OptionSpace
+    - Collapse
+    theoretical_function: Tests whether a plausible field-transformation claim collapses when the required authority,
+      capacity, dependencies, or temporal window are not actually available.
+    artifact_pair:
+      yaml: cases/E11.yaml
+      markdown: cases/E11.md
+  - case_id: E12
+    paper_ref: Appendix E.12
+    title: Distributed Agency
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - distributed_agency_pressure
+    - responsibility_boundary_pressure
+    constructs_under_test:
+    - DistributedAgency
+    - SecondOrderAgency
+    - EffectiveCapacity
+    theoretical_function: Tests whether effective transformative capacity may exist only in an actor configuration
+      while remaining distinct from equal individual responsibility.
+    artifact_pair:
+      yaml: cases/E12.yaml
+      markdown: cases/E12.md
+  - case_id: E13
+    paper_ref: Appendix E.13
+    title: Supported Indirect Cost versus Invented Cost
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - consequence_evidence_pressure
+    - cost_inflation_pressure
+    - unknown_residue_pressure
+    constructs_under_test:
+    - ConsequenceTopology
+    - EvidenceStatus
+    - UnknownResidue
+    theoretical_function: Tests whether traceably inferred downstream cost is carried while unsupported hidden-cost
+      assertions remain Unknown/Residual rather than becoming positive cost claims.
+    artifact_pair:
+      yaml: cases/E13.yaml
+      markdown: cases/E13.md
+  - case_id: E14
+    paper_ref: Appendix E.14
+    title: '`OUGHT_account` — Orientation-Mediated Attribution Increase'
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - orientation_uptake_pressure
+    - structural_attributability_pressure
+    - logic_baseline_boundary_pressure
+    constructs_under_test:
+    - OUGHT_account
+    - OrientationUptake
+    - StructuralAttributability
+    - EffectiveCapacity
+    theoretical_function: Tests orientation-mediated change in practical attribution while preserving PMS-LOGIC
+      baseline structural attributability as an independent source relation.
+    artifact_pair:
+      yaml: cases/E14.yaml
+      markdown: cases/E14.md
+  - case_id: E15
+    paper_ref: Appendix E.15
+    title: '`OUGHT_constraint`'
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - constraint_pressure
+    - carriage_pressure
+    - authority_boundary_pressure
+    constructs_under_test:
+    - OUGHT_constraint
+    - ConstraintArchitecture
+    - SystemCarriageRequired
+    theoretical_function: Tests reconstruction of a maintained constraint and its effective response class without
+      converting system carriage, source, or functional necessity into bearer authority or moral legitimacy.
+    artifact_pair:
+      yaml: cases/E15.yaml
+      markdown: cases/E15.md
+  - case_id: E16
+    paper_ref: Appendix E.16
+    title: Tragic Constraint
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - tragic_constraint_pressure
+    - option_status_pressure
+    - transformation_pressure
+    constructs_under_test:
+    - TragicConstraint
+    - ConstraintArchitecture
+    - OptionSpace
+    - SecondOrderAgency
+    theoretical_function: Tests an evidentially bounded tragic constraint in which every evidenced effective response
+      carries serious residual loss while no effective non-lossful transformation is available in time.
+    artifact_pair:
+      yaml: cases/E16.yaml
+      markdown: cases/E16.md
+  - case_id: E17
+    paper_ref: Appendix E.17
+    title: Fixpoint without Authority
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - fixpoint_pressure
+    - authority_boundary_pressure
+    constructs_under_test:
+    - FixpointRequirement
+    - BearerAuthority
+    theoretical_function: Tests whether a functional fixpoint requirement can be real while failing to establish
+      unique bearer authority.
+    artifact_pair:
+      yaml: cases/E17.yaml
+      markdown: cases/E17.md
+  - case_id: E18
+    paper_ref: Appendix E.18
+    title: Revision Is Not Survival
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - claim_revision_pressure
+    - rival_pressure
+    - rotation_pressure
+    constructs_under_test:
+    - Revision
+    - Survival
+    - RobustOrientation
+    - Collapse
+    theoretical_function: Tests whether a broad claim may collapse and a narrower revised claim later survive without
+      retrospectively reporting the original claim as having survived.
+    artifact_pair:
+      yaml: cases/E18.yaml
+      markdown: cases/E18.md
+  - case_id: E19
+    paper_ref: Appendix E.19
+    title: Echo Convergence
+    case_format: micro_countercase
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: false
+    pressure_families:
+    - convergence_pressure
+    - provenance_dependency_pressure
+    constructs_under_test:
+    - Convergence
+    - ProvenanceAudit
+    - DIR_R
+    theoretical_function: Tests whether repeated directional outputs sharing one untested upstream assumption remain
+      dependent echoes rather than independent warrants.
+    artifact_pair:
+      yaml: cases/E19.yaml
+      markdown: cases/E19.md
+  - case_id: E20
+    paper_ref: Appendix E.20
+    title: Non-Capture
+    case_format: full_minimal_case
+    adversarial:
+      marked: false
+      paper_label: null
+    load_bearing: true
+    pressure_families:
+    - type_boundary_pressure
+    - non_capture_pressure
+    - person_worth_boundary_pressure
+    constructs_under_test:
+    - NonCapture
+    - ReferenceObject
+    - PersonWorthBoundary
+    theoretical_function: Tests whether an invalid person-ranking request is refused as Non-Capture rather than
+      repaired into an intrinsic person score; a retyped bounded question is a new claim.
+    artifact_pair:
+      yaml: cases/E20.yaml
+      markdown: cases/E20.md
+  - case_id: E21
+    paper_ref: Appendix E.21
+    title: Serious Rival Wins
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: Adversarial C
+    load_bearing: true
+    pressure_families:
+    - specialist_rival_pressure
+    - domain_task_deference_pressure
+    constructs_under_test:
+    - RivalSuperiority
+    - StandaloneVECTOR
+    - DIR
+    - ROT
+    theoretical_function: Tests whether VECTOR yields a specialist technical burden to a better calibrated domain-specific
+      rival without treating local deference as same-burden reduction of DIR–ROT.
+    artifact_pair:
+      yaml: cases/E21.yaml
+      markdown: cases/E21.md
+  - case_id: E22
+    paper_ref: Appendix E.22
+    title: DIST Necessity Test — Architecture Reduction
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: Adversarial E
+    load_bearing: true
+    pressure_families:
+    - architecture_necessity_pressure
+    - dist_redundancy_pressure
+    - reversibility_pressure
+    constructs_under_test:
+    - DIST
+    - DIR
+    - ROT
+    - Reversibility
+    theoretical_function: Tests whether DIST contributes indispensable discrimination beyond its source relations;
+      the case bears directly on core architecture rather than only a local output.
+    artifact_pair:
+      yaml: cases/E22.yaml
+      markdown: cases/E22.md
+  - case_id: E23
+    paper_ref: Appendix E.23
+    title: Same-Burden Core Rival — Calibrated MCDA Reduces DIR–ROT Scope
+    case_format: full_minimal_case
+    adversarial:
+      marked: true
+      paper_label: Adversarial F
+    load_bearing: true
+    pressure_families:
+    - same_burden_rival_pressure
+    - calibration_pressure
+    - sensitivity_pressure
+    - scope_reduction_pressure
+    constructs_under_test:
+    - DIR
+    - ROT
+    - StandaloneVECTOR
+    - Calibration
+    - RivalSuperiority
+    theoretical_function: Tests whether an externally calibrated non-PMS rival addressing the same bounded orientation
+      burden can supply the primary discrimination and thereby pressure DIR, ROT, and standalone VECTOR scope.
+    artifact_pair:
+      yaml: cases/E23.yaml
+      markdown: cases/E23.md

@@ -1,0 +1,225 @@
+case_metadata:
+  case_id: E17
+  paper_ref: Appendix E.17
+  title: Fixpoint without Authority
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - fixpoint_pressure
+    - authority_boundary_pressure
+  constructs_under_test:
+    - FixpointRequirement
+    - BearerAuthority
+  theoretical_function: >-
+    Tests whether a functional fixpoint requirement can be real while failing to
+    establish unique bearer authority.
+  artifact_pair:
+    yaml: cases/E17.yaml
+    markdown: cases/E17.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      FixpointRequirement does not imply BearerAuthority.
+    - >-
+      The need for some stabilizing fixpoint function does not establish that
+      person A should rule or that one particular bearer is legitimate.
+
+vector_record:
+  reference:
+    object: >-
+      A coordination process that cannot reach joint integration but must still
+      produce an operational output before a deadline.
+    object_type: functional fixpoint-requirement claim
+
+  frame:
+    included:
+      - Joint integration cannot be reached in the coordination process.
+      - An operational output must still be produced before a deadline.
+      - Some fixpoint function is therefore required for stabilization and output.
+      - A rotating designated coordinator can carry the fixpoint function.
+      - A pre-agreed escalation protocol can also carry the fixpoint function.
+    excluded:
+      - Any inference that the functional requirement itself establishes person A's authority to rule.
+      - Any inference that a particular bearer is legitimate merely because a fixpoint function is required.
+      - Any assumption that the fixpoint must be personified rather than carried by a role, procedure, or institutional mechanism.
+
+  question:
+    scope: >-
+      Does the non-integrable but deadline-bound coordination process require a
+      fixpoint function, and does that functional requirement establish authority
+      for a particular bearer?
+    claim_ceiling: >-
+      The case may record FixpointRequirement and the existence of more than one
+      possible carrier. It does not establish BearerAuthority, person A's right to
+      rule, or the legitimacy of a particular fixpoint arrangement.
+
+  position:
+    perspective: >-
+      The coordination system or institutional process that must produce an
+      operational output despite failed joint integration.
+    temporal_position: >-
+      The bounded pre-deadline scene in which delay is no longer neutral and a
+      stabilizing output function is required.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Joint integration is unavailable while an operational output remains required
+    before the deadline; therefore some fixpoint function is required. The case
+    tests whether that functional necessity can be converted into authority for a
+    particular bearer.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is applied in this micro-countercase. The discrimination is carried
+      by separating functional necessity from bearer identity, authority, and legitimacy.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: the coordination system requiring a fixpoint function
+    options:
+      - option: rotating designated coordinator
+        status: structurally_viable
+        evidence_status: directly established by the synthetic fixture as a carrier of the fixpoint function
+        authority: >-
+          No independent bearer authority or legitimacy is established by the
+          existence of the functional role.
+        access: null
+        means: rotating designation procedure
+        information: null
+        window: before the operational deadline
+        dependencies: []
+        practical_control: null
+        relevant_cost: null
+        procedural_permission: null
+        viability_relative_to: can carry the required fixpoint function in the fixture
+      - option: pre-agreed escalation protocol
+        status: structurally_viable
+        evidence_status: directly established by the synthetic fixture as a carrier of the fixpoint function
+        authority: >-
+          The protocol can carry the function without converting functional
+          necessity into personal bearer authority.
+        access: null
+        means: pre-agreed escalation procedure
+        information: null
+        window: before the operational deadline
+        dependencies: []
+        practical_control: null
+        relevant_cost: null
+        procedural_permission: null
+        viability_relative_to: can carry the required fixpoint function in the fixture
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: an operational output must be produced before the deadline despite failed joint integration
+    maintained_by: the coordination process / institutional arrangement in the fixture
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers:
+      - rotating designated coordinator
+      - pre-agreed escalation protocol
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns:
+      - Which available carrier should be selected is not established by the fixture.
+      - The legitimacy of any particular bearer or procedure is not established by the functional requirement.
+    external_legitimacy_question: >-
+      Whether a particular coordinator, protocol, role, or institution is
+      legitimately authorized to carry the fixpoint remains external unless separately warranted.
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        The existence of two different viable carriers demonstrates that the
+        fixpoint function is not identical to one uniquely entitled person-bearer.
+    provenance_dependencies:
+      - >-
+        PMS-CONFLICT supplies the lineage that a fixpoint requirement can arise
+        where integration fails but continuity or output remains required, and
+        that the function may be carried by a person, role, procedure, or institutional mechanism.
+      - >-
+        PMS-VECTOR makes the audit boundary explicit as
+        FixpointRequirement != BearerAuthority.
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      A FixpointRequirement is present because joint integration is unavailable
+      while operational output remains required before the deadline. The function
+      can be carried by either a rotating designated coordinator or a pre-agreed
+      escalation protocol; no BearerAuthority follows from the requirement itself.
+    revisions: []
+    scope: >-
+      The result is restricted to the functional stabilization requirement in the
+      declared deadline-bound coordination scene. It does not select a carrier,
+      create authority, or establish legitimacy.
+    residue:
+      - Selection among available carriers remains unresolved by this fixture.
+      - Authority and legitimacy of any particular bearer or procedure require separate warrant.
+    stop_reason: >-
+      The fixture establishes both the functional need for a fixpoint and multiple
+      possible carriers. That is sufficient to block the inference from function
+      to unique bearer authority without adding a decision or governance claim.

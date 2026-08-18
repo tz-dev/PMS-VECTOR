@@ -1,0 +1,264 @@
+case_metadata:
+  case_id: E18
+  paper_ref: Appendix E.18
+  title: Revision Is Not Survival
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - claim_revision_pressure
+    - rival_pressure
+    - rotation_pressure
+  constructs_under_test:
+    - Revision
+    - Survival
+    - RobustOrientation
+    - Collapse
+  theoretical_function: >-
+    Tests whether a broad claim may collapse and a narrower revised claim later
+    survive without retrospectively reporting the original claim as having survived.
+  artifact_pair:
+    yaml: cases/E18.yaml
+    markdown: cases/E18.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Survival of the narrower revised claim S1 does not imply that the broader
+      baseline claim S0 survived.
+    - >-
+      Collapse of S0 does not by itself establish VECTOR failure; the fixture is
+      positive precisely because the theory improves through loss of the original claim.
+    - >-
+      Revised Robust Orientation for S1 under high-resource conditions does not
+      warrant the original dominance claim across low-resource or otherwise
+      unspecified operating conditions.
+
+vector_record:
+  reference:
+    object: >-
+      The comparative claim that Procedure Y dominates Procedure X, first across
+      the relevant operating context and then, after revision, under explicitly
+      high-resource conditions F_H for the declared question Q.
+    object_type: bounded procedure-comparison claim with explicit version lineage
+
+  frame:
+    included:
+      - >-
+        Baseline S0 claims that Procedure Y dominates Procedure X across the
+        relevant operating context.
+      - >-
+        A serious rival model exposes a low-resource counter-scene in which Y's
+        advantage depends on high resource availability and Y creates a critical regression.
+      - The broad baseline claim S0 collapses under that pressure.
+      - >-
+        Revised claim S1 restricts the comparison to high-resource conditions
+        F_H and the declared question Q.
+      - >-
+        S1 subsequently survives relevant role ROT, temporal pressure, and the
+        serious rival.
+    excluded:
+      - Any report that S0 survived because S1 later proves robust.
+      - Any universal dominance claim for Y outside high-resource conditions F_H and question Q.
+      - Any claim that narrowing a failed baseline preserves automatic claim continuity.
+      - Any inference that successful revision is equivalent to uninterrupted robustness.
+
+  question:
+    scope: >-
+      Does the broad dominance claim S0 survive serious rival pressure, and if it
+      does not, can the materially narrower claim S1 earn Revised Robust Orientation
+      under high-resource conditions F_H for Q?
+    claim_ceiling: >-
+      The fixture may record collapse of S0, explicit revision to S1, and robust
+      survival of S1 under the declared subsequent pressures. It does not restore
+      S0, extend S1 beyond F_H and Q, or establish universal superiority of Procedure Y.
+
+  position:
+    perspective: >-
+      Analyst perspective preserving the versioned claim lineage while applying
+      serious rival pressure and, after revision, relevant role ROT.
+    temporal_position: >-
+      One bounded test sequence: S0 is tested first; only after its collapse is
+      the materially narrower S1 formulated and subjected to fresh pressure.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    S0: Procedure Y dominates Procedure X across the relevant operating context.
+
+  dir:
+    relation: >-
+      S0: Y dominates X across the relevant operating context -> Collapse;
+      S1: under high-resource conditions F_H, Y dominates X for Q -> Revised Robust Orientation.
+    comparison_basis: >-
+      The broad baseline initially treats Y's advantage as context-wide. Rival
+      pressure reveals high resource availability as a claim-critical condition.
+      The revised direction is therefore restricted to F_H and Q and must earn
+      robustness anew under the narrower coordinates.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+        - serious rival pressure supplied by the fixture
+      external_premises:
+        - >-
+          High resource availability is a material condition of Y's advantage;
+          under low-resource conditions Y produces a critical regression.
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        Under low-resource conditions, Procedure Y creates a critical regression.
+      - >-
+        S0 hides a material scope condition by treating an advantage dependent on
+        high resource availability as though it held across the relevant operating context.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: role
+        vulnerability: >-
+          Whether the revised claim S1 remains directionally defensible under a
+          materially relevant role perspective within the same high-resource frame F_H and question Q.
+        purpose: >-
+          Test S1 as a new bounded claim rather than crediting the revision with
+          automatic survival because it is narrower than S0.
+        changed:
+          - The materially relevant role perspective applied to S1.
+        held_constant:
+          - Procedure X and Procedure Y.
+          - High-resource conditions F_H.
+          - The declared question Q.
+          - The revised claim S1 rather than the failed baseline S0.
+        reference_continuity: true
+        material_distinctness: >-
+          The fixture explicitly subjects S1 to relevant role ROT after revision;
+          no role-specific scene detail beyond that declared pressure is added here.
+        loss_route: >-
+          If the role ROT exposed a claim-critical regression within F_H and Q,
+          S1 would have to narrow, revise, collapse, or lose robustness.
+        result: invariant
+        robustness_relevance: >-
+          The declared role ROT has genuine loss capacity for S1 and the fixture
+          states that S1 survives it.
+    untested_relevant: []
+    stop_basis: >-
+      For the bounded fixture, S1 has survived the declared relevant role ROT,
+      temporal pressure, and the serious rival. The stop applies only to S1 under
+      F_H and Q and does not retroactively alter the recorded collapse of S0.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals:
+      - >-
+        A serious rival model exposes a low-resource counter-scene in which
+        Procedure Y's apparent advantage depends on high resource availability.
+        That rival defeats S0 and remains a live pressure against the revised S1,
+        which the fixture states survives it under F_H and Q.
+    counter_scenes:
+      - >-
+        Low-resource conditions: Procedure Y creates a critical regression,
+        defeating the broad context-wide dominance claim S0.
+      - >-
+        Temporal pressure is applied to S1 after revision; the fixture states that
+        S1 survives this pressure within its narrowed high-resource scope.
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns the fixed-baseline discipline, the explicit distinction
+        Revision != Survival, and Revised Robust Orientation as a distinct result type.
+      - >-
+        The rival model is pressure supplied by the synthetic paper fixture; its
+        success against S0 is not converted into endogenous VECTOR warrant.
+    non_compensation: >-
+      Later robustness of S1 cannot compensate for or erase the earlier collapse
+      of S0. Improvement after revision is recorded as a new claim state, not as
+      uninterrupted survival of the baseline.
+    critical_open_tests: []
+
+  result:
+    status: Revised Robust Orientation
+    surviving_claim: >-
+      S1: Under high-resource conditions F_H, Procedure Y dominates Procedure X
+      for the declared question Q. S1 survives the fixture's relevant role ROT,
+      temporal pressure, and serious rival.
+    revisions:
+      - >-
+        S0: Procedure Y dominates Procedure X across the relevant operating context -> Collapse.
+      - >-
+        S0 -> S1: the failed broad claim is materially revised to the narrower
+        high-resource claim under F_H for Q.
+      - >-
+        S1 subsequently earns Revised Robust Orientation; this is not survival of S0.
+    scope: >-
+      The robust result is limited to S1 under high-resource conditions F_H and
+      question Q. No robustness is attributed to S0 or to Y under low-resource
+      or otherwise unspecified operating conditions.
+    residue:
+      - >-
+        Any stronger claim beyond F_H and Q would require a new burden and cannot
+        inherit S1's revised robustness automatically.
+    stop_reason: >-
+      The fixture has recorded the loss of S0, the material revision to S1, and
+      S1's survival of the declared relevant role ROT, temporal pressure, and
+      serious rival. That is sufficient for Revised Robust Orientation at the
+      narrower scope while preserving Revision != Survival.

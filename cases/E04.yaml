@@ -1,0 +1,211 @@
+case_metadata:
+  case_id: E04
+  paper_ref: Appendix E.4
+  title: Trade-Off
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - tradeoff_pressure
+    - total_order_pressure
+    - non_compensation_pressure
+  constructs_under_test:
+    - DIR
+    - TradeOff
+    - NonCompensation
+  theoretical_function: >-
+    Tests whether opposed warranted relations remain a Trade-Off when no warranted
+    rule licenses their collapse into a total order.
+  artifact_pair:
+    yaml: cases/E04.yaml
+    markdown: cases/E04.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - Trade-Off does not imply Incomparable; the relevant local directions are known.
+    - Opposed local directions do not imply that one overall weighted ranking is warranted.
+    - A universal scale would not add precision without a justified conversion rule between the relevant questions.
+
+vector_record:
+  reference:
+    object: >-
+      Two candidate publication versions X and Y for a preliminary technical finding.
+    object_type: bounded communication-option comparison
+
+  frame:
+    included:
+      - Version X publishes immediately with broad public reach and limited contextual explanation.
+      - Version Y delays publication briefly to add uncertainty ranges, affected-role context, and a correction channel.
+      - Under Q1, speed of public warning, Y ≺_{Q1} X.
+      - Under Q2, reversible and context-preserving communication, X ≺_{Q2} Y.
+      - Both questions are relevant to the declared publication decision.
+      - Delay can reduce the value of the warning if it becomes excessive.
+      - Immediate broad publication can create binding, reputational fixation, and exposure before the finding is sufficiently contextualized.
+      - No justified conversion of the two relations into one weighted total is supplied.
+    excluded:
+      - Any universal weighting of Q1 and Q2 not independently warranted by the case or an external domain source.
+      - Any claim that X and Y are merely incomparable when their opposed local directions are already known.
+      - Any claim that one version dominates overall merely because it dominates on one relevant question.
+      - Any person-worth, moral-authority, or universal communication ranking.
+
+  question:
+    scope: >-
+      When X carries the speed-of-warning relation better and Y carries the
+      reversible/context-preserving communication relation better, does the declared
+      comparison warrant one overall dominance relation without a justified rule for collapsing Q1 and Q2?
+    claim_ceiling: >-
+      The fixture may record a Multidirectional / Trade-Off result for X and Y
+      under the declared questions. It does not establish a universal weighting,
+      total order, or overall dominance relation.
+
+  position:
+    perspective: >-
+      Analyst perspective on the public organization's bounded publication decision,
+      preserving both declared questions as materially relevant.
+    temporal_position: >-
+      The preliminary-publication decision before either immediate release or the
+      brief contextualizing delay has been enacted.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Candidate total-order claim S_0: the two relevant publication relations can be
+    collapsed into one overall dominance ranking between Version X and Version Y.
+
+  dir:
+    relation: >-
+      Under Q1, Y ≺_{Q1} X; under Q2, X ≺_{Q2} Y. The opposed warranted local
+      directions do not yield one warranted overall dominance relation.
+    comparison_basis: >-
+      Q1 concerns speed of public warning. Q2 concerns reversible and
+      context-preserving communication. Both are relevant, and the fixture supplies
+      no justified non-compensatory rule for converting them into one resultant rank.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+      external_premises:
+        - Immediate publication with X better serves speed of public warning than the brief delay in Y.
+        - Y better preserves uncertainty context, affected-role context, and correction capacity than X.
+        - Both Q1 and Q2 remain relevant to the bounded publication decision.
+      unresolved_dependencies:
+        - >-
+          No externally warranted cross-question priority or conversion rule is supplied for collapsing Q1 and Q2 into one overall ranking.
+    critical_regressions:
+      - >-
+        Treating performance on one question as automatic compensation for the opposed relation on the other would erase material directional structure.
+      - >-
+        Importing an unsupported weighting rule would manufacture an overall dominance claim not warranted by the fixture.
+
+  calibration:
+    threshold: null
+    basis: >-
+      Any total-order collapse would require a justified rule for prioritizing or
+      converting the two relevant question-specific relations; none is supplied by the fixture.
+    domain_source: null
+    competing_calibration: null
+    unresolved: >-
+      Cross-question priority / conversion remains unwarranted in the current case.
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is applied in this fixture. The opposed question-specific directions
+      and the absence of a justified collapse rule are sufficient to produce the declared Trade-Off result.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: >-
+      Exact magnitudes of warning-delay loss, reputational fixation, binding,
+      exposure, and contextual benefit are not supplied and are not converted into a universal scalar.
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        Under Q1, the brief delay in Y is a material regression relative to X because warning speed matters.
+      - >-
+        Under Q2, immediate broad publication in X is a material regression relative to Y because context, correction, and reversibility matter.
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns Trade-Off as a distinct result for multiple surviving local
+        directions that cannot be legitimately collapsed into one non-compensatory resultant.
+      - >-
+        The paper fixture supplies the opposed Q1 and Q2 relations; their notation does not create any additional external weighting warrant.
+    non_compensation: >-
+      The gain carried by X under Q1 cannot be used to erase the opposed gain carried
+      by Y under Q2, or vice versa, without an independently warranted priority or conversion rule.
+    critical_open_tests:
+      - >-
+        A future externally warranted rule that legitimately orders or converts Q1
+        and Q2 would create a new bounded comparison burden; no such rule is supplied here.
+
+  result:
+    status: Multidirectional / Trade-Off
+    surviving_claim: >-
+      TradeOff_V(X,Y | C): X carries the speed-of-public-warning relation better
+      under Q1, while Y carries the reversible/context-preserving communication
+      relation better under Q2; no warranted overall dominance relation is produced.
+    revisions: []
+    scope: >-
+      Limited to Versions X and Y, the declared preliminary-publication decision,
+      Q1 and Q2, and the current absence of a justified rule for collapsing the two relations.
+    residue:
+      - The opposed local directions remain jointly relevant rather than being flattened into generic incomparability.
+      - No warranted cross-question weighting or priority rule is supplied.
+    stop_reason: >-
+      The fixture closes with Trade-Off because the relevant directions are known
+      and opposed, while no legitimate non-compensatory resultant is warranted.

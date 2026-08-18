@@ -1,0 +1,228 @@
+case_metadata:
+  case_id: E14
+  paper_ref: Appendix E.14
+  title: '`OUGHT_account` — Orientation-Mediated Attribution Increase'
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - orientation_uptake_pressure
+    - structural_attributability_pressure
+    - logic_baseline_boundary_pressure
+  constructs_under_test:
+    - OUGHT_account
+    - OrientationUptake
+    - StructuralAttributability
+    - EffectiveCapacity
+  theoretical_function: >-
+    Tests orientation-mediated change in practical attribution while preserving
+    PMS-LOGIC baseline structural attributability as an independent source relation.
+  artifact_pair:
+    yaml: cases/E14.yaml
+    markdown: cases/E14.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Being told about relation R does not by itself establish ActorUptake(R) or
+      an orientation-mediated increase in structural attributability.
+    - >-
+      OUGHT_account(R) does not imply OUGHT_choice(X); the relation does not
+      select an outcome or require agreement with the orientation.
+    - >-
+      Orientation-mediated attribution increase does not replace, erase, or
+      recreate the independent PMS-LOGIC baseline through an awareness gate.
+
+vector_record:
+  reference:
+    object: >-
+      A later bounded orientation R that identifies an additional previously
+      unintegrated consequence of a process already under a role's effective
+      capacity and existing consequence relation.
+    object_type: orientation-mediated structural-attributability relation
+
+  frame:
+    included:
+      - The role already possesses effective capacity over the process.
+      - A known consequence relation may already support baseline structural attributability under PMS-LOGIC.
+      - A later review produces bounded claim R identifying an additional previously unintegrated consequence.
+      - Material external premises supporting R are supplied outside VECTOR where required.
+      - R becomes actor-accessible and sufficiently understood for contest or response.
+      - R remains praxis-available inside the relevant scene-time window t_s.
+      - Effective capacity and the relevant consequence, role, and time conditions remain materially live.
+    excluded:
+      - Any requirement that baseline PMS-LOGIC attributability wait for actor awareness or uptake.
+      - Mere presentation, publication, warning, or notification as sufficient uptake.
+      - Agreement, obedience, or enactment as necessary synonyms for uptake.
+      - Any outcome-selection or authority conclusion from OUGHT_account alone.
+
+  question:
+    scope: >-
+      Given the supplied bounded orientation R and the declared uptake, capacity,
+      consequence, external-premise, and role/time conditions, does VECTOR record
+      an orientation-mediated increase in structural attributability and the
+      relation OUGHT_account(R)?
+    claim_ceiling: >-
+      The case can establish only the bounded orientation-mediated account
+      relation and its additional attribution effect. It cannot replace the
+      independent PMS-LOGIC baseline, select an outcome, or generate moral,
+      legal, or decision authority.
+
+  position:
+    perspective: >-
+      The actor or role that already possesses effective capacity over the
+      process and to whom the later orientation becomes practically available.
+    temporal_position: >-
+      The case distinguishes the pre-review baseline relation from the later
+      scene-time state in which R has become actor-accessible, understood, and
+      praxis-available.
+    scene_time: >-
+      The relevant t_s window in which R is sufficiently available for contest,
+      rejection, refusal, verification, or action.
+    analysis_time: null
+
+  baseline_claim: >-
+    Before the later review, any supported structural attributability is the
+    independent PMS-LOGIC baseline. No VECTOR orientation-mediated attribution
+    increase is established merely by that baseline or by later notification alone.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: >-
+      No universal numeric threshold is supplied. The synthetic fixture states
+      that the current dependency bundle is sufficient for this bounded claim.
+    basis: >-
+      Relevant orientation, external premise support, actor uptake, effective
+      capacity, consequence relation, and role/time conditions must jointly carry.
+    domain_source: null
+    competing_calibration: null
+    unresolved: >-
+      The general sufficiency threshold remains calibration-sensitive outside
+      the supplied fixture and is not converted into a universal score.
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is applied in this fixture. The declared discrimination is carried
+      by the uptake and attribution dependency bundle together with the explicit
+      PMS-LOGIC baseline boundary.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: >-
+      A later review produces and presents bounded relation R as a relevant
+      consequence relation for the process.
+    actor_accessible: >-
+      Yes. The fixture states that R becomes accessible to the relevant actor or role.
+    understood: >-
+      Yes. R is understood sufficiently to be contested or acted on; agreement
+      with R or with VECTOR is not required.
+    praxis_available: >-
+      Yes. R remains practically available inside the relevant scene-time window
+      for verification, rejection, refusal, contest, or action.
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-LOGIC supplies the independent baseline relation: effective,
+        frame-bound capacity and attributable consequence can support structural
+        responsibility without a prescriptive ought and without requiring actor
+        awareness as a VECTOR gate.
+      - >-
+        PMS-VECTOR owns the orientation-uptake chain, the distinction between
+        BaselineAttributability_LOGIC and DeltaAttributability_orientation, and
+        the claim type OUGHT_account.
+      - >-
+        External premise support remains external where required; provenance or
+        notation does not manufacture the empirical, causal, legal, technical,
+        historical, or capacity warrant on which R may depend.
+    non_compensation: null
+    critical_open_tests:
+      - >-
+        If relevant orientation, external support, uptake, effective capacity,
+        consequence relation, or role/time conditions fail, the orientation-mediated
+        attribution claim must reduce or suspend rather than being rescued by mere notification.
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      In the supplied fixture, the orientation-mediated dependency bundle carries:
+      DeltaAttributability_orientation > 0 may be recorded and OUGHT_account(R)
+      means that later praxis cannot erase R as though it had never become
+      available for response. The independent PMS-LOGIC baseline remains separate.
+    revisions: []
+    scope: >-
+      The result is bounded to relation R, the declared role/process relation,
+      the supplied external support, and the relevant scene-time conditions. It
+      neither selects an outcome nor establishes moral, legal, or decision authority.
+    residue:
+      - >-
+        The general calibration threshold remains non-universal and domain-sensitive.
+      - >-
+        The actor's eventual response remains open: contest, rejection, refusal,
+        another practical branch, or action are not decided by OUGHT_account.
+    stop_reason: >-
+      The fixture explicitly supplies the dependencies required for the bounded
+      orientation-mediated uplift while preserving the BeingTold/Uptake and
+      LOGIC-baseline boundaries. No stronger choice or moral claim is licensed.

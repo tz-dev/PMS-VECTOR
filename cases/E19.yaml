@@ -1,0 +1,215 @@
+case_metadata:
+  case_id: E19
+  paper_ref: Appendix E.19
+  title: Echo Convergence
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - convergence_pressure
+    - provenance_dependency_pressure
+  constructs_under_test:
+    - Convergence
+    - ProvenanceAudit
+    - DIR_R
+  theoretical_function: >-
+    Tests whether repeated directional outputs sharing one untested upstream assumption remain
+    dependent echoes rather than independent warrants.
+  artifact_pair:
+    yaml: cases/E19.yaml
+    markdown: cases/E19.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Five similar directional outputs do not provide five independent warrants
+      for their shared untested assumption A.
+    - >-
+      Exposure of the shared dependency does not by itself establish that each
+      local directional output d_i is false; it reduces what their multiplicity
+      can count as for the convergence claim.
+    - >-
+      Apparent recurrence does not warrant a robust resultant orientation DIR_R
+      until the shared assumption A receives separate pressure.
+
+vector_record:
+  reference:
+    object: >-
+      Five local directional analyses d1 through d5 that appear to support a
+      common resultant orientation DIR_R while materially depending on the same
+      untested upstream assumption A.
+    object_type: convergence-provenance dependency claim
+
+  frame:
+    included:
+      - Five local analyses support a similar directional conclusion.
+      - At first sight the outputs appear to converge toward DIR_R.
+      - Dependency audit shows d1 through d5 all depend materially on the same untested assumption A.
+      - The convergence claim is evaluated by provenance and echo control rather than by counting outputs.
+    excluded:
+      - Any treatment of five nominal outputs as five independent warrants for A.
+      - Any inference that shared wording or repeated direction establishes robust convergence.
+      - Any inference that exposing the shared dependency proves each local d_i false.
+      - Any robust resultant claim before A is separately pressured.
+
+  question:
+    scope: >-
+      Do five similar local directional outputs supply five independent warrants
+      for a common resultant orientation, or are they materially dependent echoes
+      because they share the same untested assumption A?
+    claim_ceiling: >-
+      The fixture may reduce the convergence claim by exposing shared dependency.
+      It does not determine the truth of A, invalidate every local d_i, or establish
+      whether a robust DIR_R could later survive after A is separately pressured.
+
+  position:
+    perspective: >-
+      Meta-level convergence provenance and dependency-audit perspective over the
+      five local analyses.
+    temporal_position: >-
+      The current audit state before the shared assumption A has received separate pressure.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Five local analyses d1, d2, d3, d4, and d5 support a similar directional
+    conclusion and therefore appear to provide multiple supports for DIR_R.
+
+  dir:
+    relation: >-
+      Apparent DIR_R support is reduced: d1 through d5 cannot count as five
+      independent warrants while all materially depend on the same untested assumption A.
+    comparison_basis: >-
+      The relevant comparison is between nominal multiplicity of directional
+      outputs and the material dependency structure revealed by provenance audit.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+        - VECTOR convergence provenance and echo-control discipline
+      external_premises:
+        - A is the same upstream assumption imported into all five local analyses.
+        - A remains untested at the point of the convergence claim.
+      unresolved_dependencies:
+        - The warrant status of assumption A remains unresolved until A is separately pressured.
+    critical_regressions:
+      - >-
+        All five local outputs share one materially relevant untested dependency A.
+      - >-
+        Counting nominally separate analyses as independent support would multiply
+        warrant without multiplying the material burden at the dependency point.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is required to establish this micro-countercase. The provenance audit
+      already defeats the claimed multiplicity of independent support; separate
+      pressure on A is required before a stronger convergence claim can re-enter.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns Convergence Provenance and Echo Control as part of the
+        convergence test architecture; the relevant relation is dependency audit,
+        not historical lineage as epistemic rank.
+      - >-
+        PMS-VECTOR requires separately warranted and distinctly constrained local
+        DIRs for meaningful convergence and does not permit a resultant orientation
+        to retroactively warrant weak local components.
+      - >-
+        The shared assumption A remains an unresolved dependency. Its repeated use
+        across five analyses does not create additional warrant for A.
+    non_compensation: >-
+      Numerical or rhetorical multiplicity of outputs cannot compensate for a
+      claim-critical shared untested dependency. Five echoes do not become five warrants.
+    critical_open_tests:
+      - Separately pressure assumption A before restoring any stronger convergence or DIR_R claim.
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      Five local analyses exhibit a similar directional conclusion, but their
+      multiplicity does not provide five independent warrants because each materially
+      depends on the same untested assumption A. The stronger convergence claim is reduced.
+    revisions:
+      - >-
+        Apparent fivefold support for DIR_R -> dependency-typed echo convergence
+        pending separate pressure on A.
+    scope: >-
+      The reduction applies to what d1 through d5 can jointly warrant as a convergence
+      claim at the current audit state. It does not by itself invalidate each local
+      analysis or establish that no later resultant orientation can be warranted.
+    residue:
+      - The warrant status of assumption A remains unresolved.
+      - >-
+        Whether a common DIR_R can survive after A is separately pressured remains open.
+    stop_reason: >-
+      The dependency audit is sufficient to defeat the claim that five nominally
+      separate outputs supply five independent warrants. The fixture may stop at
+      Revision Required; stronger convergence requires re-entry after separate pressure on A.

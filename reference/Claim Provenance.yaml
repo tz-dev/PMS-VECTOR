@@ -1,0 +1,1578 @@
+claim_provenance:
+  meta:
+    artifact: PMS-VECTOR Claim Provenance
+    role: machine-readable provenance and lineage bookkeeping layer
+    paper_source: PMS-VECTOR.md — Appendix F.1–F.8
+    model_reference: model/PMS-VECTOR.yaml
+    hard_pms_dependency: PMS.yaml
+    governing_rule: lineage supports provenance, not authority inheritance
+    one_status_per_claim: true
+    ordering_implied: false
+    epistemic_strength_implied: false
+    warrant_inheritance_implied: false
+    non_equivalences:
+    - ProvenanceCompleteness != TheoreticalAdequacy
+    - provenance status != evidence strength
+    - source precedence != claim truth
+    - shared source != dependency
+  categories:
+    C:
+      label: Corpus-carried
+      meaning: Explicitly carried by the existing PMS corpus in materially relevant form.
+    R:
+      label: VECTOR reconstruction
+      meaning: Reconstructed by VECTOR from one or more corpus-carried structures without claiming that the combined relation
+        was already canonical.
+    N:
+      label: VECTOR-new
+      meaning: A distinct positive claim introduced by PMS-VECTOR.
+    P:
+      label: Proposed / provisional formalization
+      meaning: A notation, record field, schema, or formal device used for audit or reuse rather than claimed as an independently
+        established theoretical result.
+  source_registry:
+    PMS_BASE:
+      label: PMS Base
+      lineage_role: governing PMS operator grammar, base semantics, openness and non-capture precedent
+      runtime_dependency: true
+      dependency_file: PMS.yaml
+    MIP:
+      label: MIP
+      lineage_role: trajectory, power, feedback, dignity boundary precedent
+      runtime_dependency: false
+    PMS_ANTICIPATION:
+      label: PMS-ANTICIPATION
+      lineage_role: future orientation, timing, restraint, effective capacity
+      runtime_dependency: false
+    PMS_CRITIQUE:
+      label: PMS-CRITIQUE
+      lineage_role: direction, correction, review distance, follow-up
+      runtime_dependency: false
+    PMS_CONFLICT:
+      label: PMS-CONFLICT
+      lineage_role: shrinking options, carriage, fixpoint, tragic non-integrability
+      runtime_dependency: false
+    PMS_EDEN:
+      label: PMS-EDEN
+      lineage_role: truthful coordination, learned legibility, counter-scenes, reciprocity boundary
+      runtime_dependency: false
+    PMS_LOGIC:
+      label: PMS-LOGIC
+      lineage_role: effective capacity and baseline structural attributability
+      runtime_dependency: false
+    PMS_SEX:
+      label: PMS-SEX
+      lineage_role: exit realism and downstream cost
+      runtime_dependency: false
+    PMS_DISCIPLINE:
+      label: PMS-DISCIPLINE
+      lineage_role: bounded adequacy, correction before coherence, stop / refusal / claim ceilings
+      runtime_dependency: false
+    PMS_UNDER_LOAD:
+      label: PMS UNDER LOAD
+      lineage_role: pressure and self-reduction precedent; not warrant
+      runtime_dependency: false
+    PMS_STRATA:
+      label: PMS-STRATA
+      lineage_role: local superiority, non-compensation, claim reduction, rival superiority, non-capture
+      runtime_dependency: false
+    PMS_VECTOR:
+      label: PMS-VECTOR
+      lineage_role: owner of VECTOR-specific claims, reconstructions, reductions, and provisional formalizations
+      runtime_dependency: false
+  source_boundaries:
+  - source: PMS_BASE
+    boundary: open problem in Base != warrant for VECTOR as its solution
+  - source: MIP
+    boundary: Adult Orientation shorthand != AdultPerson; MIP supplies boundary precedent, not warrant for the shorthand
+  - source: PMS_ANTICIPATION
+    boundary: later possibility recognition != earlier effective capacity
+  - source: PMS_CRITIQUE
+    boundary: CRITIQUE supplies pressure and reconstruction; ROT is not inherited as a CRITIQUE operation
+  - source: PMS_CONFLICT
+    boundary: system-level carriage != person-level duty
+  - source: PMS_EDEN
+    boundary: perspectival access != perspectival equivalence
+  - source: PMS_LOGIC
+    boundary: LOGIC responsibility != VECTOR Ought typology
+  - source: PMS_SEX
+    boundary: No larger VECTOR architecture is attributed to SEX.
+  - source: PMS_DISCIPLINE
+    boundary: application/use discipline != verdict authority; May this use proceed? != What directional relation, if any,
+      is warranted?
+  - source: PMS_UNDER_LOAD
+    boundary: UNDER LOAD supplies VECTOR pressure, not VECTOR warrant
+  - source: PMS_STRATA
+    boundary: ROT != PROJECT_AS; OptionSpaceTransformation != fourth STRATA operation; borrowed discipline != inherited warrant
+  claims:
+  - claim_id: pms_base.001
+    claim: Δ–Ψ as the proposed PMS operator grammar
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Source grammar; not modified by VECTOR
+    vector_targets:
+    - PMSBase
+  - claim_id: pms_base.002
+    claim: PMS is proposed as a generative basis rather than a finished self-sealing system
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Establishes openness to later discrimination and critique
+    vector_targets:
+    - PMSBase
+  - claim_id: pms_base.003
+    claim: Completeness, optimal ordering, discriminative adequacy, and comparative superiority remain open questions
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Central problem pressure for VECTOR
+  - claim_id: pms_base.004
+    claim: Translation / derivational productivity does not establish exhaustive capture
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Supports non-capture and anti-assimilation boundaries
+    vector_targets:
+    - NonCapture
+  - claim_id: pms_base.005
+    claim: Genuine non-capture remains methodologically possible
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Precedent for VECTOR non-capture
+    vector_targets:
+    - NonCapture
+  - claim_id: pms_base.006
+    claim: PMS contains operator-level directionality, including directed activation and asymmetry
+    status: C
+    origin_sources:
+    - PMS_BASE
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: Shows that VECTOR is not introducing direction into an otherwise directionless grammar
+    vector_targets:
+    - DIR
+    - PMSBase
+  - claim_id: pms_base.007
+    claim: '`DIR` as a meta-reconstructive directional relation'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: VECTOR claim; explicitly not a new Base operator
+    vector_targets:
+    - DIR
+  - claim_id: pms_base.008
+    claim: '`DIR ≠ \nabla`, `ROT ≠ \Phi`, `DIST ≠ Χ`, `t ≠ \Theta`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: VECTOR type boundaries
+    vector_targets:
+    - DIR
+    - ROT
+    - DIST
+  - claim_id: pms_base.009
+    claim: The claim that distributed local direction may support bounded meta-orientation
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.2
+    lineage_context:
+    - PMS_BASE
+    vector_relation: VECTOR's own theoretical problem and positive possibility
+    vector_targets:
+    - DIR
+    - DIST
+  - claim_id: mip.001
+    claim: Analyse enactments rather than infer the value of persons
+    status: C
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Supports the person-ranking boundary
+    vector_targets:
+    - PersonWorthBoundary
+  - claim_id: mip.002
+    claim: Power / practical room for action matters to fair appraisal
+    status: C
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Local precedent for effective option and capacity differences
+    vector_targets:
+    - OptionSpace
+  - claim_id: mip.003
+    claim: Real alternatives, authority, information, and burden distribution affect action appraisal
+    status: C
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Supports role-bound option fields and capacity calibration
+    vector_targets:
+    - DIST
+    - Calibration
+    - OptionSpace
+    - Authority
+  - claim_id: mip.004
+    claim: \(D_0\) dignity is untouchable / non-negotiable rather than a score of maturity
+    status: C
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Supports the Chapter 16 dignity firewall and the safe use of its Adult Orientation shorthand
+    vector_targets:
+    - AdultOrientation
+  - claim_id: mip.005
+    claim: Role- and trajectory-sensitive enactment analysis
+    status: C
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Precedent for temporally and relationally bounded comparison
+  - claim_id: mip.006
+    claim: “Adult Orientation” as a VECTOR-new supporting shorthand for corrigible consequence-carrying praxis
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: Label is new, but Chapter 19 reduces it from independent construct to supporting shorthand; not a MIP
+      maturity score or person type
+    vector_targets:
+    - AdultOrientation
+    - CorrigibleConsequenceCarryingPraxis
+    - Praxis
+    - PersonWorthBoundary
+  - claim_id: mip.007
+    claim: The Chapter 16 stance / Adult Orientation shorthand does not alter \(D_0\)
+    status: R
+    origin_sources:
+    - MIP
+    paper_ref: Appendix F.3
+    lineage_context:
+    - MIP
+    vector_relation: VECTOR application of the MIP dignity boundary
+    vector_targets:
+    - AdultOrientation
+  - claim_id: pms_anticipation.001
+    claim: Attribution requires effective capacity inside a relevant frame
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Capacity gate for later attribution claims
+    vector_targets:
+    - StructuralAttributability
+    - EffectiveCapacity
+  - claim_id: pms_anticipation.002
+    claim: Abstract possibility does not create universalized responsibility
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Blocks retrospective and possibilist responsibility inflation
+  - claim_id: pms_anticipation.003
+    claim: No retroactive guilt from later-recognized possibility where effective capacity was absent
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Supports temporal discipline in option and Ought claims
+    vector_targets:
+    - OptionSpace
+    - EffectiveCapacity
+  - claim_id: pms_anticipation.004
+    claim: Imagining a scenario does not itself generate responsibility
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Supports `conceivable ≠ capacity`
+  - claim_id: pms_anticipation.005
+    claim: Θ can accumulate costs and close windows
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Timing, action-corridor, and missed-window pressure
+    vector_targets:
+    - CostTopology
+    - Timing
+  - claim_id: pms_anticipation.006
+    claim: Ψ should not be externalized from self-binding into automatic binding of others
+    status: C
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Supports self-/other-binding boundary
+  - claim_id: pms_anticipation.007
+    claim: General VECTOR timing architecture
+    status: R
+    origin_sources:
+    - PMS_ANTICIPATION
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Reconstructs these pressures through timing, option status, reversibility, and cost topology; derived
+      DIST may summarize orientation–enactment separation
+    vector_targets:
+    - DIST
+    - Reversibility
+    - OptionSpace
+    - CostTopology
+    - Timing
+  - claim_id: pms_anticipation.008
+    claim: '`OUGHT_account` / `OUGHT_constraint`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.1
+    lineage_context:
+    - PMS_ANTICIPATION
+    vector_relation: Not ANTICIPATION claims
+    vector_targets:
+    - OUGHT_account
+    - OUGHT_constraint
+    - Constraint
+  - claim_id: pms_critique.001
+    claim: Critique can be reconstructed as transition from reaction toward correction-capable praxis
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Local directional precedent
+    vector_targets:
+    - DIR
+    - Praxis
+  - claim_id: pms_critique.002
+    claim: Θ makes delay, accumulation, and irreversibility relevant
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Timing and window pressure
+    vector_targets:
+    - Reversibility
+    - Timing
+  - claim_id: pms_critique.003
+    claim: Χ provides distance / interruption capacity
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: One source pressure for DIST without type identity
+    vector_targets:
+    - DIST
+  - claim_id: pms_critique.004
+    claim: Revision windows can close
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Reversibility and missed-window cases
+    vector_targets:
+    - Revision
+    - Reversibility
+  - claim_id: pms_critique.005
+    claim: Publicness can intensify exposure, fixation, and correction costs
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Public/private timing and source relations behind role-relative derived DIST
+    vector_targets:
+    - DIST
+    - CostTopology
+    - Timing
+  - claim_id: pms_critique.006
+    claim: Endless reframing or postponement can itself block correction
+    status: C
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Counterweight to treating wider derived DIST as automatically better
+    vector_targets:
+    - DIST
+  - claim_id: pms_critique.007
+    claim: DIST as effective orientation–enactment separation
+    status: R
+    origin_sources:
+    - PMS_CRITIQUE
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Cross-domain VECTOR reconstruction
+    vector_targets:
+    - DIST
+  - claim_id: pms_critique.008
+    claim: ROT as general perspective-test architecture
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.2
+    lineage_context:
+    - PMS_CRITIQUE
+    vector_relation: Not a CRITIQUE operation
+    vector_targets:
+    - ROT
+  - claim_id: pms_conflict.001
+    claim: Mature conflict can remain non-integrable
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Precedent for trade-off, incomparability, and tragic structure
+    vector_targets:
+    - TradeOff
+    - Incomparability
+    - TragicConstraint
+  - claim_id: pms_conflict.002
+    claim: Infrastructure-coupled conflict can make carriage non-optional at system level
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Source pressure for constraint-relative carriage
+    vector_targets:
+    - OptionSpace
+    - Constraint
+  - claim_id: pms_conflict.003
+    claim: Roles can occupy asymmetric risk, temporal, and reversibility positions
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Supports role-relative DIST and option fields
+    vector_targets:
+    - DIST
+    - Reversibility
+    - OptionSpace
+  - claim_id: pms_conflict.004
+    claim: A fixpoint requirement can arise where integration fails but continuity/output remains required
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Source pressure for functional necessity
+    vector_targets:
+    - FixpointRequirement
+  - claim_id: pms_conflict.005
+    claim: Fixpoint can be carried by a person, role, procedure, or institutional mechanism
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Blocks automatic bearer personalization
+    vector_targets:
+    - FixpointRequirement
+    - PersonWorthBoundary
+  - claim_id: pms_conflict.006
+    claim: CONFLICT does not establish that a particular person morally ought to carry the load
+    status: C
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Normative boundary retained by VECTOR
+    vector_targets:
+    - PersonWorthBoundary
+  - claim_id: pms_conflict.007
+    claim: '`OUGHT_constraint` as a general claim type'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: VECTOR addition
+    vector_targets:
+    - OUGHT_constraint
+    - Constraint
+  - claim_id: pms_conflict.008
+    claim: '`TragicConstraint(G,R_G)` as VECTOR notation/configuration'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: VECTOR formalization of a broader constraint structure
+    vector_targets:
+    - TragicConstraint
+    - Constraint
+  - claim_id: pms_conflict.009
+    claim: '`FixpointRequirement ≠ BearerAuthority` as an explicit VECTOR audit rule'
+    status: R
+    origin_sources:
+    - PMS_CONFLICT
+    paper_ref: Appendix F.4.3
+    lineage_context:
+    - PMS_CONFLICT
+    vector_relation: Reconstruction preserving CONFLICT's functional/non-prescriptive boundary
+    vector_targets:
+    - FixpointRequirement
+    - Authority
+  - claim_id: pms_eden.001
+    claim: Truthful coordination of real \(\Omega\) differs structurally from false coordination
+    status: C
+    origin_sources:
+    - PMS_EDEN
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: Local DIR precedent
+    vector_targets:
+    - DIR
+  - claim_id: pms_eden.002
+    claim: Responsibility should follow real structuring effect rather than appearance
+    status: C
+    origin_sources:
+    - PMS_EDEN
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: Consequence and attribution pressure
+    vector_targets:
+    - StructuralAttributability
+  - claim_id: pms_eden.003
+    claim: Learned legibility can stabilize both competence and blind spots
+    status: C
+    origin_sources:
+    - PMS_EDEN
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: Supports non-privilege of the unrotated view
+    vector_targets:
+    - ROT
+  - claim_id: pms_eden.004
+    claim: Counter-scenes can expose whether a structural claim discriminates relevant differences
+    status: C
+    origin_sources:
+    - PMS_EDEN
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: Pressure for counter-scene testing
+  - claim_id: pms_eden.005
+    claim: Description does not itself authorize binding application
+    status: C
+    origin_sources:
+    - PMS_EDEN
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: Authority firewall
+    vector_targets:
+    - Authority
+  - claim_id: pms_eden.006
+    claim: General `DIR` architecture
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: VECTOR generalization
+    vector_targets:
+    - DIR
+  - claim_id: pms_eden.007
+    claim: ROT as perspective-testing/discovery architecture
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.4
+    lineage_context:
+    - PMS_EDEN
+    vector_relation: VECTOR generalization rather than inherited EDEN operation
+    vector_targets:
+    - ROT
+  - claim_id: pms_logic.001
+    claim: Potential means effective, frame-bound capacity rather than abstract possibility
+    status: C
+    origin_sources:
+    - PMS_LOGIC
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: Capacity gate
+  - claim_id: pms_logic.002
+    claim: Responsibility tracks structurally attributable consequences under relevant asymmetry and temporality
+    status: C
+    origin_sources:
+    - PMS_LOGIC
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: Attribution pressure
+    vector_targets:
+    - StructuralAttributability
+  - claim_id: pms_logic.003
+    claim: Non-action can cease to be structurally neutral where effective capacity and attributable consequence are present
+    status: C
+    origin_sources:
+    - PMS_LOGIC
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: Source pressure for structural attributability / non-neutrality; not itself VECTOR Ought
+    vector_targets:
+    - StructuralAttributability
+    - EffectiveCapacity
+  - claim_id: pms_logic.004
+    claim: LOGIC operates on responsibility, not prescriptive ought statements
+    status: C
+    origin_sources:
+    - PMS_LOGIC
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: Hard provenance boundary
+    vector_targets:
+    - Provenance
+  - claim_id: pms_logic.005
+    claim: Effective potential introduces no obligation by itself
+    status: C
+    origin_sources:
+    - PMS_LOGIC
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: Hard normative boundary
+  - claim_id: pms_logic.006
+    claim: Orientation can alter the actor's legibility of relevant capacity and consequence
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: VECTOR-specific relation
+  - claim_id: pms_logic.007
+    claim: '`OUGHT_account`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: VECTOR-specific claim type
+    vector_targets:
+    - OUGHT_account
+  - claim_id: pms_logic.008
+    claim: '`OUGHT_constraint`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: VECTOR-specific claim type
+    vector_targets:
+    - OUGHT_constraint
+    - Constraint
+  - claim_id: pms_logic.009
+    claim: The `OUGHT_choice / OUGHT_account / OUGHT_constraint` typology
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.4.5
+    lineage_context:
+    - PMS_LOGIC
+    vector_relation: VECTOR-specific architecture
+    vector_targets:
+    - OUGHT_account
+    - OUGHT_constraint
+    - OUGHT_choice
+    - Constraint
+  - claim_id: pms_sex.001
+    claim: Exit can alter the future trajectory without erasing the prior history of a relation
+    status: C
+    origin_sources:
+    - PMS_SEX
+    paper_ref: Appendix F.4.6
+    lineage_context:
+    - PMS_SEX
+    vector_relation: Local precedent for `Exit ≠ Reset`
+  - claim_id: pms_sex.002
+    claim: Binding and exposure can leave downstream effects after exit
+    status: C
+    origin_sources:
+    - PMS_SEX
+    paper_ref: Appendix F.4.6
+    lineage_context:
+    - PMS_SEX
+    vector_relation: Reversibility and cost-topology pressure
+    vector_targets:
+    - Reversibility
+    - CostTopology
+  - claim_id: pms_sex.003
+    claim: '`Exit changes trajectory; it does not reset history` as a generalized VECTOR rule'
+    status: R
+    origin_sources:
+    - PMS_SEX
+    paper_ref: Appendix F.4.6
+    lineage_context:
+    - PMS_SEX
+    vector_relation: Cross-domain reconstruction
+  - claim_id: pms_discipline.001
+    claim: PMS readability does not itself authorize application
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Precedent for `orientation ≠ authority`
+    vector_targets:
+    - PMSBase
+    - Authority
+  - claim_id: pms_discipline.002
+    claim: Claim ceilings and bounded use must remain explicit
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: VECTOR boundedness discipline
+  - claim_id: pms_discipline.003
+    claim: Suspend / refuse / stop are legitimate outcomes
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Precedent for VECTOR suspension and non-forcing
+  - claim_id: pms_discipline.004
+    claim: Later work does not inherit findings or claim ceilings automatically
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Non-inheritance discipline
+  - claim_id: pms_discipline.005
+    claim: Falsehood can remain false while organizing real practice
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Direct source pressure for Chapter 11
+    vector_targets:
+    - DIR
+  - claim_id: pms_discipline.006
+    claim: A false claim can orient action, delay, burden, exposure, and follow-up cost
+    status: C
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Practical Power of Falsehood
+    vector_targets:
+    - CostTopology
+  - claim_id: pms_discipline.007
+    claim: '`orientation effect ≠ orientation truth` as a general VECTOR principle'
+    status: R
+    origin_sources:
+    - PMS_DISCIPLINE
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: VECTOR generalization into option/cost topology
+    vector_targets:
+    - OptionSpace
+    - CostTopology
+  - claim_id: pms_discipline.008
+    claim: VECTOR directional claims
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.5
+    lineage_context:
+    - PMS_DISCIPLINE
+    vector_relation: Not validated by DISCIPLINE
+    vector_targets:
+    - DIR
+  - claim_id: pms_under_load.001
+    claim: PMS success can itself become a pressure condition
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Source of VECTOR success-trap discipline
+    vector_targets:
+    - PMSBase
+  - claim_id: pms_under_load.002
+    claim: Translation is not capture
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Anti-assimilation pressure
+  - claim_id: pms_under_load.003
+    claim: Coherence is not sufficiency
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Anti-self-confirmation pressure
+  - claim_id: pms_under_load.004
+    claim: Self-binding is not final self-arbitration
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Self-test boundary
+  - claim_id: pms_under_load.005
+    claim: Corpus structure is not external warrant
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: External-warrant boundary
+    vector_targets:
+    - Warrant
+  - claim_id: pms_under_load.006
+    claim: Application / transformation discipline is not verdict authority
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Authority firewall
+    vector_targets:
+    - Authority
+  - claim_id: pms_under_load.007
+    claim: More structure is not more warrant
+    status: C
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Anti-formalization inflation
+    vector_targets:
+    - Warrant
+  - claim_id: pms_under_load.008
+    claim: VECTOR must remain reducible by its own distinctions
+    status: R
+    origin_sources:
+    - PMS_UNDER_LOAD
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: Reconstruction of UNDER LOAD pressure into VECTOR self-reduction
+    vector_targets:
+    - DIST
+  - claim_id: pms_under_load.009
+    claim: Failure families and reduction ladder
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.6
+    lineage_context:
+    - PMS_UNDER_LOAD
+    vector_relation: VECTOR-specific pressure architecture
+  - claim_id: pms_strata.001
+    claim: 'Exactly three core operations: `COMPOSE`, `DECOMPOSE`, `PROJECT_AS`'
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Hard operation boundary
+  - claim_id: pms_strata.002
+    claim: Origin-type / type integrity
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Borrowed methodological discipline
+  - claim_id: pms_strata.003
+    claim: Reference continuity
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Borrowed methodological discipline
+  - claim_id: pms_strata.004
+    claim: Contextual boundedness and explicit transformation loss
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Borrowed methodological discipline
+  - claim_id: pms_strata.005
+    claim: No universal scale theory
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Precedent for local comparison without global rank
+  - claim_id: pms_strata.006
+    claim: Stop and non-capture
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Precedent for bounded transformation
+    vector_targets:
+    - NonCapture
+  - claim_id: pms_strata.007
+    claim: Paths / transitions can open or close action corridors
+    status: C
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Local source pressure for option-field temporality
+    vector_targets:
+    - OptionSpace
+  - claim_id: pms_strata.008
+    claim: ROT
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Not `PROJECT_AS`
+    vector_targets:
+    - ROT
+  - claim_id: pms_strata.009
+    claim: Option-Space Transformation
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Praxis transformation, not a fourth STRATA operation
+    vector_targets:
+    - OptionSpace
+    - Praxis
+  - claim_id: pms_strata.010
+    claim: Non-compensatory VECTOR comparison
+    status: R
+    origin_sources:
+    - PMS_STRATA
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: Methodological reconstruction of a discipline already carried by STRATA
+  - claim_id: pms_strata.011
+    claim: Rotation Contract
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.7
+    lineage_context:
+    - PMS_STRATA
+    vector_relation: VECTOR-specific operational device
+    vector_targets:
+    - ROT
+  - claim_id: vector.core_architecture.001
+    claim: '`VECTOR := <DIR, ROT>`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+    vector_targets:
+    - DIR
+    - ROT
+  - claim_id: vector.core_architecture.002
+    claim: VECTOR as a late meta-reconstructive praxeological orientation claim
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+  - claim_id: vector.core_architecture.003
+    claim: The coordinated claim conditions \(O,F,Q,\pi,t\) as a VECTOR object
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+  - claim_id: vector.core_architecture.004
+    claim: The exact notation \(V_t(O\mid F,Q,\pi)=\langle DIR_t,RP_t\rangle\)
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+    vector_targets:
+    - DIR
+  - claim_id: vector.core_architecture.005
+    claim: '`ROTProfile` / \(RP_t\) as the stored rotation-test state distinct from the \(ROT\) operation family'
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+    vector_targets:
+    - ROT
+    - ROTProfile
+    - DIST
+  - claim_id: vector.core_architecture.006
+    claim: Optional retrospective notation \(t_s\) / \(t_a\)
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.core_architecture.007
+    claim: 'Non-retroprojection boundary: analyst legibility at \(t_a\) does not establish actor legibility or capacity at
+      \(t_s\)'
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+  - claim_id: vector.core_architecture.008
+    claim: Geometry Firewall / `VECTOR ≠ vector space by default`
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Core architecture
+    vector_targets:
+    - GeometryFirewall
+  - claim_id: vector.direction_and_rotation.001
+    claim: DIR as a generalized bounded directional claim type
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - DIR
+  - claim_id: vector.direction_and_rotation.002
+    claim: Trade-Off / Incomparability / Non-Capture as distinct VECTOR outputs
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - DIST
+    - NonCapture
+    - TradeOff
+    - Incomparability
+  - claim_id: vector.direction_and_rotation.003
+    claim: ROT as a general perspective-testing and discovery component
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - ROT
+  - claim_id: vector.direction_and_rotation.004
+    claim: Rotation Contract
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - ROT
+  - claim_id: vector.direction_and_rotation.005
+    claim: Robustness-bearing ROT versus exploratory probe
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - ROT
+  - claim_id: vector.direction_and_rotation.006
+    claim: '`orientation gain ≠ same-claim robustness gain`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+  - claim_id: vector.direction_and_rotation.007
+    claim: Rotational robustness as materially distinct pressure rather than rotation count
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - ROT
+    - DIST
+  - claim_id: vector.direction_and_rotation.008
+    claim: Warrant Source Boundary separating internal robustness from external-premise warrant
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - Warrant
+  - claim_id: vector.direction_and_rotation.009
+    claim: Exact warrant-source inventory / record fields
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - Warrant
+  - claim_id: vector.direction_and_rotation.010
+    claim: 'VECTOR Calibration Boundary: thresholds are exposed but not fully generated endogenously'
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - Calibration
+  - claim_id: vector.direction_and_rotation.011
+    claim: Exact calibration record fields
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - Calibration
+  - claim_id: vector.direction_and_rotation.012
+    claim: 'Same-burden rival scope boundary: calibrated commensurable multi-criteria orientation can yield primary DIR/ROT
+      status to an external sensitivity model'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Direction and rotation
+    vector_targets:
+    - DIR
+    - ROT
+    - Calibration
+  - claim_id: vector.dist_and_reversibility.001
+    claim: Effective orientation–enactment separation as a cross-domain reconstructed relation
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+  - claim_id: vector.dist_and_reversibility.002
+    claim: DIST as compact notation for that relation
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+    vector_targets:
+    - DIST
+  - claim_id: vector.dist_and_reversibility.003
+    claim: Reduction of DIST from core component to derived supporting construct after redundancy test
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+    vector_targets:
+    - DIST
+  - claim_id: vector.dist_and_reversibility.004
+    claim: '`DIST ≠ REV_avail`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+    vector_targets:
+    - DIST
+  - claim_id: vector.dist_and_reversibility.005
+    claim: '`C_ROT ≠ C_REV` as explicit VECTOR distinction'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+    vector_targets:
+    - ROT
+    - DIST
+  - claim_id: vector.dist_and_reversibility.006
+    claim: '`Reversibility is a budget to be understood, not a value to be maximized`'
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: DIST and reversibility
+    vector_targets:
+    - Reversibility
+  - claim_id: vector.possibility_agency_and_consequence.001
+    claim: Paired Option Invisibility / Option Illusion architecture
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.possibility_agency_and_consequence.002
+    claim: Special-case probe versus original-frame option status
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.possibility_agency_and_consequence.003
+    claim: Option field represented through nodes and relations
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.possibility_agency_and_consequence.004
+    claim: Second-order Agency as effective transformation of option availability or relations inside VECTOR
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+    - SecondOrderAgency
+  - claim_id: vector.possibility_agency_and_consequence.005
+    claim: '`second-order agency ≠ sovereignty over possibility`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - SecondOrderAgency
+  - claim_id: vector.possibility_agency_and_consequence.006
+    claim: Cost Topology as a non-fungible consequence field within VECTOR
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - CostTopology
+  - claim_id: vector.possibility_agency_and_consequence.007
+    claim: '`orientation effect ≠ orientation truth`'
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+  - claim_id: vector.possibility_agency_and_consequence.008
+    claim: Specific notation such as \(K(bearer,t,type,source,status)\)
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+  - claim_id: vector.convergence_and_self_test.001
+    claim: Convergence Provenance and Echo Control
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - Convergence
+    - Provenance
+  - claim_id: vector.convergence_and_self_test.002
+    claim: Separately warranted and distinctly constrained local DIRs as convergence input
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - DIR
+    - DIST
+    - Warrant
+    - Convergence
+  - claim_id: vector.convergence_and_self_test.003
+    claim: Resultant Orientation as a new bounded claim
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - ResultantOrientation
+  - claim_id: vector.convergence_and_self_test.004
+    claim: Bounded Test-Burden Closure as current declared-burden closure without final closure
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - BoundedTestBurdenClosure
+  - claim_id: vector.convergence_and_self_test.005
+    claim: Baseline \(S_0\) as a fixed loss-bearing test object
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+  - claim_id: vector.convergence_and_self_test.006
+    claim: '`Revision ≠ Survival` as explicit result typing'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - Revision
+  - claim_id: vector.convergence_and_self_test.007
+    claim: Revised Robust Orientation as a distinct result
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - DIST
+    - RobustOrientation
+  - claim_id: vector.convergence_and_self_test.008
+    claim: '`VECTOR robustness ≠ external warrant`'
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Convergence and self-test
+    vector_targets:
+    - Warrant
+  - claim_id: vector.ought_and_praxis.001
+    claim: Orientation as an actor-relative Praxis Event after relevant uptake
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - OrientationUptake
+    - Praxis
+  - claim_id: vector.ought_and_praxis.002
+    claim: Orientation-Uptake chain (`presented ≠ accessible ≠ understood ≠ praxis-available ≠ enacted`)
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - OrientationUptake
+    - Praxis
+  - claim_id: vector.ought_and_praxis.003
+    claim: Structural attributability as the technical primary relation; “loss of structural innocence” as secondary shorthand
+    status: R
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - StructuralAttributability
+  - claim_id: vector.ought_and_praxis.004
+    claim: Constraint assignment audit fields (maintainer / modifier / bearer / exit / alternatives / legitimacy question)
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - Constraint
+  - claim_id: vector.ought_and_praxis.005
+    claim: '`OUGHT_choice / OUGHT_account / OUGHT_constraint` typology'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - OUGHT_account
+    - OUGHT_constraint
+    - OUGHT_choice
+    - Constraint
+  - claim_id: vector.ought_and_praxis.006
+    claim: Evidentially bounded Tragic Constraint as a VECTOR configuration of `OUGHT_constraint`
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - OUGHT_constraint
+    - TragicConstraint
+    - Constraint
+  - claim_id: vector.ought_and_praxis.007
+    claim: Constraint-source table \(G_{self},G_{role},G_{infra},G_{external}\)
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - Constraint
+  - claim_id: vector.ought_and_praxis.008
+    claim: “Adult Orientation” as supporting shorthand for corrigible consequence-carrying praxis after redundancy reduction
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - AdultOrientation
+    - CorrigibleConsequenceCarryingPraxis
+    - Praxis
+  - claim_id: vector.ought_and_praxis.009
+    claim: '`Orientation can increase structural attributability without increasing decision authority`'
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Ought and praxis
+    vector_targets:
+    - StructuralAttributability
+    - Authority
+  - claim_id: vector.recursive_architecture.001
+    claim: Orientation can alter option/consequence legibility and thereby change later praxis conditions
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Recursive architecture
+    vector_targets:
+    - OptionSpace
+    - Praxis
+  - claim_id: vector.recursive_architecture.002
+    claim: Praxis can alter future orientation conditions
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Recursive architecture
+    vector_targets:
+    - Praxis
+  - claim_id: vector.recursive_architecture.003
+    claim: Extended VECTOR / option / cost / enactment cycle as dependency schema
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Recursive architecture
+    vector_targets:
+    - OptionSpace
+    - CostTopology
+  - claim_id: vector.recursive_architecture.004
+    claim: Exact compact symbols for some result and record states
+    status: P
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Recursive architecture

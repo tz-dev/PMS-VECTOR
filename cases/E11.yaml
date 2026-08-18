@@ -1,0 +1,282 @@
+case_metadata:
+  case_id: E11
+  paper_ref: Appendix E.11
+  title: Second-Order Agency Claim Collapses
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: Adversarial D
+  load_bearing: false
+  pressure_families:
+    - second_order_agency_pressure
+    - mechanism_pressure
+    - authority_capacity_pressure
+    - timing_window_pressure
+  constructs_under_test:
+    - SecondOrderAgency
+    - EffectiveCapacity
+    - OptionSpace
+    - Collapse
+  theoretical_function: >-
+    Tests whether a plausible field-transformation claim collapses when the
+    required authority, capacity, dependencies, or temporal window are not
+    actually available.
+  artifact_pair:
+    yaml: cases/E11.yaml
+    markdown: cases/E11.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Collapse of the current Second-Order Agency claim does not establish that
+      cross-unit reassignment is impossible in every future case.
+    - >-
+      A changed authorization structure, a reopened window, or evidence of a
+      distributed actor configuration could support a new transformation claim.
+    - >-
+      The analyst's ability to describe a reassignment does not by itself enlarge
+      the current effective option field.
+    - >-
+      Second-order agency does not imply sovereignty over possibility or freedom
+      from authority, dependency, and timing conditions.
+
+vector_record:
+  reference:
+    object: >-
+      The proposed temporary reassignment of qualified staff from a neighboring
+      unit as a third staffing path for a continuity-critical service during a
+      short absence window.
+    object_type: second-order agency / option-field transformation claim
+
+  frame:
+    included:
+      - A continuity-critical service faces two unattractive current staffing responses during a short absence window.
+      - >-
+        A project lead proposes temporarily moving qualified staff from a
+        neighboring unit so that both functions can be preserved.
+      - The neighboring unit has people with the relevant skills.
+      - An organizational transfer mechanism exists.
+      - The project lead can request reassignment but cannot authorize it.
+      - The role that can authorize reassignment is unavailable until after the relevant window closes.
+      - The neighboring unit cannot release staff without that authorization.
+      - No standing emergency mechanism bypasses the authorization dependency.
+      - No evidence identifies another actor or distributed actor configuration capable of producing the transfer in time.
+    excluded:
+      - Any assumption that conceivability alone creates effective capacity.
+      - Any assumption that an existing transfer mechanism is sufficient without timely authority and dependency satisfaction.
+      - Any retroactive use of a later-changed authorization structure to rewrite the current scene-time field.
+      - Any claim that the current collapse establishes permanent impossibility of cross-unit reassignment.
+
+  question:
+    scope: >-
+      Does the proposed temporary cross-unit reassignment count as effective
+      Second-Order Agency that enlarges the current option field inside the
+      relevant absence window?
+    claim_ceiling: >-
+      The case can determine only whether this current transformation claim is
+      supported under the declared mechanism, authority/capacity, dependency,
+      and timing conditions. It cannot establish that reassignment is impossible
+      under future institutional conditions or a different actor configuration.
+
+  position:
+    perspective: >-
+      Analysis of the project lead's proposed field transformation under the
+      actual authority and dependency structure of the declared scene.
+    temporal_position: >-
+      The relevant short absence window closes before the role with authorization
+      capacity becomes available.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Temporary cross-unit reassignment is a current effective Second-Order Agency
+    path that can transform R_{O,t} into R_{O,t+1} by opening a third staffing
+    option during the relevant absence window.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT burden is material to this fixture. The claim is decided by the
+      mechanism, authority/effective-capacity, dependency, and temporal-window
+      audit required for Second-Order Agency.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: >-
+      The project lead and the continuity-critical service within the declared
+      short absence window.
+    options:
+      - option: Temporary cross-unit reassignment from the neighboring unit.
+        status: visible
+        evidence_status: null
+        authority: >-
+          The project lead can request reassignment but cannot authorize it; the
+          authorizing role is unavailable until after the window closes.
+        access: >-
+          Qualified neighboring-unit staff are identified in the fixture, but
+          access to their labor is contingent on authorization and release.
+        means: >-
+          An organizational transfer mechanism exists, but its existence alone
+          does not supply timely authority or control.
+        information: >-
+          The relevant skills, transfer mechanism, authorization dependency, and
+          timing failure are all visible in the supplied fixture.
+        window: >-
+          The current absence window closes before the authorizing role becomes
+          available.
+        dependencies:
+          - authorization by the role empowered to approve reassignment
+          - neighboring-unit release contingent on that authorization
+        practical_control: >-
+          Not established for the project lead or any other evidenced actor
+          configuration inside the relevant window.
+        relevant_cost: null
+        procedural_permission: >-
+          Reassignment requires authorization; no standing emergency bypass is
+          available in the declared scene.
+        viability_relative_to: >-
+          Not established as effectively actionable inside the current absence
+          window.
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes:
+      - >-
+        The reassignment proposal remains useful as a probe because it identifies
+        an institutional dependency that could be redesigned in future cases.
+
+  transformability:
+    actor_configuration: >-
+      The project lead is the proposing actor, but no actor or distributed actor
+      configuration with timely authorization and practical control is evidenced
+      in the current scene.
+    target_change: >-
+      Open a third current staffing path by changing the effective option field
+      through temporary cross-unit reassignment; formally, a claimed change in
+      R_{O,t} toward R_{O,t+1} and a corresponding effective option-node change.
+    mechanism: >-
+      Temporary reassignment through the organization's existing cross-unit
+      transfer mechanism.
+    authority_capacity: >-
+      Insufficient in the relevant window. The project lead can request but not
+      authorize reassignment, while the authorizing role is unavailable until
+      after the window closes.
+    dependencies:
+      - timely authorization by the empowered role
+      - release of qualified neighboring-unit staff after authorization
+      - an actor configuration capable of completing the transfer within the window
+    window: >-
+      The transformation must become effective during the short absence window;
+      the required authorizer becomes available only after that window closes.
+    evidence: >-
+      The fixture establishes qualified staff and an organizational transfer
+      mechanism, but also establishes the missing timely authorization, the
+      release dependency, the absence of an emergency bypass, and the absence of
+      evidence for another capable actor configuration.
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-ANTICIPATION supplies a lineage boundary that effective capacity is
+        frame- and time-bound and that later possibility does not retroactively
+        create earlier effective capacity.
+      - >-
+        PMS-VECTOR owns the Second-Order Agency distinction, its mechanism burden,
+        and the E11 collapse when authority/capacity, dependencies, or the
+        relevant window fail.
+      - >-
+        Provenance does not convert the ANTICIPATION capacity relation into
+        independent warrant for the broader VECTOR Second-Order Agency architecture.
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      The cross-unit reassignment remains a serious and informative probe that
+      identifies an institutional dependency, but it is not a current effective
+      transformation and does not enlarge the effective option field inside the
+      declared window.
+    revisions:
+      - 'SecondOrderAgencyClaim -> Collapse.'
+      - >-
+        The proposed reassignment is retained as a probe / future redesign
+        candidate rather than as a current effectively actionable option.
+      - >-
+        No effective node or relation change in the current option field is
+        recorded because the required transformation is not produced in time.
+    scope: >-
+      The negative result is bounded to the current mechanism, authority/capacity
+      field, dependencies, and short absence window.
+    residue:
+      - >-
+        A changed authorization structure could support a new transformation
+        claim.
+      - >-
+        A reopened or different temporal window could support a new
+        transformation claim.
+      - >-
+        Evidence of a distributed actor configuration capable of authorizing and
+        producing the transfer in time could support a new transformation claim.
+    stop_reason: >-
+      The current Second-Order Agency claim fails its required mechanism burden:
+      timely authority/effective capacity is absent, the neighboring-unit release
+      remains dependency-bound, no emergency bypass exists, and no alternative
+      capable actor configuration is evidenced. The claim therefore collapses
+      without converting a conceivable transformation into current agency.

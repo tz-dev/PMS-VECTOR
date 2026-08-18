@@ -1,0 +1,184 @@
+case_metadata:
+  case_id: E03
+  paper_ref: Appendix E.3
+  title: Incomparability
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - incomparability_pressure
+    - total_order_pressure
+  constructs_under_test:
+    - DIR
+    - Incomparability
+  theoretical_function: >-
+    Tests whether the architecture preserves incomparability when no warranted
+    priority relation supports dominance, rather than misclassifying the result as equality.
+  artifact_pair:
+    yaml: cases/E03.yaml
+    markdown: cases/E03.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - Incomparability does not imply equality.
+    - Absence of warranted dominance does not imply equal quality, consequence, adequacy, or practical significance.
+    - A meaningful comparison that yields no warranted rank is not thereby Non-Capture.
+
+vector_record:
+  reference:
+    object: >-
+      Two emergency procedures X and Y considered within one bounded emergency-procedure comparison.
+    object_type: bounded procedure comparison
+
+  frame:
+    included:
+      - Procedure X minimizes immediate service interruption.
+      - Procedure Y maximizes preservation of audit evidence needed to determine a later cause.
+      - The two aims are different and non-substitutable in the declared situation.
+      - The current situation supplies no warranted priority relation between those aims.
+      - Neither procedure dominates the other on both aims.
+    excluded:
+      - Any inference that absence of dominance makes X and Y equal.
+      - Any universal ranking of the two procedures beyond the declared comparison.
+      - Any claim that the comparison itself is wrongly typed or meaningless.
+
+  question:
+    scope: >-
+      Does the declared emergency-procedure comparison warrant a dominance relation
+      between X and Y when their non-substitutable aims lack a warranted priority relation
+      and neither procedure dominates on both?
+    claim_ceiling: >-
+      The fixture may record Incomparable for this bounded comparison. It does not
+      establish equality, universal rank, equal consequence, or Non-Capture.
+
+  position:
+    perspective: >-
+      Analyst perspective comparing the two procedures only under the aims and
+      priority conditions supplied by the fixture.
+    temporal_position: the current emergency decision situation described in Appendix E.3
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Tempting candidate S_0: because no overall dominance relation is available,
+    Procedure X and Procedure Y should be recorded as equal.
+
+  dir:
+    relation: >-
+      X is incomparable with Y under the declared VECTOR conditions C:
+      X ∥_{V,C} Y. No warranted dominance relation is available.
+    comparison_basis: >-
+      X carries the immediate-service-interruption aim better, while Y carries the
+      audit-evidence-preservation aim better; no warranted priority relation orders
+      those non-substitutable aims, and neither procedure dominates on both.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+      external_premises:
+        - The two declared aims are non-substitutable in the current situation.
+        - No warranted priority relation between the two aims is supplied.
+        - Neither procedure dominates the other on both aims.
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        A newly warranted priority relation or a genuine dominance relation across
+        the material aims would require a new bounded comparison and could defeat the current incomparability result.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is applied in this micro-countercase. The fixture is sufficient to
+      distinguish meaningful comparison without warranted dominance from equality or Non-Capture.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns Incomparability as a distinct non-dominance result and
+        the boundary that incomparability does not imply equality.
+    non_compensation: >-
+      No compensatory or priority rule is available that would convert the two
+      non-substitutable aims into one warranted dominance relation.
+    critical_open_tests: []
+
+  result:
+    status: Incomparable
+    surviving_claim: >-
+      The comparison is meaningful, but no warranted dominance relation between
+      X and Y has been earned under the declared conditions: X ∥_{V,C} Y.
+    revisions: []
+    scope: >-
+      Limited to the declared emergency-procedure comparison, its two supplied
+      non-substitutable aims, and the absence of a warranted priority relation between them.
+    residue:
+      - The procedures remain materially different despite the absence of warranted rank.
+      - No priority relation between the two aims is supplied by the fixture.
+    stop_reason: >-
+      The micro-countercase closes once the meaningful comparison, absence of
+      warranted dominance, and non-equivalence between incomparability and equality are preserved.

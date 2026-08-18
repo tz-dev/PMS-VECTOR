@@ -1,0 +1,243 @@
+case_metadata:
+  case_id: E13
+  paper_ref: Appendix E.13
+  title: Supported Indirect Cost versus Invented Cost
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - consequence_evidence_pressure
+    - cost_inflation_pressure
+    - unknown_residue_pressure
+  constructs_under_test:
+    - ConsequenceTopology
+    - EvidenceStatus
+    - UnknownResidue
+  theoretical_function: >-
+    Tests whether traceably inferred downstream cost is carried while
+    unsupported hidden-cost assertions remain Unknown/Residual rather than
+    becoming positive cost claims.
+  artifact_pair:
+    yaml: cases/E13.yaml
+    markdown: cases/E13.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      An unseen downstream consequence is not thereby zero.
+    - >-
+      An unseen downstream consequence is not thereby a positive hidden-cost
+      claim; unsupported remainder stays Unknown/Residual.
+    - >-
+      Unknown residue cannot function as a universal defeat condition for an
+      otherwise supported DIR or option claim.
+
+vector_record:
+  reference:
+    object: >-
+      Two downstream-cost assertions: Scene A links maintenance deferral to a
+      later outage risk through a documented failure mode, while Scene B asserts
+      only that some unspecified downstream cost may exist.
+    object_type: consequence-evidence typing comparison
+
+  frame:
+    included:
+      - >-
+        Scene A contains a maintenance deferral that leaves a documented failure
+        mode active.
+      - >-
+        Scene A supplies a known mechanism from the deferred repair to later
+        outage risk through the technical record.
+      - >-
+        Scene A identifies the bearer as the service that depends on the
+        component and makes the future temporal relation explicit.
+      - >-
+        Scene B supplies only the statement that there may be some downstream
+        cost not yet thought of.
+      - >-
+        Scene B supplies no bearer, mechanism, temporal relation, or external
+        support for a positive cost claim.
+    excluded:
+      - Any assumption that temporal distance makes a consequence unreal or automatically important.
+      - Any inference that naming a cost category creates evidence that the cost exists.
+      - Any conversion of unspecified downstream possibility into a positive consequence item.
+      - Any universal total-cost scalar or hidden-cost reserve used to protect a preferred conclusion.
+
+  question:
+    scope: >-
+      Which of the two downstream-cost assertions can be carried as a positive
+      consequence relation, and which must remain Unknown/Residual under the
+      supplied evidence?
+    claim_ceiling: >-
+      The case can type support status for the two downstream assertions. It does
+      not establish Scene A's exact magnitude or timing, identify a hidden cost
+      in Scene B, or use unknown residue to determine a universal DIR, option,
+      or total-cost result.
+
+  position:
+    perspective: >-
+      Bounded consequence-evidence audit of the two supplied scenes.
+    temporal_position: >-
+      Scene A concerns a future downstream outage risk whose relation to the
+      current maintenance deferral is traced in the supplied technical record;
+      Scene B remains temporally unspecified.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Both scenes present unseen downstream-cost possibilities, so both may be
+    carried as positive cost relations despite not being directly observed.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT burden is required for this fixture. The discrimination is produced
+      by comparing whether bearer, temporal relation, mechanism/source, and
+      evidential bridge are actually supplied for each downstream-cost assertion.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items:
+      - type: delayed / downstream cost
+        bearer: The service that depends on the deferred-maintenance component.
+        temporal_relation: >-
+          Future outage risk connected to the present maintenance deferral.
+        mechanism_source: >-
+          A documented failure mode remains active, and the supplied technical
+          record traces the dependency from deferred repair to later outage risk.
+        evidence_status: traceably_inferred
+    unknown_residue: >-
+      Scene B remains unknown_or_residual: an unspecified possible downstream
+      cost is mentioned, but no bearer, mechanism, temporal relation, or
+      external support is supplied. It is therefore preserved as residue rather
+      than inserted into consequence_topology.items as a positive cost claim.
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        Scene B functions as the contrast case: downstream-cost language is
+        present, but the claim lacks the bearer, temporal relation,
+        mechanism/source, and evidential bridge supplied in Scene A.
+    provenance_dependencies:
+      - >-
+        PMS-SEX supplies a local lineage precedent that downstream effects can
+        persist and matter across time, but it does not warrant any specific
+        hidden cost in E13.
+      - >-
+        PMS-VECTOR owns the explicit consequence-evidence statuses, the
+        Unknown/Residual anti-inflation rule, and the E13 discrimination between
+        traceably inferred cost and invented hidden cost.
+      - >-
+        Provenance does not convert a downstream-cost precedent into evidence
+        for Scene B; the positive cost burden remains claim-specific.
+    non_compensation: null
+    critical_open_tests:
+      - >-
+        Scene A preserves uncertainty about magnitude and exact timing; a
+        stronger quantitative or directional claim would require additional
+        support.
+      - >-
+        Scene B can motivate further inquiry, but it remains Unknown/Residual
+        until a bearer, temporal relation, mechanism/source, and evidential
+        bridge are supplied.
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      Scene A may carry a delayed/downstream consequence as traceably inferred
+      because the bearer, temporal relation, mechanism, and evidential bridge
+      are supplied. Scene B does not support a positive cost assertion and
+      remains Unknown/Residual.
+    revisions:
+      - >-
+        The baseline rule that unseen downstream possibility can be carried as a
+        positive cost in both scenes is rejected.
+      - >-
+        Scene A is retained as a traceably inferred consequence relation, while
+        Scene B is retyped as unknown_or_residual rather than as a positive item.
+    scope: >-
+      The result is limited to evidence-status typing of the supplied downstream
+      relations. It does not establish Scene A's exact magnitude or timing and
+      does not derive a DIR, option ranking, or aggregate total-cost conclusion.
+    residue:
+      - >-
+        Scene A retains uncertainty about magnitude and precise timing despite
+        the traceable downstream relation.
+      - >-
+        Scene B remains unresolved residue that may justify further inquiry but
+        supplies no current positive cost evidence.
+    stop_reason: >-
+      The fixture supplies enough relation structure to classify Scene A as
+      traceably inferred and enough absence of relation structure to refuse a
+      positive cost claim in Scene B. Further inquiry may refine either scene,
+      but no hidden-cost assertion is licensed by the current residue.

@@ -1,0 +1,227 @@
+case_metadata:
+  case_id: E20
+  paper_ref: Appendix E.20
+  title: Non-Capture
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: true
+  pressure_families:
+    - type_boundary_pressure
+    - non_capture_pressure
+    - person_worth_boundary_pressure
+  constructs_under_test:
+    - NonCapture
+    - ReferenceObject
+    - PersonWorthBoundary
+  theoretical_function: >-
+    Tests whether an invalid person-ranking request is refused as Non-Capture
+    rather than repaired into an intrinsic person score; a retyped bounded question
+    is a new claim.
+  artifact_pair:
+    yaml: cases/E20.yaml
+    markdown: cases/E20.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Non-Capture does not mean that the two employees are equal, incomparable as
+      persons, or insufficiently documented; it means the requested person-level
+      VECTOR ranking is not a valid output type.
+    - >-
+      Adding more workplace observations cannot by itself repair the category jump
+      from bounded enactment analysis to intrinsic person ranking.
+    - >-
+      Retyping the question to compare bounded incident-response procedures creates
+      a new claim; it is not completion or rescue of the original person-ranking
+      request.
+    - Suspend is not equivalent to Non-Capture.
+
+vector_record:
+  reference:
+    object: >-
+      The requested comparison "Which of two employees has the higher VECTOR?" as
+      a person-level ranking derived from observed workplace enactments.
+    object_type: invalid person-level VECTOR ranking request
+
+  frame:
+    included:
+      - Several observed workplace enactments involving the two employees.
+      - Different roles across the observed enactments.
+      - Different constraints, histories, and authority conditions across those enactments.
+      - The evaluator's request for one person-level VECTOR comparison.
+    excluded:
+      - Intrinsic person quality as a VECTOR reference scale.
+      - Human worth or dignity as a quantity to be ranked.
+      - Any person-level score obtained by compressing heterogeneous bounded enactments into one intrinsic ranking.
+      - Any assumption that additional data can repair an invalid claim type without changing the question.
+
+  question:
+    scope: >-
+      Can VECTOR validly answer the requested question "Which of two employees has
+      the higher VECTOR?" by converting the supplied bounded workplace enactments
+      into a person-level ranking?
+    claim_ceiling: >-
+      The record may determine only whether the requested VECTOR operation is
+      admissible in its current form. It cannot rank intrinsic person quality,
+      dignity, or worth, and it cannot treat a retyped bounded comparison as the
+      completion of the original request.
+
+  position:
+    perspective: evaluator reviewing several workplace enactments
+    temporal_position: >-
+      Across the supplied observations under differing roles, constraints,
+      histories, and authority conditions.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    The observed workplace enactments can be compressed into a single person-level
+    VECTOR score that permits the two employees to be ranked against one another.
+
+  dir:
+    relation: null
+    comparison_basis: >-
+      No valid person-level DIR comparison is available because the requested
+      reference object converts bounded enactment relations into an intrinsic
+      person-ranking claim that VECTOR does not license.
+    warrant:
+      source_types:
+        - PMS-VECTOR person-worth and reference-object boundary
+        - Appendix E.20 case type boundary
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        The observed enactments occur under different roles, constraints, histories,
+        and authority conditions; collapsing them into a person-level score changes
+        the claim type rather than merely aggregating more evidence.
+      - >-
+        More data about the same employees would not make an intrinsic person-ranking
+        output valid in the original form.
+      - >-
+        A bounded comparison of procedures or enactments can become legitimate only
+        by changing the reference object and question, thereby creating a new claim.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      The requested operation fails at the reference/type boundary before
+      robustness-bearing rotation is required. Non-Capture is already the proper
+      terminal result; additional ROT cannot convert an invalid person-ranking claim
+      into a valid one without changing the claim itself.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        Retyped bounded question: "Which of these two incident-response procedures
+        preserved affected-role visibility under the declared event?" This may be a
+        legitimate VECTOR comparison, but it is a new claim rather than a repaired
+        form of the original person-ranking request.
+    provenance_dependencies:
+      - >-
+        PMS Base supplies a non-capture precedent: derivational or translation
+        productivity does not establish exhaustive capture, and genuine non-capture
+        must remain methodologically possible.
+      - >-
+        MIP supplies the dignity/person-worth boundary precedent: human worth is not
+        a score, and person-ranking must not be inferred from bounded enactment
+        descriptions.
+      - >-
+        PMS-VECTOR owns the specific Non-Capture result type and the rule that
+        O != person worth; the E20 person-ranking refusal is a VECTOR case result,
+        not inherited verdict authority from the lineage sources.
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Non-Capture
+    surviving_claim: >-
+      VECTOR may compare bounded enactments, trajectories, claims, option fields, or
+      relational configurations under declared questions, but it should not produce
+      the requested intrinsic person-level ranking from the supplied observations.
+    revisions: []
+    scope: >-
+      Non-Capture applies to the original person-ranking request in its current form.
+      A separately typed bounded procedure or enactment comparison may be legitimate,
+      but that would be a new claim with its own reference, frame, question, and
+      warrant burden.
+    residue:
+      - >-
+        The observed workplace enactments remain available as material for properly
+        bounded future comparisons; they do not become evidence of intrinsic person
+        quality by accumulation.
+      - >-
+        The retyped incident-response procedure question is not evaluated here; it
+        is preserved only as the paper's contrast showing that retyping changes the
+        claim rather than rescuing the original one.
+    stop_reason: >-
+      The requested operation commits a type/category jump from bounded enactment
+      analysis to intrinsic person ranking. Because the defect is in the requested
+      claim form rather than merely in evidential sufficiency, Suspend is not the
+      correct result and additional data cannot repair the original question.

@@ -1,0 +1,266 @@
+case_metadata:
+  case_id: E02
+  paper_ref: Appendix E.2
+  title: Rotation Collapses DIR
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - rotation_pressure
+    - claim_regression_pressure
+    - non_compensation_pressure
+  constructs_under_test:
+    - DIR
+    - ROT
+    - Collapse
+    - Revision
+  theoretical_function: >-
+    Tests whether affected-role ROT can expose a claim-critical externalized load
+    and collapse an initial DIR rather than preserve it through revision.
+  artifact_pair:
+    yaml: cases/E02.yaml
+    markdown: cases/E02.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Collapse of the initial DIR does not establish VECTOR failure; the
+      collapse is the discriminative result of a materially relevant ROT.
+    - >-
+      A later claim about a modified coordinator role with explicit capacity
+      protection would be a new claim and would not mean the original
+      Arrangement Y survived.
+    - >-
+      The observed delivery gain under Arrangement Y does not compensate for a
+      claim-critical externalized load when the declared question explicitly
+      includes sustainable coordination and load visibility.
+
+vector_record:
+  reference:
+    object: >-
+      The comparison between staffing Arrangement X, which distributes urgent
+      coordination tasks among several team members, and Arrangement Y, which
+      assigns one experienced coordinator to absorb nearly all urgent
+      interruptions.
+    object_type: bounded staffing-arrangement comparison
+
+  frame:
+    included:
+      - A project lead compares Arrangement X and Arrangement Y.
+      - >-
+        From the lead's initial perspective, Arrangement Y produces smoother
+        delivery, lower meeting load, and rapid failure resolution.
+      - >-
+        The declared question concerns sustainable coordination without hiding
+        critical load.
+      - >-
+        An affected-role rotation moves to the coordinator's position while
+        preserving the project, time interval, and declared question.
+      - >-
+        Under Arrangement Y, the apparent efficiency depends on continuous
+        unrecorded interruption, after-hours work, and loss of the coordinator's
+        own project capacity.
+    excluded:
+      - Any universal ranking of staffing arrangements beyond the declared scene.
+      - Any person-worth or moral ranking of the coordinator or project lead.
+      - Any compensatory aggregate in which delivery smoothness automatically offsets hidden role load.
+      - Any claim that a revised future coordinator design retroactively preserves the original Arrangement Y claim.
+
+  question:
+    scope: >-
+      Which arrangement supports sustainable coordination without hiding
+      critical load?
+    claim_ceiling: >-
+      The case can determine whether the initial bounded DIR survives the
+      declared affected-role ROT. It does not establish a universal staffing
+      rule, a total score over heterogeneous consequences, or the superiority of
+      a later modified arrangement not tested in this fixture.
+
+  position:
+    perspective: >-
+      Initial project-lead perspective, followed by an affected-role perspective
+      centered on the coordinator who carries the urgent interruption load.
+    temporal_position: >-
+      The same project and declared time interval are preserved across the
+      rotation.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Arrangement Y is directionally superior to Arrangement X for the declared
+    coordination question: X ≺_{V,C} Y.
+
+  dir:
+    relation: 'Initial relation: X ≺_{V,C} Y.'
+    comparison_basis: >-
+      The initial direction is carried by smoother delivery, lower meeting load,
+      and faster resolution of failures as seen from the project lead's
+      position, under a question that also requires sustainable coordination and
+      visible critical load.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        Arrangement Y depends on continuous unrecorded interruption borne by the
+        coordinator.
+      - >-
+        Arrangement Y depends on after-hours work by the coordinator.
+      - >-
+        Arrangement Y reduces the coordinator's own project capacity.
+      - >-
+        The initial DIR treated system-level smoothness as though it represented
+        scene-wide adequacy even though the declared question includes load
+        visibility and sustainability.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: actor_affected_role
+        vulnerability: >-
+          Whether the initial project-lead DIR depends on externalizing critical
+          coordination load into the coordinator role.
+        purpose: >-
+          Test whether Arrangement Y remains superior when the affected role is
+          made claim-relevant under the same project, time interval, and declared
+          question.
+        changed:
+          - >-
+            Perspective changes from the project lead's system-level view to the
+            coordinator's affected-role position.
+        held_constant:
+          - Arrangement X and Arrangement Y.
+          - The same project.
+          - The same time interval.
+          - The declared question of sustainable coordination without hidden critical load.
+        reference_continuity: true
+        material_distinctness: >-
+          The rotation reveals role-specific load that was not represented by the
+          initial system-level smoothness description: continuous unrecorded
+          interruption, after-hours work, and loss of the coordinator's own
+          project capacity.
+        loss_route: >-
+          If the apparent efficiency of Arrangement Y depends on a
+          claim-critical externalized load that the declared question explicitly
+          requires the analysis to preserve, the initial DIR can no longer stand.
+        result: collapse
+        robustness_relevance: >-
+          The rotation has genuine claim-loss capacity and exercises it: the
+          baseline directional relation collapses rather than being protected by
+          the initially observed delivery gains.
+    untested_relevant: []
+    stop_basis: >-
+      The affected-role ROT directly exposes a claim-critical regression under
+      the declared question, so the original DIR cannot survive this test. Any
+      modified staffing design would constitute a new claim with a new burden.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-VECTOR owns the general DIR / ROT architecture and the E02 collapse
+        claim; ROT is not inherited from another PMS add-on operation.
+      - >-
+        PMS-STRATA supplies a lineage precedent for non-compensatory claim
+        discipline, but E02's concrete non-compensation relation is carried by
+        the declared case question and its claim-critical regression rather than
+        inherited as independent VECTOR warrant.
+    non_compensation: >-
+      The project-level delivery gain does not compensate for the coordinator's
+      unrecorded interruption load, after-hours work, and lost project capacity
+      because the declared question itself requires sustainable coordination
+      without hidden critical load.
+    critical_open_tests: []
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      The observed smoother delivery, lower meeting load, and rapid failure
+      resolution under Arrangement Y remain part of the scene, but they no
+      longer warrant the original superiority relation for the declared
+      sustainable-coordination question.
+    revisions:
+      - 'Initial DIR: X ≺_{V,C} Y -> Collapse.'
+      - >-
+        No replacement DIR is established within this fixture; any modified
+        coordinator arrangement with explicit capacity protection would be a new
+        claim requiring its own test.
+    scope: >-
+      The collapse is bounded to Arrangement X versus the original Arrangement Y
+      in the declared project, time interval, and sustainable-coordination
+      question.
+    residue:
+      - >-
+        A redesigned coordinator role with explicit capacity protection may be a
+        legitimate new comparison candidate, but it is not evaluated here.
+    stop_reason: >-
+      The materially relevant affected-role ROT exposes a non-compensable,
+      claim-critical regression in the baseline relation. The responsible result
+      is Revision Required after DIR collapse, not preservation of the original
+      claim through a post hoc redesign.

@@ -1,0 +1,340 @@
+case_metadata:
+  case_id: E16
+  paper_ref: Appendix E.16
+  title: Tragic Constraint
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - tragic_constraint_pressure
+    - option_status_pressure
+    - transformation_pressure
+  constructs_under_test:
+    - TragicConstraint
+    - ConstraintArchitecture
+    - OptionSpace
+    - SecondOrderAgency
+  theoretical_function: >-
+    Tests an evidentially bounded tragic constraint in which every evidenced
+    effective response carries serious residual loss while no effective
+    non-lossful transformation is available in time.
+  artifact_pair:
+    yaml: cases/E16.yaml
+    markdown: cases/E16.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      TragicConstraint(G,R_G) does not establish which residual loss is morally
+      justified or which response is morally preferable.
+    - >-
+      The absence of a currently evidenced non-lossful response does not establish
+      metaphysical impossibility or prove that no such route could ever become available.
+    - >-
+      Hypothetical option D is not a current effective option merely because it can
+      be described; its required staff and equipment are unavailable within the
+      relevant window.
+    - >-
+      No currently evidenced good option does not imply failure of imagination.
+
+vector_record:
+  reference:
+    object: >-
+      The care institution's maintained continuity condition G together with the
+      current effective response field R_G during a sudden critical-resource shortage.
+    object_type: evidentially bounded constraint-and-response-field claim
+
+  frame:
+    included:
+      - A sudden shortage cannot be corrected within the relevant time window.
+      - The maintained continuity condition requires allocation of a limited critical resource.
+      - Option A preserves one high-dependency service but suspends another.
+      - Option B distributes the resource more evenly but leaves both services below their ordinary safe margin.
+      - Option C closes one service entirely and concentrates remaining capacity on the other.
+      - Every current effective option A, B, and C carries serious, non-substitutable residual loss.
+      - Hypothetical option D would avoid those losses if additional staff and equipment were available.
+      - The required additional staff and equipment for D cannot be obtained within the relevant window.
+      - No currently evidenced effective option-space transformation removes the conflict inside the declared window, capacity field, and dependency structure.
+    excluded:
+      - Any claim that the current residual losses are morally justified, fair, deserved, or good.
+      - Any claim that the maintained condition G legitimates itself or assigns moral duty to a particular bearer.
+      - Any treatment of hypothetical D as currently effective despite the missing staff, equipment, and time-window conditions.
+      - Any metaphysical claim that a non-lossful route is impossible in all future or differently configured fields.
+
+  question:
+    scope: >-
+      Given the correctly typed current effective response field, does every
+      response satisfying the maintained condition carry serious residual loss,
+      and is any evidenced effective non-lossful route or in-window option-space
+      transformation currently available?
+    claim_ceiling: >-
+      The case may record an evidentially bounded TragicConstraint(G,R_G) for the
+      declared field. It does not select a morally justified loss, establish the
+      legitimacy of G, assign bearer authority, or claim metaphysical impossibility.
+
+  position:
+    perspective: >-
+      The care institution as the configuration maintaining G and facing the
+      bounded resource-allocation field; affected-service losses remain visible
+      without being converted into a person or moral ranking.
+    temporal_position: >-
+      The current shortage scene inside the relevant correction window. Routes
+      that require resources unavailable within that window are not counted as
+      current effective options.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Candidate claim S_0: under the current shortage and maintained condition G,
+    the effective response field R_G = {A,B,C} contains no non-lossful response,
+    and no currently evidenced effective transformation opens one within the
+    declared window, capacity field, and dependency structure.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions:
+      - A previously invisible but real effective non-lossful option is evidenced.
+      - An effective second-order transformation can open a non-lossful route within the declared window.
+      - A serious rival shows that the effective option or constraint field was materially misdescribed.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No ROT is applied in this fixture. The discrimination is carried by the
+      effective-option audit, the residual-loss condition across R_G, and the
+      second-order transformation audit required for a Tragic Constraint claim.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: >-
+      The care institution maintaining G during the shortage; no person-level
+      bearer or authority assignment is made by the fixture.
+    options:
+      - option: A — preserve one high-dependency service and suspend another.
+        status: structurally_viable
+        evidence_status: >-
+          Directly established by the synthetic fixture as a current effective
+          response satisfying the maintained condition while carrying serious residual loss.
+        authority: null
+        access: null
+        means: limited critical resource allocated to the preserved service
+        information: null
+        window: within the current shortage window
+        dependencies: []
+        practical_control: null
+        relevant_cost: serious non-substitutable residual loss through suspension of the other service
+        procedural_permission: null
+        viability_relative_to: satisfies G in the declared current response field
+      - option: B — distribute the resource more evenly across both services.
+        status: structurally_viable
+        evidence_status: >-
+          Directly established by the synthetic fixture as a current effective
+          response satisfying the maintained condition while leaving both
+          services below their ordinary safe margin.
+        authority: null
+        access: null
+        means: distributed use of the limited critical resource
+        information: null
+        window: within the current shortage window
+        dependencies: []
+        practical_control: null
+        relevant_cost: serious non-substitutable residual loss through below-safe-margin operation of both services
+        procedural_permission: null
+        viability_relative_to: satisfies G in the declared current response field
+      - option: C — close one service and concentrate remaining capacity on the other.
+        status: structurally_viable
+        evidence_status: >-
+          Directly established by the synthetic fixture as a current effective
+          response satisfying the maintained condition while carrying serious residual loss.
+        authority: null
+        access: null
+        means: concentrated use of remaining capacity on one service
+        information: null
+        window: within the current shortage window
+        dependencies: []
+        practical_control: null
+        relevant_cost: serious non-substitutable residual loss through closure of one service
+        procedural_permission: null
+        viability_relative_to: satisfies G in the declared current response field
+      - option: D — avoid the residual losses by adding staff and equipment.
+        status: visible
+        evidence_status: >-
+          The fixture explicitly supplies D as a hypothetical no-loss route, but
+          also establishes that its required staff and equipment cannot be obtained
+          within the relevant window.
+        authority: null
+        access: unavailable within the declared window
+        means: required additional staff and equipment are unavailable within the declared window
+        information: null
+        window: fails the current time-window condition
+        dependencies:
+          - additional staff
+          - additional equipment
+        practical_control: not effectively available in the declared current field
+        relevant_cost: null
+        procedural_permission: null
+        viability_relative_to: >-
+          D is not a member of the current effective response field R_G because
+          the means and window conditions required for effective action are not met.
+    option_invisibility: >-
+      A real but currently unseen non-lossful option would defeat the Tragic
+      Constraint claim once evidenced; the fixture supplies no such option.
+    option_illusion: >-
+      D must not be promoted from a visible hypothetical route to a current
+      effective option when its required means are unavailable in time.
+    special_case_probes:
+      - >-
+        Search for a real fourth path that satisfies G without serious residual loss.
+      - >-
+        Test whether an option-space transformation can create or open such a path
+        within the declared window, capacity field, and dependency structure.
+
+  transformability:
+    actor_configuration: the care institution and its relevant resource-acquisition dependencies
+    target_change: open a non-lossful response route while maintaining G
+    mechanism: obtain the additional staff and equipment required for hypothetical option D
+    authority_capacity: >-
+      Effective capacity to obtain the required staff and equipment within the
+      relevant window is absent in the fixture.
+    dependencies:
+      - availability of additional staff
+      - availability of additional equipment
+      - acquisition within the relevant shortage window
+    window: the declared correction window for the sudden shortage
+    evidence: >-
+      Appendix E.16 explicitly establishes that the additional staff and equipment
+      required for D cannot be obtained within the relevant window.
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items:
+      - type: service suspension loss
+        bearer: affected service / dependent recipients not further specified by the fixture
+        temporal_relation: current response consequence of A
+        mechanism_source: preserving one high-dependency service by suspending another
+        evidence_status: directly established by the synthetic fixture
+      - type: below-safe-margin service loss
+        bearer: both services / affected recipients not further specified by the fixture
+        temporal_relation: current response consequence of B
+        mechanism_source: distributing the limited resource across both services
+        evidence_status: directly established by the synthetic fixture
+      - type: service closure loss
+        bearer: closed service / affected recipients not further specified by the fixture
+        temporal_relation: current response consequence of C
+        mechanism_source: concentrating remaining capacity on the other service
+        evidence_status: directly established by the synthetic fixture
+    unknown_residue: >-
+      Exact magnitudes, bearer distribution, comparative moral weights, and other
+      downstream consequences are not supplied and are not converted into a universal scalar.
+
+  constraint:
+    G: >-
+      The care institution's maintained continuity condition requiring assignment
+      of the limited critical resource during the sudden shortage.
+    maintained_by: the care institution in the paper fixture
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes:
+      - >-
+        Hypothetical D would provide a non-lossful route if additional staff and
+        equipment became effectively available within the relevant window; the
+        fixture establishes that they are not currently available in time.
+    abandon_or_revision_consequences: []
+    unknowns:
+      - Whether G could or should be revised is not established by this fixture.
+      - Exact burden distribution and moral evaluation of the residual losses are not established.
+      - Future or differently resourced non-lossful routes are not ruled out metaphysically.
+    external_legitimacy_question: >-
+      The fixture does not establish that G is legitimate, that the residual
+      losses are just, or that any particular carrier is morally obligated.
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        If a previously invisible but real effective fourth path avoids material
+        residual loss, TragicConstraint(G,R_G) must collapse or the field must be retyped.
+      - >-
+        If an evidenced second-order transformation can open a non-lossful route
+        within the declared window, capacity field, and dependency structure,
+        TragicConstraint(G,R_G) must collapse.
+      - >-
+        Mere imagination of a rescue route without effective means or in-window
+        capacity does not change the current option status.
+    provenance_dependencies:
+      - >-
+        PMS-CONFLICT supplies lineage precedent for mature non-integrability and
+        tragic residual structure without converting tragedy into moral failure.
+      - >-
+        PMS-VECTOR owns TragicConstraint(G,R_G) as an evidentially bounded
+        configuration of OUGHT_constraint and requires the effective option-field
+        and second-order transformation audits used in this fixture.
+    non_compensation: >-
+      The serious residual losses attached to A, B, and C are non-substitutable in
+      the fixture and are not aggregated into a universal cost or moral score.
+    critical_open_tests: []
+
+  result:
+    status: Bounded Orientation
+    surviving_claim: >-
+      Under the declared current response field R_G = {A,B,C}, every effective
+      response carries serious residual loss and no currently evidenced effective
+      non-lossful route or in-window option-space transformation is available.
+      The bounded result is therefore TragicConstraint(G,R_G).
+    revisions: []
+    scope: >-
+      The result is restricted to the current shortage, maintained condition G,
+      declared effective response field, relevant time window, capacity field,
+      and dependency structure. It is evidentially bounded rather than metaphysical.
+    residue:
+      - >-
+        A newly evidenced real no-loss option would defeat the current tragic classification.
+      - >-
+        An effective in-window second-order transformation opening a non-lossful
+        route would defeat the current tragic classification.
+      - >-
+        Legitimacy of G, moral justification of any loss, and bearer-level duty remain external.
+    stop_reason: >-
+      The fixture supplies a correctly typed current response field in which all
+      effective responses carry serious residual loss and explicitly establishes
+      that the supplied non-lossful hypothetical route is not effectively available
+      in time. No current evidence in the fixture supports a further non-lossful
+      route or effective in-window transformation; new such evidence would reopen the claim.

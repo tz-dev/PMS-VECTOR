@@ -1,0 +1,278 @@
+case_metadata:
+  case_id: E22
+  paper_ref: Appendix E.22
+  title: DIST Necessity Test — Architecture Reduction
+  case_format: full_minimal_case
+  adversarial:
+    marked: true
+    paper_label: Adversarial E
+  load_bearing: true
+  pressure_families:
+    - architecture_necessity_pressure
+    - dist_redundancy_pressure
+    - reversibility_pressure
+  constructs_under_test:
+    - DIST
+    - DIR
+    - ROT
+    - Reversibility
+  theoretical_function: >-
+    Tests whether DIST contributes indispensable discrimination beyond its source
+    relations; the case bears directly on core architecture rather than only a
+    local output.
+  artifact_pair:
+    yaml: cases/E22.yaml
+    markdown: cases/E22.md
+  architecture_effect:
+    applies: true
+    targets:
+      - DIST
+    effect: 'DIST: core_component -> derived_supporting_only'
+  non_implications:
+    - >-
+      Reducing DIST from the core does not show that the underlying practical
+      orientation–enactment distinction is false.
+    - >-
+      Derived DIST may summarize its source relations, but the label adds no
+      independent warrant, threshold, or discrimination when those relations
+      already carry the result.
+    - DIST is not equivalent to REV_avail.
+
+vector_record:
+  reference:
+    object: >-
+      The necessity of DIST as an independent VECTOR core component in the
+      matched Scene A / Scene B orientation–enactment comparison.
+    object_type: architecture component necessity claim
+
+  frame:
+    included:
+      - Two bounded scenes with the same current DIR.
+      - The same nominal twenty-four-hour interval before activation.
+      - Substantial PMS Χ distance in both scenes, sufficient for the actors to reflect on and understand a serious affected-role objection.
+      - Scene A with no material Ψ self-binding or public reliance, a practically open Θ review window, and a valid stop.
+      - Scene B with prior Ψ self-binding, public commitments, third-party reliance, and materially lower available reversibility.
+      - The practical role of the same affected-role ROT in each scene.
+    excluded:
+      - Any universal metric interpretation of DIST.
+      - Any claim that greater DIST is automatically better or more adequate.
+      - Any equation of DIST with PMS Χ or with REV_avail.
+      - Any claim that removing DIST removes the underlying orientation–enactment distinction.
+
+  question:
+    scope: >-
+      Does removing DIST cause a real discriminative loss in distinguishing
+      whether the same affected-role ROT remains pre-enactment actionable or is
+      primarily relevant to reversal, mitigation, or later correction?
+    claim_ceiling: >-
+      The case can establish only whether DIST is independently necessary for
+      this discrimination and therefore for core-component status; it does not
+      establish a universal distance metric, a monotonic quality relation, or
+      an identity between DIST and reversibility.
+
+  position:
+    perspective: >-
+      Architecture-level necessity test using the same affected-role ROT across
+      the matched Scene A and Scene B conditions.
+    temporal_position: >-
+      Nominally twenty-four hours before activation in both scenes, with
+      materially different binding, publicness, review-window, and reversibility
+      conditions.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    DIST is independently necessary as a third VECTOR core component because it
+    contributes practical discrimination that cannot be recovered without the
+    DIST construct from the source relations themselves.
+
+  dir:
+    relation: Same bounded DIR is held constant across Scene A and Scene B.
+    comparison_basis: >-
+      DIR is a matched condition rather than the changing variable; the test
+      concerns whether DIST adds indispensable architecture-level discrimination
+      once the practical source relations are stated.
+    warrant:
+      source_types:
+        - supplied paper-case condition
+        - PMS Base operator relations carried by Χ, Θ, and Ψ
+        - paper-declared publicness and reversibility relations
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions:
+      - >-
+        If the bounded DIR were not held stable across the two scenes, the
+        matched-case necessity test would confound direction with the
+        orientation–enactment separation relation under examination.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: actor_affected_role
+        vulnerability: >-
+          Whether the practical discrimination attributed to DIST remains when
+          the same affected-role ROT is evaluated directly through the matched
+          scenes' source relations.
+        purpose: >-
+          Test whether DIST is an independently necessary core component rather
+          than a shorthand for already discriminating source relations.
+        changed:
+          - >-
+            Scene A: no material Ψ self-binding or public reliance; Θ review
+            window practically open; valid stop available.
+          - >-
+            Scene B: prior Ψ self-binding, public commitments, third-party
+            reliance, and lower available reversibility.
+        held_constant:
+          - reference object and architecture question
+          - same bounded DIR
+          - same nominal twenty-four-hour interval before activation
+          - substantial PMS Χ distance sufficient for reflective understanding of the affected-role objection
+        reference_continuity: true
+        material_distinctness: >-
+          The scenes differ in binding, publicness, temporal openness, and
+          reversibility while retaining the matched DIR, nominal interval, and
+          reflective Χ condition.
+        loss_route: >-
+          If the practical A/B distinction survives after DIST is removed and
+          stated only through its source relations, DIST loses its claim to
+          independent core discrimination.
+        result: >-
+          Scene A leaves the affected-role ROT pre-enactment actionable; Scene B
+          leaves the same ROT primarily reversal/correction-relevant. The
+          distinction survives without DIST as an independent component.
+        robustness_relevance: >-
+          This ROT bears on the robustness of the architecture-necessity claim,
+          not on awarding Robust Orientation status to either scene.
+    untested_relevant: []
+    stop_basis: >-
+      The matched-case test directly answers the declared necessity question:
+      removing DIST leaves the practical discrimination intact because the
+      source relations still carry it.
+
+  dist_derived:
+    effective_separation: >-
+      As supporting shorthand only, DIST_A > DIST_B: Scene A retains more
+      effective pre-enactment separation than Scene B.
+    source_relations:
+      - PMS Χ distance remains substantial in both scenes.
+      - Scene A retains a practically open Θ review window.
+      - Scene A has no material Ψ self-binding or public reliance.
+      - Scene A retains a valid stop and greater available reversibility.
+      - Scene B carries prior Ψ self-binding, public commitments, and third-party reliance.
+      - Scene B has materially lower available reversibility, shifting the same ROT toward reversal, mitigation, or later correction.
+    role_variation: >-
+      The affected-role objection remains reflectively legible in both scenes;
+      what changes is the practical ability of that rotation to affect
+      pre-enactment action under the scene-specific binding and reversibility
+      relations.
+
+  reversibility:
+    available: >-
+      Scene A retains a valid stop and a practically open review window, so
+      correction can still occur before enactment; Scene B has materially lower
+      available reversibility, so the same affected-role rotation bears
+      primarily on reversal, mitigation, renegotiation, or later correction.
+    rotation_cost: null
+    reversal_cost: >-
+      Materially higher in Scene B relative to the pre-enactment correction path
+      in Scene A because prior binding, public commitment, and third-party
+      reliance have already loaded the trajectory.
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        Scene A and Scene B are matched on bounded DIR, nominal time interval,
+        and substantial PMS Χ distance, while differing in Ψ self-binding,
+        public reliance, Θ review-window openness, and available reversibility.
+    provenance_dependencies:
+      - >-
+        PMS Base owns Χ, Θ, Ψ, Ω, and Α semantics; VECTOR-DIST is not identical
+        to PMS Χ.
+      - >-
+        PMS-CRITIQUE carries materially relevant distance/interruption,
+        review-window, publicness, and correction pressure; those source
+        relations do not make DIST a CRITIQUE operation or an inherited warrant.
+      - >-
+        PMS-VECTOR owns the reduction claim that DIST is supporting only after
+        the E22 / Chapter 19.5 redundancy test.
+    non_compensation: >-
+      Convenience of the DIST shorthand cannot compensate for failure to add
+      independent discrimination or warrant beyond its source relations.
+    critical_open_tests: []
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      The practical orientation–enactment distinction survives: the affected-role
+      ROT remains pre-enactment actionable in Scene A and primarily
+      reversal/correction-relevant in Scene B.
+    revisions:
+      - 'DIST: core_component -> derived_supporting_only'
+      - 'VECTOR core: <DIR, ROT, DIST> -> <DIR, ROT>'
+    scope: >-
+      DIST remains usable only as a derived supporting descriptor whose strong
+      claims stay reducible to the source relations that generate effective
+      orientation–enactment separation.
+    residue:
+      - >-
+        DIST may remain useful as compact prose or case-comparison shorthand,
+        but it carries no independent core warrant.
+      - >-
+        Reversibility remains a distinct supporting dependency architecture;
+        DIST is not REV_avail and correction does not imply restoration.
+    stop_reason: >-
+      The declared architecture-necessity test is resolved by loss without
+      protective reinterpretation: removing DIST does not remove the practical
+      discrimination, so the core-status claim is reduced while the underlying
+      source relations remain available.

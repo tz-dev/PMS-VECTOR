@@ -1,0 +1,250 @@
+case_metadata:
+  case_id: E07
+  paper_ref: Appendix E.7
+  title: Option Invisibility
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - option_visibility_pressure
+    - rotation_pressure
+  constructs_under_test:
+    - OptionSpace
+    - OptionInvisibility
+    - ROT
+  theoretical_function: >-
+    Tests whether ROT can reveal an already available actionable path without
+    misclassifying increased legibility as creation of a new option.
+  artifact_pair:
+    yaml: cases/E07.yaml
+    markdown: cases/E07.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      ROT revealing staged transition C does not establish that ROT created C;
+      the fixture states that the actionable path already existed before the
+      inside/outside rotation.
+    - >-
+      Absence of C from the initial orientation does not establish absence of C
+      from the effective option field.
+
+vector_record:
+  reference:
+    object: >-
+      Staged transition C between two departments, enabled by an already
+      authorized shared support unit that can separate one blocking dependency.
+    object_type: option-field legibility relation
+
+  frame:
+    included:
+      - The two departments are initially assumed to face only A, keeping the current process, or B, replacing it entirely.
+      - A shared support unit already possesses authority to separate one blocking dependency.
+      - That existing authority makes staged transition C genuinely available and actionable in the declared scene.
+      - Before the inside/outside ROT, C is absent from the current orientation.
+      - The inside/outside ROT makes C visible without changing the authority that makes C available.
+    excluded:
+      - Any claim that ROT creates new authority, resources, or a new staged-transition path in this fixture.
+      - Any general claim that every invisible option is already effectively actionable.
+
+  question:
+    scope: >-
+      Does the inside/outside ROT reveal a pre-existing actionable option C that
+      was absent from the current orientation, or does it create a new option?
+    claim_ceiling: >-
+      The case types C as an already available actionable path that becomes
+      visible under the declared rotation. It does not establish a general rule
+      that ROT creates options or that every newly visible path was previously
+      actionable.
+
+  position:
+    perspective: >-
+      The departments' initial A/B orientation, tested by an inside/outside view
+      that includes the already authorized shared support unit and its relation
+      to the blocking dependency.
+    temporal_position: >-
+      The same organizational scene before and after ROT; the fixture changes
+      legibility rather than the underlying authority or option relation.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    The effective option field contains only A, keep the current process, and B,
+    replace it entirely; no staged transition C is available as a current path.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: inside_outside
+        vulnerability: >-
+          Whether the initial A/B-only option field mistakes lack of current
+          legibility for lack of a real actionable path.
+        purpose: >-
+          Test the option field by adding the outside relation supplied by the
+          shared support unit while preserving the same departments, blocking
+          dependency, and bounded option question.
+        changed:
+          - >-
+            The view changes from the departments' initial A/B orientation to an
+            inside/outside view that includes the shared support unit and its
+            already existing authority relation.
+        held_constant:
+          - The two departments and their current process.
+          - The same blocking dependency.
+          - The shared support unit's already existing authority.
+          - The same temporal scene and bounded option-field question.
+        reference_continuity: true
+        material_distinctness: >-
+          The rotation exposes an organizational relation excluded from the
+          initial orientation: the support unit can already separate the blocking
+          dependency and thereby support staged transition C.
+        loss_route: >-
+          If C was already genuinely available and actionable before ROT, then
+          the A/B-only baseline option field fails; increased visibility cannot
+          be recorded as creation of C.
+        result: emergent
+        robustness_relevance: >-
+          The rotation defeats the initial option-field representation by making
+          a pre-existing actionable path legible. The emergence is in orientation
+          only, not creation of a new option relation.
+    untested_relevant: []
+    stop_basis: >-
+      The fixture directly states both the support unit's pre-existing authority
+      and C's genuine actionability before ROT. No additional rotation is needed
+      to discriminate Option Invisibility from Option Creation in this bounded case.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: >-
+      The two departments' effective option field in the declared organizational
+      scene, with the shared support unit represented as a constitutive dependency.
+    options:
+      - option: Staged transition C.
+        status: effectively_actionable
+        evidence_status: >-
+          The paper fixture directly establishes that the shared support unit
+          already possesses authority to separate the blocking dependency and
+          that this makes C genuinely available; ROT changes visibility, not the
+          underlying actionability relation.
+        authority: >-
+          Already present through the shared support unit's authority to separate
+          the blocking dependency.
+        access: null
+        means: null
+        information: >-
+          C is not visible in the departments' initial A/B orientation and becomes
+          legible under the inside/outside ROT.
+        window: >-
+          The fixture preserves the same temporal scene before and after ROT; no
+          later-created window is needed to make C actionable.
+        dependencies:
+          - The shared support unit must be able to separate the blocking dependency, and the fixture states that it already can.
+        practical_control: >-
+          The actionable route is carried by the already authorized support-unit
+          relation rather than created by the analytical rotation.
+        relevant_cost: null
+        procedural_permission: >-
+          Supported by the support unit's already existing authority in the fixture.
+        viability_relative_to: >-
+          C is treated only as the genuinely available staged-transition path in
+          this declared scene; no broader viability claim is made.
+    option_invisibility: >-
+      Present before ROT: C is genuinely available and actionable but absent from
+      the current orientation, i.e. Available(C) and not Visible(C).
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies: []
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      Staged transition C was already genuinely available and actionable in the
+      declared scene but absent from the initial orientation. The inside/outside
+      ROT makes C visible; the correct classification is Option Invisibility,
+      not Option Creation.
+    revisions:
+      - >-
+        Initial A/B-only option field -> corrected option field that includes C
+        as a pre-existing actionable path whose visibility changes under ROT.
+      - >-
+        Apparent new-option interpretation -> Option Invisibility.
+    scope: >-
+      The result is bounded to the two departments, the shared support unit's
+      already existing authority, the blocking dependency, and the same declared
+      organizational scene.
+    residue: []
+    stop_reason: >-
+      The paper fixture directly establishes the pre-ROT availability and
+      actionability of C and the post-ROT change in visibility. The baseline
+      option-field representation therefore requires revision without any claim
+      that ROT created the path.

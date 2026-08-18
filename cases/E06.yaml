@@ -1,0 +1,225 @@
+case_metadata:
+  case_id: E06
+  paper_ref: Appendix E.6
+  title: Missed Window under Excessive Delay / Preserved Analytical Distance
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - timing_window_pressure
+    - option_status_pressure
+    - dist_pressure
+  constructs_under_test:
+    - Timing
+    - OptionSpace
+    - DIST
+  theoretical_function: >-
+    Tests whether continued analysis can destroy a real option window and whether
+    preserved analytical distance must remain distinct from preserved practical possibility.
+  artifact_pair:
+    yaml: cases/E06.yaml
+    markdown: cases/E06.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - Delay does not by itself preserve a practical option.
+    - Wider derived DIST does not imply higher adequacy.
+    - A lost option after the deadline does not retroactively establish fault, earlier awareness, or earlier effective capacity beyond what the fixture supplies.
+
+vector_record:
+  reference:
+    object: >-
+      Continued review of a reversible pilot whose extension branch is available
+      only before a contractual deadline.
+    object_type: temporal option-window claim
+
+  frame:
+    included:
+      - The team keeps a reversible pilot under review for one more round of analysis.
+      - The pilot can be extended only before a contractual deadline.
+      - The additional review adds little new pressure.
+      - The contractual deadline passes while review continues.
+      - The formerly available extension branch moves from Deferred to Lost.
+    excluded:
+      - Any inference that continued analytical distance preserves the practical extension option.
+      - Any inference that wider derived DIST is automatically better or more adequate.
+      - Any retrospective inference of fault, awareness, or effective capacity beyond the case conditions supplied.
+      - Any universal rule that delay is always harmful.
+
+  question:
+    scope: >-
+      Does one more round of low-yield review preserve the pilot-extension option
+      when that branch exists only before a contractual deadline?
+    claim_ceiling: >-
+      The fixture may record the deadline-driven transition from Deferred to Lost
+      and reject the equation of delay with preservation. It does not establish
+      universal timing fault, an optimal action point, or the permanent impossibility
+      of every future alternative.
+
+  position:
+    perspective: >-
+      Team-level analysis of the pilot-extension branch across the supplied
+      pre-deadline review period and the post-deadline state.
+    temporal_position: >-
+      The case explicitly spans a pre-deadline state in which extension remains
+      available and a post-deadline state in which that branch has been lost.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Candidate S_0: because the pilot remains reversible and the team is keeping
+    analytical distance through another review round, delaying the extension
+    decision preserves the practical option to extend the pilot.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: >-
+      No additional ROT is needed to reach this fixture's timing result: the
+      paper directly supplies both the low marginal pressure from further review
+      and the contractual deadline that converts the deferred branch into a lost
+      branch. This does not waive ROT for any stronger robustness claim beyond the fixture.
+
+  dist_derived:
+    effective_separation: >-
+      Continued review preserves or widens analytical orientation–enactment
+      separation while the separate practical extension window closes.
+    source_relations:
+      - continued review / delayed commitment
+      - contractual deadline
+      - temporal option-window closure
+      - transition of the extension branch from Deferred to Lost
+      - reversibility of the pilot as distinct from preservation of the extension option
+    role_variation: null
+
+  reversibility:
+    available: >-
+      The pilot is described as reversible during review, but that reversibility
+      does not preserve the separate extension branch beyond its contractual deadline.
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: the team managing the reversible pilot
+    options:
+      - option: Extend the pilot before the contractual deadline.
+        status: lost
+        evidence_status: >-
+          The paper fixture directly establishes that the branch was formerly
+          available, was deferred during continued review, and became lost when
+          the contractual deadline passed.
+        authority: null
+        access: null
+        means: null
+        information: null
+        window: >-
+          The extension branch exists only before the contractual deadline; the
+          post-deadline window is closed.
+        dependencies:
+          - extension must occur before the contractual deadline
+        practical_control: null
+        relevant_cost: null
+        procedural_permission: null
+        viability_relative_to: >-
+          At the post-deadline state represented by the fixture, continued review
+          cannot restore the formerly available extension branch merely by preserving analytical distance.
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-ANTICIPATION supplies lineage pressure that temporality can accumulate
+        costs and close windows and that effective capacity depends on an open
+        temporal corridor; that lineage does not itself warrant the VECTOR case result.
+      - >-
+        PMS-CRITIQUE supplies lineage pressure that revision windows can close and
+        that endless reframing or postponement can itself block correction.
+      - >-
+        PMS-VECTOR owns the explicit Deferred-to-Lost option transition, the
+        distinction between delay and preservation, and the boundary that wider
+        derived DIST does not imply higher adequacy.
+    non_compensation: null
+    critical_open_tests: []
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      Continued analysis may preserve analytical separation, but it does not
+      preserve the pilot-extension option after the contractual deadline. The
+      supplied extension branch has moved from Deferred to Lost.
+    revisions:
+      - >-
+        The baseline equation of continued delay with practical preservation is
+        rejected. Timing must be tracked through the actual option relation, not
+        inferred from preserved analytical distance or pilot reversibility alone.
+    scope: >-
+      Limited to the supplied reversible-pilot scene, its contractual extension
+      deadline, and the low-yield additional review round that continues until the deadline passes.
+    residue:
+      - The fixture does not establish whether another materially different future option could later emerge.
+      - The fixture does not establish actor fault or retrospective awareness from the fact of window closure alone.
+    stop_reason: >-
+      The micro-countercase closes when the practical branch transition is explicit:
+      continued review added little pressure, the contractual deadline passed,
+      and the formerly available extension branch became Lost. Preserved analytical
+      distance therefore cannot be counted as preserved practical possibility.

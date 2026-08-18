@@ -1,0 +1,150 @@
+case_metadata:
+  case_id: E09
+  paper_ref: Appendix E.9
+  title: Special-Case Probe Produces Orientation
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+  - special_case_probe_pressure
+  - frame_pressure
+  - option_status_pressure
+  constructs_under_test:
+  - OptionSpace
+  - DIR
+  - Frame
+  theoretical_function: Tests whether a special-case probe can identify the asymmetry blocking a current option without converting the hypothetical option into present availability.
+  artifact_pair:
+    yaml: cases/E09.yaml
+    markdown: cases/E09.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+  - A shared procedure that is viable under F* does not thereby belong to the current option field under F0.
+  - Invalid as a current option does not imply invalid as an analytic probe.
+  - Orientation gain from the frame contrast does not imply an option-status change in the original frame.
+vector_record:
+  reference:
+    object: The special-case comparison between the current conflict frame F0 and a counterfactual frame F* in which both parties have equal decision authority.
+    object_type: special-case probe / frame-contrast orientation claim
+  frame:
+    included:
+    - Under the current frame F0, the conflict has no viable shared procedure.
+    - The analyst constructs F* by assuming equal decision authority for both parties.
+    - Under F*, a shared procedure becomes viable.
+    - The frame contrast identifies the operative authority asymmetry that blocks the shared procedure under F0.
+    excluded:
+    - Any transport of the shared procedure from F* into F0 as a current effective option.
+    - Any claim that the counterfactual itself changes the real option set.
+    - Any claim of same-claim robustness merely because the special case yields orientation.
+  question:
+    scope: Can the declared special-case frame F* increase bounded orientation about what blocks a shared procedure in F0 without increasing the current real option set?
+    claim_ceiling: The case can identify a blocking asymmetry through the declared frame contrast. It cannot establish that the shared procedure is currently available, actionable, or viable under F0.
+  position:
+    perspective: Analyst-facing comparison of F0 with the explicitly modified special-case frame F*.
+    temporal_position: The probe is evaluated against the current conflict conditions represented by F0.
+    scene_time: null
+    analysis_time: null
+  baseline_claim: The special-case construction F* may be used to identify the operative blocking condition in F0, but the shared procedure that becomes viable under F* is not thereby a current option under F0.
+  dir:
+    relation: 'Bounded orientation from the frame contrast: unequal decision authority is identified as the operative asymmetry blocking the shared procedure under F0.'
+    comparison_basis: Declared contrast between F0 and F*, changing the decision-authority condition while asking what difference that alteration makes to shared-procedure viability.
+    warrant:
+      source_types:
+      - declared synthetic frame contrast
+      - paper-stipulated viability difference between F0 and F*
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions:
+    - Transporting o(F*) into F0 as if the original frame already contained the option.
+    - Treating orientation gain as evidence that the real option set has changed.
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+  rot_profile:
+    applied: []
+    untested_relevant: []
+    stop_basis: No robustness-bearing ROT claim is made. The declared frame alteration is used as a special-case probe; the fixture closes once the blocking asymmetry is identified without transporting the hypothetical option back into F0.
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+  option_space:
+    actor_or_role: The parties to the conflict under the current frame F0; F* is an analyst-constructed comparison frame, not a changed current actor configuration.
+    options:
+    - option: Shared procedure under the current conflict conditions.
+      status: conceivable
+      evidence_status: The fixture establishes viability under F* only; it does not establish current availability or viability under F0.
+      authority: Equal decision authority is assumed only in F* and is not established in F0.
+      access: null
+      means: null
+      information: The special-case comparison makes the blocking authority asymmetry legible to the analysis.
+      window: null
+      dependencies:
+      - A change in the decision-authority relation would be required for the F* viability condition to obtain in the current field.
+      practical_control: No actor-level practical control that would make the F* authority condition real in F0 is established by the fixture.
+      relevant_cost: null
+      procedural_permission: null
+      viability_relative_to: Viable under F*; not established as a current viable option under F0.
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes:
+    - 'F*: assume equal decision authority; the resulting viability of a shared procedure identifies authority asymmetry as the operative blocker without changing option status in F0.'
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: No effective option-field transformation is claimed or evidenced. The altered authority condition exists only in the analytic special-case frame.
+    node_changes: []
+    relation_changes: []
+  consequence_topology:
+    items: []
+    unknown_residue: null
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+  pressure:
+    rivals: []
+    counter_scenes:
+    - 'F*: equal decision authority; under this declared special case, the shared procedure becomes viable.'
+    provenance_dependencies:
+    - 'PMS-VECTOR owns the Special-Case Probe boundary: valid probe != valid option, and orientation gain != option-status change.'
+    non_compensation: null
+    critical_open_tests: []
+  result:
+    status: Bounded Orientation
+    surviving_claim: The special-case probe yields bounded orientation that the operative blocker in F0 is the authority asymmetry. The shared procedure remains outside the current effective option field merely on the basis of the probe.
+    revisions: []
+    scope: The result is limited to the declared contrast between F0 and F* and to identification of the blocking authority condition. It does not change current option status.
+    residue: []
+    stop_reason: The declared frame contrast is sufficient to identify what changes when decision authority is equalized, while the case explicitly blocks transport of the F* option back into F0.

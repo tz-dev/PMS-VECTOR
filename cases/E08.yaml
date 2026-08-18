@@ -1,0 +1,290 @@
+case_metadata:
+  case_id: E08
+  paper_ref: Appendix E.8
+  title: Option Illusion
+  case_format: full_minimal_case
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - option_status_pressure
+    - evidence_status_pressure
+    - effective_capacity_pressure
+  constructs_under_test:
+    - OptionSpace
+    - OptionIllusion
+    - EffectiveCapacity
+  theoretical_function: >-
+    Tests whether a visible and superficially plausible alternative is rejected
+    as effectively unavailable when authority, access, means, timing, or
+    dependencies are missing.
+  artifact_pair:
+    yaml: cases/E08.yaml
+    markdown: cases/E08.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - >-
+      Conceivability or visibility of the delegation route does not establish
+      that it is structurally available or effectively actionable for the
+      overloaded employee.
+    - >-
+      Actionability of the same transfer route for a senior director does not
+      imply actionability for the employee under the employee's role-bound
+      authority, access, resources, timing, and dependency conditions.
+    - >-
+      The current Option Illusion result does not establish that the delegation
+      route could never become actionable after a real change in authority,
+      resources, cooperation, or other effective-capacity conditions.
+
+vector_record:
+  reference:
+    object: >-
+      Delegating a recurring task from an overloaded employee to another unit,
+      evaluated as a role-relative option for the employee and then compared
+      under a role rotation to a senior director.
+    object_type: role-relative delegation-option status
+
+  frame:
+    included:
+      - A manager presents delegation to another unit as a simple alternative for an overloaded employee.
+      - The delegation route is highly visible and superficially plausible.
+      - The employee lacks authority to transfer the task.
+      - The employee lacks access to the receiving unit for the transfer.
+      - No budget for the transfer is available to the employee.
+      - No open temporal window supports the transfer in the current scene.
+      - The receiving unit does not supply the cooperation on which the transfer depends.
+      - A role rotation to a senior director preserves the transfer route while changing the relevant role position.
+      - The senior director does possess the capacity required to make the transfer actionable.
+    excluded:
+      - Any inference that a represented or imaginable alternative is thereby an effective option.
+      - Any transfer of authority, access, resources, or practical control from the senior-director role to the employee role.
+      - Any retrospective rewriting of the employee's current option field from the director's stronger role position.
+      - Any claim that the current status fixes the option's status under materially changed future conditions.
+
+  question:
+    scope: >-
+      Is delegation to the other unit an effectively actionable option for the
+      overloaded employee under the current role, resource, timing, and
+      dependency conditions?
+    claim_ceiling: >-
+      The case can type the delegation route in the employee's current effective
+      option field and test the role-transfer error. It does not establish a
+      universal rule about delegation, a moral judgment about the employee or
+      manager, or the route's status under changed institutional conditions.
+
+  position:
+    perspective: >-
+      The overloaded employee's role-bound option field, tested against a role
+      rotation to a senior director in the same nominal scene.
+    temporal_position: >-
+      Current conditions are evaluated as declared; the role rotation does not
+      move the employee into a later or hypothetically improved institutional state.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Delegation to the other unit is a current effective option for the overloaded
+    employee because the alternative is visible and can be described as a
+    plausible way to remove the recurring task.
+
+  dir:
+    relation: null
+    comparison_basis: null
+    warrant:
+      source_types: []
+      external_premises: []
+      unresolved_dependencies: []
+    critical_regressions: []
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied:
+      - family: role
+        vulnerability: >-
+          Whether an option actionable from a stronger role is being attributed
+          to the employee merely because both roles occupy the same scene and
+          can represent the same transfer route.
+        purpose: >-
+          Test the role-transfer illusion by holding the delegation route fixed
+          while changing the role from the overloaded employee to a senior director.
+        changed:
+          - The relevant role position changes from overloaded employee to senior director.
+        held_constant:
+          - The recurring task to be delegated.
+          - The receiving unit.
+          - The basic transfer route under examination.
+          - The bounded question of role-relative practical actionability.
+        reference_continuity: true
+        material_distinctness: >-
+          The paper fixture establishes the transfer as actionable for the
+          senior director, whereas the employee lacks the effective-option
+          conditions established in the current scene.
+        loss_route: >-
+          If actionability appears only after moving to a materially stronger
+          role, then that actionability cannot be carried back into the
+          employee's option field without a real change in the employee's
+          authority, access, resources, timing, or dependencies.
+        result: collapse
+        robustness_relevance: >-
+          The role rotation defeats the baseline employee-level option claim
+          while preserving the same nominal transfer route for comparison.
+    untested_relevant: []
+    stop_basis: >-
+      The fixture directly establishes that the employee lacks all listed
+      effective-option conditions while the senior director possesses sufficient
+      role capacity for the transfer. The role-transfer inflation is therefore
+      discriminated without additional ROT pressure.
+
+  dist_derived:
+    effective_separation: null
+    source_relations: []
+    role_variation: null
+
+  reversibility:
+    available: null
+    rotation_cost: null
+    reversal_cost: null
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: >-
+      The overloaded employee is the target role; a senior director is used only
+      as the explicit comparison role in the paper's role rotation.
+    options:
+      - option: Delegate the recurring task to another unit.
+        status: visible
+        evidence_status: >-
+          The fixture positively establishes the listed effective-capacity
+          failures; actionability is not left Unknown merely because the route is visible.
+        authority: >-
+          Absent for the employee: the employee does not possess authority to
+          transfer the recurring task.
+        access: >-
+          Absent for the employee: access to the receiving unit required for the
+          transfer is not available.
+        means: >-
+          Absent for the employee in the current frame because no transfer budget
+          is available.
+        information: >-
+          The route itself is legible; the failure is not lack of awareness but
+          lack of effective practical reach.
+        window: >-
+          No open temporal window supports the transfer in the current scene.
+        dependencies:
+          - Cooperation from the receiving unit is constitutive and is not available.
+        practical_control: >-
+          Not established for the employee because authority, access, budget,
+          timing, and required cooperation are absent.
+        relevant_cost: null
+        procedural_permission: >-
+          No employee-level permission or authority for the transfer is established.
+        viability_relative_to: >-
+          The route is not effectively actionable for the employee under the
+          current frame, regardless of its visibility or actionability for the director.
+    option_invisibility: null
+    option_illusion: >-
+      Present. The delegation route is highly visible but fails the current
+      employee's effective availability/actionability conditions. The role
+      rotation additionally exposes a role-transfer illusion: actionability for
+      the senior director is not actionability for the employee.
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals: []
+    counter_scenes:
+      - >-
+        Senior-director role rotation: the same transfer route is actionable for
+        the director, demonstrating role-relative capacity rather than an
+        employee-level option.
+    provenance_dependencies:
+      - >-
+        PMS-ANTICIPATION supplies a lineage boundary that effective capacity is
+        frame- and time-bound and that abstract or later-recognized possibility
+        does not create current actor capacity.
+      - >-
+        PMS-VECTOR owns the paired Option Invisibility / Option Illusion
+        architecture, the role-relative option-field typing, and the E08 result.
+      - >-
+        The ANTICIPATION capacity lineage does not independently warrant VECTOR's
+        Option Illusion taxonomy or transfer authority from one role to another.
+    non_compensation: null
+    critical_open_tests:
+      - >-
+        A future Second-Order Agency claim would require evidence that authority,
+        resources, cooperation, timing, or another relevant condition has
+        actually changed; this fixture supplies no such transformation.
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      The delegation route remains visible and conceivable, and it is actionable
+      for the senior director in the declared role rotation. It is not a current
+      effectively actionable option for the overloaded employee.
+    revisions:
+      - >-
+        Employee option status: presumed effective option -> visible but
+        non-actionable Option Illusion under the current frame.
+      - >-
+        Director-level actionability is retained as a role-relative comparison
+        result and is not transferred to the employee.
+    scope: >-
+      The result is bounded to the overloaded employee's current role, access,
+      budget, temporal window, cooperation dependencies, and practical control
+      in the declared scene.
+    residue:
+      - >-
+        A materially changed authority, resource, cooperation, or timing
+        configuration could support a new option-status claim.
+      - >-
+        Second-Order Agency remains an open question only if a real mechanism
+        for changing the failed conditions is evidenced.
+    stop_reason: >-
+      The employee's effective-option claim fails because the fixture positively
+      establishes missing authority, access, budget, temporal window, and
+      required cooperation. The senior-director rotation confirms that the
+      route's actionability is role-relative rather than scene-global.

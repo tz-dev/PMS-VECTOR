@@ -1,0 +1,239 @@
+case_metadata:
+  case_id: E05
+  paper_ref: Appendix E.5
+  title: Premature Enactment
+  case_format: micro_countercase
+  adversarial:
+    marked: false
+    paper_label: null
+  load_bearing: false
+  pressure_families:
+    - enactment_timing_pressure
+    - correction_space_pressure
+    - reversibility_pressure
+  constructs_under_test:
+    - DIR
+    - ROT
+    - DIST
+    - Reversibility
+    - Timing
+  theoretical_function: >-
+    Tests the distinction between a robust directional result and the timing of
+    enactment when cheap, materially relevant correction remains available.
+  artifact_pair:
+    yaml: cases/E05.yaml
+    markdown: cases/E05.md
+  architecture_effect:
+    applies: false
+    targets: []
+    effect: null
+  non_implications:
+    - A well-supported or robust DIR does not imply immediate enactment.
+    - Premature enactment relative to available correction space does not imply that the underlying DIR was false.
+    - Derived DIST may summarize narrowed orientation-enactment separation but is not the causal mechanism of the timing failure.
+
+vector_record:
+  reference:
+    object: >-
+      Public enactment of a new organizational procedure after a well-supported
+      preliminary DIR, while a cheap affected-role ROT and a serious rival
+      comparison remain available.
+    object_type: bounded procedure-enactment timing claim
+
+  frame:
+    included:
+      - The organization has a well-supported preliminary DIR favoring the new procedure.
+      - A low-cost affected-role ROT remains available before public binding.
+      - One serious rival comparison also remains available before public binding.
+      - The organization nevertheless binds itself publicly to the change immediately.
+      - Public binding narrows the remaining review and correction space.
+      - A later ROT does not necessarily establish that the preliminary DIR was false.
+    excluded:
+      - Any inference that a favorable DIR contains an execution command.
+      - Any inference that the timing failure proves the directional claim false.
+      - Any treatment of derived DIST as an independent causal dial or warrant source.
+      - Any universal rule that slower enactment is always better.
+
+  question:
+    scope: >-
+      Does the well-supported preliminary DIR warrant immediate public enactment
+      when a cheap materially relevant affected-role ROT and a serious rival
+      comparison remain available before binding?
+    claim_ceiling: >-
+      The fixture may diagnose premature enactment relative to available
+      correction space. It does not establish that the underlying DIR is false,
+      that delay is universally preferable, or that derived DIST independently
+      determines timing adequacy.
+
+  position:
+    perspective: >-
+      Organizational decision perspective at the pre-binding stage, with the
+      remaining cheap test and rival pressure kept visible.
+    temporal_position: >-
+      The relevant decision point is immediately before public binding, while
+      the affected-role ROT and serious rival comparison are still cheaply available.
+    scene_time: null
+    analysis_time: null
+
+  baseline_claim: >-
+    Candidate S_0: because the preliminary DIR strongly favors the new procedure,
+    the organization may immediately bind itself publicly to enactment even though
+    a cheap materially relevant affected-role test remains available before commitment.
+
+  dir:
+    relation: >-
+      The supplied fixture retains a well-supported preliminary DIR favoring the
+      new procedure within the declared comparison; no immediate-enactment
+      relation follows from that DIR alone.
+    comparison_basis: >-
+      The paper fixture supplies the preliminary favorable direction but keeps
+      timing analytically separate from direction. The cheap affected-role ROT is
+      a materially relevant correction test still available before binding; the
+      serious rival comparison remains additional open pressure on the directional claim.
+    warrant:
+      source_types:
+        - supplied paper-case conditions
+      external_premises:
+        - A well-supported preliminary directional comparison favors the new procedure.
+        - Cheap materially relevant correction pressure remains available before public binding.
+      unresolved_dependencies:
+        - The outcome of the still-unperformed affected-role ROT is not supplied by the fixture.
+        - The outcome of the still-unperformed serious rival comparison is not supplied by the fixture.
+    critical_regressions:
+      - >-
+        The remaining affected-role ROT could materially revise or defeat the
+        current directional claim.
+      - >-
+        The serious rival comparison could materially revise or defeat the
+        current directional claim in its own vocabulary.
+
+  calibration:
+    threshold: null
+    basis: null
+    domain_source: null
+    competing_calibration: null
+    unresolved: null
+
+  rot_profile:
+    applied: []
+    untested_relevant:
+      - >-
+        A low-cost affected-role ROT remains available at the relevant
+        pre-binding decision point and is materially relevant to correction.
+    stop_basis: >-
+      No applied ROT result is needed to establish this fixture's timing failure:
+      the organization publicly binds itself before using a cheap materially
+      relevant test that the paper explicitly keeps available. The still-open ROT
+      remains material to any stronger robustness claim about the procedure itself.
+
+  dist_derived:
+    effective_separation: >-
+      Public binding narrows the effective orientation-enactment separation by
+      closing part of the previously available review and correction space.
+    source_relations:
+      - public binding / fixation
+      - remaining review and correction space
+      - availability of a cheap affected-role ROT before commitment
+      - reversibility conditions around enactment
+    role_variation: null
+
+  reversibility:
+    available: >-
+      Cheap correction space remains available before public binding; the fixture
+      states that public binding prematurely narrows that space.
+    rotation_cost: >-
+      The affected-role ROT is explicitly low-cost at the relevant pre-binding stage.
+    reversal_cost: >-
+      Public binding makes later correction harder than using the still-cheap
+      pre-binding test, but the fixture does not quantify the reversal cost.
+    restoration_possible: null
+
+  option_space:
+    actor_or_role: null
+    options: []
+    option_invisibility: null
+    option_illusion: null
+    special_case_probes: []
+
+  transformability:
+    actor_configuration: null
+    target_change: null
+    mechanism: null
+    authority_capacity: null
+    dependencies: []
+    window: null
+    evidence: null
+    node_changes: []
+    relation_changes: []
+
+  consequence_topology:
+    items: []
+    unknown_residue: null
+
+  constraint:
+    G: null
+    maintained_by: null
+    modifiable_by: null
+    claimed_authority: null
+    burden_bearers: []
+    exit_relations: []
+    alternative_carriers: []
+    transformation_routes: []
+    abandon_or_revision_consequences: []
+    unknowns: []
+    external_legitimacy_question: null
+
+  orientation_uptake:
+    presented: null
+    actor_accessible: null
+    understood: null
+    praxis_available: null
+    actor_response: null
+
+  pressure:
+    rivals:
+      - >-
+        One serious rival comparison remains available before public binding;
+        its result is not supplied because the case turns on premature closure
+        of correction space, not on a declared rival victory.
+    counter_scenes: []
+    provenance_dependencies:
+      - >-
+        PMS-ANTICIPATION supplies lineage pressure that restraint, reversibility,
+        and temporal windows remain material under irreversibility; that lineage
+        does not itself warrant the VECTOR timing result.
+      - >-
+        PMS-CRITIQUE supplies lineage pressure that review windows can close and
+        publicness can increase fixation and correction cost; that lineage does
+        not make DIST an independent mechanism.
+      - >-
+        PMS-VECTOR owns the separation of DIR from enactment timing, the derived
+        status of DIST, and the E05 premature-enactment result.
+    non_compensation: null
+    critical_open_tests:
+      - The low-cost affected-role ROT remains unperformed at the point of public binding.
+      - The serious rival comparison remains unperformed at the point of public binding.
+
+  result:
+    status: Revision Required
+    surviving_claim: >-
+      The preliminary favorable DIR may remain supported, but it does not warrant
+      immediate public binding where a cheap materially relevant correction test
+      remains available and has not yet been performed.
+    revisions:
+      - >-
+        The baseline implication from favorable DIR to immediate public enactment
+        is rejected. Timing requires its own burden relative to correction space,
+        reversibility, public binding, and the cheap material test still available.
+    scope: >-
+      Limited to the declared pre-binding scene in which the affected-role ROT
+      and serious rival comparison remain available at low cost before public commitment.
+    residue:
+      - The later affected-role ROT result is not specified by the fixture.
+      - The serious rival comparison result is not specified by the fixture.
+      - The exact post-binding reversal cost is not quantified.
+    stop_reason: >-
+      The fixture closes once the timing error is discriminated from directional
+      error: public binding occurred before cheap material correction pressure was
+      used, so immediate enactment requires revision even though the DIR itself
+      need not collapse.

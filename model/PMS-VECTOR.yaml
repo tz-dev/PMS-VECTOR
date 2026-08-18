@@ -1,0 +1,1996 @@
+# =============================================================================
+#  PMS–VECTOR — DIRECTION AND ROTATION
+#  REPOSITORY REFERENCE PROFILE
+#
+#  Paper:
+#    PMS–VECTOR
+#    Direction and Rotation
+#    Praxeological Orientation under Perspectival Freedom, Reversibility,
+#    and Transformable Possibility
+#
+#  File:
+#    model/PMS-VECTOR.yaml
+#
+#  Schema Version:
+#    PMS-VECTOR_1.0
+#
+#  Status:
+#    draft_repository_reference
+#
+#  Base Dependency:
+#    PMS.yaml / PMS_1.3 — REQUIRED
+#
+#  IMPORTANT:
+#    This file is intentionally not a standalone replacement for PMS.yaml.
+#    VECTOR has its own theory architecture, claim types, test burdens, and
+#    reductions, but PMS operator semantics, PMS entry conditions, and Base
+#    repository governance remain external governing inputs and must be
+#    resolved from PMS.yaml.
+#
+#    Inspectable without PMS.yaml != valid PMS–VECTOR application.
+#    Machine-readable consistency != theoretical adequacy.
+#    VECTOR robustness != external warrant.
+# =============================================================================
+
+pms_dependency_gate:
+  requirement: >
+    PMS–VECTOR is a late meta-reconstructive orientation theory built in
+    explicit dependency on the Praxeological Meta-Structure. This profile may
+    be inspected as a repository artifact on its own, but its PMS operator
+    references, PMS application validity, and PMS-conformity claims are not
+    semantically complete unless the required PMS.yaml base specification is
+    resolved. VECTOR does not duplicate or replace the Base operator grammar.
+
+  hard_dependency:
+    model_name: "Praxeological Meta-Structure"
+    model_short: "PMS"
+    source_file: "PMS.yaml"
+    expected_schema_version: "PMS_1.3"
+    resolution_required: true
+    semantic_authority: "external_governing_base"
+
+  required_base_bindings:
+    - pointer: "PMS.yaml#/pms_entry_condition"
+      role: "PMS application entry condition"
+    - pointer: "PMS.yaml#/repository_governance"
+      role: "Base / overlay governance boundary"
+    - pointer: "PMS.yaml#/pms_model_reference/meta_axioms"
+      role: "Δ–Ψ operator identity, order, dependency, and semantics"
+    - pointer: "PMS.yaml#/computational_representation"
+      role: "Base computational restraint and implementation boundary"
+
+  resolution_policy:
+    inspectable_without_pms: true
+    application_valid_without_pms: false
+    pms_conformity_claim_valid_without_pms: false
+    operator_semantics_complete_without_pms: false
+    vector_specific_constructs_visible_without_pms: true
+    failure_state_if_unresolved: "pms_dependency_unresolved"
+
+  prohibited_if_unresolved:
+    - "claiming a valid PMS–VECTOR application"
+    - "treating local operator labels as self-contained operator definitions"
+    - "claiming PMS-conformity"
+    - "deriving PMS operator dependencies from this file alone"
+    - "using this profile as a replacement PMS base grammar"
+
+  critique_boundary: >
+    The dependency gate constrains PMS–VECTOR application and PMS-conformity
+    claims. It does not prohibit criticism, rejection, revision proposals, or
+    rival formalizations that inspect VECTOR without accepting PMS.
+
+  conditional_base_bindings:
+    - pointer: "PMS.yaml#/derived_structures"
+      role: "Base-derived structure reference only where explicitly invoked by a VECTOR claim"
+      resolution_required: false
+schema_version: "PMS-VECTOR_1.0"
+
+schema_meta:
+  model_name: "PMS–VECTOR"
+  model_short: "PMS-VECTOR"
+  title: "Direction and Rotation"
+  subtitle: >
+    Praxeological Orientation under Perspectival Freedom, Reversibility, and
+    Transformable Possibility
+  status: "draft_repository_reference"
+  maturity: "paper_complete_repository_formalization_in_progress"
+  repository_role: "pms_bound_meta_reconstructive_orientation_profile"
+  last_updated: "2026-08-17"
+
+  depends_on:
+    model_name: "Praxeological Meta-Structure"
+    model_short: "PMS"
+    source_file: "PMS.yaml"
+    schema_version: "PMS_1.3"
+    dependency_type: "hard_semantic_dependency"
+    required_for_valid_application: true
+
+  authors:
+    - name: "T. Zöller"
+      role: "originator"
+    - name: "ChatGPT (GPT-5.6 Sol)"
+      role: "repository_formalization_assistant"
+
+  paper_source:
+    source_file: "PMS-VECTOR.md"
+    authority_role: "primary_vector_theoretical_source"
+    model_may_mirror_but_not_expand_theory: true
+
+  epistemic_status: >
+    PMS–VECTOR is a bounded, revisable, rival-sensitive orientation theory. It
+    does not claim finality, universal rank, moral decision authority, complete
+    capture, or guaranteed superiority to rival methods. Its current
+    standalone status is provisional retain with scope reduction under the
+    same-burden rival demonstrated in Appendix E.23.
+
+  description: >
+    VECTOR reconstructs when structural differences may support bounded
+    directional claims, how such claims change under admissible perspectival
+    pressure, how orientation relates to transformable possibility,
+    consequence, timing, uptake, and structural attributability, and how the
+    theory itself must reduce when components or scope fail their burden.
+
+  claim_type:
+    - "late"
+    - "meta-reconstructive"
+    - "praxeological"
+    - "orientation"
+
+  methodological_restraint: >
+    VECTOR must remain vulnerable to revision, non-capture, component
+    reduction, scope reduction, domain deference, and standalone reduction.
+    Internal coherence, successful formalization, case coverage, reader
+    consistency, or PMS lineage do not establish external warrant or theory
+    superiority.
+
+  intended_use:
+    allowed_profiles:
+      - "theoretical_orientation_analysis"
+      - "bounded_structural_comparison"
+      - "perspectival_pressure_testing"
+      - "option_and_constraint_analysis"
+      - "rival_sensitive_theory_comparison"
+      - "praxeological_case_audit"
+      - "machine_readable_repository_reference"
+    not_intended_for:
+      - "universal_person_ranking"
+      - "personality_typing"
+      - "clinical_or_diagnostic_use"
+      - "automated_moral_judgement"
+      - "automatic_legal_or_policy_authorization"
+      - "automatic_blame_or_liability_assignment"
+      - "metric_vector_scoring_without_domain_calibration"
+      - "replacement_of_specialist_methods_by_default"
+      - "self_certification_of_pms_or_vector"
+
+repository_governance:
+  role_of_this_file: >
+    PMS-VECTOR.yaml is the repository reference profile for the VECTOR paper.
+    It records VECTOR-specific architecture, status boundaries, result types,
+    reduction conditions, and machine-readable references while remaining
+    subordinate to PMS.yaml for PMS Base semantics and to PMS-VECTOR.md for
+    VECTOR theory content.
+
+  typed_authority:
+    pms_base_semantics:
+      authority: PMS.yaml
+      governs:
+        - PMS entry condition
+        - PMS meta-axiom identity and semantics
+        - PMS operator dependency path
+        - Base / overlay repository governance
+    vector_theory:
+      authority: PMS-VECTOR.md
+      governs:
+        - VECTOR-specific theoretical claims
+        - VECTOR-specific boundaries and reductions
+        - paper-linked test and rival burden
+      pms_base_openness_is_warrant_for_vector: false
+    vector_machine_representation:
+      authority: model/PMS-VECTOR.yaml
+      role: machine-readable mirror and repository reference
+      subordinate_to:
+        - PMS.yaml for PMS Base semantics
+        - PMS-VECTOR.md for VECTOR-specific theory
+    downstream_artifacts:
+      model_specification: interpretation and field contract; no additional theory authority
+      reference_yaml: provenance/dependency mirrors; no independent warrant
+      cases: paper-linked test records; case count is not evidence weight
+      examples: non-validating downstream illustrations
+      reader: presentation, navigation, and repository-consistency inspection only
+  vector_may:
+    - "reference PMS operators without redefining them"
+    - "reconstruct cross-paper relations"
+    - "introduce VECTOR-specific claim types and notation"
+    - "define bounded audit and record structures"
+    - "yield to rival methods"
+    - "reduce its own scope or components"
+    - "declare non-capture"
+
+  vector_must_not:
+    - "silently_redefine_pms_meta_axioms"
+    - "silently_alter_pms_dependency_path"
+    - "promote_vector_constructs_to_pms_meta_axioms"
+    - "treat_pms_derived_structures_as_independent_primitives"
+    - "convert_orientation_to_authority"
+    - "convert_structural_attributability_to_moral_fault"
+    - "convert_schema_validity_to_theoretical_validity"
+    - "convert_case_count_to_evidence_weight"
+    - "convert_reader_graph_relations_to_theory"
+
+  non_equivalences:
+    - "PMS lineage != epistemic authority inheritance"
+    - "machine-readable consistency != theoretical adequacy"
+    - "record completeness != claim truth"
+    - "schema-valid record != warranted VECTOR result"
+    - "case readability != validation"
+    - "reader self-test != VECTOR validity"
+    - "formal explicitness != metric validation"
+
+pms_reference:
+  source: "PMS.yaml"
+  schema_version: "PMS_1.3"
+  base_dependency_required: true
+
+  operator_semantics_policy: >
+    Operator definitions and canonical dependency relations are not owned by
+    VECTOR. The operator handles below support explicit cross-reference only.
+    Their semantics must be resolved against PMS.yaml.
+
+  fixed_operator_handles:
+    - id: "Δ"
+      name: "Difference"
+    - id: "∇"
+      name: "Impulse"
+    - id: "□"
+      name: "Frame"
+    - id: "Λ"
+      name: "Non-Event"
+    - id: "Α"
+      name: "Attractor"
+    - id: "Ω"
+      name: "Asymmetry"
+    - id: "Θ"
+      name: "Temporality"
+    - id: "Φ"
+      name: "Recontextualization"
+    - id: "Χ"
+      name: "Distance"
+    - id: "Σ"
+      name: "Integration"
+    - id: "Ψ"
+      name: "Self-Binding"
+
+  dependency_hygiene:
+    definitions_duplicated_here: false
+    base_dependency_paths_rewritten_here: false
+    reduced_signatures_override_pms_dependencies: false
+    note: >
+      Any compact VECTOR formula using PMS operators is shorthand inside a
+      bounded VECTOR claim. It does not create an alternative PMS operator
+      order or dependency path.
+
+  pms_entry_condition_ref: "PMS.yaml#/pms_entry_condition"
+  repository_governance_ref: "PMS.yaml#/repository_governance"
+
+  base_open_questions_used_by_vector:
+    - "completeness remains open"
+    - "optimal operator ordering remains open"
+    - "discriminative adequacy remains open"
+    - "comparative superiority remains open"
+    - "translation does not establish exhaustive capture"
+    - "rival formalizations remain methodologically admissible"
+
+vector_identity:
+  central_problem: >
+    Under what conditions can structural direction be warranted without
+    converting local difference into total order, perspectival dependence into
+    relativism, framework coherence into authority, or practical effect into
+    truth?
+
+  canonical_core:
+    notation: "VECTOR := ⟨DIR, ROT⟩"
+    component_count: 2
+    components:
+      - "DIR"
+      - "ROT"
+
+    ascii_alias: VECTOR := <DIR, ROT>
+  concrete_state:
+    notation: "V_t(O | F,Q,π) = ⟨DIR_t, RP_t⟩"
+    state_fields:
+      - "DIR_t"
+      - "RP_t"
+    operation_state_boundary: "ROT != RP"
+
+    ascii_alias: V_t(O | F,Q,pi) = <DIR_t, RP_t>
+  supporting_relation:
+    id: "DIST"
+    status: "vector_derived_supporting_construct"
+    in_vector_core: false
+    meaning: "effective orientation–enactment separation descriptor"
+
+  current_theory_status:
+    dir: "retain_scope_narrowed"
+    rot: "retain_scope_narrowed"
+    dist: "derived_supporting_only"
+    adult_orientation: "supporting_shorthand_only"
+    standalone_vector: "provisional_retain_scope_reduced"
+
+construct_status_registry:
+  purpose: >
+    Prevent category collapse among PMS references, VECTOR core functions,
+    stored state, supporting shorthand, result types, boundary types, and
+    external warrant inputs.
+  registry_scope: >
+    Construct-class status tokens are declared under statuses. Reduction and
+    current-theory status tokens are declared under statuses.reduction_status;
+    machine consumers must not infer membership across these status families.
+  unknown_status_policy: "reject_or_mark_unresolved"
+
+  statuses:
+    pms_operator_reference:
+      owned_by_vector: false
+      semantics_source: "PMS.yaml"
+      examples: ["Δ", "∇", "□", "Λ", "Α", "Ω", "Θ", "Φ", "Χ", "Σ", "Ψ"]
+
+    pms_derived_reference:
+      owned_by_vector: false
+      semantics_source: "PMS.yaml"
+      examples: ["A", "C", "R", "E", "D"]
+      examples_role: generic_pms_base_examples_not_current_vector_dependencies
+      current_vector_dependency_required: false
+
+    vector_core_claim_family:
+      owned_by_vector: true
+      examples: ["DIR"]
+
+    vector_core_operation_family:
+      owned_by_vector: true
+      examples: ["ROT"]
+
+    vector_stored_audit_state:
+      owned_by_vector: true
+      examples: ["RP"]
+
+    vector_derived_supporting_construct:
+      owned_by_vector: true
+      independent_core_status: false
+      examples: ["DIST"]
+
+    vector_supporting_shorthand:
+      owned_by_vector: true
+      independent_theoretical_discrimination: false
+      examples: ["AdultOrientation"]
+
+    vector_result_type:
+      owned_by_vector: true
+      examples:
+        - "RobustOrientation"
+        - "RevisedRobustOrientation"
+        - "BoundedOrientation"
+        - "RevisionRequired"
+        - "TradeOff"
+        - "Incomparable"
+        - "Suspend"
+        - "NonCapture"
+
+    vector_boundary_type:
+      owned_by_vector: true
+      examples:
+        - "OUGHT_choice"
+        - "OUGHT_moral"
+
+    vector_positive_ought_relation:
+      owned_by_vector: true
+      moral_authority_implied: false
+      examples:
+        - "OUGHT_account"
+        - "OUGHT_constraint"
+
+    external_warrant_input:
+      owned_by_vector: false
+      examples:
+        - "historical evidence"
+        - "domain measurement"
+        - "current law"
+        - "medical knowledge"
+        - "empirical causal support"
+        - "role-specific authority evidence"
+
+    external_calibration_input:
+      owned_by_vector: false
+      examples:
+        - "threshold basis"
+        - "domain criterion weights"
+        - "specialist measurement scale"
+
+    provenance_status:
+      owned_by_vector: true
+      ordering_implied: false
+      values:
+        C: "corpus-carried"
+        R: "VECTOR reconstruction"
+        N: "VECTOR-new"
+        P: "proposed / provisional formalization"
+
+    reduction_status:
+      owned_by_vector: true
+      values:
+        - "retain"
+        - "retain_scope_narrowed"
+        - "retain_evidence_typed_and_narrowed"
+        - "retain_narrow"
+        - "retain_as_test_architecture_narrowed"
+        - "retain_calibration_sensitive_narrowed"
+        - "retain_with_firewall_narrowed"
+        - "derived_supporting_only"
+        - "supporting_only"
+        - "supporting_shorthand_only"
+        - "provisional_retain_scope_reduced"
+        - "scope_reduced"
+        - "component_reduced"
+        - "domain_non_capture"
+        - "architecture_reduced"
+        - "standalone_reduced"
+
+validity_and_application_boundary:
+  pms_entry_condition_required: true
+  pms_entry_condition_ref: "PMS.yaml#/pms_entry_condition"
+
+  vector_claim_requirements:
+    - typed
+    - bounded
+    - revisable
+    - reference declared
+    - frame declared
+    - question and claim ceiling declared
+    - perspective declared
+    - temporal position declared
+    - warrant source visible
+    - calibration basis visible where material
+    - external dependencies preserved
+    - non-capture remains possible
+  authority_boundary:
+    rule: "orientation_up_does_not_imply_authority_up"
+    canonical_non_equivalence: "Orientation↑ != Authority↑"
+    external_authority_sources_may_include:
+      - "law"
+      - "consent"
+      - "role"
+      - "institution"
+      - "expertise"
+      - "mandate"
+      - "moral premises"
+    vector_supplies_external_authority: false
+
+  human_boundary:
+    person_rank: "prohibited"
+    dignity_rank: "prohibited"
+    moral_fault_from_vector_alone: "prohibited"
+    structural_attributability_is_not:
+      - "guilt"
+      - "blame"
+      - "liability"
+      - "moral fault"
+
+  application_non_equivalences:
+    - "legibility != direction"
+    - "direction != authority"
+    - "orientation effect != orientation truth"
+    - "structural robustness != practical attribution"
+    - "being told != uptake"
+    - "visibility != effective capacity"
+    - "system carriage required != Person X must carry"
+
+geometry_firewall:
+  default_mathematical_status: "relational_and_ordinal_before_metric"
+
+  required_non_equivalences:
+    - "VECTOR != vector space by default"
+    - "DIR != signed scalar"
+    - "ROT != geometric rotation"
+    - "DIST != metric distance"
+    - "DIR_R != vector sum"
+    - O ≠ person worth
+    - F ≠ □
+    - "DIR != ∇"
+    - "ROT != Φ"
+    - "ROT != PROJECT_AS"
+    - "DIST != Χ"
+    - "π != P_MIP"
+    - "t != Θ"
+
+    - DIST ≠ REV_avail
+    - C_ROT ≠ C_REV
+    - reversibility ≠ restoration
+  no_default_implication_of:
+    - "norm"
+    - "magnitude"
+    - "angle"
+    - "dot product"
+    - "vector addition"
+    - "Euclidean projection"
+    - "invertibility of ROT"
+    - "group composition of ROT"
+    - "unit for DIST"
+    - "total ordering"
+    - "transitivity across unrelated questions"
+
+  metric_extension_policy: >
+    A domain may separately earn a metric for a bounded variable. Any such
+    metric must declare what is measured, calibration, uncertainty, meaning-
+    preserving transformations, and non-generalization boundaries. Metric
+    extension does not alter the non-metric default of VECTOR as a whole.
+
+reference_coordinates:
+  canonical_signature:
+    object: O
+    frame: F
+    question: Q
+    perspective: π
+    temporal_index: t
+  reference_object:
+    required: true
+    may_include:
+      - "praxis scene"
+      - "reconstruction"
+      - "trajectory"
+      - "coordination relation"
+      - "option field"
+      - "claim"
+      - "institutional arrangement"
+
+    not_equivalent_to: person worth
+  frame:
+    required: true
+    fields:
+      - "included"
+      - "excluded"
+
+    not_equivalent_to: □ (PMS Frame operator)
+  question:
+    required: true
+    fields:
+      - "scope"
+      - "claim_ceiling"
+
+  perspective:
+    required: true
+    canonical_symbol: π
+    ascii_alias: pi
+    not_equivalent_to: P_MIP (MIP practical power)
+  temporal_position:
+    required: true
+    canonical_symbol: t
+    scene_analysis_split_required_where_material: true
+    scene_time_symbol: t_s
+    analysis_time_symbol: t_a
+    required_temporal_firewalls:
+      - antecedent: "Legibility_analyst(t_a)"
+        relation: "does_not_imply"
+        consequent: "Legibility_actor(t_s)"
+      - antecedent: "knowledge_t_a"
+        relation: "does_not_imply"
+        consequent: "effective_capacity_t_s"
+      - left: "t"
+        relation: "not_equivalent_to"
+        right: "Θ"
+calibration_boundary:
+  status: vector_boundary_type
+  vector_exposes_threshold_dependencies: true
+  vector_generates_all_thresholds_endogenously: false
+  thresholds_may_depend_on:
+    - source material
+    - domain convention
+    - empirical measurement
+    - legal or technical standards
+    - role-specific conditions
+    - explicit comparison criteria
+    - other externally accountable basis
+  threshold_bearing_claims_include:
+    - DIR warrant or scope
+    - ROT relevance / material distinctness
+    - option status
+    - effective capacity
+    - derived DIST comparisons where shorthand is used
+    - convergence
+    - test-burden closure
+    - structural-attribution uplift
+    - constraint-relative necessity
+  conform_analyses_may_be_calibration_divergent: true
+  calibration_divergence_alone_is_theory_failure: false
+  permitted_responses_to_traceable_divergence:
+    - narrower scope
+    - explicit calibration divergence
+    - bounded orientation
+    - Suspend
+    - rival-sensitive disagreement
+    - Non-Capture
+  failure_boundary: >-
+    Calibration failure begins where material threshold divergence becomes untraceable, concealed, or
+    is treated as if VECTOR had generated substantive calibration from its own vocabulary.
+  external_to_vector_core: true
+vector_architecture:
+  core:
+    exact_components:
+      - id: "DIR"
+        type: "directional_claim_family"
+      - id: "ROT"
+        type: "perspective_testing_and_discovery_operation_family"
+    closed_core_for_current_version: true
+
+  state:
+    id: "V_t"
+    signature: "V_t(O | F,Q,π) = ⟨DIR_t, RP_t⟩"
+    fields:
+      DIR_t:
+        type: "current_directional_claim_or_status"
+      RP_t:
+        type: "current_rotation_test_profile"
+        expands_to: "ROTProfile_t"
+
+    ascii_alias: V_t(O | F,Q,pi) = <DIR_t, RP_t>
+  excluded_from_core:
+    - "RP"
+    - "DIST"
+    - "warrant"
+    - "calibration"
+    - "option_space"
+    - "cost_topology"
+    - "effective_capacity"
+    - "uptake"
+    - "result_status"
+    - "provenance"
+    - "residue"
+
+  expansion_drift_rule: >
+    Claim-support fields, derived relations, and practical dependency fields do
+    not become VECTOR components merely because they condition, summarize, or
+    constrain a VECTOR claim.
+
+dir:
+  full_name: "Direction"
+  status: "vector_core_claim_family"
+  purpose: >
+    State a bounded structural direction under a declared reference, frame,
+    question, perspective, temporal position, comparison basis, warrant, and
+    claim ceiling.
+
+  canonical_relations:
+    directed: X ≺_{V,C} Y
+    directed_ascii_alias: X <_V,C Y
+    trade_off: TradeOff_V(X,Y | C)
+    incomparable: X ∥_{V,C} Y
+    incomparable_ascii_alias: X ||_V,C Y
+    non_capture: ∅_{V,C}
+    non_capture_ascii_alias: emptyset_V,C
+  validity_conditions:
+    - "reference continuity"
+    - "declared comparison basis"
+    - "warrant visibility"
+    - "question-bounded relevance"
+    - "non-compensation where dimensions are not legitimately commensurable"
+    - "calibration visibility where thresholds or priorities matter"
+    - "scope-bounded claim ceiling"
+    - "rival vulnerability"
+
+  warrant_source_boundary:
+    vector_generates_external_warrant: false
+    strong_claim_requires_traceability_to_source: true
+    unresolved_external_premises_must_remain_visible: true
+    sources_may_include:
+      - "PMS corpus structure"
+      - "empirical evidence"
+      - "domain expertise"
+      - "law or policy source"
+      - "historical source"
+      - "explicit normative premise"
+      - "externally calibrated decision model"
+
+  non_compensation:
+    default: true
+    rule: >
+      Distinct claim-critical losses may not be hidden by unexplained aggregate
+      gain. Trade-offs remain visible unless commensurability and calibration
+      are independently warranted.
+
+  local_not_universal:
+    local_superiority_possible: true
+    universal_superiority_implied: false
+    total_order_implied: false
+
+  failure_condition: >
+    DIR must reduce or lose standalone discrimination if relevant cases are
+    losslessly captured by pre-existing structures or a same-burden rival
+    provides the required directional discrimination more directly.
+
+rot:
+  full_name: "Rotation"
+  status: "vector_core_operation_family"
+  purpose: >
+    Apply admissible perspectival change that can test, damage, revise, split,
+    collapse, or extend a bounded directional claim while preserving declared
+    reference and question conditions where required.
+
+  operation_signature: "ROT_ρ(C_0) → C_1"
+  stored_state: "RP"
+  required_non_equivalence: "ROT != RP"
+
+  robustness_bearing_rotation:
+    requires:
+      - "declared change"
+      - declared purpose / vulnerability
+      - "declared held constants"
+      - "reference continuity"
+      - "question relevance"
+      - "material distinctness"
+      - "credible claim-loss route"
+    claim_can_be_hurt: true
+
+    same_claim_test_requires_reference_and_question_continuity: true
+    exploratory_probe_may_change_frame_without_counting_as_same_claim_survival: true
+  exploratory_probe:
+    may_generate:
+      - "new distinction"
+      - "new option"
+      - "new consequence"
+      - "new question"
+      - "new rival"
+    robustness_credit_without_loss_route: false
+
+  rotation_families:
+    - id: "role"
+      name: "Role Rotation"
+    - id: "actor_affected_role"
+      name: "Actor / Affected-Role Rotation"
+    - id: "inside_outside"
+      name: "Inside / Outside Rotation"
+    - id: "intention_effect"
+      name: "Intention / Effect Rotation"
+    - id: "temporal"
+      name: "Temporal Rotation"
+    - id: "omega_position"
+      name: "Ω-Position Rotation"
+    - id: "counterfactual"
+      name: "Counterfactual Rotation"
+    - id: "rival_model"
+      name: "Rival-Model Rotation"
+    - id: "granularity"
+      name: "Granularity Rotation"
+
+  outcomes:
+    - "invariant"
+    - "variant"
+    - "emergent"
+    - "collapse"
+
+  admissibility_stop:
+    may_stop_when:
+      - "known claim-critical vulnerabilities have received material pressure"
+      - "remaining rotations are redundant"
+      - "remaining rotations are irrelevant to the declared claim"
+      - "further pressure requires unavailable external evidence"
+      - "further pressure belongs to a stronger new claim"
+      - current result is already Suspend, Non-Capture, or Revision Required
+    stop_is_finality: false
+
+  failure_condition: >
+    ROT must reduce if it cannot add claim-relevant discrimination beyond
+    ordinary reframing, rival comparison, or existing PMS recontextualization
+    practices under the same burden.
+
+  operation_signature_ascii_alias: ROT_rho(C_0) -> C_1
+rot_profile:
+  id: "RP"
+  full_name: "ROT Profile"
+  status: "vector_stored_audit_state"
+  operation: false
+  records:
+    - "rotation family"
+    - "vulnerability"
+    - "purpose"
+    - "changed variables"
+    - "held constants"
+    - "reference continuity"
+    - "material distinctness"
+    - "loss route"
+    - "result"
+    - "robustness relevance"
+    - "untested relevant rotations"
+    - "stop basis"
+
+dist_derived:
+  id: "DIST"
+  full_name: "Distance"
+  status: "vector_derived_supporting_construct"
+  in_vector_core: false
+  independent_component: false
+  definition: "derived orientation–enactment separation descriptor"
+  default_metric: false
+
+  source_relations:
+    pms_operator_sources:
+      - "Χ"
+      - "Θ"
+      - "Ψ"
+      - "Ω"
+      - "Α"
+    explicit_non_operator_sources:
+      - "publicness"
+      - "option status"
+      - "effective capacity"
+      - "reversibility conditions"
+      - "role position"
+
+  discrimination_rule: >
+    Strong claims must be carried by the source relations that generate
+    effective orientation–enactment separation. DIST may summarize those
+    relations but may not operate as an independent causal dial or warrant
+    source.
+
+  required_non_equivalence: "DIST != Χ"
+  reduction_basis: "Appendix E.22 / Chapter 19.5"
+  current_status: "derived_supporting_only"
+
+reversibility:
+  status: "supporting_dependency_architecture"
+  not_a_core_component: true
+  properties:
+    - "path-dependent"
+    - "role-relative"
+    - "temporally conditioned"
+    - "affected by binding"
+    - "affected by public fixation"
+    - "may be asymmetric"
+
+  distinguish:
+    rotation_cost: >-
+      practical friction involved in reorienting a relevant actor, role, institution, or interpretive
+      field; not the analyst's computational effort in performing a ROT operation
+    reversal_cost: "cost of materially changing enacted or bound praxis"
+
+  rules:
+    - "exit changes trajectory; it does not reset it"
+    - "renewed orientation–enactment separation does not undo Θ"
+    - "ROT does not erase Ψ"
+    - "more reversibility is not universally better"
+
+    - DIST↑ does not imply adequacy↑
+    - REV_avail↑ does not imply praxis quality↑
+  available_relation:
+    canonical_notation: REV_avail(a,t | F,Q)
+    status: supporting_dependency_architecture
+  required_non_equivalences:
+    - DIST ≠ REV_avail
+    - reversibility ≠ restoration
+    - C_ROT ≠ C_REV
+vector_dynamics:
+  status: "open_recursive_dependency_schema"
+  closed_update_law: false
+
+  supported_relations:
+    - "ROT may change DIR"
+    - "source conditions may change practical availability of ROT"
+    - "stabilized DIR may alter praxis conditions summarized by DIST"
+    - "binding alters later orientation"
+    - "praxis may change later orientation conditions"
+
+  external_inputs_remain_possible:
+    - "Δ / new difference"
+    - "other actors"
+    - "institutional change"
+    - "material events"
+    - "new evidence"
+    - "unknown conditions"
+
+option_space:
+  symbol: "𝒪_{a,t}(O | F,Q)"
+  status: "supporting_praxeological_architecture"
+  core_component: false
+
+  option_statuses:
+    - id: "conceivable"
+      meaning: "weakest"
+    - id: "visible"
+      meaning: "epistemically available to the relevant view"
+    - id: "structurally_available"
+      meaning: "exists in the relevant field"
+    - id: "effectively_actionable"
+      meaning: "actor / role has effective practical reach"
+    - id: "structurally_viable"
+      meaning: "can satisfy the declared viability relation"
+  non_equivalence_chain:
+    - "conceivable != visible"
+    - "visible != structurally_available"
+    - "structurally_available != effectively_actionable"
+    - "effectively_actionable != structurally_viable"
+
+  failure_modes:
+    option_invisibility: >
+      A real or materially relevant option is absent from the current
+      legibility field.
+    option_illusion: >
+      An apparent option fails one or more effective availability conditions.
+
+  option_illusion_families:
+    - "frame illusion"
+    - "capacity illusion"
+    - "temporal illusion"
+    - "role-transfer illusion"
+    - "relational illusion"
+    - "cost-blind illusion"
+
+  branch_statuses:
+    - "realized"
+    - "rejected"
+    - "blocked"
+    - "deferred"
+    - "lost"
+
+  special_case_probe_boundary: "valid probe != valid option"
+
+  canonical_symbol: 𝒪_{a,t}(O | F,Q)
+  ascii_alias: O_option(a,t | O,F,Q)
+  no_automatic_implication_ladder: true
+  option_status_and_evidence_status_are_distinct: true
+  evidence_status_boundary:
+    unknown_permitted: true
+    non_equivalences:
+      - Unknown != Unavailable
+      - Unknown != Available
+  actionable_evidence_may_include:
+    - authority
+    - access
+    - means
+    - information
+    - time / window
+    - dependencies
+    - practical control
+    - relevant cost
+    - procedural permission
+  option_field_state_notation:
+    canonical: 𝒪_t = (N_t, R_{O,t})
+    meaning: option nodes and relations at time t
+  action_corridors:
+    status: supporting_praxeological_architecture
+    meaning: >-
+      bounded future reachability opened, preserved, narrowed, or closed by current conditions and praxis
+    complete_decision_tree_implied: false
+  temporal_option_field:
+    field_may_change_over_time: true
+    theta_implies_monotonic_shrinkage: false
+    non_selection_implies_preservation: false
+second_order_agency:
+  status: "supporting_praxeological_architecture"
+  core_component: false
+
+  distinction:
+    first_order_agency: "selection among currently effective options"
+    second_order_agency: "change to the option field or relations among options"
+
+  transformations_may_include:
+    - "create option"
+    - "open blocked option"
+    - "preserve option"
+    - "close option"
+    - "change sequence"
+    - "change window"
+    - "change relation among options"
+
+  mechanism_burden:
+    requires_where_claimed:
+      - "actor or distributed actor configuration"
+      - "target change"
+      - "mechanism"
+      - "authority / effective capacity"
+      - "dependencies"
+      - "window"
+      - "evidence"
+      - resulting node and/or relation change
+    imagination_is_capacity: false
+    ability_to_imagine_is_effective_capacity: false
+
+    formal_target_where_used: ΔN and/or ΔR_O
+  distributed_agency_possible: true
+  sovereign_actor_assumption: false
+  fourth_strata_operation: false
+
+consequence_and_cost_topology:
+  status: "supporting_praxeological_architecture"
+  core_component: false
+
+  cost_types:
+    - "direct action cost"
+    - "non-action cost"
+    - "opportunity loss"
+    - "window cost"
+    - "binding cost"
+    - "reversal cost"
+    - "externalized cost"
+    - "relation-change cost"
+    - "delayed / downstream cost"
+
+  evidence_statuses:
+    - "observed_or_directly_established"
+    - "externally_supported"
+    - "traceably_inferred"
+    - "hypothetical"
+    - "unknown_or_residual"
+
+  default_fungibility: false
+  role_bound: true
+  time_bound: true
+
+  anti_inflation_rules:
+    - "hidden cost may not be invented merely to save a preferred claim"
+    - "practical effect does not validate the orientation that caused it"
+    - "unknown downstream cost remains residue when support is absent"
+
+timing:
+  status: "supporting_praxeological_architecture"
+  principles:
+    - "correct direction does not imply immediate enactment"
+    - "delay is not automatically restraint"
+    - "premature enactment != responsibility != indefinite postponement"
+    - "timing can change the option relation"
+    - "there is no universal optimal timing"
+    - "public and private critique may carry different timing and exposure relations"
+
+convergence:
+  status: "vector_test_architecture"
+
+  distinctions:
+    lexical_recurrence: "same or similar wording recurs"
+    structural_recurrence: "similar structural relation recurs"
+    directional_convergence: "distinct local DIR relations support compatible bounded direction"
+    robust_convergence: "direction survives material provenance, ROT, rival, and non-compensation pressure"
+
+  non_equivalences:
+    - "recurrence != convergence"
+    - "framework habituation != independent support"
+    - "AI convergence != adequacy"
+
+  meaningful_convergence_conditions:
+    - "separately warranted and distinctly constrained local DIR"
+    - "convergence provenance and echo control"
+    - "relevant ROT pressure"
+    - "preserved difference"
+    - "rival sensitivity"
+    - "counterfactual sensitivity"
+    - "non-compensation"
+    - "no critical regression"
+    - "real possibility of collapse or non-capture"
+
+  resultant_orientation:
+    algebraic_vector_sum: false
+    status: "new_bounded_claim_reconstructed_from_surviving_relations"
+
+    must_carry:
+      - local source DIR relations
+      - preserved differences
+      - common direction
+      - claim bounds / frames / questions / pressures
+    not_a:
+      - vector sum
+      - vote
+      - average
+      - weighted aggregate
+      - scalar score
+    no_robust_resultant_is_valid_result: true
+bounded_test_burden_closure:
+  status: "explicit_stop_discipline"
+  truth_closure: false
+  finality: false
+
+  minimum_burdens_where_material:
+    - "reference, frame, question, perspective, temporal position, and baseline claim declared"
+    - "relevant Ω and Θ conditions visible or residual"
+    - "current DIR stated"
+    - "materially relevant ROT families applied"
+    - "source conditions of orientation–enactment separation tested"
+    - "option field mapped at necessary level"
+    - "option invisibility and illusion pressured"
+    - "real option-space transformability tested"
+    - "relevant consequence topology mapped"
+    - "at least one serious rival has real winning conditions"
+    - "relevant counter-scene or counter-position pressure applied"
+    - "provenance and dependency audited"
+    - "no known claim-critical untested question hidden"
+    - "relevant Λ preserved"
+
+  calibration_sensitive: true
+  stop_rule: >
+    The current declared test burden may close when known claim-critical
+    vulnerabilities have received materially distinct pressure sufficient for
+    the current scope. This does not close all possible tests or establish
+    truth finality.
+
+result_types:
+  status: "non_hierarchical_result_set"
+  automatic_confidence_score: false
+
+  values:
+    robust_orientation:
+      label: "Robust Orientation"
+      meaning: >
+        The claim-relevant core survives materially relevant current pressure
+        without material revision, within declared scope.
+      scope_required: true
+
+    revised_robust_orientation:
+      label: "Revised Robust Orientation"
+      meaning: >
+        The baseline materially failed, a revised claim was produced, and the
+        revised claim subsequently survived the relevant pressure.
+
+    bounded_orientation:
+      label: "Bounded Orientation"
+      meaning: >
+        Sufficient directional support exists for the declared question without
+        earning stronger robustness status.
+
+    revision_required:
+      label: "Revision Required"
+      meaning: >
+        The current claim does not survive, but a materially altered claim may
+        be testable; the revision has not yet earned robust status.
+
+    trade_off:
+      label: "Multidirectional / Trade-Off"
+      meaning: >
+        Several relevant directional relations survive but no legitimate
+        non-compensatory resultant is warranted.
+
+    incomparable:
+      label: "Incomparable"
+      meaning: >
+        A meaningful comparison space exists but no warranted dominance
+        relation has been earned.
+
+    suspend:
+      label: "Suspend"
+      meaning: >
+        The question remains legitimate but current warrant is insufficient.
+      reentry_possible: true
+
+    non_capture:
+      label: "Non-Capture"
+      meaning: >
+        VECTOR should not produce the requested directional relation in the
+        current form.
+      positive_discriminative_outcome: true
+
+  excluded_results:
+    - "AbsoluteTruth"
+    - "CertifiedCorrect"
+    - "FinalPosition"
+
+claim_discipline:
+  status: vector_boundary_type
+  required_non_equivalences:
+    - Revision ≠ Survival
+    - probe ≠ original-frame warrant
+  material_coordinate_change:
+    automatic_claim_continuity: false
+    rule: There is no automatic claim continuity across material coordinate change.
+  scope_rule: Scope↑ ⇒ Burden↑
+external_warrant_boundary:
+  rule: "VECTOR robustness != external warrant"
+  vector_can:
+    - "make external dependencies visible"
+    - "test whether a claim changes if a premise fails"
+    - "test typing and inference boundaries"
+    - "preserve under-warranted status"
+  vector_cannot:
+    - "manufacture historical evidence"
+    - "manufacture medical knowledge"
+    - "manufacture current law"
+    - "manufacture empirical measurements"
+    - "manufacture causal evidence"
+    - "manufacture role authority"
+
+  admissible_joint_status: "structurally_robust_plus_externally_under_warranted"
+
+orientation_uptake:
+  status: "practical_transition_dependency"
+  sequence:
+    - "presented"
+    - "actor_accessible"
+    - "understood"
+    - "praxis_available"
+    - "enacted"
+
+  required_non_equivalence: >
+    presented != actor_accessible != understood != praxis_available != enacted
+
+  anti_abuse_rule: "being told is not uptake"
+  being_told_implies_orientation_mediated_attribution_uplift: false
+
+  notes:
+    actor_accessible: "The actor can actually access the orientation in usable form."
+    understood: "The relevant claim and support burden are intelligible enough to contest or respond to."
+    praxis_available: >
+      The relation has entered the practical question-space sufficiently to be
+      checked, rejected, accepted, refused, contested, or acted upon; agreement
+      with VECTOR is not required.
+
+structural_attributability:
+  status: "practical_dependency_architecture"
+  terminology_priority:
+    technical_primary: "structural attributability"
+    secondary_shorthand: "loss of structural innocence"
+    secondary_shorthand_is_independent_claim_type: false
+
+  baseline_boundary:
+    source: "PMS-LOGIC"
+    baseline_relation: "BaselineAttributability_LOGIC"
+    orientation_mediated_relation: "DeltaAttributability_orientation"
+    equal: false
+
+    baseline_awareness_required_by_vector: false
+    baseline_uptake_required_by_vector: false
+    uptake_gate_applies_only_to_orientation_mediated_change: true
+    note: >-
+      PMS-LOGIC baseline structural attributability remains externally sourced and does not generally
+      require actor awareness. VECTOR must not insert awareness or uptake into that baseline; uptake gates
+      only a VECTOR orientation-mediated change in attributability.
+  orientation_mediated_uplift_requires_where_material:
+    - "relevant bounded orientation"
+    - "external premise support"
+    - "actor uptake"
+    - "effective capacity"
+    - "consequence relation"
+    - "role / time conditions"
+
+  directionality:
+    more_orientation_monotonically_increases_attributability: false
+    possible_effects:
+      - "increase"
+      - "decrease"
+      - "retype"
+      - "remain insufficient"
+
+  human_boundary:
+    increased_structural_attributability_implies_increased_authority: false
+    loss_of_structural_innocence_is_not:
+      - "guilt"
+      - "blame"
+      - "liability"
+      - "moral fault"
+
+ought_typology:
+  status: "vector_specific_claim_typology"
+  moral_operator_family: false
+
+  types:
+    OUGHT_choice:
+      status: "vector_boundary_type"
+      meaning: "outcome-directed prescriptive choice claim"
+      generated_by_vector_alone: false
+
+    OUGHT_account:
+      status: "vector_positive_ought_relation"
+      meaning: >-
+        R must remain accounted for in subsequent praxis
+      selects_outcome: false
+      replaces_pms_logic_baseline: false
+      dependencies_ref: "reference/Dependency Map.yaml#/dependencies/ought_account"
+
+      relation_type: VECTOR orientation-mediated relation
+      technical_primary_effect: possible orientation-mediated change in structural attributability
+      calibration_sensitive: true
+      universal_threshold: false
+      no_moral_authority: true
+      no_automatic_responsibility_blame_or_liability_conversion: true
+    OUGHT_constraint:
+      status: "vector_positive_ought_relation"
+      meaning: >
+        Constraint-relative practical necessity relation identifying a response
+        class required to maintain an operative condition G under a correctly
+        typed effective option field.
+      moral_legitimacy_implied: false
+      dependencies_ref: "reference/Dependency Map.yaml#/dependencies/ought_constraint"
+
+    OUGHT_moral:
+      status: "vector_boundary_type"
+      meaning: "categorical moral claim beyond VECTOR warrant"
+      generated_by_vector_alone: false
+
+  moral_conversion_boundary:
+    vector_ought_notation_imports_moral_legitimacy: false
+    legal_duty_implied: false
+    obedience_implied: false
+    person_rank_implied: false
+
+constraint_architecture:
+  status: "vector_practical_dependency_architecture"
+
+  constraint_record_fields:
+    - "G"
+    - "maintained_by"
+    - "modifiable_by"
+    - "claimed_authority"
+    - "burden_bearers"
+    - "exit_relations"
+    - "alternative_carriers"
+    - "transformation_routes"
+    - "abandon_or_revision_consequences"
+    - "unknowns"
+    - "external_legitimacy_question"
+
+  ought_constraint_dependencies:
+    - "operative G"
+    - "external premise support"
+    - "effective option field"
+    - "non-empty response class R_G"
+    - "constraint relations visible"
+
+    - each member of R_G satisfies the relevant G-condition
+  system_person_boundary: "SystemCarriageRequired != PersonXMustCarry"
+  legitimacy_source: "external_unless_separately_warranted"
+
+  tragic_constraint:
+    status: "evidentially_bounded_configuration_of_OUGHT_constraint"
+    requires:
+      - "valid operative G relation"
+      - "correctly typed effective option field"
+      - "residual loss across R_G"
+      - "second-order transformation mechanism audit"
+      - "capacity / authority / dependency / window audit"
+      - "no currently evidenced non-lossful route in declared field"
+    metaphysical_impossibility_claim: false
+    falsified_by: >-
+      an evidenced effective non-lossful route, including an evidenced second-order transformation that
+      opens such a route within the declared window, capacity field, and dependency structure
+    not_falsified_by: "mere imagination of a rescue route"
+
+  source_legitimacy_boundary: Source(G) ≠ Legitimacy(G)
+  revision_rule: Revision(G) => new constraint claim
+  fixpoint_requirement:
+    status: functional_requirement
+    bearer_may_be:
+      - role
+      - procedure
+      - institutional mechanism
+      - escalation path
+      - temporary coordination function
+      - other stabilizing structure
+    non_equivalences:
+      - FixpointRequirement ≠ BearerAuthority
+      - requirement of a fixpoint ≠ legitimacy of a particular fixpoint
+    personification_required: false
+corrigible_consequence_carrying_praxis:
+  status: "supporting_stance_architecture"
+  label: "Adult Orientation"
+  label_status: "supporting_shorthand_only"
+  independent_dependency_node: false
+  independent_theoretical_discrimination: false
+
+  carried_by_lower_level_relations:
+    - "bounded relevant orientation"
+    - "preserved corrigibility"
+    - "willingness to carry relevant consequence"
+    - "awareness of capacity limits"
+    - "preserved Λ / residue"
+    - "orientation–enactment source conditions without reifying DIST"
+    - "distributed agency where relevant"
+    - "no conversion of orientation into authority over others"
+
+  required_firewall:
+    - "AdultOrientation != AdultReciprocity_EDEN"
+    - "AdultOrientation != MIP maturity"
+    - "AdultOrientation != AdultPerson"
+    - "AdultOrientation != person rank"
+    - "successful outcome != evidence of the stance"
+
+  reduction_basis: "Chapter 19.12 deletion test"
+
+  mip_boundary_precedent_only: true
+  mip_supplies_warrant_for_label_or_stance: false
+failure_families:
+  status: "under_load_self_pressure_architecture"
+  families:
+    - id: "direction_and_order_drift"
+      chapter: "18.1"
+    - id: "rotation_and_perspective_drift"
+      chapter: "18.2"
+    - id: "dist_and_reversibility_drift"
+      chapter: "18.3"
+    - id: "possibility_and_agency_drift"
+      chapter: "18.4"
+    - id: "consequence_and_timing_drift"
+      chapter: "18.5"
+    - id: "convergence_and_self_test_drift"
+      chapter: "18.6"
+    - id: "ought_constraint_and_stance_label_drift"
+      chapter: "18.7"
+    - id: "meta_authority_and_self_immunization_drift"
+      chapter: "18.8"
+
+falsifiability_and_reduction:
+  governing_rule: "self_application_must_preserve_the_possibility_of_self_reduction"
+  vector_self_application_is_final_validation: false
+
+  failure_tests:
+    standalone_redundancy:
+      chapter: "19.2"
+      consequence: "standalone_scope_or_status_reduction"
+
+    dir_discrimination_failure:
+      chapter: "19.3"
+      consequence: "DIR reduction or scope reduction"
+
+    rot_discrimination_failure:
+      chapter: "19.4"
+      consequence: "ROT reduction or scope reduction"
+
+    dist_redundancy:
+      chapter: "19.5"
+      consequence: "component reduction"
+      already_triggered: true
+
+    option_space_discrimination_failure:
+      chapter: "19.6"
+      consequence: "supporting architecture reduction"
+
+    second_order_agency_failure:
+      chapter: "19.7"
+      consequence: "supporting architecture reduction"
+
+    cost_topology_failure:
+      chapter: "19.8"
+      consequence: "supporting architecture reduction"
+
+    convergence_failure:
+      chapter: "19.9"
+      consequence: "robustness / closure claim reduction"
+
+    self_test_failure:
+      chapter: "19.10"
+      consequence: "architecture pressure"
+
+    ought_typology_failure:
+      chapter: "19.11"
+      consequence: "typology reduction"
+
+    adult_orientation_redundancy:
+      chapter: "19.12"
+      consequence: "supporting shorthand only"
+      already_triggered: true
+
+    calibration_failure:
+      chapter: "19.13"
+      consequence: "ClaimReduction or Suspend"
+
+    rival_superiority:
+      chapter: "19.14"
+      consequence: "domain deference, scope reduction, or standalone reduction"
+      already_triggered_at_scope_level: true
+
+    failure_of_self_reduction:
+      chapter: "19.15"
+      consequence: "theory self-immunization failure"
+
+  reduction_ladder:
+    - level: 1
+      id: "claim_reduction"
+    - level: 2
+      id: "scope_reduction"
+    - level: 3
+      id: "component_reduction"
+    - level: 4
+      id: "domain_non_capture"
+    - level: 5
+      id: "architecture_reduction"
+    - level: 6
+      id: "standalone_reduction"
+
+current_reduction_status:
+  status_date: "2026-08-17"
+
+  components:
+    DIR:
+      previous_candidate_status: "core"
+      current_status: "retain_scope_narrowed"
+      reduction_pressure:
+        - "same-burden rival superiority in E.23"
+
+    ROT:
+      previous_candidate_status: "core"
+      current_status: "retain_scope_narrowed"
+      reduction_pressure:
+        - "same-burden rival superiority in E.23"
+
+    DIST:
+      previous_candidate_status: "core_component"
+      current_status: "derived_supporting_only"
+      reduction_pressure:
+        - "matched-case redundancy test"
+        - "Appendix E.22"
+        - "Chapter 19.5"
+
+    OptionTaxonomy:
+      previous_candidate_status: "supporting_architecture"
+      current_status: "retain_evidence_typed_and_narrowed"
+      remaining_burden:
+        - "Unknown must remain distinct from Available / Unavailable"
+        - "retrospective and person-near claims remain bounded"
+
+    SecondOrderAgency:
+      previous_candidate_status: "supporting_architecture"
+      current_status: "retain_narrow"
+      remaining_burden:
+        - "actor / distributed actor configuration must be traceable"
+        - "mechanism, authority/capacity, dependencies, window, and evidence must be supported"
+        - "E.11 demonstrates collapse when these fail"
+
+    CostTopology:
+      previous_candidate_status: "supporting_architecture"
+      current_status: "retain_narrow"
+      remaining_burden:
+        - "non-fungible consequence discrimination retained"
+        - "unsupported hidden costs remain Hypothetical / Unknown"
+
+    Convergence:
+      previous_candidate_status: "test_architecture"
+      current_status: "retain_as_test_architecture_narrowed"
+      remaining_burden:
+        - "echo control required"
+        - "genealogy or recurrence cannot generate resultant orientation by themselves"
+
+    BoundedTestBurdenClosure:
+      previous_candidate_status: "test_architecture"
+      current_status: "retain_calibration_sensitive_narrowed"
+      remaining_burden:
+        - "threshold basis must remain visible"
+        - "closure is not finality"
+
+    OughtTypology:
+      previous_candidate_status: "vector_specific_typology"
+      current_status: "retain_with_firewall_narrowed"
+      remaining_burden:
+        - "orientation-mediated uplift gate remains required"
+        - "constraint audit remains required"
+        - "moral conversion remains external"
+
+    AdultOrientation:
+      previous_candidate_status: "independent_construct_candidate"
+      current_status: "supporting_shorthand_only"
+      reduction_pressure:
+        - "deletion / discrimination test"
+        - "Chapter 19.12"
+
+    StandaloneVECTOR:
+      previous_candidate_status: "standalone_theory_candidate"
+      current_status: "provisional_retain_scope_reduced"
+      reduction_pressure:
+        - "same-burden MCDA rival superiority in E.23"
+      related_domain_deference:
+        - "specialist rival victory in E.21; domain-task deference only, not by itself a same-burden standalone scope reduction"
+
+  same_burden_scope_boundary:
+    case_ref: "cases/E23.yaml"
+    paper_ref: "Appendix E.23"
+    class: "externally_calibrated_commensurable_multi_criteria_orientation"
+    result: >-
+      Where a bounded orientation problem is genuinely commensurable, externally calibrated, and better
+      carried by a non-PMS sensitivity architecture, VECTOR cedes primary directional and perspectival
+      status for that bounded burden. DIR and ROT remain retained only where they add discrimination not
+      losslessly supplied by the rival.
+
+positive_boundary:
+  paper_source: "Chapter 20"
+  status: "what_remains_after_reduction"
+  retained_discriminations:
+    - "bounded directional discrimination"
+    - "perspective as a testable variable"
+    - "reversibility-sensitive orientation"
+    - "real and illusory possibility"
+    - "constraint-bound second-order agency"
+    - "consequence without total-cost conversion"
+    - "bounded test-burden closure without finality"
+    - "practical consequence without moral automation"
+    - "corrigible consequence-carrying praxis"
+    - "legitimate non-capture"
+    - "structural attributability without added authority"
+
+  current_core_claim: >
+    The remaining DIR–ROT architecture is retained only within scope where it
+    adds discriminative purchase not losslessly supplied by PMS structures or
+    same-burden rivals.
+
+rival_superiority:
+  status: "mandatory_vulnerability_mechanism"
+  rival_need_not_use_vector_vocabulary: true
+  rival_must_have_real_winning_conditions: true
+
+  forms:
+    specialist_rival:
+      meaning: "rival wins a narrower specialist burden VECTOR should not own as primary"
+      example_ref: "cases/E21.yaml"
+
+    same_burden_rival:
+      meaning: "rival addresses the same bounded orientation burden and outperforms VECTOR"
+      example_ref: "cases/E23.yaml"
+      may_reduce:
+        - "DIR scope"
+        - "ROT scope"
+        - "Standalone VECTOR scope"
+
+  assimilation_prohibited: >
+    VECTOR may record an externally calibrated rival relation as an input or
+    bounded directional fact only by preserving its external warrant source.
+    Re-expression in VECTOR notation does not make the rival's calibration an
+    endogenous VECTOR warrant.
+
+non_capture:
+  status: "positive_boundary_and_result"
+  must_remain_possible: true
+  not_equivalent_to:
+    - "incomparability"
+    - "suspend"
+    - "theory failure"
+
+  triggers_may_include:
+    - "reference continuity failure"
+    - "badly typed question"
+    - "category jump"
+    - "person-worth ranking request"
+    - "claim-critical residue not responsibly compressible"
+    - "required claim conditions cannot be preserved"
+
+provenance_reference:
+  source_file: "reference/Claim Provenance.yaml"
+  paper_source: "Appendix F"
+  categories:
+    C: "corpus-carried"
+    R: "VECTOR reconstruction"
+    N: "VECTOR-new"
+    P: "proposed / provisional formalization"
+  ordering_implied: false
+  epistemic_strength_implied: false
+  governing_non_equivalence: "ProvenanceCompleteness != TheoreticalAdequacy"
+  lineage_supports_authority_inheritance: false
+
+dependency_reference:
+  source_file: "reference/Dependency Map.yaml"
+  paper_source: "Appendix F.9"
+  governing_rule: "dependency transmits vulnerability, not automatic warrant"
+
+  load_bearing_nodes:
+    - "RobustOrientation"
+    - "OUGHT_account"
+    - "OUGHT_constraint"
+    - "TragicConstraint"
+    - "CorrigibleConsequenceCarryingPraxis"
+    - "StandaloneVECTOR"
+
+record_reference:
+  paper_source: "Appendix B"
+  reference_template: "model/VECTOR-Record.template.yaml"
+  case_template: "model/Case.template.yaml"
+  validation_schema: false
+
+  canonical_top_level_record_fields:
+    - "reference"
+    - "frame"
+    - "question"
+    - "position"
+    - "baseline_claim"
+    - "dir"
+    - "calibration"
+    - "rot_profile"
+    - "dist_derived"
+    - "reversibility"
+    - "option_space"
+    - "transformability"
+    - "consequence_topology"
+    - "constraint"
+    - "orientation_uptake"
+    - "pressure"
+    - "result"
+
+  requiredness_policy: "claim_strength_and_claim_type_dependent"
+  no_default_numeric_fields_for:
+    - "DIR score"
+    - "rotation count score"
+    - "DIST percentage"
+    - "responsibility score"
+    - "adultness score"
+    - "universal confidence percentage"
+
+  boundaries:
+    record_incomplete_is_claim_false: false
+    schema_valid_is_claim_warranted: false
+
+case_suite_reference:
+  source_index: "cases/index.yaml"
+  paper_source: "Appendix E"
+  paper_linked_case_count: 23
+  case_count_is_evidence_weight: false
+  case_suite_is_empirical_validation: false
+
+  load_bearing_cases:
+    E20:
+      role: "Non-Capture"
+    E21:
+      role: "specialist rival superiority / domain-task deference"
+    E22:
+      role: "DIST necessity test and architecture reduction"
+    E23:
+      role: "same-burden rival superiority and DIR/ROT/standalone scope reduction"
+
+source_lineage:
+  status: "provenance_reference_not_hard_runtime_dependency"
+  paper_source: "Appendix F / Chapter 17"
+
+  hard_base_dependency:
+    - "PMS.yaml"
+
+  ecosystem_lineage_inputs:
+    - id: "MIP"
+      role: "trajectory, power, feedback, dignity boundary precedent"
+    - id: "PMS-ANTICIPATION"
+      role: "future orientation, timing, restraint, effective capacity"
+    - id: "PMS-CRITIQUE"
+      role: "direction, correction, review distance, follow-up"
+    - id: "PMS-CONFLICT"
+      role: "shrinking options, carriage, fixpoint, tragic non-integrability"
+    - id: "PMS-EDEN"
+      role: "truthful coordination, learned legibility, counter-scenes, reciprocity boundary"
+    - id: "PMS-LOGIC"
+      role: "effective capacity and baseline structural attributability"
+    - id: "PMS-SEX"
+      role: "exit realism and downstream cost"
+    - id: "PMS-DISCIPLINE"
+      role: "bounded adequacy, correction before coherence, stop / refusal / claim ceilings"
+    - id: "PMS UNDER LOAD"
+      role: "pressure and self-reduction precedent; not warrant"
+    - id: "PMS-STRATA"
+      role: "local superiority, non-compensation, claim reduction, rival superiority, non-capture"
+
+  hard_runtime_load_required_for_all_lineage_sources: false
+  provenance_must_remain_traceable: true
+
+computational_representation:
+  file_role: "machine_readable_vector_repository_reference"
+
+  supports:
+    - "repository loading"
+    - "construct status inspection"
+    - "dependency inspection"
+    - "case linkage"
+    - "record scaffolding"
+    - "reader graph generation from declared relations"
+    - "consistency auditing"
+  may_structurally_check:
+    - "required field presence"
+    - "known construct status"
+    - "known result type"
+    - "PMS dependency resolution"
+    - "case index / case file identity"
+    - "declared dependency target existence"
+    - "provenance target existence"
+    - "forbidden core reintroduction of DIST"
+    - "ROT / RP type distinction"
+
+    - O / person-worth distinction
+    - F / PMS □ distinction
+    - DIST / REV_avail distinction
+    - C_ROT / C_REV distinction
+    - Unknown / Available / Unavailable distinction
+    - FixpointRequirement / BearerAuthority distinction
+    - E23 cedes-primary-status wording
+  may_not_determine:
+    - "empirical truth"
+    - "external factual warrant"
+    - "moral correctness"
+    - "legal validity"
+    - "person evaluation"
+    - "actual actor understanding"
+    - "actual effective capacity without evidence"
+    - "substantive VECTOR result from syntax alone"
+    - "rival inferiority by schema preference"
+
+  direct_implementation_guaranteed: false
+  universal_metric_available: false
+  automated_direction_engine: false
+  automated_moral_engine: false
+
+  operational_use_requires:
+    - "resolved PMS.yaml dependency"
+    - "architecture-specific implementation"
+    - "question-specific calibration where needed"
+    - "external warrant where material"
+    - "explicit claim ceiling"
+    - "human or domain-grounded judgment where irreducible"
+    - "rival-sensitive evaluation"
+
+  repository_implementation_targets:
+    vm_or_simulation_scaffolding:
+      permitted: true
+      requires_explicit_calibration: true
+      paper_claim: false
+      validation_implied: false
+      theory_expansion_implied: false
+reader_boundary:
+  source_dir: "reader/"
+  presentation_layer_only: true
+  graph_creates_theory: false
+  graph_creates_evidence: false
+  graph_creates_dependencies: false
+  graph_creates_authority: false
+
+  permitted_graph_sources:
+    - "model/PMS-VECTOR.yaml"
+    - "reference/Dependency Map.yaml"
+    - "reference/Claim Provenance.yaml"
+    - "cases/index.yaml"
+    - "cases/E01.yaml ... cases/E23.yaml"
+
+  recommended_views:
+    - "Architecture & Status"
+    - "Dependency / Warrant Graph"
+    - "Case Pressure Map"
+    - "Selected Case Trace"
+    - "Reduction Graph"
+
+  prohibited_visual_inference:
+    - "VECTOR as geometric vector space"
+    - "ROT as geometric angle"
+    - "DIST as spatial metric"
+    - "node depth as ontological depth"
+    - "graph centrality as theoretical importance"
+    - "visual adjacency as undeclared dependency"
+
+scope_limitations:
+  vector_does_not_claim:
+    - "universal scalar orientation"
+    - "universal total order of praxis"
+    - "moral decision rule"
+    - "automatic legitimacy"
+    - "automatic authority"
+    - "person worth evaluation"
+    - "exhaustive option discovery"
+    - "exhaustive consequence prediction"
+    - "exhaustive capture of praxis"
+    - "universal superiority over specialist or rival methods"
+    - "final self-validation"
+
+  same_burden_rival_limit: >-
+    Calibrated, genuinely commensurable multi-criteria orientation may be better handled by an externally
+    calibrated sensitivity architecture. VECTOR must cede primary status for that bounded burden unless
+    it adds distinct discrimination not already supplied by the rival.
+
+  specialist_method_limit: >
+    Specialist technical burdens may be ceded to specialist models without
+    treating domain deference as failure of the entire VECTOR architecture.
+
+quality_and_integrity_checks:
+  expected_for_repository_release:
+    pms_dependency_explicit: true
+    pms_operator_definitions_not_redefined: true
+    paper_source_declared: true
+    canonical_core_is_dir_rot: true
+    concrete_state_is_dir_rp: true
+    rot_not_equal_rp: true
+    dist_not_in_core: true
+    dist_source_relations_preserved: true
+    geometry_firewall_present: true
+    adult_orientation_supporting_only: true
+    standalone_scope_reduction_present: true
+    e22_reduction_link_present: true
+    e23_same_burden_scope_link_present: true
+    external_warrant_boundary_present: true
+    pms_logic_baseline_boundary_present: true
+    being_told_not_uptake_present: true
+    system_carriage_person_boundary_present: true
+    provenance_not_epistemic_rank: true
+    dependency_not_warrant: true
+    non_capture_preserved: true
+    schema_validity_not_theory_validity: true
+    reader_authority_prohibited: true
+
+    pms_schema_version_is_1_3: true
+    o_not_person_worth: true
+    f_not_pms_frame_operator: true
+    dir_not_impulse: true
+    rot_not_recontextualization: true
+    rot_not_project_as: true
+    dist_not_pms_distance: true
+    pi_not_mip_practical_power: true
+    t_not_pms_temporality: true
+    dist_not_reversibility_available: true
+    rotation_cost_not_reversal_cost: true
+    reversibility_not_restoration: true
+    unknown_not_available: true
+    unknown_not_unavailable: true
+    baseline_logic_not_orientation_uplift: true
+    fixpoint_requirement_not_bearer_authority: true
+    constraint_source_not_constraint_legitimacy: true
+    mip_boundary_precedent_not_adult_orientation_warrant: true
+    calibration_failure_maps_to_claim_reduction_or_suspend: true
+    tragic_constraint_nonlossful_route_falsifier_present: true
+    e23_explicitly_cedes_primary_status: true
+load_order:
+  required_sequence:
+    - step: 1
+      source: "PMS.yaml"
+      purpose: "resolve Base operator grammar, entry condition, and governance"
+    - step: 2
+      source: "PMS-VECTOR.md"
+      purpose: "read primary VECTOR theoretical source"
+    - step: 3
+      source: "model/PMS-VECTOR.yaml"
+      purpose: "load machine-readable VECTOR reference profile"
+    - step: 4
+      source: "model/Model Specification.md"
+      purpose: "interpret field contracts and representation boundaries"
+    - step: 5
+      source: "reference/Claim Provenance.yaml"
+      purpose: "resolve origin/status map where needed"
+    - step: 6
+      source: "reference/Dependency Map.yaml"
+      purpose: "resolve vulnerability/dependency map where needed"
+    - step: 7
+      source: "cases/index.yaml"
+      purpose: "load paper-linked test case inventory"
+    - step: 8
+      source: "cases/*.yaml"
+      purpose: "load individual case records"
+
+  invalid_shortcut:
+    - "PMS-VECTOR.yaml before PMS.yaml for application"
+    - "case result without PMS and VECTOR model context"
+    - "reader graph as substitute for declared source relations"
+
+closing_contract:
+  compact_core: "VECTOR := ⟨DIR, ROT⟩"
+  compact_state: "V_t(O | F,Q,π) = ⟨DIR_t, RP_t⟩"
+  derived_support: "DIST := derived orientation–enactment separation descriptor"
+
+  current_reductions:
+    - ⟨DIR, ROT, DIST⟩ → ⟨DIR, ROT⟩
+    - Adult Orientation → supporting shorthand
+    - Standalone VECTOR → provisional retain, scope-reduced
+  compact_core_ascii_alias: VECTOR := <DIR, ROT>
+  compact_state_ascii_alias: V_t(O | F,Q,pi) = <DIR_t, RP_t>
+  compact_reduction_set:
+    direction:
+      - direction != destiny
+      - local superiority != universal superiority
+      - incomparability != equality
+    perspective:
+      - rotation != relativism
+      - probe != original-frame warrant
+    time_and_possibility:
+      - distance != superiority
+      - reversibility != reset
+      - conceivable != available
+      - availability != capacity
+      - option transformation != unlimited agency
+    consequence:
+      - cost != total score
+      - unseen != invented
+    normativity:
+      - capacity != obligation
+      - constraint != legitimacy
+      - necessity != moral goodness
+      - self-binding != authority to bind others
+    epistemic_status:
+      - invariance != final truth
+      - convergence != consensus
+      - test-burden closure != truth closure
+    human_boundary:
+      - VECTOR != person ranking
+      - VECTOR != dignity ranking
+      - Adult Orientation shorthand != AdultPerson
+      - VECTOR != tribunal
+  additional_governing_boundaries:
+    - Being told is not uptake.
+    - VECTOR robustness != external warrant.
+    - Orientation↑ != Authority↑.
+    - Provenance completeness != theoretical adequacy.
+    - Dependency transmits vulnerability, not automatic warrant.
+    - Self-application must preserve the possibility of self-reduction.
