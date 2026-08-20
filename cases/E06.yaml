@@ -16,8 +16,10 @@ case_metadata:
     - OptionSpace
     - DIST
   theoretical_function: >-
-    Tests whether continued analysis can destroy a real option window and whether
-    preserved analytical distance must remain distinct from preserved practical possibility.
+    Tests whether continued analysis can destroy a real option window, whether
+    Deferred/Lost remain branch statuses distinct from option-status predicates,
+    and whether preserved analytical distance must remain distinct from preserved
+    practical possibility.
   artifact_pair:
     yaml: cases/E06.yaml
     markdown: cases/E06.md
@@ -124,7 +126,8 @@ vector_record:
     actor_or_role: the team managing the reversible pilot
     options:
       - option: Extend the pilot before the contractual deadline.
-        status: lost
+        status: null
+        branch_status: lost
         evidence_status: >-
           The paper fixture directly establishes that the branch was formerly
           available, was deferred during continued review, and became lost when
@@ -145,7 +148,11 @@ vector_record:
           At the post-deadline state represented by the fixture, continued review
           cannot restore the formerly available extension branch merely by preserving analytical distance.
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -195,7 +202,7 @@ vector_record:
         PMS-CRITIQUE supplies lineage pressure that revision windows can close and
         that endless reframing or postponement can itself block correction.
       - >-
-        PMS-VECTOR owns the explicit Deferred-to-Lost option transition, the
+        PMS-VECTOR owns the explicit Deferred-to-Lost branch-status transition, the
         distinction between delay and preservation, and the boundary that wider
         derived DIST does not imply higher adequacy.
     non_compensation: null

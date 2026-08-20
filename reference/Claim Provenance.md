@@ -265,7 +265,9 @@ These claims are grouped exactly by the Appendix F.8 subsections. Novelty is rec
 
 | Claim ID | Claim | Status |
 |---|---|---:|
-| `vector.possibility_agency_and_consequence.001` | Paired Option Invisibility / Option Illusion architecture | `N` |
+| `vector.possibility_agency_and_consequence.001` | `Option Invisibility ≠ Option Blindness`: legibility condition versus unsupported exclusion | `N` |
+| `vector.possibility_agency_and_consequence.009` | Option Blindness / Option Illusion as opposite forms of Option-Field Misrepresentation | `N` |
+| `vector.possibility_agency_and_consequence.010` | Exact `UnsupportedExclusion` / `UnsupportedInclusion` audit notation | `P` |
 | `vector.possibility_agency_and_consequence.002` | Special-case probe versus original-frame option status | `N` |
 | `vector.possibility_agency_and_consequence.003` | Option field represented through nodes and relations | `N` |
 | `vector.possibility_agency_and_consequence.004` | Second-order Agency as effective transformation of option availability or relations inside VECTOR | `N` |

@@ -14,11 +14,12 @@ case_metadata:
   constructs_under_test:
     - OptionSpace
     - OptionIllusion
+    - OptionFieldMisrepresentation
     - EffectiveCapacity
   theoretical_function: >-
-    Tests whether a visible and superficially plausible alternative is rejected
-    as effectively unavailable when authority, access, means, timing, or
-    dependencies are missing.
+    Tests whether a visible and superficially plausible alternative is identified
+    as Option Illusion when it is unsupportedly included in the relevant effective
+    option field despite missing authority, access, means, timing, or dependencies.
   artifact_pair:
     yaml: cases/E08.yaml
     markdown: cases/E08.md
@@ -39,6 +40,9 @@ case_metadata:
       The current Option Illusion result does not establish that the delegation
       route could never become actionable after a real change in authority,
       resources, cooperation, or other effective-capacity conditions.
+    - >-
+      Option-Field Misrepresentation does not by itself establish responsibility,
+      blame, obligation, or authority.
 
 vector_record:
   reference:
@@ -163,6 +167,7 @@ vector_record:
     options:
       - option: Delegate the recurring task to another unit.
         status: visible
+        branch_status: null
         evidence_status: >-
           The fixture positively establishes the listed effective-capacity
           failures; actionability is not left Unknown merely because the route is visible.
@@ -192,11 +197,18 @@ vector_record:
           The route is not effectively actionable for the employee under the
           current frame, regardless of its visibility or actionability for the director.
     option_invisibility: null
-    option_illusion: >-
-      Present. The delegation route is highly visible but fails the current
-      employee's effective availability/actionability conditions. The role
-      rotation additionally exposes a role-transfer illusion: actionability for
-      the senior director is not actionability for the employee.
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions:
+          - >-
+            Delegation is unsupportedly included in the overloaded employee's
+            current effective option field on the basis of visibility and
+            superficial plausibility despite absent authority, access, budget,
+            temporal window, required cooperation, and practical control. The
+            role rotation additionally exposes role-transfer inflation: actionability
+            for the senior director is not actionability for the employee.
     special_case_probes: []
 
   transformability:
@@ -247,8 +259,9 @@ vector_record:
         frame- and time-bound and that abstract or later-recognized possibility
         does not create current actor capacity.
       - >-
-        PMS-VECTOR owns the paired Option Invisibility / Option Illusion
-        architecture, the role-relative option-field typing, and the E08 result.
+        PMS-VECTOR owns Option Illusion as unsupported inclusion within
+        Option-Field Misrepresentation, the role-relative option-field typing,
+        and the E08 result.
       - >-
         The ANTICIPATION capacity lineage does not independently warrant VECTOR's
         Option Illusion taxonomy or transfer authority from one role to another.
@@ -267,8 +280,9 @@ vector_record:
       effectively actionable option for the overloaded employee.
     revisions:
       - >-
-        Employee option status: presumed effective option -> visible but
-        non-actionable Option Illusion under the current frame.
+        Employee option representation: presumed effective option -> visible route
+        that was unsupportedly included in the employee's effective option field;
+        this is Option Illusion under the current frame.
       - >-
         Director-level actionability is retained as a role-relative comparison
         result and is not transferred to the employee.

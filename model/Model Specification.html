@@ -1922,40 +1922,58 @@
 	          relations that must be supported at the level required by the current claim.
 	        </p>
 
-	        <h3>8.3 Option invisibility and option illusion</h3>
+	        <h3>8.3 Option invisibility and option-field misrepresentation</h3>
 	        <p>
-	          VECTOR distinguishes a route that is materially real but absent from the current legibility field from a route that
-	          appears available but fails one or more effective availability conditions. The first is
-	          <strong>option invisibility</strong>; the second is <strong>option illusion</strong>. Conflating them would produce
-	          opposite analytical errors: prematurely shrinking the field in the first case and fictionalizing capacity in the second.
+	          VECTOR separates a legibility condition from two opposite option-field status errors.
+	          <strong>Option Invisibility</strong> occurs where a relevantly real or realistically transformable option is absent
+	          from the current legibility field. It is <strong>not by itself a failure mode</strong>. It becomes an
+	          <strong>Option Blindness</strong> case only when that absence is converted into an unsupported exclusion, downgrade,
+	          or claim of non-existence, non-availability, or genuine lack of alternatives.
 	        </p>
 
 	        <table class="table">
 	          <thead>
 	            <tr>
-	              <th>Failure mode</th>
+	              <th>Type</th>
 	              <th>Repository meaning</th>
-	              <th>Typical consequence</th>
+	              <th>Boundary</th>
 	            </tr>
 	          </thead>
 	          <tbody>
 	            <tr>
-	              <td>Option invisibility</td>
-	              <td>A real or materially relevant option is absent from the current legibility field.</td>
-	              <td>The analysis may understate the current or transformable possibility field.</td>
+	              <td>Option Invisibility</td>
+	              <td>A relevantly real or realistically transformable option is absent from the current legibility field.</td>
+	              <td>Legibility condition; not by itself Option-Field Misrepresentation.</td>
 	            </tr>
 	            <tr>
-	              <td>Option illusion</td>
-	              <td>An apparent option fails one or more effective availability conditions.</td>
-	              <td>The analysis may invent capacity, responsibility, exit, or freedom that does not practically exist.</td>
+	              <td>Option Blindness</td>
+	              <td>Unsupported exclusion from the relevant current or realistically transformable option field.</td>
+	              <td>Negative direction of Option-Field Misrepresentation.</td>
+	            </tr>
+	            <tr>
+	              <td>Option Illusion</td>
+	              <td>Unsupported inclusion in the relevant effective option field.</td>
+	              <td>Positive direction of Option-Field Misrepresentation.</td>
 	            </tr>
 	          </tbody>
 	        </table>
 
+	        <div class="box">
+	          <div class="box-title">Option-field misrepresentation</div>
+	          <p class="small">
+	            <span class="code-inline">OptionFieldMisrepresentation = UnsupportedExclusion OR UnsupportedInclusion</span>.
+	            The assignment is evidence-bound: it does not presuppose access to a complete or final option field.
+	            Unknown must remain Unknown where the evidence does not warrant either direction.
+	          </p>
+	        </div>
+
 	        <p>
-	          The YAML names several option-illusion families: frame illusion, capacity illusion, temporal illusion, role-transfer
-	          illusion, relational illusion, and cost-blind illusion. The list is diagnostic support rather than a closed ontology.
-	          Its function is to keep the reason for failure visible instead of collapsing every unavailable route into a generic no.
+	          The YAML retains several option-illusion families: frame illusion, capacity illusion, temporal illusion, role-transfer
+	          illusion, relational illusion, and cost-blind illusion. These are recurrent positive-misrepresentation families rather
+	          than peers of Option Invisibility. The list is diagnostic support rather than a closed ontology. A Special-Case Probe
+	          remains distinct from Option Illusion until its constructed possibility is imported into the effective option field
+	          without sufficient support. Likewise, a bounded negative after adequate option and transformation pressure is not
+	          Option Blindness merely because it excludes a route.
 	        </p>
 
 	        <h3>8.4 Branch status records what happened to a route</h3>
@@ -2974,9 +2992,9 @@
 	              <td>Naturalized option field or unbounded option fantasy.</td>
 	            </tr>
 	            <tr>
-	              <td>Invisibility / illusion pressure</td>
-	              <td>Relevant unseen real options and merely imagined unavailable options are distinguished.</td>
-	              <td>Possibility blindness or possibility inflation.</td>
+	              <td>Option-field discrimination</td>
+	              <td>Invisibility/discovery, unsupported exclusion, and unsupported inclusion are pressured separately.</td>
+	              <td>Premature contraction, unsupported necessity, or inflated possibility field.</td>
 	            </tr>
 	            <tr>
 	              <td>Transformability</td>
@@ -3134,8 +3152,8 @@
 	            </tr>
 	            <tr>
 	              <td>Option-space discrimination failure</td>
-	              <td>Supporting architecture reduction</td>
-	              <td>Retained only under evidence-typed limits.</td>
+	              <td>Simplify, narrow, recalibrate, or remove the supporting distinction that failed to discriminate</td>
+	              <td>Failure if Invisibility/Blindness, bounded negative/Blindness, or Probe/Illusion cannot remain distinct, or if Blindness/Illusion become post hoc stabilization vocabulary.</td>
 	            </tr>
 	            <tr>
 	              <td>Second-order agency failure</td>
@@ -3357,7 +3375,7 @@
 	            <tr>
 	              <td>Option taxonomy</td>
 	              <td><span class="code-inline">retain_evidence_typed_and_narrowed</span></td>
-	              <td>Unknown remains distinct from Available/Unavailable; retrospective and person-near claims remain bounded.</td>
+	              <td>Unknown boundaries remain active; Invisibility != Blindness; bounded negatives remain distinct from Blindness; Special-Case Probes remain distinct from Illusion; bidirectional assignments must remain corrigibly auditable and the taxonomy must reduce if those distinctions fail.</td>
 	            </tr>
 	            <tr>
 	              <td>Second-Order Agency</td>
@@ -3918,7 +3936,7 @@
 	            <tr><td>1</td><td><span class="code-inline">PMS.yaml</span></td><td>Resolve Base operator grammar, entry condition, and governance.</td></tr>
 	            <tr><td>2</td><td><span class="code-inline">PMS-VECTOR.md</span></td><td>Read the primary VECTOR theoretical source.</td></tr>
 	            <tr><td>3</td><td><span class="code-inline">model/PMS-VECTOR.yaml</span></td><td>Load the machine-readable VECTOR reference profile.</td></tr>
-	            <tr><td>4</td><td><span class="code-inline">model/Model Specification.md</span></td><td>Interpret field contracts and representation boundaries.</td></tr>
+	            <tr><td>4</td><td><span class="code-inline">model/Model Specification.html</span></td><td>Interpret field contracts and representation boundaries.</td></tr>
 	            <tr><td>5</td><td><span class="code-inline">reference/Claim Provenance.yaml</span></td><td>Resolve origin/status relations where needed.</td></tr>
 	            <tr><td>6</td><td><span class="code-inline">reference/Dependency Map.yaml</span></td><td>Resolve declared vulnerability/dependency relations where needed.</td></tr>
 	            <tr><td>7</td><td><span class="code-inline">cases/index.yaml</span></td><td>Load the paper-linked case inventory.</td></tr>
@@ -3954,7 +3972,7 @@
 	            <tr><td>Core / state</td><td><span class="code-inline">VECTOR := ⟨DIR, ROT⟩</span>; <span class="code-inline">V_t = ⟨DIR_t, RP_t⟩</span>; ROT != RP.</td></tr>
 	            <tr><td>DIST</td><td>Not in core; source relations preserved; DIST != REV_avail.</td></tr>
 	            <tr><td>Human / operator firewalls</td><td>O/person worth, F/□, DIR/∇, ROT/Φ, ROT/PROJECT_AS, DIST/Χ, π/P_MIP, t/Θ remain distinct.</td></tr>
-	            <tr><td>Option status</td><td>Unknown != Available and Unknown != Unavailable.</td></tr>
+	            <tr><td>Option architecture</td><td>Unknown != Available/Unavailable; Invisibility != Blindness and is not itself a field error; Blindness/Illusion remain unsupported exclusion/inclusion; bounded-negative and Special-Case-Probe boundaries are preserved.</td></tr>
 	            <tr><td>Attribution</td><td>Baseline LOGIC relation remains distinct from VECTOR orientation-mediated uplift.</td></tr>
 	            <tr><td>Constraint</td><td>FixpointRequirement != BearerAuthority and Source(G) != Legitimacy(G).</td></tr>
 	            <tr><td>Calibration</td><td>Calibration failure maps to ClaimReduction or Suspend; notation does not manufacture warrant.</td></tr>

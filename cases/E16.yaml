@@ -17,9 +17,11 @@ case_metadata:
     - OptionSpace
     - SecondOrderAgency
   theoretical_function: >-
-    Tests an evidentially bounded tragic constraint in which every evidenced
-    effective response carries serious residual loss while no effective
-    non-lossful transformation is available in time.
+    Tests whether an evidentially bounded Tragic Constraint survives relevant
+    option-invisibility and unsupported-exclusion pressure while resisting
+    unsupported inclusion and Infinite Option Fantasy, with every evidenced
+    effective response carrying serious residual loss and no effective non-lossful
+    transformation available in time.
   artifact_pair:
     yaml: cases/E16.yaml
     markdown: cases/E16.md
@@ -40,6 +42,13 @@ case_metadata:
       relevant window.
     - >-
       No currently evidenced good option does not imply failure of imagination.
+    - >-
+      Tragic Constraint does not equal premature option-field closure.
+    - >-
+      Tragic Constraint does not equal failure to invent enough options.
+    - >-
+      Successful Option Blindness pressure does not imply that an additional
+      effective option must exist.
 
 vector_record:
   reference:
@@ -67,7 +76,7 @@ vector_record:
 
   question:
     scope: >-
-      Given the correctly typed current effective response field, does every
+      Given the evidence-typed current effective response field, does every
       response satisfying the maintained condition carry serious residual loss,
       and is any evidenced effective non-lossful route or in-window option-space
       transformation currently available?
@@ -139,6 +148,7 @@ vector_record:
     options:
       - option: A — preserve one high-dependency service and suspend another.
         status: structurally_viable
+        branch_status: null
         evidence_status: >-
           Directly established by the synthetic fixture as a current effective
           response satisfying the maintained condition while carrying serious residual loss.
@@ -154,6 +164,7 @@ vector_record:
         viability_relative_to: satisfies G in the declared current response field
       - option: B — distribute the resource more evenly across both services.
         status: structurally_viable
+        branch_status: null
         evidence_status: >-
           Directly established by the synthetic fixture as a current effective
           response satisfying the maintained condition while leaving both
@@ -170,6 +181,7 @@ vector_record:
         viability_relative_to: satisfies G in the declared current response field
       - option: C — close one service and concentrate remaining capacity on the other.
         status: structurally_viable
+        branch_status: null
         evidence_status: >-
           Directly established by the synthetic fixture as a current effective
           response satisfying the maintained condition while carrying serious residual loss.
@@ -185,6 +197,7 @@ vector_record:
         viability_relative_to: satisfies G in the declared current response field
       - option: D — avoid the residual losses by adding staff and equipment.
         status: visible
+        branch_status: null
         evidence_status: >-
           The fixture explicitly supplies D as a hypothetical no-loss route, but
           also establishes that its required staff and equipment cannot be obtained
@@ -203,12 +216,12 @@ vector_record:
         viability_relative_to: >-
           D is not a member of the current effective response field R_G because
           the means and window conditions required for effective action are not met.
-    option_invisibility: >-
-      A real but currently unseen non-lossful option would defeat the Tragic
-      Constraint claim once evidenced; the fixture supplies no such option.
-    option_illusion: >-
-      D must not be promoted from a visible hypothetical route to a current
-      effective option when its required means are unavailable in time.
+    option_invisibility: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes:
       - >-
         Search for a real fourth path that satisfies G without serious residual loss.
@@ -291,14 +304,20 @@ vector_record:
     counter_scenes:
       - >-
         If a previously invisible but real effective fourth path avoids material
-        residual loss, TragicConstraint(G,R_G) must collapse or the field must be retyped.
+        residual loss, TragicConstraint(G,R_G) must collapse or the field must be
+        retyped; later discovery does not by itself diagnose earlier Option Blindness.
       - >-
         If an evidenced second-order transformation can open a non-lossful route
         within the declared window, capacity field, and dependency structure,
         TragicConstraint(G,R_G) must collapse.
       - >-
+        Nonvisibility, Unknown status, blockage, or current non-actionability may
+        not be used as evidence of non-existence or non-transformability without
+        sufficient support; such unsupported exclusion would be Option Blindness.
+      - >-
         Mere imagination of a rescue route without effective means or in-window
-        capacity does not change the current option status.
+        capacity does not change the current option status and need not be promoted
+        to avoid Infinite Option Fantasy.
     provenance_dependencies:
       - >-
         PMS-CONFLICT supplies lineage precedent for mature non-integrability and
@@ -310,7 +329,19 @@ vector_record:
     non_compensation: >-
       The serious residual losses attached to A, B, and C are non-substitutable in
       the fixture and are not aggregated into a universal cost or moral score.
-    critical_open_tests: []
+    critical_open_tests:
+      - >-
+        Relevant option invisibility and unsupported exclusion must remain capable
+        of defeating the tragic classification if a real effective or realistically
+        transformable non-lossful route is evidenced.
+      - >-
+        Hypothetical route D remains a valid probe but not a current effective
+        option; promoting it without the missing means and window conditions would
+        be unsupported inclusion / Option Illusion.
+      - >-
+        Failure to evidence an additional route after appropriate pressure does
+        not itself establish Option Blindness and does not require invention of a
+        further option.
 
   result:
     status: Bounded Orientation
@@ -333,8 +364,10 @@ vector_record:
       - >-
         Legitimacy of G, moral justification of any loss, and bearer-level duty remain external.
     stop_reason: >-
-      The fixture supplies a correctly typed current response field in which all
-      effective responses carry serious residual loss and explicitly establishes
-      that the supplied non-lossful hypothetical route is not effectively available
-      in time. No current evidence in the fixture supports a further non-lossful
-      route or effective in-window transformation; new such evidence would reopen the claim.
+      The fixture supplies an evidence-typed current response field in which all
+      effective responses carry serious residual loss, pressures relevant
+      invisibility and unsupported exclusion, and explicitly establishes that the
+      supplied non-lossful hypothetical route is not effectively available in time.
+      No current evidence in the fixture supports a further non-lossful route or
+      effective in-window transformation; that bounded negative is not Option
+      Blindness by default, and new such evidence would reopen the claim.

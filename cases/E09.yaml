@@ -15,7 +15,7 @@ case_metadata:
   - OptionSpace
   - DIR
   - Frame
-  theoretical_function: Tests whether a special-case probe can identify the asymmetry blocking a current option without converting the hypothetical option into present availability.
+  theoretical_function: Tests whether a special-case probe can identify the asymmetry blocking a current option without converting the hypothetical option into present availability or treating analytic construction as Option Illusion unless unsupported inclusion actually occurs.
   artifact_pair:
     yaml: cases/E09.yaml
     markdown: cases/E09.md
@@ -27,6 +27,7 @@ case_metadata:
   - A shared procedure that is viable under F* does not thereby belong to the current option field under F0.
   - Invalid as a current option does not imply invalid as an analytic probe.
   - Orientation gain from the frame contrast does not imply an option-status change in the original frame.
+  - Analytic construction does not by itself constitute Option Illusion; unsupported inclusion into the current effective option field would be required.
 vector_record:
   reference:
     object: The special-case comparison between the current conflict frame F0 and a counterfactual frame F* in which both parties have equal decision authority.
@@ -39,10 +40,10 @@ vector_record:
     - The frame contrast identifies the operative authority asymmetry that blocks the shared procedure under F0.
     excluded:
     - Any transport of the shared procedure from F* into F0 as a current effective option.
-    - Any claim that the counterfactual itself changes the real option set.
+    - Any claim that the counterfactual itself changes the current effective option field.
     - Any claim of same-claim robustness merely because the special case yields orientation.
   question:
-    scope: Can the declared special-case frame F* increase bounded orientation about what blocks a shared procedure in F0 without increasing the current real option set?
+    scope: Can the declared special-case frame F* increase bounded orientation about what blocks a shared procedure in F0 without increasing the current effective option field?
     claim_ceiling: The case can identify a blocking asymmetry through the declared frame contrast. It cannot establish that the shared procedure is currently available, actionable, or viable under F0.
   position:
     perspective: Analyst-facing comparison of F0 with the explicitly modified special-case frame F*.
@@ -61,7 +62,7 @@ vector_record:
       unresolved_dependencies: []
     critical_regressions:
     - Transporting o(F*) into F0 as if the original frame already contained the option.
-    - Treating orientation gain as evidence that the real option set has changed.
+    - Treating orientation gain as evidence that the current effective option field has changed.
   calibration:
     threshold: null
     basis: null
@@ -86,6 +87,7 @@ vector_record:
     options:
     - option: Shared procedure under the current conflict conditions.
       status: conceivable
+      branch_status: null
       evidence_status: The fixture establishes viability under F* only; it does not establish current availability or viability under F0.
       authority: Equal decision authority is assumed only in F* and is not established in F0.
       access: null
@@ -99,7 +101,11 @@ vector_record:
       procedural_permission: null
       viability_relative_to: Viable under F*; not established as a current viable option under F0.
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes:
     - 'F*: assume equal decision authority; the resulting viability of a shared procedure identifies authority asymmetry as the operative blocker without changing option status in F0.'
   transformability:

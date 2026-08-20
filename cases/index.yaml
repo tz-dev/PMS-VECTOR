@@ -34,12 +34,15 @@ case_index:
     case_suite_is_empirical_validation: false
     index_is_theoretical_authority: false
     pressure_families_are_navigation_labels: true
+    case_template_is_strict_validation_schema: false
+    template_change_reclassifies_existing_cases: false
     constructs_under_test_are_validation_claims: false
     local_case_result_stored_here: false
     architecture_effect_stored_here: false
     notes:
     - The index inventories Appendix E; case YAML files carry structured case content.
     - Pressure-family labels support navigation and do not constitute a new theoretical taxonomy.
+    - Template evolution does not itself update, validate, or reclassify existing paper-linked case artifacts; substantive case synchronization requires case-level review.
     - A collapse, rival victory, suspension, reduction, or Non-Capture may be the correct discriminative case result.
     - case count != evidential weight
     - case suite != empirical validation
@@ -171,8 +174,8 @@ case_index:
     - DIST
     - Reversibility
     - Timing
-    theoretical_function: Tests the distinction between a robust directional result and the timing of enactment
-      when cheap, materially relevant correction remains available.
+    theoretical_function: Tests the distinction between a well-supported preliminary DIR and enactment timing
+      when cheap, materially relevant correction pressure remains available before public binding.
     artifact_pair:
       yaml: cases/E05.yaml
       markdown: cases/E05.md
@@ -192,8 +195,9 @@ case_index:
     - Timing
     - OptionSpace
     - DIST
-    theoretical_function: Tests whether continued analysis can destroy a real option window and whether preserved
-      analytical distance must remain distinct from preserved practical possibility.
+    theoretical_function: Tests whether continued analysis can destroy a real option window, whether Deferred/Lost
+      remain branch statuses distinct from option-status predicates, and whether preserved analytical distance must
+      remain distinct from preserved practical possibility.
     artifact_pair:
       yaml: cases/E06.yaml
       markdown: cases/E06.md
@@ -212,7 +216,8 @@ case_index:
     - OptionSpace
     - OptionInvisibility
     - ROT
-    theoretical_function: Tests whether ROT can reveal an already available actionable path without misclassifying
+    theoretical_function: Tests whether ROT can reveal an already available actionable path while preserving the
+      distinction between Option Invisibility and unsupported exclusion / Option Blindness, without misclassifying
       increased legibility as creation of a new option.
     artifact_pair:
       yaml: cases/E07.yaml
@@ -232,9 +237,11 @@ case_index:
     constructs_under_test:
     - OptionSpace
     - OptionIllusion
+    - OptionFieldMisrepresentation
     - EffectiveCapacity
-    theoretical_function: Tests whether a visible and superficially plausible alternative is rejected as effectively
-      unavailable when authority, access, means, timing, or dependencies are missing.
+    theoretical_function: Tests whether a visible and superficially plausible alternative is identified as Option
+      Illusion when it is unsupportedly included in the relevant effective option field despite missing authority,
+      access, means, timing, or dependencies.
     artifact_pair:
       yaml: cases/E08.yaml
       markdown: cases/E08.md
@@ -255,7 +262,8 @@ case_index:
     - DIR
     - Frame
     theoretical_function: Tests whether a special-case probe can identify the asymmetry blocking a current option
-      without converting the hypothetical option into present availability.
+      without converting the hypothetical option into present availability or treating analytic construction as
+      Option Illusion unless unsupported inclusion actually occurs.
     artifact_pair:
       yaml: cases/E09.yaml
       markdown: cases/E09.md
@@ -296,9 +304,12 @@ case_index:
     - SecondOrderAgency
     - EffectiveCapacity
     - OptionSpace
+    - OptionIllusion
+    - OptionFieldMisrepresentation
     - Collapse
-    theoretical_function: Tests whether a plausible field-transformation claim collapses when the required authority,
-      capacity, dependencies, or temporal window are not actually available.
+    theoretical_function: Tests whether an unsupported promotion of a plausible transformation into the current
+      effective option field collapses as Option Illusion while the route remains a valid probe and the resulting bounded
+      negative remains distinct from Option Blindness.
     artifact_pair:
       yaml: cases/E11.yaml
       markdown: cases/E11.md
@@ -313,12 +324,16 @@ case_index:
     pressure_families:
     - distributed_agency_pressure
     - responsibility_boundary_pressure
+    - option_status_pressure
     constructs_under_test:
     - DistributedAgency
     - SecondOrderAgency
     - EffectiveCapacity
-    theoretical_function: Tests whether effective transformative capacity may exist only in an actor configuration
-      while remaining distinct from equal individual responsibility.
+    - OptionBlindness
+    - OptionFieldMisrepresentation
+    theoretical_function: Tests whether an individual-only actor model can produce Option Blindness by excluding a
+      transformation that is effectively available at a coordinated actor configuration while preserving the distinction
+      between distributed capacity and individual responsibility.
     artifact_pair:
       yaml: cases/E12.yaml
       markdown: cases/E12.md
@@ -339,7 +354,8 @@ case_index:
     - EvidenceStatus
     - UnknownResidue
     theoretical_function: Tests whether traceably inferred downstream cost is carried while unsupported hidden-cost
-      assertions remain Unknown/Residual rather than becoming positive cost claims.
+      assertions remain Unknown/Residual as a consequence-evidence status rather than becoming positive cost claims
+      or licensing an option-status inference.
     artifact_pair:
       yaml: cases/E13.yaml
       markdown: cases/E13.md
@@ -377,12 +393,14 @@ case_index:
     - constraint_pressure
     - carriage_pressure
     - authority_boundary_pressure
+    - option_status_pressure
     constructs_under_test:
     - OUGHT_constraint
     - ConstraintArchitecture
     - SystemCarriageRequired
-    theoretical_function: Tests reconstruction of a maintained constraint and its effective response class without
-      converting system carriage, source, or functional necessity into bearer authority or moral legitimacy.
+    theoretical_function: Tests reconstruction of a maintained constraint and an evidence-typed effective response
+      class that remains open to unsupported exclusion and unsupported inclusion pressure without converting system
+      carriage, source, or functional necessity into bearer authority or moral legitimacy.
     artifact_pair:
       yaml: cases/E15.yaml
       markdown: cases/E15.md
@@ -403,8 +421,9 @@ case_index:
     - ConstraintArchitecture
     - OptionSpace
     - SecondOrderAgency
-    theoretical_function: Tests an evidentially bounded tragic constraint in which every evidenced effective response
-      carries serious residual loss while no effective non-lossful transformation is available in time.
+    theoretical_function: Tests whether an evidentially bounded Tragic Constraint survives relevant invisibility
+      and unsupported-exclusion pressure while resisting unsupported inclusion and Infinite Option Fantasy, with no
+      evidenced non-lossful route or effective in-window transformation available.
     artifact_pair:
       yaml: cases/E16.yaml
       markdown: cases/E16.md

@@ -181,7 +181,11 @@ vector_record:
     actor_or_role: null
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:

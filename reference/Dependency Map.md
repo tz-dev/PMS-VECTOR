@@ -2,14 +2,17 @@
 
 ## 1. Role and governing rule
 
-This reference artifact externalizes the declared dependency and vulnerability topology of `PMS-VECTOR.md` Appendix F.9. It is not an authority graph and does not generate warrant.
+This reference artifact externalizes the declared dependency and vulnerability topology of `PMS-VECTOR.md` Appendix F.9, synchronized with the option-status discrimination burden declared in Chapter 19.6. It is not an authority graph and does not generate warrant.
 
 > **Governing rule:** dependency transmits vulnerability, not automatic warrant.
 
 `dependency != warrant`  
 `graph depth != theoretical importance`  
 `node degree != epistemic strength`  
-`visual adjacency != undeclared dependency`
+`visual adjacency != undeclared dependency`  
+`option invisibility != option blindness`  
+`warranted bounded negative != option blindness by default`  
+`special-case or imagined probe != effective option`
 
 Only relations explicitly present in `reference/Dependency Map.yaml` are graphable as dependency edges. Co-occurrence, shared source, or shared provenance status creates no edge.
 
@@ -82,13 +85,15 @@ OUGHT_constraint
 └── LegitimacyQuestionExternalized
 ```
 
+`EffectiveOptionField` here means an evidence-typed field under the declared frame, role, time, capacity, dependency, and option-misrepresentation pressure. It does not imply complete or final access to the option field.
+
 ### Failure / reduction routes
 
-| Trigger | Response | Target(s) |
-|---|---|---|
-| a previously invisible but real effective option is discovered | `revise_response_class` | EffectiveOptionField |
-| G is revised | `new_constraint_claim_required` | OUGHT_constraint |
-| system-level carriage is real but bearer assignment is unsupported | `collapse_person_assignment_preserve_system_relation` | SystemCarriageRequired, PersonXMustCarry |
+| Trigger | Response | Target(s) | Boundary |
+|---|---|---|---|
+| a previously invisible effective option becomes evidenced within the relevant frame and time | `revise_response_class` | EffectiveOptionField | field revision does not by itself retroactively diagnose Option Blindness |
+| G is revised | `new_constraint_claim_required` | OUGHT_constraint | — |
+| system-level carriage is real but bearer assignment is unsupported | `collapse_person_assignment_preserve_system_relation` | SystemCarriageRequired, PersonXMustCarry | — |
 
 ## 6. TragicConstraint
 
@@ -112,14 +117,16 @@ TragicConstraint
 └── NoEvidencedNonLossfulRoute
 ```
 
+`SecondOrderMechanismAudit` requires evidenced mechanism discrimination between realistic transformability and merely imagined possibility. Blindness pressure does not require an analyst to invent an alternative where no effective route is evidenced.
+
 ### Failure / reduction routes
 
-| Trigger | Response | Target(s) |
-|---|---|---|
-| a previously invisible effective no-loss option is evidenced | `collapse` | TragicConstraint |
-| Second-Order Agency can create or open a non-lossful route in time | `collapse` | TragicConstraint |
-| a rival demonstrates that the option/constraint field was materially misdescribed | `collapse_or_retype` | TragicConstraint |
-| only an imagined rescue route exists | `no_current_option_status_change` | ImaginedRescueRoute |
+| Trigger | Response | Target(s) | Boundary |
+|---|---|---|---|
+| a previously invisible effective no-loss option is evidenced | `collapse` | TragicConstraint | current tragic classification collapses; prior invisibility alone does not establish prior Option Blindness |
+| Second-Order Agency can create or open a non-lossful route in time | `collapse` | TragicConstraint | transformation must be mechanism-supported, not merely conceivable |
+| a rival demonstrates that the option/constraint field was materially misdescribed, including unsupported exclusion or unsupported inclusion where material | `collapse_or_retype` | TragicConstraint | misdescription can contract or inflate the represented field |
+| only an imagined rescue route exists | `no_current_option_status_change` | ImaginedRescueRoute | imagined or special-case rescue may remain a probe; no effective option status follows unless its constitutive conditions are evidenced |
 
 ## 7. CorrigibleConsequenceCarryingPraxis
 
@@ -145,6 +152,11 @@ StandaloneVECTOR
 ├── DISTCoreReductionAccepted
 ├── AdultOrientationReductionAccepted
 ├── OptionStatusDiscrimination
+│   ├── InvisibilityBlindnessSeparation
+│   ├── BlindnessBoundedNegativeSeparation
+│   ├── ProbeIllusionSeparation
+│   ├── BidirectionalFieldCorrection
+│   └── OptionTaxonomyReducibility
 ├── SecondOrderAgencyMechanismDiscrimination
 ├── CostTopologyDiscrimination
 ├── ConvergenceClosureClaimLossAndStop
@@ -153,6 +165,8 @@ StandaloneVECTOR
 ├── OughtTypologyPreventsConflation
 └── CoreRemainsReducible
 ```
+
+`OptionStatusDiscrimination` is corrigibly bidirectional: evidence may expand or contract the represented option field. Its validity depends on keeping Invisibility distinct from Blindness, bounded negatives distinct from Blindness, probes distinct from Illusion, and the taxonomy itself reducible if those distinctions fail or become post hoc stabilization vocabulary.
 
 ### Failure / reduction routes
 
@@ -204,5 +218,7 @@ These are reductions already carried by the current PMS-VECTOR architecture. The
 - Dependency tells us what becomes vulnerable if a required relation fails.
 - Dependency does not tell us that the dependent claim is warranted.
 - Failure routes specify reduction, revision, collapse, or Non-Capture where declared; they do not force binary rejection.
+- Option-status discrimination is bidirectional and remains vulnerable to reduction if its distinctions do not discriminate.
+- Later discovery of an effective option revises the current field where warranted; it does not by itself establish earlier Option Blindness.
 - Provenance categories are maintained separately in `reference/Claim Provenance.yaml`.
 - Reader graphs may visualize only declared dependency, prohibited-inference, case-pressure, provenance-routing, or reduction relations from their owning artifacts.

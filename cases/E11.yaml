@@ -16,11 +16,14 @@ case_metadata:
     - SecondOrderAgency
     - EffectiveCapacity
     - OptionSpace
+    - OptionIllusion
+    - OptionFieldMisrepresentation
     - Collapse
   theoretical_function: >-
-    Tests whether a plausible field-transformation claim collapses when the
-    required authority, capacity, dependencies, or temporal window are not
-    actually available.
+    Tests whether an unsupported promotion of a plausible transformation into
+    the current effective option field collapses as Option Illusion while the
+    route remains a valid probe and the resulting bounded negative remains
+    distinct from Option Blindness.
   artifact_pair:
     yaml: cases/E11.yaml
     markdown: cases/E11.md
@@ -38,6 +41,12 @@ case_metadata:
     - >-
       The analyst's ability to describe a reassignment does not by itself enlarge
       the current effective option field.
+    - >-
+      A valid analytical probe is not itself Option Illusion; the error lies in
+      unsupported promotion into the current effective option field.
+    - >-
+      A bounded negative after adequate mechanism, capacity, dependency, and
+      timing pressure is not Option Blindness by default.
     - >-
       Second-order agency does not imply sovereignty over possibility or freedom
       from authority, dependency, and timing conditions.
@@ -137,7 +146,13 @@ vector_record:
     options:
       - option: Temporary cross-unit reassignment from the neighboring unit.
         status: visible
-        evidence_status: null
+        branch_status: null
+        evidence_status: >-
+          The fixture directly establishes the relevant negative practical
+          conditions: missing timely authorization, authorization-dependent
+          release, no emergency bypass, no evidenced alternative capable actor
+          configuration, and a window that closes before authorization becomes
+          available.
         authority: >-
           The project lead can request reassignment but cannot authorize it; the
           authorizing role is unavailable until after the window closes.
@@ -167,11 +182,21 @@ vector_record:
           Not established as effectively actionable inside the current absence
           window.
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions:
+          - >-
+            The baseline claim unsupportedly promotes the proposed cross-unit
+            reassignment into the current effective option field despite absent
+            timely authorization, dependency satisfaction, practical control,
+            and temporal window.
     special_case_probes:
       - >-
-        The reassignment proposal remains useful as a probe because it identifies
-        an institutional dependency that could be redesigned in future cases.
+        The same reassignment remains analytically useful as a probe because it
+        identifies an institutional dependency that could be redesigned in
+        future cases.
 
   transformability:
     actor_configuration: >-
@@ -256,11 +281,17 @@ vector_record:
     revisions:
       - 'SecondOrderAgencyClaim -> Collapse.'
       - >-
+        The baseline promotion of the reassignment into the current effective
+        option field is classified as Option Illusion / unsupported inclusion.
+      - >-
         The proposed reassignment is retained as a probe / future redesign
         candidate rather than as a current effectively actionable option.
       - >-
         No effective node or relation change in the current option field is
         recorded because the required transformation is not produced in time.
+      - >-
+        The bounded negative after the declared mechanism, authority/capacity,
+        dependency, and timing audit is not classified as Option Blindness.
     scope: >-
       The negative result is bounded to the current mechanism, authority/capacity
       field, dependencies, and short absence window.
@@ -279,4 +310,7 @@ vector_record:
       timely authority/effective capacity is absent, the neighboring-unit release
       remains dependency-bound, no emergency bypass exists, and no alternative
       capable actor configuration is evidenced. The claim therefore collapses
-      without converting a conceivable transformation into current agency.
+      without converting a conceivable transformation into current agency. This
+      evidentially bounded negative follows from the declared audit rather than
+      from mere nonvisibility, unknown status, or unsupported exclusion, so it is
+      not Option Blindness.

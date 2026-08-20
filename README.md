@@ -58,7 +58,7 @@ VECTOR theoretical validation
 
 ![PMS-VECTOR Reader interface](reader/screenshot01.png)
 
-### Graph Interface
+### Graph Lab
 
 ![PMS-VECTOR Graph interface](reader/screenshot02.png)
 
@@ -137,7 +137,7 @@ cases/E##.yaml
 cases/E##.md
 ```
 
-The YAML is the structured case record; the Markdown file is its human-readable companion.
+The YAML is the structured case record; the Markdown file is its human-readable companion. Case labels, pressure-family classifications, and fixture organization support navigation and pressure testing; they do not independently define VECTOR theory.
 
 The suite is an internal conformance and adversarial fixture layer:
 
@@ -173,8 +173,10 @@ The machine-readable and reference-facing artifacts are separated by function:
 | [`model/Model Specification.pdf`](model/Model%20Specification.pdf) | Publication/render form of the specification |
 | [`model/VECTOR-Record.template.yaml`](model/VECTOR-Record.template.yaml) | Generic bounded audit/reference scaffold |
 | [`model/Case.template.yaml`](model/Case.template.yaml) | Appendix-E case scaffold |
-| [`reference/Claim Provenance.yaml`](reference/Claim%20Provenance.yaml) | Declared claim-source provenance |
-| [`reference/Dependency Map.yaml`](reference/Dependency%20Map.yaml) | Declared dependency, failure, prohibited-inference, and reduction relations |
+| [`reference/Claim Provenance.yaml`](reference/Claim%20Provenance.yaml) | Canonical declared claim-source provenance registry |
+| [`reference/Claim Provenance.md`](reference/Claim%20Provenance.md) | Human-readable mirror of the claim-provenance registry |
+| [`reference/Dependency Map.yaml`](reference/Dependency%20Map.yaml) | Canonical declared dependency, failure, prohibited-inference, and reduction registry |
+| [`reference/Dependency Map.md`](reference/Dependency%20Map.md) | Human-readable mirror of the dependency map |
 
 Machine-readable consistency does not establish substantive adequacy.
 
@@ -196,12 +198,14 @@ It can load the repository as a folder or ZIP and provides:
 - heading navigation and corpus-wide search;
 - direct browsing of E01–E23;
 - paired case inspection;
+- declared option-field record inspection for Invisibility, Blindness, Illusion, and Special-Case Probes;
+- case filtering by recorded option-field content;
 - Architecture & Status view;
 - Dependency / Warrant graph;
 - Case Pressure Map;
 - Selected Case Trace;
 - Reduction Graph;
-- repository self-tests for declared cross-file consistency.
+- repository self-tests for declared cross-file consistency, including canonical case-record structure.
 
 The Graph Lab deliberately avoids a pseudo-geometric VECTOR visualization. It displays declared dependencies, pressure relations, case traces, and reductions instead.
 
@@ -210,6 +214,8 @@ reader parse success ≠ schema validation
 reader self-test ≠ VECTOR validity
 graph rendering ≠ analytical finding
 visual spacing ≠ semantic distance
+option-record filtering ≠ Reader-created case finding
+absence of a recorded option-field finding ≠ proof of absence
 ```
 
 ---
@@ -241,13 +247,8 @@ PMS-VECTOR/
 ├── model/
 ├── cases/
 ├── reference/
-├── examples/
 ├── reader/
-├── css/
-├── img/
-├── CITATION.cff
-├── LICENSE
-└── .zenodo.json
+└── css/
 ```
 
 The paper owns VECTOR theory. Model, reference, case, and reader artifacts make that theory more inspectable; they do not acquire greater authority through formalization or implementation.
@@ -314,7 +315,7 @@ The paper owns VECTOR theory. Model, reference, case, and reader artifacts make 
 | [PMS Model Assistant](https://chatgpt.com/g/g-69358a2a4980819183da6a97893389cf-pms-model-assistant) | Interactive exploration of PMS model materials. |
 | [Maturity in Action](https://chat.openai.com/g/g-693460d3def48191ad08647301645a2e-maturity-in-action-a-praxeological-anthropology) | Applied praxeological anthropology assistant. |
 
-Project websites and book pages are maintained separately and will be refreshed after the repository README update pass. Where available, they include the [PMS Theory Site](https://pms-theory.netlify.app), the [PMS-STACK book website](https://pms-stack.netlify.app), the [Maturity in Practice website](https://maturity-in-practice.netlify.app), the [Reife im Vollzug website](https://reife-im-vollzug.netlify.app), and the corresponding Amazon book pages for PMS-STACK and Maturity in Practice.
+Project websites and book pages are maintained separately and may reflect different release timings. Where available, they include the [PMS Theory Site](https://pms-theory.netlify.app), the [PMS-STACK book website](https://pms-stack.netlify.app), the [Maturity in Practice website](https://maturity-in-practice.netlify.app), the [Reife im Vollzug website](https://reife-im-vollzug.netlify.app), and the corresponding Amazon book pages for PMS-STACK and Maturity in Practice.
 
 ---
 

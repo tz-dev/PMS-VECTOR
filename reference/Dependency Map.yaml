@@ -2,7 +2,7 @@ dependency_map:
   meta:
     artifact: PMS-VECTOR Dependency Map
     role: declared dependency, vulnerability, prohibited-inference, and enacted-reduction topology
-    paper_source: PMS-VECTOR.md — Appendix F.9
+    paper_source: PMS-VECTOR.md — Appendix F.9; Chapter 19.6 option-status discrimination burden
     model_reference: model/PMS-VECTOR.yaml
     governing_rule: dependency transmits vulnerability, not automatic warrant
     inferred_edges_allowed: false
@@ -15,6 +15,9 @@ dependency_map:
     - graph depth != theoretical importance
     - node degree != epistemic strength
     - visual adjacency != undeclared dependency
+    - option invisibility != option blindness
+    - warranted bounded negative != option blindness by default
+    - special-case or imagined probe != effective option
   load_bearing_roots:
   - RobustOrientation
   - OUGHT_account
@@ -109,7 +112,7 @@ dependency_map:
       description: G is actually operative
     EffectiveOptionField:
       kind: condition
-      description: effective option field is correctly typed
+      description: effective option field is evidence-typed under declared frame, role, time, capacity, dependency, and option-misrepresentation pressure
     NonEmptyResponseClass:
       kind: condition
       description: response class R_G is non-empty
@@ -146,7 +149,7 @@ dependency_map:
       description: residual loss remains across all responses in R_G
     SecondOrderMechanismAudit:
       kind: condition
-      description: second-order transformation mechanisms are audited
+      description: evidenced second-order transformation mechanisms are audited to distinguish realistic transformability from imagined possibility
     CapacityAuthorityDependencyWindowAudit:
       kind: condition
       description: capacity, authority, dependency, and window conditions are audited
@@ -206,7 +209,22 @@ dependency_map:
       description: Adult Orientation is reduced to supporting shorthand after deletion testing
     OptionStatusDiscrimination:
       kind: condition
-      description: option-status architecture discriminates real from illusory possibility
+      description: corrigible bidirectional option-status discrimination under evidence-typed conditions
+    InvisibilityBlindnessSeparation:
+      kind: condition
+      description: Option Invisibility remains distinguishable from unsupported exclusion / Option Blindness
+    BlindnessBoundedNegativeSeparation:
+      kind: condition
+      description: Option Blindness remains distinguishable from a warranted bounded negative after appropriate option and transformation pressure
+    ProbeIllusionSeparation:
+      kind: condition
+      description: analytical or special-case probes remain distinguishable from unsupported inclusion / Option Illusion
+    BidirectionalFieldCorrection:
+      kind: condition
+      description: represented option fields can expand or contract when evidence warrants revision
+    OptionTaxonomyReducibility:
+      kind: vulnerability_condition
+      description: option taxonomy remains reducible, narrowable, recalibratable, or removable if its distinctions fail to discriminate or become post hoc stabilization vocabulary
     SecondOrderAgencyMechanismDiscrimination:
       kind: condition
       description: second-order agency adds field-transformation discrimination under mechanism evidence
@@ -386,7 +404,7 @@ dependency_map:
     dependent: OUGHT_constraint
     dependency: EffectiveOptionField
     relation: depends_on
-    role: effective option field is correctly typed
+    role: effective option field is evidence-typed under declared frame, role, time, capacity, dependency, and option-misrepresentation pressure
     paper_ref: Appendix F.9
   - edge_id: ought_constraint.depends.nonemptyresponseclass
     dependent: OUGHT_constraint
@@ -434,7 +452,7 @@ dependency_map:
     dependent: TragicConstraint
     dependency: EffectiveOptionField
     relation: depends_on
-    role: effective option field must be correctly typed
+    role: effective option field must remain evidence-typed under the declared bounded conditions
     paper_ref: Appendix F.9
   - edge_id: tragicconstraint.depends.residuallossacrossrg
     dependent: TragicConstraint
@@ -542,8 +560,38 @@ dependency_map:
     dependent: StandaloneVECTOR
     dependency: OptionStatusDiscrimination
     relation: depends_on
-    role: option taxonomy distinguishes real from illusory possibility
+    role: option taxonomy provides corrigible bidirectional discrimination of unsupported contraction and unsupported expansion
     paper_ref: Appendix F.9
+  - edge_id: optionstatusdiscrimination.depends.invisibilityblindnessseparation
+    dependent: OptionStatusDiscrimination
+    dependency: InvisibilityBlindnessSeparation
+    relation: depends_on
+    role: legibility condition must remain distinct from unsupported exclusion
+    paper_ref: Chapter 19.6 / Appendix F.9
+  - edge_id: optionstatusdiscrimination.depends.blindnessboundednegativeseparation
+    dependent: OptionStatusDiscrimination
+    dependency: BlindnessBoundedNegativeSeparation
+    relation: depends_on
+    role: unsupported exclusion must remain distinct from a warranted bounded negative
+    paper_ref: Chapter 19.6 / Appendix F.9
+  - edge_id: optionstatusdiscrimination.depends.probeillusionseparation
+    dependent: OptionStatusDiscrimination
+    dependency: ProbeIllusionSeparation
+    relation: depends_on
+    role: analytical probe must remain distinct from unsupported inclusion into the effective option field
+    paper_ref: Chapter 19.6 / Appendix F.9
+  - edge_id: optionstatusdiscrimination.depends.bidirectionalfieldcorrection
+    dependent: OptionStatusDiscrimination
+    dependency: BidirectionalFieldCorrection
+    relation: depends_on
+    role: evidence must be able to expand or contract the represented option field
+    paper_ref: Chapter 19.6 / Appendix F.9
+  - edge_id: optionstatusdiscrimination.depends.optiontaxonomyreducibility
+    dependent: OptionStatusDiscrimination
+    dependency: OptionTaxonomyReducibility
+    relation: depends_on
+    role: taxonomy must remain reducible if its distinctions fail or become stabilization vocabulary
+    paper_ref: Chapter 19.6 / Appendix F.9
   - edge_id: standalonevector.depends.secondorderagencymechanismdiscrimination
     dependent: StandaloneVECTOR
     dependency: SecondOrderAgencyMechanismDiscrimination
@@ -630,10 +678,11 @@ dependency_map:
     paper_ref: Appendix F.9
   - route_id: ought_constraint.real_invisible_option_discovered
     root: OUGHT_constraint
-    trigger: a previously invisible but real effective option is discovered
+    trigger: a previously invisible effective option becomes evidenced within the relevant frame and time
     response: revise_response_class
     target: EffectiveOptionField
-    paper_ref: Appendix F.9
+    boundary: field revision does not by itself retroactively diagnose Option Blindness
+    paper_ref: Appendix F.9 / Chapter 19.6
   - route_id: ought_constraint.g_revised
     root: OUGHT_constraint
     trigger: G is revised
@@ -653,7 +702,8 @@ dependency_map:
     trigger: a previously invisible effective no-loss option is evidenced
     response: collapse
     target: TragicConstraint
-    paper_ref: Appendix F.9
+    boundary: current tragic classification collapses; prior invisibility alone does not establish prior Option Blindness
+    paper_ref: Appendix F.9 / Chapter 19.6
   - route_id: tragic_constraint.second_order_opens_no_loss
     root: TragicConstraint
     trigger: Second-Order Agency can create or open a non-lossful route in time
@@ -662,16 +712,17 @@ dependency_map:
     paper_ref: Appendix F.9
   - route_id: tragic_constraint.field_misdescribed
     root: TragicConstraint
-    trigger: a rival demonstrates that the option/constraint field was materially misdescribed
+    trigger: a rival demonstrates that the option/constraint field was materially misdescribed, including unsupported exclusion or unsupported inclusion where material
     response: collapse_or_retype
     target: TragicConstraint
-    paper_ref: Appendix F.9
+    paper_ref: Appendix F.9 / Chapter 19.6
   - route_id: tragic_constraint.imagined_rescue_only
     root: TragicConstraint
     trigger: only an imagined rescue route exists
     response: no_current_option_status_change
     target: ImaginedRescueRoute
-    paper_ref: Appendix F.9
+    boundary: imagined or special-case rescue may remain a probe; no effective option status follows unless its constitutive conditions are evidenced
+    paper_ref: Appendix F.9 / Chapter 19.6
   - route_id: standalone_vector.lossless_reducibility
     root: StandaloneVECTOR
     trigger: every major component becomes losslessly reducible to pre-existing PMS terms

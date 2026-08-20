@@ -15,8 +15,10 @@ case_metadata:
     - OptionInvisibility
     - ROT
   theoretical_function: >-
-    Tests whether ROT can reveal an already available actionable path without
-    misclassifying increased legibility as creation of a new option.
+    Tests whether ROT can reveal an already available actionable path while
+    preserving the distinction between Option Invisibility and unsupported
+    exclusion / Option Blindness, without misclassifying increased legibility as
+    creation of a new option.
   artifact_pair:
     yaml: cases/E07.yaml
     markdown: cases/E07.md
@@ -32,6 +34,9 @@ case_metadata:
     - >-
       Absence of C from the initial orientation does not establish absence of C
       from the effective option field.
+    - >-
+      Option Invisibility does not by itself establish Option Blindness; the latter
+      would require unsupported exclusion.
 
 vector_record:
   reference:
@@ -42,7 +47,7 @@ vector_record:
 
   frame:
     included:
-      - The two departments are initially assumed to face only A, keeping the current process, or B, replacing it entirely.
+      - The departments' current orientation represents A, keeping the current process, and B, replacing it entirely; the fixture does not treat that representation as an exhaustive no-alternative claim.
       - A shared support unit already possesses authority to separate one blocking dependency.
       - That existing authority makes staged transition C genuinely available and actionable in the declared scene.
       - Before the inside/outside ROT, C is absent from the current orientation.
@@ -73,8 +78,11 @@ vector_record:
     analysis_time: null
 
   baseline_claim: >-
-    The effective option field contains only A, keep the current process, and B,
-    replace it entirely; no staged transition C is available as a current path.
+    Candidate S_0: the departments' current orientation represents A, keep the
+    current process, and B, replace it entirely. If inside/outside ROT later makes
+    staged transition C visible, treat C as newly created rather than previously
+    invisible. The candidate does not assert that the prior A/B representation
+    exhausts the effective option field.
 
   dir:
     relation: null
@@ -96,12 +104,14 @@ vector_record:
     applied:
       - family: inside_outside
         vulnerability: >-
-          Whether the initial A/B-only option field mistakes lack of current
-          legibility for lack of a real actionable path.
+          Whether the current A/B orientation fails to represent an already
+          actionable path, and whether later visibility is then misread as
+          creation of that path.
         purpose: >-
-          Test the option field by adding the outside relation supplied by the
-          shared support unit while preserving the same departments, blocking
-          dependency, and bounded option question.
+          Test whether an actionable path absent from the current orientation
+          becomes legible when the outside relation supplied by the shared
+          support unit is represented, while preserving the same departments,
+          blocking dependency, and bounded option question.
         changed:
           - >-
             The view changes from the departments' initial A/B orientation to an
@@ -119,13 +129,15 @@ vector_record:
           dependency and thereby support staged transition C.
         loss_route: >-
           If C was already genuinely available and actionable before ROT, then
-          the A/B-only baseline option field fails; increased visibility cannot
-          be recorded as creation of C.
+          later visibility cannot be recorded as creation of C. Prior nonvisibility
+          also cannot by itself be used as evidence that C was absent from the
+          effective option field.
         result: emergent
         robustness_relevance: >-
-          The rotation defeats the initial option-field representation by making
+          The rotation defeats the apparent new-option interpretation by making
           a pre-existing actionable path legible. The emergence is in orientation
-          only, not creation of a new option relation.
+          only, not creation of a new option relation; no Option Blindness is
+          diagnosed merely from the path's prior nonvisibility.
     untested_relevant: []
     stop_basis: >-
       The fixture directly states both the support unit's pre-existing authority
@@ -150,6 +162,7 @@ vector_record:
     options:
       - option: Staged transition C.
         status: effectively_actionable
+        branch_status: null
         evidence_status: >-
           The paper fixture directly establishes that the shared support unit
           already possesses authority to separate the blocking dependency and
@@ -180,7 +193,11 @@ vector_record:
     option_invisibility: >-
       Present before ROT: C is genuinely available and actionable but absent from
       the current orientation, i.e. Available(C) and not Visible(C).
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -231,13 +248,15 @@ vector_record:
       Staged transition C was already genuinely available and actionable in the
       declared scene but absent from the initial orientation. The inside/outside
       ROT makes C visible; the correct classification is Option Invisibility,
-      not Option Creation.
+      not Option Creation. No Option Blindness follows merely from C's prior
+      nonvisibility.
     revisions:
       - >-
-        Initial A/B-only option field -> corrected option field that includes C
-        as a pre-existing actionable path whose visibility changes under ROT.
+        Apparent new-option interpretation -> pre-existing actionable path whose
+        visibility changes under ROT.
       - >-
-        Apparent new-option interpretation -> Option Invisibility.
+        Mere absence from the initial orientation -> Option Invisibility, without
+        unsupported exclusion from the effective option field.
     scope: >-
       The result is bounded to the two departments, the shared support unit's
       already existing authority, the blocking dependency, and the same declared
@@ -245,6 +264,6 @@ vector_record:
     residue: []
     stop_reason: >-
       The paper fixture directly establishes the pre-ROT availability and
-      actionability of C and the post-ROT change in visibility. The baseline
-      option-field representation therefore requires revision without any claim
-      that ROT created the path.
+      actionability of C and the post-ROT change in visibility. The apparent
+      creation interpretation therefore requires revision; prior nonvisibility
+      is not converted into an unsupported exclusion claim.

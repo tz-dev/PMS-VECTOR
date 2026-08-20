@@ -29,8 +29,8 @@ case_metadata:
   non_implications:
     - >-
       The specialist rival's victory on queue-delay minimization does not show that
-      it answers questions about legitimacy, burden distribution, hidden options,
-      or practical attribution.
+      it answers questions about legitimacy, burden distribution, option-field legibility
+      or misrepresentation, or practical attribution.
     - >-
       Local domain-task deference does not by itself narrow DIR or ROT on VECTOR's
       own bounded orientation burden and is not the same-burden reduction enacted
@@ -64,7 +64,7 @@ vector_record:
         distinctions.
     excluded:
       - Any claim that the queueing model answers legitimacy questions.
-      - Any claim that the queueing model exhausts burden distribution, hidden options, or practical attribution.
+      - Any claim that the queueing model exhausts burden distribution, option-field legibility or misrepresentation, or practical attribution.
       - Any requirement that the specialist rival use DIR, ROT, option topology, or PMS operators.
       - Any conversion of local domain-task superiority into universal method superiority.
       - Any E23-style same-burden reduction of DIR, ROT, or Standalone VECTOR.
@@ -127,7 +127,7 @@ vector_record:
         rival superiority would not follow.
       - >-
         If the declared question materially included legitimacy, burden distribution,
-        hidden options, or practical attribution, the specialist queue-delay burden
+        option-field legibility or misrepresentation, or practical attribution, the specialist queue-delay burden
         would no longer exhaust the relevant comparison.
 
   calibration:
@@ -199,7 +199,11 @@ vector_record:
     actor_or_role: null
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -279,8 +283,8 @@ vector_record:
       Standalone VECTOR.
     residue:
       - >-
-        Questions about legitimacy, burden distribution, hidden options, role-specific
-        costs, and practical attribution remain outside the rival's declared technical
+        Questions about legitimacy, burden distribution, option-field legibility or
+        misrepresentation, role-specific costs, and practical attribution remain outside the rival's declared technical
         objective.
       - >-
         Local specialist superiority does not establish that the queueing model is

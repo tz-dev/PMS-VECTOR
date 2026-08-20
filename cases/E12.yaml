@@ -10,11 +10,14 @@ case_metadata:
   pressure_families:
   - distributed_agency_pressure
   - responsibility_boundary_pressure
+  - option_status_pressure
   constructs_under_test:
   - DistributedAgency
   - SecondOrderAgency
   - EffectiveCapacity
-  theoretical_function: Tests whether effective transformative capacity may exist only in an actor configuration while remaining distinct from equal individual responsibility.
+  - OptionBlindness
+  - OptionFieldMisrepresentation
+  theoretical_function: Tests whether an individual-only actor model can produce Option Blindness by excluding a transformation that is effectively available at a coordinated actor configuration while preserving the distinction between distributed capacity and individual responsibility.
   artifact_pair:
     yaml: cases/E12.yaml
     markdown: cases/E12.md
@@ -25,6 +28,8 @@ case_metadata:
   non_implications:
   - Distributed collective capacity does not imply equal individual capacity.
   - Distributed collective capacity does not imply equal or undifferentiated individual responsibility.
+  - Option Blindness in the individual-only reconstruction does not establish actor fault, blame, obligation, or equal responsibility.
+  - This fixture does not establish that every apparently blocked transformation is collectively reachable.
 vector_record:
   reference:
     object: The coordinated capacity of three departments to authorize, fund, and implement a needed change that no department can produce alone.
@@ -38,14 +43,14 @@ vector_record:
     - Any inference that each department individually possesses the collective capacity.
     - Any inference that collective capacity distributes responsibility equally across the individual departments.
   question:
-    scope: Can effective transformative capacity exist only at the level of a coordinated multi-department actor configuration while individual capacity remains below the requirement?
-    claim_ceiling: The case can establish distributed Second-Order Agency at the configuration level. It cannot infer equal individual capacity or equal / undifferentiated individual responsibility from the collective capacity relation.
+    scope: Can an individual-only actor model produce Option Blindness by excluding a needed transformation even though the coordinated multi-department configuration has sufficient effective capacity to produce it?
+    claim_ceiling: The case can establish distributed Second-Order Agency and an unsupported exclusion in the individual-only reconstruction. It cannot infer equal individual capacity, equal / undifferentiated individual responsibility, or a general rule that distributed capacity always exists.
   position:
     perspective: Analysis of the effective capacity of each department separately and of the coordinated three-department configuration.
     temporal_position: The fixture concerns the same bounded transformation requirement for the individual and coordinated capacity comparisons.
     scene_time: null
     analysis_time: null
-  baseline_claim: For the needed change, Capacity(a_i) < Requirement for each individual department, while Capacity(a_1+a_2+a_3) >= Requirement for the coordinated configuration.
+  baseline_claim: Because Capacity(a_i) < Requirement for every individual department, no effective transformation route is available for the needed change.
   dir:
     relation: null
     comparison_basis: null
@@ -77,7 +82,17 @@ vector_record:
     actor_or_role: The three departments considered individually and as the coordinated actor configuration relevant to the needed change.
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions:
+        - >-
+          The individual-only reconstruction excludes the needed transformation
+          from the effective / transformably reachable field because no single
+          department meets the requirement, despite the fixture establishing
+          sufficient coordinated capacity across the three-department
+          configuration.
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
   transformability:
     actor_configuration: The coordinated configuration a_1 + a_2 + a_3. No individual a_i independently meets the transformation requirement.
@@ -121,9 +136,12 @@ vector_record:
     non_compensation: null
     critical_open_tests: []
   result:
-    status: Bounded Orientation
-    surviving_claim: The field contains distributed Second-Order Agency at the level of the coordinated three-department configuration because the combined effective capacity meets the transformation requirement while each individual department remains below it.
-    revisions: []
-    scope: The result is bounded to the supplied capacity relation for the needed change. It does not allocate responsibility equally across the individual departments.
+    status: Revision Required
+    surviving_claim: The individual-only reconstruction exhibits Option Blindness because it unsupportedly excludes the needed transformation despite sufficient coordinated capacity at the three-department actor configuration. The field therefore contains distributed Second-Order Agency at that configuration, while the distributed capacity neither transfers equally to each department nor establishes equal individual responsibility.
+    revisions:
+    - Individual-only NoEffectiveTransformation claim -> Option Blindness / unsupported exclusion.
+    - Preserve the coordinated three-department configuration as the effective carrier of the transformation capacity.
+    - Preserve distributed capacity != equal individual capacity and collective capacity != equal individual responsibility.
+    scope: The result is bounded to the supplied capacity relation for the needed change and the individual-only exclusion tested by the fixture. It does not allocate responsibility equally across the individual departments or claim that distributed capacity exists generally.
     residue: []
-    stop_reason: The fixture directly supplies the discriminating relation between individual insufficiency and coordinated sufficiency. That is enough to classify the capacity as distributed while preserving the responsibility boundary.
+    stop_reason: The fixture directly supplies both individual insufficiency and coordinated sufficiency. The individual-only reconstruction therefore excludes more transformability than the supplied evidence warrants and must be revised, while the responsibility boundary remains intact.

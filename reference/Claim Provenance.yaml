@@ -1306,8 +1306,26 @@ claim_provenance:
     vector_targets:
     - Reversibility
   - claim_id: vector.possibility_agency_and_consequence.001
-    claim: Paired Option Invisibility / Option Illusion architecture
+    claim: '`Option Invisibility ≠ Option Blindness`: legibility condition versus unsupported exclusion'
     status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.possibility_agency_and_consequence.009
+    claim: Option Blindness / Option Illusion as opposite forms of Option-Field Misrepresentation
+    status: N
+    origin_sources:
+    - PMS_VECTOR
+    paper_ref: Appendix F.8
+    paper_group: Possibility, agency, and consequence
+    vector_targets:
+    - OptionSpace
+  - claim_id: vector.possibility_agency_and_consequence.010
+    claim: Exact `UnsupportedExclusion` / `UnsupportedInclusion` audit notation
+    status: P
     origin_sources:
     - PMS_VECTOR
     paper_ref: Appendix F.8

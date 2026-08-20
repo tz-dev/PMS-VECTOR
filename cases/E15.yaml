@@ -11,14 +11,16 @@ case_metadata:
     - constraint_pressure
     - carriage_pressure
     - authority_boundary_pressure
+    - option_status_pressure
   constructs_under_test:
     - OUGHT_constraint
     - ConstraintArchitecture
     - SystemCarriageRequired
   theoretical_function: >-
-    Tests reconstruction of a maintained constraint and its effective response
-    class without converting system carriage, source, or functional necessity
-    into bearer authority or moral legitimacy.
+    Tests reconstruction of a maintained constraint and an evidence-typed effective
+    response class that remains open to unsupported exclusion and unsupported
+    inclusion pressure without converting system carriage, source, or functional
+    necessity into bearer authority or moral legitimacy.
   artifact_pair:
     yaml: cases/E15.yaml
     markdown: cases/E15.md
@@ -137,6 +139,7 @@ vector_record:
     options:
       - option: X — use the emergency backup system.
         status: structurally_viable
+        branch_status: null
         evidence_status: >-
           The paper fixture directly includes X in the effective response class
           satisfying G after the simultaneous failures.
@@ -155,6 +158,7 @@ vector_record:
           X satisfies the maintained continuity condition G in the current post-failure scene.
       - option: Y — temporarily reduce service to a protected minimum.
         status: structurally_viable
+        branch_status: null
         evidence_status: >-
           The paper fixture directly includes Y in the effective response class
           satisfying G after the simultaneous failures.
@@ -174,6 +178,7 @@ vector_record:
           Y satisfies G in the primary scene; after the later failure it no longer belongs to R_G.
       - option: Z — continue routine operation.
         status: visible
+        branch_status: null
         evidence_status: >-
           The fixture establishes that routine operation Z no longer satisfies G;
           it does not separately need to establish Z's practical status for a
@@ -191,7 +196,11 @@ vector_record:
           Z does not satisfy G after the simultaneous failures and is therefore
           excluded from the effective response class R_G for this bounded question.
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -286,7 +295,14 @@ vector_record:
         The existence of an operative G or a remaining response class does not
         manufacture external legitimacy, legal authority, or moral warrant.
     non_compensation: null
-    critical_open_tests: []
+    critical_open_tests:
+      - >-
+        A newly evidenced additional effective response satisfying G would expand
+        R_G and defeat any singleton necessity claim that excluded it.
+      - >-
+        A response may remain in R_G only while its effective status under the
+        declared frame, role, time, capacity, dependency, and evidence conditions is
+        supported; mere visibility does not warrant inclusion.
 
   result:
     status: Bounded Orientation
@@ -305,10 +321,11 @@ vector_record:
         The later failure variant produces another scene-state claim R_G = {X};
         this narrows practical necessity for G without converting it into moral obligation.
     scope: >-
-      The result is conditional on G remaining operative and on the declared
-      post-failure option field. It reconstructs constraint-relative practical
-      necessity only; it does not establish legitimacy of G, person-level duty,
-      or a preferred choice between X and Y while both satisfy G.
+      The result is conditional on G remaining operative and on the evidence-typed
+      post-failure response field under the declared frame, role, time, capacity,
+      dependency, and evidence conditions. It reconstructs constraint-relative
+      practical necessity only; it does not establish legitimacy of G, person-level
+      duty, or a preferred choice between X and Y while both satisfy G.
     residue:
       - >-
         Revision or abandonment of G remains a real branch but produces a new
@@ -317,6 +334,7 @@ vector_record:
         Person-level burden assignment, fairness, legitimacy, and external legal
         or institutional authority remain unresolved or externally warranted.
     stop_reason: >-
-      The fixture supplies an operative G, a non-empty effective response class
-      whose members satisfy G, and an explicit revision branch. This is sufficient
+      The fixture supplies an operative G, an evidence-typed non-empty response
+      class whose members satisfy G, bidirectional pressure against unsupported
+      exclusion and inclusion, and an explicit revision branch. This is sufficient
       for the bounded constraint relation while the moral and authority boundaries remain open.

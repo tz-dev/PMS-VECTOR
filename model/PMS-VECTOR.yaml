@@ -906,12 +906,44 @@ option_space:
     - "structurally_available != effectively_actionable"
     - "effectively_actionable != structurally_viable"
 
-  failure_modes:
-    option_invisibility: >
-      A real or materially relevant option is absent from the current
-      legibility field.
-    option_illusion: >
-      An apparent option fails one or more effective availability conditions.
+  option_legibility:
+    option_invisibility:
+      type: "legibility_condition"
+      meaning: >
+        A relevantly real or realistically transformable option is absent from
+        the current legibility field.
+      not_by_itself:
+        - "option-field error"
+        - "Option Blindness"
+
+  option_field_misrepresentation:
+    status: "supporting_error_taxonomy"
+    umbrella_relation: "UnsupportedExclusion OR UnsupportedInclusion"
+    option_blindness:
+      type: "unsupported_exclusion"
+      meaning: >
+        The represented field excludes more current or realistically
+        transformable possibility than the declared frame, role, time, capacity,
+        dependency, and evidence conditions warrant.
+      boundaries:
+        - "Option Invisibility != Option Blindness"
+        - "Unknown != Unavailable"
+        - "Blocked != Nonexistent"
+        - "not actionable now != not transformably reachable"
+        - "bounded negative after adequate transformability pressure != Option Blindness by default"
+        - "Option Blindness != responsibility"
+    option_illusion:
+      type: "unsupported_inclusion"
+      meaning: >
+        The represented field includes an alternative as an effective option
+        although the conditions required for its relevant availability,
+        actionability, viability, or transformability are not sufficiently supported.
+      boundaries:
+        - "Visible != EffectiveOption"
+        - "Conceivable != effective capacity"
+        - "special-case probe != effective option"
+        - "later capacity != earlier actionability"
+        - "Option Illusion != responsibility"
 
   option_illusion_families:
     - "frame illusion"
@@ -1090,7 +1122,7 @@ bounded_test_burden_closure:
     - "materially relevant ROT families applied"
     - "source conditions of orientation–enactment separation tested"
     - "option field mapped at necessary level"
-    - "option invisibility and illusion pressured"
+    - "option field pressured for invisibility, unsupported exclusion (Option Blindness), and unsupported inclusion (Option Illusion)"
     - "real option-space transformability tested"
     - "relevant consequence topology mapped"
     - "at least one serious rival has real winning conditions"
@@ -1432,7 +1464,12 @@ falsifiability_and_reduction:
 
     option_space_discrimination_failure:
       chapter: "19.6"
-      consequence: "supporting architecture reduction"
+      fails_if:
+        - "Option Invisibility cannot remain distinguishable from Option Blindness"
+        - "Option Blindness cannot remain distinguishable from a warranted bounded negative after relevant option and transformation pressure"
+        - "Special-Case Probe cannot remain distinguishable from Option Illusion"
+        - "Option Blindness and Option Illusion can be assigned post hoc so that the preferred VECTOR result survives regardless of the represented option field"
+      consequence: "simplify, narrow, recalibrate, or remove the supporting option distinction that failed to discriminate"
 
     second_order_agency_failure:
       chapter: "19.7"
@@ -1515,6 +1552,11 @@ current_reduction_status:
       current_status: "retain_evidence_typed_and_narrowed"
       remaining_burden:
         - "Unknown must remain distinct from Available / Unavailable"
+        - "Option Invisibility must remain distinct from Option Blindness"
+        - "Option Blindness must remain distinguishable from a warranted bounded negative"
+        - "Special-Case Probe must remain distinguishable from Option Illusion"
+        - "bidirectional option-status assignments must remain corrigibly auditable"
+        - "the taxonomy must reduce if its added distinctions fail to discriminate"
         - "retrospective and person-near claims remain bounded"
 
     SecondOrderAgency:
@@ -1906,6 +1948,12 @@ quality_and_integrity_checks:
     reversibility_not_restoration: true
     unknown_not_available: true
     unknown_not_unavailable: true
+    option_invisibility_not_option_blindness: true
+    option_invisibility_not_option_field_error: true
+    option_blindness_is_unsupported_exclusion: true
+    option_illusion_is_unsupported_inclusion: true
+    bounded_negative_not_blindness_by_default: true
+    special_case_probe_not_option_illusion_by_default: true
     baseline_logic_not_orientation_uplift: true
     fixpoint_requirement_not_bearer_authority: true
     constraint_source_not_constraint_legitimacy: true
@@ -1925,7 +1973,7 @@ load_order:
       source: "model/PMS-VECTOR.yaml"
       purpose: "load machine-readable VECTOR reference profile"
     - step: 4
-      source: "model/Model Specification.md"
+      source: "model/Model Specification.html"
       purpose: "interpret field contracts and representation boundaries"
     - step: 5
       source: "reference/Claim Provenance.yaml"

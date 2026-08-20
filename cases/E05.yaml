@@ -18,8 +18,9 @@ case_metadata:
     - Reversibility
     - Timing
   theoretical_function: >-
-    Tests the distinction between a robust directional result and the timing of
-    enactment when cheap, materially relevant correction remains available.
+    Tests the distinction between a well-supported preliminary directional result
+    and enactment timing when cheap, materially relevant correction pressure
+    remains available before public binding.
   artifact_pair:
     yaml: cases/E05.yaml
     markdown: cases/E05.md
@@ -28,7 +29,8 @@ case_metadata:
     targets: []
     effect: null
   non_implications:
-    - A well-supported or robust DIR does not imply immediate enactment.
+    - This fixture does not itself establish Robust Orientation; materially relevant affected-role ROT and serious-rival pressure remain open.
+    - A well-supported preliminary DIR does not imply immediate enactment, and Chapter 12 preserves the stronger general boundary that even a robust DIR does not imply immediate enactment.
     - Premature enactment relative to available correction space does not imply that the underlying DIR was false.
     - Derived DIST may summarize narrowed orientation-enactment separation but is not the causal mechanism of the timing failure.
 
@@ -152,7 +154,11 @@ vector_record:
     actor_or_role: null
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:

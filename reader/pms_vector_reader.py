@@ -10,6 +10,7 @@ Core features:
 - Renders local Markdown images directly in the main reader area.
 - Provides corpus-wide full-text search and heading navigation.
 - Parses the 23 Appendix-E case fixtures into lightweight case summaries.
+- Displays declared option-field case records without inferring case classifications.
 - Includes an interactive Graph Lab with five VECTOR-specific views:
   * Architecture & Status,
   * Dependency / Warrant Graph,
@@ -66,7 +67,7 @@ except ImportError as exc:  # pragma: no cover
     ) from exc
 
 APP_TITLE = "PMS-VECTOR Reader"
-APP_VERSION = "0.9.5-cases-popup-direct"
+APP_VERSION = "0.11.0"
 
 DEBUG = True  # set False to silence console output
 
@@ -81,8 +82,8 @@ SECTION_ORDER: List[str] = [
     "README.md",
     "PMS-VECTOR.md",
     "model",
-    "cases",
     "reference",
+    "cases",
     "examples",
 ]
 
@@ -243,7 +244,27 @@ class CaseSummary:
     architecture_targets: List[str] = field(default_factory=list)
     architecture_effect: str = ""
     non_implications: List[str] = field(default_factory=list)
+    option_invisibility_record: str = ""
+    unsupported_exclusions: List[str] = field(default_factory=list)
+    unsupported_inclusions: List[str] = field(default_factory=list)
+    special_case_probes: List[str] = field(default_factory=list)
     raw: Dict[str, object] = field(default_factory=dict, repr=False)
+
+    def option_record_tags(self) -> List[str]:
+        tags: List[str] = []
+        if self.option_invisibility_record:
+            tags.append("Invisibility")
+        if self.unsupported_exclusions:
+            tags.append("Blindness")
+        if self.unsupported_inclusions:
+            tags.append("Illusion")
+        if self.special_case_probes:
+            tags.append("Probe")
+        return tags
+
+    def option_record_label(self) -> str:
+        tags = self.option_record_tags()
+        return " · ".join(tags) if tags else "—"
 
 
 @dataclass
@@ -562,6 +583,10 @@ class Corpus:
             record = as_dict(data.get("vector_record"))
             result = as_dict(record.get("result"))
             dir_block = as_dict(record.get("dir"))
+            option_space = as_dict(record.get("option_space"))
+            option_misrep = as_dict(option_space.get("option_field_misrepresentation"))
+            option_blindness = as_dict(option_misrep.get("blindness"))
+            option_illusion = as_dict(option_misrep.get("illusion"))
             architecture = as_dict(case_meta.get("architecture_effect"))
             adversarial = as_dict(case_meta.get("adversarial"))
             summary = CaseSummary(
@@ -587,6 +612,10 @@ class Corpus:
                 architecture_targets=[str(x) for x in as_list(architecture.get("targets"))],
                 architecture_effect=scalar_text(architecture.get("effect")),
                 non_implications=[scalar_text(x) for x in as_list(case_meta.get("non_implications"))],
+                option_invisibility_record=scalar_text(option_space.get("option_invisibility")),
+                unsupported_exclusions=[scalar_text(x) for x in as_list(option_blindness.get("unsupported_exclusions")) if scalar_text(x)],
+                unsupported_inclusions=[scalar_text(x) for x in as_list(option_illusion.get("unsupported_inclusions")) if scalar_text(x)],
+                special_case_probes=[scalar_text(x) for x in as_list(option_space.get("special_case_probes")) if scalar_text(x)],
                 raw=data,
             )
             self.cases.append(summary)
@@ -711,7 +740,7 @@ class BrowseFilesDialog(tk.Toplevel):
         table_wrap.pack(fill=tk.BOTH, expand=True)
         self.files = ttk.Treeview(
             table_wrap,
-            columns=("title", "result", "artifact"),
+            columns=("title", "result", "option_record", "artifact"),
             show="tree headings",
             selectmode="browse",
             style="Browser.Treeview",
@@ -719,11 +748,13 @@ class BrowseFilesDialog(tk.Toplevel):
         self.files.heading("#0", text="Case / Node")
         self.files.heading("title", text="Title / Description")
         self.files.heading("result", text="Result / Type")
+        self.files.heading("option_record", text="Option record")
         self.files.heading("artifact", text="Repository artifact")
         self.files.column("#0", width=130, minwidth=100, stretch=False)
         self.files.column("title", width=430, minwidth=240, stretch=True)
-        self.files.column("result", width=210, minwidth=140, stretch=True)
-        self.files.column("artifact", width=280, minwidth=180, stretch=True)
+        self.files.column("result", width=190, minwidth=130, stretch=True)
+        self.files.column("option_record", width=185, minwidth=130, stretch=True)
+        self.files.column("artifact", width=250, minwidth=170, stretch=True)
         yscroll = ttk.Scrollbar(table_wrap, orient=tk.VERTICAL, command=self.files.yview)
         xscroll = AutoHideScrollbar(table_wrap, orient=tk.HORIZONTAL, command=self.files.xview)
         self.files.configure(yscrollcommand=yscroll.set, xscrollcommand=xscroll.set)
@@ -776,6 +807,8 @@ class BrowseFilesDialog(tk.Toplevel):
                 case.paper_ref,
                 " ".join(case.pressure_families),
                 " ".join(case.constructs_under_test),
+                " ".join(case.option_record_tags()),
+                case.option_record_label(),
             ]).casefold()
             if query and query not in haystack:
                 continue
@@ -783,7 +816,7 @@ class BrowseFilesDialog(tk.Toplevel):
                 cases_group,
                 tk.END,
                 text=case.case_id,
-                values=(case.title, case.result_status or "—", case.yaml_path),
+                values=(case.title, case.result_status or "—", case.option_record_label(), case.yaml_path),
             )
             self._row_target[row] = ("case", case.case_id)
             if case.case_id == active_case_id:
@@ -811,7 +844,7 @@ class BrowseFilesDialog(tk.Toplevel):
                     view_group,
                     tk.END,
                     text=f"↳ {kind_label}",
-                    values=(label, kind_label, artifact),
+                    values=(label, kind_label, "—", artifact),
                 )
                 self._row_target[row] = ("node", node.node_id)
                 visible_nodes += 1
@@ -904,6 +937,7 @@ class GraphLab(tk.Toplevel):
         self.view_var = tk.StringVar(value=self.VIEW_ARCHITECTURE)
         self.pressure_var = tk.StringVar(value="ALL")
         self.result_var = tk.StringVar(value="ALL")
+        self.option_record_var = tk.StringVar(value="ALL")
         self.labels_var = tk.BooleanVar(value=True)
         self.status_var = tk.StringVar(value="Left-drag to pan • wheel to zoom • click a node for details")
         self.h_spacing_var = tk.DoubleVar(value=1.0)
@@ -931,6 +965,7 @@ class GraphLab(tk.Toplevel):
         self.apply_theme()
         self.refresh()
         self.after_idle(self._maximize)
+        self.after(140, self._set_initial_pane_split)
 
     def _build_ui(self) -> None:
         toolbar = ttk.Frame(self, padding=(8, 8, 8, 5))
@@ -952,14 +987,26 @@ class GraphLab(tk.Toplevel):
         self.pressure_box.bind("<<ComboboxSelected>>", lambda event: self.refresh())
 
         ttk.Label(toolbar, text="Result").pack(side=tk.LEFT)
-        self.result_box = ttk.Combobox(toolbar, textvariable=self.result_var, state="readonly", width=24, style="Graph.TCombobox")
+        self.result_box = ttk.Combobox(toolbar, textvariable=self.result_var, state="readonly", width=20, style="Graph.TCombobox")
         self.result_box.pack(side=tk.LEFT, padx=(5, 12))
         self.result_box.bind("<<ComboboxSelected>>", lambda event: self.refresh())
+
+        ttk.Label(toolbar, text="Option record").pack(side=tk.LEFT)
+        self.option_record_box = ttk.Combobox(
+            toolbar,
+            textvariable=self.option_record_var,
+            state="readonly",
+            width=20,
+            style="Graph.TCombobox",
+            values=["ALL", "Invisibility recorded", "Blindness recorded", "Illusion recorded", "Probe recorded"],
+        )
+        self.option_record_box.pack(side=tk.LEFT, padx=(5, 12))
+        self.option_record_box.bind("<<ComboboxSelected>>", lambda event: self.refresh())
 
         ttk.Checkbutton(toolbar, text="Labels", variable=self.labels_var, command=self.redraw).pack(side=tk.LEFT)
         ttk.Button(toolbar, text="Reset View", command=self.reset_view).pack(side=tk.LEFT, padx=(10, 0))
         ttk.Button(toolbar, text="Close", command=self._hide).pack(side=tk.RIGHT)
-        for box in (self.view_box, self.pressure_box, self.result_box):
+        for box in (self.view_box, self.pressure_box, self.result_box, self.option_record_box):
             box.configure(cursor="hand2")
 
         spacing = ttk.Frame(self, padding=(8, 0, 8, 5))
@@ -986,9 +1033,10 @@ class GraphLab(tk.Toplevel):
 
         main = ttk.PanedWindow(self, orient=tk.HORIZONTAL)
         main.pack(fill=tk.BOTH, expand=True, padx=8, pady=(0, 5))
+        self.main_pane = main
 
         canvas_frame = ttk.Frame(main)
-        main.add(canvas_frame, weight=4)
+        main.add(canvas_frame, weight=7)
         self.canvas = tk.Canvas(canvas_frame, highlightthickness=0, background="#10151c")
         self.canvas.pack(fill=tk.BOTH, expand=True)
         self.canvas.bind("<Configure>", lambda event: self.redraw())
@@ -1013,6 +1061,22 @@ class GraphLab(tk.Toplevel):
         self._create_detail_tab("Relations", wrap=tk.WORD)
         self._create_detail_tab("Trace", wrap=tk.WORD)
         ttk.Label(self, textvariable=self.status_var, anchor=tk.W, padding=(8, 4), style="Status.TLabel").pack(fill=tk.X)
+
+    def _set_initial_pane_split(self) -> None:
+        """Give the detail pane about 2/9 of Graph Lab width.
+
+        The previous 4:2 split devoted roughly one third of the workspace to
+        details. 2/9 is one third narrower while preserving a useful minimum.
+        This is presentation geometry only; it carries no graph semantics.
+        """
+        try:
+            self.update_idletasks()
+            width = max(self.main_pane.winfo_width(), 900)
+            detail_width = max(260, int(width * 2 / 9))
+            detail_width = min(detail_width, max(260, width - 520))
+            self.main_pane.sashpos(0, width - detail_width)
+        except (tk.TclError, IndexError):
+            pass
 
     def _create_detail_tab(self, label: str, wrap: str) -> None:
         frame = ttk.Frame(self.detail_notebook, padding=0)
@@ -1118,6 +1182,8 @@ class GraphLab(tk.Toplevel):
             self.pressure_var.set("ALL")
         if self.result_var.get() not in (["ALL"] + results):
             self.result_var.set("ALL")
+        if self.option_record_var.get() not in ["ALL", "Invisibility recorded", "Blindness recorded", "Illusion recorded", "Probe recorded"]:
+            self.option_record_var.set("ALL")
 
         view = self.view_var.get()
         self.edge_kinds = {}
@@ -1142,14 +1208,28 @@ class GraphLab(tk.Toplevel):
         if self.browser_dialog is not None and self.browser_dialog.winfo_exists():
             self.browser_dialog.refresh_from_graph()
 
+    @staticmethod
+    def _matches_option_record(case: CaseSummary, selected: str) -> bool:
+        if selected == "ALL":
+            return True
+        required = {
+            "Invisibility recorded": "Invisibility",
+            "Blindness recorded": "Blindness",
+            "Illusion recorded": "Illusion",
+            "Probe recorded": "Probe",
+        }.get(selected)
+        return required in case.option_record_tags() if required else True
+
     def _filtered_cases(self) -> List[CaseSummary]:
         assert self.app.corpus is not None
         p = self.pressure_var.get()
         r = self.result_var.get()
+        o = self.option_record_var.get()
         return [
             case for case in self.app.corpus.cases
             if (p == "ALL" or p in case.pressure_families)
             and (r == "ALL" or case.result_status == r)
+            and self._matches_option_record(case, o)
         ]
 
     def _build_architecture_status(self) -> Tuple[List[GraphNode], List[Tuple[str, str]]]:
@@ -1336,6 +1416,21 @@ class GraphLab(tk.Toplevel):
         }.get(view, "") + "\n\nNo graph edge is inferred from co-occurrence or visual proximity."
 
     @staticmethod
+    def _option_record_text(case: CaseSummary) -> str:
+        sections: List[str] = []
+        if case.option_invisibility_record:
+            sections.append(f"Option Invisibility\n- {case.option_invisibility_record}")
+        if case.unsupported_exclusions:
+            sections.append("Blindness — unsupported exclusions\n" + "\n".join(f"- {x}" for x in case.unsupported_exclusions))
+        if case.unsupported_inclusions:
+            sections.append("Illusion — unsupported inclusions\n" + "\n".join(f"- {x}" for x in case.unsupported_inclusions))
+        if case.special_case_probes:
+            sections.append("Special-Case Probes\n" + "\n".join(f"- {x}" for x in case.special_case_probes))
+        if not sections:
+            return "No material option-field finding or probe is recorded in this case record."
+        return "\n\n".join(sections)
+
+    @staticmethod
     def _case_summary(case: CaseSummary) -> str:
         return (
             f"{case.case_id} — {case.title}\n\n"
@@ -1344,6 +1439,7 @@ class GraphLab(tk.Toplevel):
             f"Load-bearing: {'yes' if case.load_bearing else 'no'}\n\n"
             f"Pressure families\n" + ("\n".join(f"- {x}" for x in case.pressure_families) or "—") + "\n\n"
             f"Constructs under test\n" + ("\n".join(f"- {x}" for x in case.constructs_under_test) or "—") + "\n\n"
+            f"Option-field record\n{GraphLab._option_record_text(case)}\n\n"
             f"Theoretical function\n{case.theoretical_function or '—'}\n\n"
             f"Local result\n{case.result_status or '—'}\n\n"
             f"Architecture effect\n{case.architecture_effect if case.architecture_applies else 'none enacted'}\n\n"
@@ -1392,8 +1488,13 @@ class GraphLab(tk.Toplevel):
         return (
             f"Pressure families (navigation only)\n" + ("\n".join(f"- {x}" for x in case.pressure_families) or "—") + "\n\n"
             f"Constructs under test\n" + ("\n".join(f"- {x}" for x in case.constructs_under_test) or "—") + "\n\n"
+            f"Option-field record\n{GraphLab._option_record_text(case)}\n\n"
             f"Architecture effect\n{case.architecture_effect if case.architecture_applies else 'none enacted'}\n\n"
-            "pressure_families != VECTOR operator taxonomy\nconstructs_under_test != constructs validated\nlocal result != architecture effect"
+            "pressure_families != VECTOR operator taxonomy\n"
+            "constructs_under_test != constructs validated\n"
+            "recorded option-field field != Reader-created classification\n"
+            "absence of a recorded option-field finding != proof of absence\n"
+            "local result != architecture effect"
         )
 
     @staticmethod
@@ -1648,7 +1749,7 @@ class GraphLab(tk.Toplevel):
         palette=self.theme_palette(); self.configure(background=palette["window_bg"]); self.canvas.configure(background=palette["canvas_bg"])
         style=ttk.Style(self); style.configure("Graph.TCombobox",fieldbackground=palette["input_bg"],background=palette["button_bg"],foreground=palette["fg"],arrowcolor=palette["fg"],selectbackground=palette["selection_bg"],selectforeground=palette["fg"])
         style.map("Graph.TCombobox",fieldbackground=[("readonly",palette["input_bg"])],foreground=[("readonly",palette["fg"])],background=[("active",palette["button_hover_bg"]),("readonly",palette["button_bg"])])
-        style.configure("Graph.TNotebook",background=palette["window_bg"],borderwidth=0); style.configure("Graph.TNotebook.Tab",background=palette["button_bg"],foreground=palette["fg"],padding=(10,6))
+        style.configure("Graph.TNotebook",background=palette["window_bg"],borderwidth=0); style.configure("Graph.TNotebook.Tab",background=palette["button_bg"],foreground=palette["fg"],padding=(5,6))
         style.map("Graph.TNotebook.Tab",background=[("selected",palette["panel_bg"]),("active",palette["button_hover_bg"])])
         for widget in self._detail_texts.values(): widget.configure(background=palette["text_bg"],foreground=palette["text_fg"],insertbackground=palette["text_fg"],selectbackground=palette["selection_bg"]); self._configure_detail_tags(widget)
         if self.browser_dialog is not None and self.browser_dialog.winfo_exists(): self.browser_dialog.apply_theme()
@@ -1831,6 +1932,7 @@ class PmsVectorReaderApp(tk.Tk):
         self.italic_font = tkfont.Font(family="Segoe UI", size=10, slant="italic")
         self.bold_italic_font = tkfont.Font(family="Segoe UI", size=10, weight="bold", slant="italic")
         self.mono_font = tkfont.Font(family="Consolas", size=10)
+        self.math_font = tkfont.Font(family="Cambria Math", size=11)
         self.heading_font_1 = tkfont.Font(family="Segoe UI", size=18, weight="bold")
         self.heading_font_2 = tkfont.Font(family="Segoe UI", size=15, weight="bold")
         self.heading_font_3 = tkfont.Font(family="Segoe UI", size=13, weight="bold")
@@ -2028,34 +2130,38 @@ class PmsVectorReaderApp(tk.Tk):
         self.toolbar = ttk.Frame(self, padding=(6, 6, 6, 3))
         self.toolbar.pack(fill=tk.X)
 
+        # Reserve the right-side controls before packing the flexible left-side
+        # toolbar groups so Help / Exit remain visible at normal window widths.
+
+        ttk.Button(self.toolbar, text="Exit", command=self.destroy).pack(side=tk.RIGHT)
+        ttk.Button(self.toolbar, text="Help", command=self.show_help).pack(side=tk.RIGHT, padx=(0, 6))
+
         ttk.Label(self.toolbar, text="Search").pack(side=tk.LEFT)
         self.search_var = tk.StringVar()
-        self._search_entry = ttk.Entry(self.toolbar, textvariable=self.search_var, width=42)
+        self._search_entry = ttk.Entry(self.toolbar, textvariable=self.search_var, width=6)
         self._search_entry.pack(side=tk.LEFT, padx=(6, 4))
         self._search_entry.bind("<Return>", lambda event: self.run_search())
         ttk.Button(self.toolbar, text="Search", command=self.run_search).pack(side=tk.LEFT)
-        ttk.Button(self.toolbar, text="Clear", command=self.clear_search).pack(side=tk.LEFT, padx=(4, 12))
+        ttk.Button(self.toolbar, text="Clear", command=self.clear_search).pack(side=tk.LEFT, padx=(4, 8))
 
         ttk.Button(self.toolbar, text="Reload", command=self.reload_source).pack(side=tk.LEFT)
-        ttk.Button(self.toolbar, text="Home", command=self.open_home).pack(side=tk.LEFT, padx=(6, 12))
+        ttk.Button(self.toolbar, text="Home", command=self.open_home).pack(side=tk.LEFT, padx=(6, 8))
 
         ttk.Button(self.toolbar, text="A−", command=self.decrease_reader_font).pack(side=tk.LEFT)
-        ttk.Button(self.toolbar, text="A+", command=self.increase_reader_font).pack(side=tk.LEFT, padx=(4, 12))
+        ttk.Button(self.toolbar, text="A+", command=self.increase_reader_font).pack(side=tk.LEFT, padx=(4, 8))
 
         self.fullscreen_button = ttk.Button(
             self.toolbar,
-            text="Reader Fullscreen",
+            text="Fullscreen",
             command=self.toggle_reader_fullscreen,
         )
         self.fullscreen_button.pack(side=tk.LEFT, padx=(0, 8))
 
-        ttk.Button(self.toolbar, text="Graph Lab", command=self.open_graph_lab).pack(side=tk.LEFT, padx=(0, 8))
+        self.theme_button = ttk.Button(self.toolbar, text="Dark", command=self.toggle_dark_mode)
+        self.theme_button.pack(side=tk.LEFT, padx=(0, 8))
 
-        self.theme_button = ttk.Button(self.toolbar, text="Dark Mode", command=self.toggle_dark_mode)
-        self.theme_button.pack(side=tk.LEFT)
+        ttk.Button(self.toolbar, text="Graph Lab", command=self.open_graph_lab).pack(side=tk.LEFT)
 
-        ttk.Button(self.toolbar, text="Exit", command=self.destroy).pack(side=tk.RIGHT)
-        ttk.Button(self.toolbar, text="Help", command=self.show_help).pack(side=tk.RIGHT, padx=(0, 6))
 
     def _build_fullscreen_toolbar(self) -> None:
         self.fullscreen_toolbar = ttk.Frame(self, padding=(8, 6, 8, 4))
@@ -2105,6 +2211,17 @@ class PmsVectorReaderApp(tk.Tk):
         self.text.tag_configure("list", font=self.base_font, lmargin1=28, lmargin2=46, spacing1=1, spacing3=1)
         self.text.tag_configure("code", font=self.mono_font, background="#f4f4f4", lmargin1=28, lmargin2=28, spacing1=8, spacing3=8)
         self.text.tag_configure("inline_code", font=self.mono_font, background="#f4f4f4")
+        self.text.tag_configure("math_inline", font=self.math_font)
+        self.text.tag_configure(
+            "math_display",
+            font=self.math_font,
+            justify=tk.CENTER,
+            lmargin1=34,
+            lmargin2=34,
+            rmargin=34,
+            spacing1=10,
+            spacing3=10,
+        )
         self.text.tag_configure("yaml_key", font=self.mono_font, background="#f4f4f4", foreground="#7a3e9d", lmargin1=28, lmargin2=28)
         self.text.tag_configure("yaml_value", font=self.mono_font, background="#f4f4f4", foreground="#555555", lmargin1=28, lmargin2=28)
         self.text.tag_configure("quote", lmargin1=24, lmargin2=24, foreground="#555555")
@@ -2150,7 +2267,7 @@ class PmsVectorReaderApp(tk.Tk):
             reader_border_fg = "#34383c"
             link_fg = "#6cb6ff"
             link_hover_bg = "#24384a"
-            self.theme_button.configure(text="Light Mode")
+            self.theme_button.configure(text="Light")
         else:
             bg = "#f0f0f0"
             navigation_bg = "#f2f4f6"
@@ -2173,7 +2290,7 @@ class PmsVectorReaderApp(tk.Tk):
             reader_border_fg = "#cfcfcf"
             link_fg = "#0563c1"
             link_hover_bg = "#dceeff"
-            self.theme_button.configure(text="Dark Mode")
+            self.theme_button.configure(text="Dark")
 
         self.configure(background=bg)
 
@@ -2266,6 +2383,8 @@ class PmsVectorReaderApp(tk.Tk):
         self.text.tag_configure("list", background=text_bg, foreground=text_fg)
         self.text.tag_configure("code", background=code_bg, foreground=text_fg)
         self.text.tag_configure("inline_code", background=code_bg, foreground=text_fg)
+        self.text.tag_configure("math_inline", background=text_bg, foreground=text_fg)
+        self.text.tag_configure("math_display", background=text_bg, foreground=text_fg)
         self.text.tag_configure("yaml_key", background=code_bg, foreground=yaml_key_fg)
         self.text.tag_configure("yaml_value", background=code_bg, foreground=yaml_value_fg)
         self.text.tag_configure("quote", background=text_bg, foreground=muted_fg)
@@ -2520,6 +2639,7 @@ class PmsVectorReaderApp(tk.Tk):
             "  Architecture & Status   Core / state / supporting / reduced status\n"
             "  Dependency / Warrant    Declared dependencies and blocked jumps\n"
             "  Case Pressure Map       Pressure family → case → result / reduction\n"
+            "  Option record filter    Filter cases by declared Invisibility / Blindness / Illusion / Probe records\n"
             "  Selected Case Trace     Baseline → warrant → pressure → result\n"
             "  Reduction Graph         Declared loss history\n"
             "  Drag                     Pan the 2D audit view\n"
@@ -2527,7 +2647,8 @@ class PmsVectorReaderApp(tk.Tk):
             "  Double-click node        Open its repository artifact\n\n"
             "Theme:\n"
             "  Dark Mode               Toggle light / dark mode\n\n"
-            "The graph layer visualizes declared repository relations only. It does not create theory, evidence, classification, dependencies, warrant, authority, or geometry. Reader self-test checks repository consistency, not VECTOR validity.",
+            "The graph layer visualizes declared repository relations only. It does not create theory, evidence, classification, dependencies, warrant, authority, or geometry. Reader self-test checks repository consistency, not VECTOR validity.\n\n"
+            "Option-field views and filters read declared case-record fields only. The Reader does not infer, rewrite, validate, or reclassify cases. Canonical case-record structure is a repository-consistency condition, not proof that a case finding is true. Absence of a recorded option-field finding is not proof of absence.",
         )
 
     def increase_reader_font(self) -> None:
@@ -2552,6 +2673,7 @@ class PmsVectorReaderApp(tk.Tk):
         self.italic_font.configure(size=size)
         self.bold_italic_font.configure(size=size)
         self.mono_font.configure(size=size)
+        self.math_font.configure(size=size + 1)
 
         self.heading_font_1.configure(size=size + 8)
         self.heading_font_2.configure(size=size + 5)
@@ -2617,7 +2739,7 @@ class PmsVectorReaderApp(tk.Tk):
 
         self.after_idle(self._set_initial_pane_positions)
 
-        self.fullscreen_button.configure(text="Reader Fullscreen")
+        self.fullscreen_button.configure(text="Fullscreen")
         self.text.focus_set()
 
     def _bind_shortcuts(self) -> None:
@@ -2693,14 +2815,20 @@ class PmsVectorReaderApp(tk.Tk):
         section_items: Dict[str, str] = {}
         folder_items: Dict[Tuple[str, str], str] = {}
 
-        def nav_sort_key(rel_path: str) -> Tuple[int, Tuple[object, ...]]:
+        def nav_sort_key(rel_path: str) -> Tuple[int, int, Tuple[Tuple[int, object], ...]]:
+            section_key = rel_path.split("/", 1)[0] if "/" in rel_path else rel_path
+            try:
+                section_index = SECTION_ORDER.index(section_key)
+            except ValueError:
+                section_index = len(SECTION_ORDER)
+            local_rank = 3
             if rel_path == "cases/README.md":
-                return (0, natural_sort_key(rel_path))
-            if rel_path == "cases/index.yaml":
-                return (1, natural_sort_key(rel_path))
-            if rel_path.startswith("cases/"):
-                return (2, natural_sort_key(rel_path))
-            return (3, corpus_sort_key(rel_path))
+                local_rank = 0
+            elif rel_path == "cases/index.yaml":
+                local_rank = 1
+            elif rel_path.startswith("cases/"):
+                local_rank = 2
+            return (section_index, local_rank, natural_sort_key(rel_path))
 
         nav_paths = [
             rel_path for rel_path in self.corpus.ordered_paths
@@ -2713,14 +2841,16 @@ class PmsVectorReaderApp(tk.Tk):
             section_key = rel_path.split("/", 1)[0] if "/" in rel_path else rel_path
             section_label = SECTION_LABELS.get(section_key, section_key)
             if section_key not in section_items:
-                section_items[section_key] = self.file_tree.insert("", tk.END, text=section_label, open=True)
+                section_items[section_key] = self.file_tree.insert(
+                    "", tk.END, text=section_label, open=(section_key == "README.md")
+                )
 
             parent = section_items[section_key]
             parts = rel_path.split("/")
             for depth, folder in enumerate(parts[1:-1], start=1):
                 key = (section_key, "/".join(parts[1:depth + 1]))
                 if key not in folder_items:
-                    folder_items[key] = self.file_tree.insert(parent, tk.END, text=folder, open=(depth < 2))
+                    folder_items[key] = self.file_tree.insert(parent, tk.END, text=folder, open=False)
                 parent = folder_items[key]
 
             doc = self.corpus.documents[rel_path]
@@ -3096,6 +3226,34 @@ class PmsVectorReaderApp(tk.Tk):
                 i += 1
                 continue
 
+            stripped_line = raw_line.strip()
+            if stripped_line == r"\[":
+                math_lines: List[str] = []
+                i += 1
+                while i < len(lines) and lines[i].strip() != r"\]":
+                    math_lines.append(lines[i])
+                    i += 1
+                if i < len(lines) and lines[i].strip() == r"\]":
+                    i += 1
+                self._insert_math_block(math_lines)
+                continue
+
+            if stripped_line.startswith(r"\[") and stripped_line.endswith(r"\]") and len(stripped_line) > 4:
+                self._insert_math_block([stripped_line[2:-2]])
+                i += 1
+                continue
+
+            if stripped_line == "$$":
+                math_lines = []
+                i += 1
+                while i < len(lines) and lines[i].strip() != "$$":
+                    math_lines.append(lines[i])
+                    i += 1
+                if i < len(lines) and lines[i].strip() == "$$":
+                    i += 1
+                self._insert_math_block(math_lines)
+                continue
+
             image_match = MARKDOWN_IMAGE_RE.fullmatch(raw_line.strip())
             if image_match:
                 alt_text, image_target = image_match.groups()
@@ -3278,6 +3436,21 @@ class PmsVectorReaderApp(tk.Tk):
             self.text.insert(tk.END, " — ", ("quote",))
         self.text.insert(tk.END, reason + "\n", ("quote",))
 
+    def _insert_math_block(self, block_lines: List[str]) -> None:
+        """Render a display-math block as portable Unicode mathematics.
+
+        Tk Text does not provide a TeX engine. This intentionally bounded
+        renderer removes presentation commands and translates VECTOR's common
+        LaTeX symbols while preserving the mathematical content.
+        """
+        raw = "\n".join(block_lines)
+        rendered = latex_to_readable_math(raw, display=True)
+        if not rendered:
+            return
+        self.text.insert(tk.END, "\n", ("body",))
+        self.text.insert(tk.END, rendered.rstrip() + "\n", ("math_display",))
+        self.text.insert(tk.END, "\n", ("body",))
+
     def _insert_code_block(self, block_lines: List[str], language: str) -> None:
         """Insert a fenced code block without showing the fence markers."""
         if not block_lines:
@@ -3315,7 +3488,7 @@ class PmsVectorReaderApp(tk.Tk):
     def _insert_inline_markdown(self, text: str, base_tags: Tuple[str, ...]) -> None:
         """Insert inline Markdown, including navigable internal/external links."""
         token_re = re.compile(
-            r"(\[[^\]]+\]\([^)]+\)|`[^`]+`|\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*\n]+\*)"
+            r"(\\\([^\n]*?\\\)|\[[^\]]+\]\([^)]+\)|`[^`]+`|\*\*\*[^*]+\*\*\*|\*\*[^*]+\*\*|\*[^*\n]+\*)"
         )
         pos = 0
         for match in token_re.finditer(text):
@@ -3327,6 +3500,12 @@ class PmsVectorReaderApp(tk.Tk):
             if link_match:
                 label, target = link_match.groups()
                 self._insert_markdown_link(label, target, base_tags)
+            elif token.startswith(r"\(") and token.endswith(r"\)"):
+                self.text.insert(
+                    tk.END,
+                    latex_to_readable_math(token[2:-2], display=False),
+                    base_tags + ("math_inline",),
+                )
             elif token.startswith("`") and token.endswith("`"):
                 self.text.insert(tk.END, token[1:-1], base_tags + ("inline_code",))
             elif token.startswith("***") and token.endswith("***"):
@@ -3744,6 +3923,191 @@ class PmsVectorReaderApp(tk.Tk):
 # ---------------------------------------------------------------------------
 # Pure helper functions
 # ---------------------------------------------------------------------------
+
+LATEX_SYMBOLS: Dict[str, str] = {
+    r"\not\Rightarrow": "⇏",
+    r"\not\rightarrow": "↛",
+    r"\not\in": "∉",
+    r"\Rightarrow": "⇒",
+    r"\rightarrow": "→",
+    r"\leftarrow": "←",
+    r"\leftrightarrow": "↔",
+    r"\langle": "〈",
+    r"\rangle": "〉",
+    r"\parallel": "∥",
+    r"\varnothing": "∅",
+    r"\subseteq": "⊆",
+    r"\supseteq": "⊇",
+    r"\subset": "⊂",
+    r"\supset": "⊃",
+    r"\approx": "≈",
+    r"\neq": "≠",
+    r"\geq": "≥",
+    r"\ge": "≥",
+    r"\leq": "≤",
+    r"\le": "≤",
+    r"\prec": "≺",
+    r"\succ": "≻",
+    r"\land": "∧",
+    r"\lor": "∨",
+    r"\neg": "¬",
+    r"\forall": "∀",
+    r"\infty": "∞",
+    r"\in": "∈",
+    r"\notin": "∉",
+    r"\mid": " | ",
+    r"\times": "×",
+    r"\cdot": "·",
+    r"\sum": "∑",
+    r"\Box": "□",
+    r"\Delta": "Δ",
+    r"\Theta": "Θ",
+    r"\Lambda": "Λ",
+    r"\Psi": "Ψ",
+    r"\Omega": "Ω",
+    r"\Phi": "Φ",
+    r"\Sigma": "Σ",
+    r"\nabla": "∇",
+    r"\pi": "π",
+    r"\lambda": "λ",
+    r"\rho": "ρ",
+    r"\ldots": "…",
+    r"\cdots": "…",
+    r"\uparrow": "↑",
+    r"\downarrow": "↓",
+}
+
+MATHCAL_CHARS: Dict[str, str] = {
+    "A": "𝒜", "B": "ℬ", "C": "𝒞", "D": "𝒟", "E": "ℰ", "F": "ℱ",
+    "G": "𝒢", "H": "ℋ", "I": "ℐ", "J": "𝒥", "K": "𝒦", "L": "ℒ",
+    "M": "ℳ", "N": "𝒩", "O": "𝒪", "P": "𝒫", "Q": "𝒬", "R": "ℛ",
+    "S": "𝒮", "T": "𝒯", "U": "𝒰", "V": "𝒱", "W": "𝒲", "X": "𝒳",
+    "Y": "𝒴", "Z": "𝒵",
+}
+MATHBB_CHARS: Dict[str, str] = {"N": "ℕ", "Z": "ℤ", "Q": "ℚ", "R": "ℝ", "C": "ℂ", "H": "ℍ"}
+
+
+def _replace_latex_group_command(text: str, command: str, formatter) -> str:
+    r"""Replace ``\command{...}`` while respecting balanced braces."""
+    needle = "\\" + command + "{"
+    pos = 0
+    pieces: List[str] = []
+    while True:
+        start = text.find(needle, pos)
+        if start < 0:
+            pieces.append(text[pos:])
+            break
+        pieces.append(text[pos:start])
+        content_start = start + len(needle)
+        depth = 1
+        i = content_start
+        while i < len(text) and depth:
+            if text[i] == "{" and (i == 0 or text[i - 1] != "\\"):
+                depth += 1
+            elif text[i] == "}" and (i == 0 or text[i - 1] != "\\"):
+                depth -= 1
+            i += 1
+        if depth:
+            pieces.append(text[start:])
+            break
+        inner = text[content_start:i - 1]
+        pieces.append(formatter(inner))
+        pos = i
+    return "".join(pieces)
+
+
+def latex_to_readable_math(source: str, display: bool = False) -> str:
+    r"""Translate the bounded TeX used by VECTOR into readable Unicode math.
+
+    This is deliberately not a TeX evaluator. It removes layout-only commands,
+    preserves labels/text, and translates common relational/symbol commands so
+    the desktop Reader never exposes raw ``\[`` / ``\boxed`` markup merely
+    because no external TeX engine is installed.
+    """
+    text = source.strip()
+    if not text:
+        return ""
+    if text.startswith(r"\[") and text.endswith(r"\]"):
+        text = text[2:-2]
+    if text.startswith(r"\(") and text.endswith(r"\)"):
+        text = text[2:-2]
+
+    text = text.replace(r"\begin{aligned}", "").replace(r"\end{aligned}", "")
+    text = text.replace(r"\begin{aligned*}", "").replace(r"\end{aligned*}", "")
+    text = text.replace(r"\begin{array}", "").replace(r"\end{array}", "")
+    text = text.replace(r"\bigl", "").replace(r"\bigr", "").replace(r"\big", "")
+
+    text = _replace_latex_group_command(text, "text", lambda inner: inner)
+    text = _replace_latex_group_command(text, "mathrm", lambda inner: inner)
+    text = _replace_latex_group_command(text, "mathbf", lambda inner: inner)
+    text = _replace_latex_group_command(text, "mathit", lambda inner: inner)
+    text = _replace_latex_group_command(
+        text, "mathcal", lambda inner: MATHCAL_CHARS.get(inner.strip(), inner.strip())
+    )
+    text = _replace_latex_group_command(
+        text, "mathbb", lambda inner: MATHBB_CHARS.get(inner.strip(), inner.strip())
+    )
+    text = re.sub(
+        r"\\mathcal\s+([A-Z])",
+        lambda m: MATHCAL_CHARS.get(m.group(1), m.group(1)),
+        text,
+    )
+    text = re.sub(
+        r"\\mathbb\s+([A-Z])",
+        lambda m: MATHBB_CHARS.get(m.group(1), m.group(1)),
+        text,
+    )
+    text = _replace_latex_group_command(
+        text,
+        "boxed",
+        lambda inner: "⟦ " + latex_to_readable_math(inner, display=True).strip() + " ⟧",
+    )
+
+    frac_re = re.compile(r"\\frac\{([^{}]+)\}\{([^{}]+)\}")
+    while frac_re.search(text):
+        text = frac_re.sub(lambda m: f"({m.group(1)})/({m.group(2)})", text)
+    text = re.sub(
+        r"\\xrightarrow\[([^\]]+)\]\{((?:[^{}]|\{[^{}]*\})+)\}",
+        lambda m: "—" + latex_to_readable_math(m.group(2)).strip() + " / "
+        + latex_to_readable_math(m.group(1)).strip() + "→",
+        text,
+    )
+    text = re.sub(
+        r"\\xrightarrow\{((?:[^{}]|\{[^{}]*\})+)\}",
+        lambda m: "—" + latex_to_readable_math(m.group(1)).strip() + "→",
+        text,
+    )
+
+    # Preserve escaped set braces while ordinary grouping braces are removed.
+    text = text.replace(r"\{", "⟪SETL⟫").replace(r"\}", "⟪SETR⟫")
+
+    # TeX line break ``\\`` is distinct from command-leading ``\``.
+    text = text.replace("\\\\", "\n")
+    text = text.replace("&", "")
+    text = text.replace(r"\qquad", "        ").replace(r"\quad", "    ")
+    text = text.replace(r"\;", " ").replace(r"\,", " ").replace(r"\!", "")
+
+    for command, symbol in LATEX_SYMBOLS.items():
+        text = text.replace(command, symbol)
+    text = text.replace(r"\not=", "≠")
+    text = text.replace(r"\not", "¬")
+    text = text.replace(r"\left", "").replace(r"\right", "")
+    text = text.replace("\\ ", " ")
+
+    # Remaining braces in this controlled corpus are grouping marks, not data.
+    text = text.replace("{", "").replace("}", "")
+    text = text.replace("⟪SETL⟫", "{").replace("⟪SETR⟫", "}")
+    text = re.sub(r"[ \t]+\n", "\n", text)
+    text = re.sub(r"\n[ \t]+", "\n", text)
+    text = re.sub(r"[ \t]{2,}", " ", text)
+    text = re.sub(r"\n{2,}", "\n", text)
+    text = text.replace("〈 ", "〈").replace(" 〉", "〉")
+    text = text.strip()
+
+    if display and "⟦" in text and "\n" in text:
+        text = text.replace("⟦ \n", "⟦\n").replace("\n ⟧", "\n⟧")
+    return text
+
 
 def corpus_sort_key(rel_path: str) -> Tuple[int, Tuple[object, ...]]:
     first = rel_path.split("/", 1)[0] if "/" in rel_path else rel_path
@@ -4317,16 +4681,27 @@ def chunk_markdown_text(text: str, target_bytes: int) -> List[RenderChunk]:
     current_bytes = 0
     start_line = 1
     in_fence = False
+    in_math_block = False
+    in_dollar_math = False
     line_number = 1
 
     for line in lines:
         current.append(line)
         current_bytes += len(line.encode("utf-8", errors="replace"))
+        stripped = line.strip()
         if FENCE_RE.match(line.rstrip("\r\n")):
             in_fence = not in_fence
+        elif not in_fence:
+            if stripped == r"\[":
+                in_math_block = True
+            elif stripped == r"\]":
+                in_math_block = False
+            elif stripped == "$$":
+                in_dollar_math = not in_dollar_math
 
-        safe_boundary = not in_fence and not line.strip()
-        forced_boundary = not in_fence and current_bytes >= target_bytes * 2
+        inside_special_block = in_fence or in_math_block or in_dollar_math
+        safe_boundary = not inside_special_block and not stripped
+        forced_boundary = not inside_special_block and current_bytes >= target_bytes * 2
         if current_bytes >= target_bytes and (safe_boundary or forced_boundary):
             chunks.append(RenderChunk("".join(current), start_line))
             current = []
@@ -4528,6 +4903,92 @@ def run_self_test(source_path: Optional[Path]) -> int:
             if list(record.keys()) != canonical_blocks:
                 bad_block_counts.append(case.case_id)
 
+        # Canonical option-taxonomy / template / case-record compatibility.
+        # The staged case migration is complete: canonical inner option-record
+        # structure is now a repository-consistency condition. This remains a
+        # structural check only; schema consistency does not establish case truth.
+        model_option_space = as_dict(corpus.model_data.get("option_space"))
+        model_legibility = as_dict(model_option_space.get("option_legibility"))
+        model_invisibility = as_dict(model_legibility.get("option_invisibility"))
+        model_misrep = as_dict(model_option_space.get("option_field_misrepresentation"))
+        model_blindness = as_dict(model_misrep.get("option_blindness"))
+        model_illusion = as_dict(model_misrep.get("option_illusion"))
+        canonical_option_taxonomy_model = (
+            scalar_text(model_invisibility.get("type")) == "legibility_condition"
+            and scalar_text(model_blindness.get("type")) == "unsupported_exclusion"
+            and scalar_text(model_illusion.get("type")) == "unsupported_inclusion"
+            and "option_invisibility" not in model_misrep
+        )
+
+        record_template_data = {}
+        case_template_data = {}
+        if "model/VECTOR-Record.template.yaml" in corpus.documents:
+            parsed = parse_simple_yaml(corpus.documents["model/VECTOR-Record.template.yaml"].text)
+            record_template_data = as_dict(parsed)
+        if "model/Case.template.yaml" in corpus.documents:
+            parsed = parse_simple_yaml(corpus.documents["model/Case.template.yaml"].text)
+            case_template_data = as_dict(parsed)
+        record_template = as_dict(record_template_data.get("vector_record"))
+        case_template_record = as_dict(case_template_data.get("vector_record"))
+        template_option_space = as_dict(record_template.get("option_space"))
+        template_options = [as_dict(x) for x in as_list(template_option_space.get("options"))]
+        template_option_item = template_options[0] if template_options else {}
+        # The Reader's deliberately small YAML lens represents a null ``option:``
+        # followed by sibling null fields as one nested mapping. Accept that
+        # controlled parse shape without turning the template into a strict schema.
+        template_option_fields = as_dict(template_option_item.get("option")) or template_option_item
+        template_misrep = as_dict(template_option_space.get("option_field_misrepresentation"))
+        template_blindness = as_dict(template_misrep.get("blindness"))
+        template_illusion = as_dict(template_misrep.get("illusion"))
+        canonical_record_template = (
+            "branch_status" in template_option_fields
+            and "evidence_status" in template_option_fields
+            and "option_invisibility" in template_option_space
+            and "option_field_misrepresentation" in template_option_space
+            and "special_case_probes" in template_option_space
+            and "option_illusion" not in template_option_space
+            and "unsupported_exclusions" in template_blindness
+            and "unsupported_inclusions" in template_illusion
+        )
+        case_template_record_parity = bool(record_template) and record_template == case_template_record
+
+        legacy_case_option_schema_ids: List[str] = []
+        migrated_case_option_schema_ids: List[str] = []
+        other_case_option_schema_ids: List[str] = []
+        for case in corpus.cases:
+            option_space = as_dict(as_dict(case.raw.get("vector_record")).get("option_space"))
+            misrep = as_dict(option_space.get("option_field_misrepresentation"))
+            blindness = as_dict(misrep.get("blindness"))
+            illusion = as_dict(misrep.get("illusion"))
+            options = [as_dict(x) for x in as_list(option_space.get("options"))]
+            option_items_canonical = all(
+                "status" in item and "branch_status" in item and "evidence_status" in item
+                for item in options
+            )
+            canonical_inner = (
+                "option_invisibility" in option_space
+                and "option_field_misrepresentation" in option_space
+                and "special_case_probes" in option_space
+                and "option_illusion" not in option_space
+                and "unsupported_exclusions" in blindness
+                and "unsupported_inclusions" in illusion
+                and option_items_canonical
+            )
+            if canonical_inner:
+                migrated_case_option_schema_ids.append(case.case_id)
+            elif "option_illusion" in option_space and "option_field_misrepresentation" not in option_space:
+                legacy_case_option_schema_ids.append(case.case_id)
+            else:
+                other_case_option_schema_ids.append(case.case_id)
+        noncanonical_case_option_schema_ids = sorted(
+            set(legacy_case_option_schema_ids + other_case_option_schema_ids),
+            key=natural_sort_key,
+        )
+        all_case_option_records_canonical = (
+            len(migrated_case_option_schema_ids) == len(corpus.cases)
+            and not noncanonical_case_option_schema_ids
+        )
+
         # Index -> case identity and navigation parity.
         index_root = as_dict(corpus.case_index_data.get("case_index"))
         index_cases = {str(as_dict(x).get("case_id") or ""): as_dict(x) for x in as_list(index_root.get("cases"))}
@@ -4645,6 +5106,20 @@ def run_self_test(source_path: Optional[Path]) -> int:
             "bad_top_level": bad_top_level,
             "canonical_17_block_envelope": not bad_block_counts,
             "bad_17_block_cases": bad_block_counts,
+            "canonical_option_taxonomy_model": canonical_option_taxonomy_model,
+            "canonical_record_template": canonical_record_template,
+            "case_template_record_parity": case_template_record_parity,
+            "all_case_option_records_canonical": all_case_option_records_canonical,
+            "canonical_case_option_schema_count": len(migrated_case_option_schema_ids),
+            "canonical_case_option_schema_ids": migrated_case_option_schema_ids,
+            "noncanonical_case_option_schema_ids": noncanonical_case_option_schema_ids,
+            "legacy_case_option_schema_count": len(legacy_case_option_schema_ids),
+            "legacy_case_option_schema_ids": legacy_case_option_schema_ids,
+            "migrated_case_option_schema_count": len(migrated_case_option_schema_ids),
+            "migrated_case_option_schema_ids": migrated_case_option_schema_ids,
+            "other_case_option_schema_ids": other_case_option_schema_ids,
+            "case_option_schema_migration_pending": bool(noncanonical_case_option_schema_ids),
+            "case_schema_transition_boundary": "canonical case-record structure is a repository-consistency condition; schema consistency != case truth or VECTOR validity",
             "index_case_parity": not index_case_mismatches,
             "index_case_mismatches": index_case_mismatches,
             "load_bearing_cases": load_bearing,
@@ -4671,6 +5146,10 @@ def run_self_test(source_path: Optional[Path]) -> int:
             len(corpus.cases) == 23
             and not missing_cases and not extra_cases and not missing_pairs
             and not bad_top_level and not bad_block_counts and not index_case_mismatches
+            and canonical_option_taxonomy_model
+            and canonical_record_template
+            and case_template_record_parity
+            and all_case_option_records_canonical
             and load_bearing == ["E20", "E21", "E22", "E23"]
             and len(roots) == 6 and not missing_edge_endpoints
             and len(claims) > 0 and not bad_provenance_statuses

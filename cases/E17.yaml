@@ -114,6 +114,7 @@ vector_record:
     options:
       - option: rotating designated coordinator
         status: structurally_viable
+        branch_status: null
         evidence_status: directly established by the synthetic fixture as a carrier of the fixpoint function
         authority: >-
           No independent bearer authority or legitimacy is established by the
@@ -129,6 +130,7 @@ vector_record:
         viability_relative_to: can carry the required fixpoint function in the fixture
       - option: pre-agreed escalation protocol
         status: structurally_viable
+        branch_status: null
         evidence_status: directly established by the synthetic fixture as a carrier of the fixpoint function
         authority: >-
           The protocol can carry the function without converting functional
@@ -143,7 +145,11 @@ vector_record:
         procedural_permission: null
         viability_relative_to: can carry the required fixpoint function in the fixture
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:

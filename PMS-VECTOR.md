@@ -3588,7 +3588,9 @@ and:
 \neg Real(o).
 \]
 
-The first prevents option illusion. The second prevents option blindness.
+The first blocks one route into Option Illusion: visibility cannot by itself license inclusion in the real or effective option field. The second blocks one route into Option Blindness: invisibility cannot by itself license exclusion from that field.
+
+The two boundaries are related but not type-identical. An option can be invisible without any status error having yet occurred. Blindness begins only when invisibility, uncertainty, blockage, or another weaker status is treated as sufficient warrant for a stronger negative option-status claim than the evidence supports. Chapter 9.7 will therefore distinguish **Option Invisibility** as a legibility condition from **Option Blindness** as an exclusion error.
 
 Visibility therefore concerns legibility, not existence. A person can vividly see a route that does not actually exist for them. Conversely, a viable path can remain structurally available while absent from the current orientation because the actor lacks information, occupies a narrow role position, or has learned a frame in which the route does not register as a possibility.
 
@@ -3732,6 +3734,18 @@ Option Invisibility can arise through several structural mechanisms:
 
 The concept should not be psychologized. VECTOR does not need to claim that the actor is irrational, defensive, or unaware in a clinical sense. It needs only to show that the option's real status and its legibility diverge.
 
+Option Invisibility is therefore a condition of legibility, not by itself an option-status error.
+
+\[
+\boxed{
+OptionInvisibility
+\neq
+OptionBlindness.
+}
+\]
+
+An actor, role, or analyst may genuinely fail to see an option without that fact alone establishing mistake, avoidability, responsibility, or any stronger negative claim about the option itself. The category records a divergence between legibility and relevant possibility. Whether that divergence is itself attributable, correctable, or practically consequential requires additional conditions.
+
 ROT (Rotation) can correct this divergence. A new role position can make an option visible. A rival model can reveal a path the original model did not encode. A temporal reconstruction can show that a route existed earlier and was missed.
 
 But the correction must preserve temporal discipline. If an option becomes visible only after it has become lost, the later insight does not retroactively restore its earlier visibility or actionability.
@@ -3746,9 +3760,39 @@ But the correction must preserve temporal discipline. If an option becomes visib
 
 This rule will later matter for responsibility. Here it protects the option field from retrospective inflation.
 
+### 9.7.1 Option Blindness
+
+**Option Blindness** occurs when a relevantly real current option or transformably reachable alternative is represented as absent from the relevant possibility field without sufficient support for that exclusion.
+
+The paradigmatic error is to treat invisibility as evidence of non-availability or genuine lack of alternatives:
+
+\[
+\boxed{
+\neg Visible_a(o,t)
+\not\Rightarrow
+\neg Available_a(o,t).
+}
+\]
+
+The category is broader than this single inference. Blindness can also occur when uncertainty is silently resolved into unavailability, when a blocked path is treated as nonexistent, when present non-actionability is inflated into non-transformability, or when a real distributed transformation is excluded because no single actor can realize it alone.
+
+The governing error is therefore **unsupported exclusion**, not mere failure to see.
+
+\[
+\boxed{
+OptionBlindness
+=
+UnsupportedExclusion.
+}
+\]
+
+This formulation preserves the distinction between option status and evidence status. `Unknown` remains `Unknown`; it must not be rewritten as unavailable merely because the analyst cannot currently establish availability. Likewise, a blocked or presently non-actionable route may still matter to the reconstruction as a blocked path or as a transformably reachable possibility, depending on the relevant actor, role, frame, temporal window, dependencies, and effective capacity. Neither status may be silently promoted into present actionability, but neither may it be erased as non-existence without support.
+
+Option Blindness is not a psychological diagnosis and does not by itself establish responsibility. The error may belong to an analyst, an institutional representation, a role-bound orientation, or a later reconstruction. A responsibility claim would require the additional attribution conditions developed later in the paper.
+
 ## 9.8 Option Illusion
 
-Option Illusion is the symmetric error.
+Option Illusion is the positive counterpart to Option Blindness within option-field representation.
 
 It occurs when an alternative is treated as part of the relevant effective option field although one or more conditions required for its practical existence are absent, altered, role-inaccessible, or imported from another frame.
 
@@ -3809,6 +3853,31 @@ Option Illusion is particularly dangerous because it often appears as creativity
 \]
 
 A better imagined world is not yet an available branch of the current one.
+
+Option Blindness and Option Illusion can therefore be stated as opposite forms of **Option-Field Misrepresentation**:
+
+\[
+\boxed{
+\begin{aligned}
+OptionBlindness &: \text{ unsupported exclusion from the relevant effective or transformable option field},\\
+OptionIllusion &: \text{ unsupported inclusion in the relevant effective option field}.
+\end{aligned}
+}
+\]
+
+and, at the umbrella level:
+
+\[
+\boxed{
+OptionFieldMisrepresentation
+=
+UnsupportedExclusion
+\lor
+UnsupportedInclusion.
+}
+\]
+
+The umbrella does not turn option status into a binary real/unreal test. Conceivable, visible, available, actionable, viable, blocked, deferred, lost, transformably reachable, and evidentially unknown remain distinct relations. The misrepresentation occurs when the represented field assigns or denies a status more strongly than the actor-, role-, time-, frame-, dependency-, capacity-, and evidence-bound conditions support.
 
 ## 9.9 Special-Case Construction — Valid Probe, Invalid Option
 
@@ -3951,7 +4020,7 @@ A serious unrealized alternative must be supportable as relevantly available or 
 
 This rule does not forbid counterfactual analysis. It makes the claim narrower. A counterfactual can reveal a missed structural relation without establishing that a specific actor could have enacted the alternative. It can show what changed when a window closed without proving that the earlier actor knew or could use the window. It can identify a system-level possibility without converting that possibility into individual capacity.
 
-The distinction protects both sides of the analysis. It prevents easy blame through hindsight, and it prevents fatalistic reconstruction in which the realized path is treated as the only path that ever existed.
+The distinction protects both sides of the analysis. It prevents easy blame through hindsight, and it prevents fatalistic reconstruction in which the realized path is treated as the only path that ever existed. Where that exclusivity is asserted without sufficient option-status support, it is an Option Blindness risk rather than a mere absence of imagination.
 
 A path can have been unrealized and real.
 
@@ -4260,7 +4329,31 @@ Creating.
 
 This distinction also matters for option invisibility. A blocked option can be visible. It can also be invisible because the blocking relation has been mistaken for non-existence. ROT (Rotation) may reveal the option without opening it. Praxis may then be required to change the blocking condition.
 
-The sequence can therefore be:
+That divergence must remain typed. Mistaking a blocking relation for non-existence can become **Option Blindness** when the blockage is used to support an unsupported exclusion from the relevant current or transformable option field. But the inverse move is equally invalid: identifying a blocked path does not by itself establish current availability or realistic transformability.
+
+\[
+\boxed{
+Blocked(o)
+\neq
+Nonexistent(o).
+}
+\]
+
+And, without additional mechanism and capacity evidence:
+
+\[
+Blocked(o)
+\not\Rightarrow
+Available(o),
+\]
+
+\[
+Blocked(o)
+\not\Rightarrow
+TransformablyReachable(o).
+\]
+
+One admissible sequence can therefore be:
 
 \[
 Invisible
@@ -4272,7 +4365,7 @@ Blocked
 Available.
 \]
 
-Each transition is a different claim.
+Each transition is a different claim; none is automatic.
 
 ## 10.6 Preserving Options
 
@@ -4738,6 +4831,16 @@ and:
 A false orientation can alter the option field. It can make a real option invisible, make a blocked option appear available, induce a premature commitment, redistribute burden, close a window, or create institutional dependencies around a mistaken claim. Once this occurs, later factual correction does not necessarily restore the earlier field.
 
 A false risk assessment can delay action until a window closes. A false accusation can change who must explain themselves, who receives access, or who is treated as credible. A false technical assumption can become embedded in infrastructure, making correction expensive even after the assumption is rejected. A false belief that no alternative exists can stabilize a trajectory that later becomes path-dependent.
+
+Where a no-alternative representation excludes a relevantly real or transformably reachable alternative without sufficient support, the option-field error is **Option Blindness**. The category does not make every restrictive option claim false. A bounded conclusion that no relevant alternative is currently evidenced may be warranted. Blindness begins only where the negative status or exclusion exceeds what the declared frame, role, time, capacity, dependency, and evidence conditions support.
+
+\[
+\boxed{
+NoAlternativeClaim
+\not\Rightarrow
+OptionBlindness.
+}
+\]
 
 The practical consequence is real even though the orientation is false.
 
@@ -6538,13 +6641,13 @@ Thus:
 
 The purpose is not to enumerate every imaginable branch. It is to prevent a claim from gaining robustness by relying on an option field that has never itself been tested.
 
-## 14.8 Test for Option Invisibility and Option Illusion
+## 14.8 Test for Option Invisibility, Option Blindness, and Option Illusion
 
-Option mapping is insufficient unless the self-test pressures both directions of error.
+Option mapping is insufficient unless the self-test separates **discovery pressure** from the two directions of option-field status error. Option Invisibility is not itself an error. Option Blindness and Option Illusion are the negative and positive forms of Option-Field Misrepresentation established in Chapter 9.
 
 ### Option invisibility
 
-The first question is:
+The discovery question is:
 
 > What relevantly real or transformably reachable alternative might my current orientation fail to see?
 
@@ -6552,11 +6655,47 @@ A role rotation, granularity shift, counter-scene, or rival model may expose an 
 
 If such an option becomes visible, the original DIR may need to be revised. A previously necessary-looking choice may become one among several. A trade-off may replace dominance. A claimed constraint may weaken.
 
-But the reverse problem is equally important.
+But discovery does not by itself establish that the newly visible route was previously available, actionable, or transformably reachable for the relevant actor. The status still has to be earned.
+
+### Option blindness
+
+The exclusion-side test asks:
+
+> Which alternatives, statuses, or transformation routes has the current analysis excluded, downgraded, or treated as absent without sufficient support from the declared frame, role, time, capacity, dependency, and evidence conditions?
+
+The test should pressure at least the following invalid shortcuts where they are material:
+
+\[
+\neg Visible(o)
+\not\Rightarrow
+\neg Available(o),
+\]
+
+\[
+Unknown(o)
+\not\Rightarrow
+Unavailable(o),
+\]
+
+\[
+Blocked(o)
+\not\Rightarrow
+Nonexistent(o),
+\]
+
+and:
+
+\[
+\neg Actionable_{now}(o)
+\not\Rightarrow
+\neg TransformablyReachable(o).
+\]
+
+Blindness can therefore concern either an unsupported exclusion from the current effective option field or an unsupported exclusion from the realistically transformable field. These claims must remain distinct. A route that is not currently actionable does not thereby become a current option merely because it may be transformable, and a merely imaginable transformation does not defeat a bounded negative result.
 
 ### Option illusion
 
-The self-test asks:
+The inclusion-side test asks:
 
 > Which alternatives in my current analysis exist only because I have changed the frame, imported later capacity, ignored cost, transferred another actor's authority, or treated a hypothetical construction as a real option?
 
@@ -6578,13 +6717,21 @@ insight(F^*)
 option(F_0).
 \]
 
-This paired test is essential because frameworks often have a characteristic bias toward only one error. Some analyses naturalize the current field and undercount possibility. Others reward imaginative reframing so strongly that they overcount possibility. VECTOR requires pressure in both directions.
+The three pressures perform different work. Option Invisibility asks what the orientation may fail to see. Option Blindness asks whether the analysis excludes more possibility than the evidence warrants. Option Illusion asks whether it includes more effective possibility than the conditions warrant.
 
-A robust position should survive both questions:
+\[
+\boxed{
+\text{discover more}
+\neq
+\text{count more}.
+}
+\]
+
+A robust position should therefore survive three questions:
 
 > What am I failing to see?
 
-and:
+> What am I excluding without sufficient warrant?
 
 > What am I pretending is available when it is not?
 
@@ -6613,6 +6760,8 @@ But VECTOR must equally permit the bounded negative result:
 > **No currently evidenced effective transformation is available within the declared window, capacity field, and relevant dependency structure.**
 
 This result is stronger than *no transformation has yet been imagined* and weaker than an ontological claim that transformation is impossible. It should be supported by a traceable transformation audit: actor or distributed actor configuration, target change, mechanism, effective capacity or authority, dependencies, window, evidence, and the expected change in \(N\) and/or \(R_O\).
+
+The bounded negative is not Option Blindness merely because it excludes a transformation. Blindness arises only where the exclusion outruns the audit or where uncertainty, invisibility, blockage, or current non-actionability is converted into a stronger negative status than the evidence supports.
 
 This matters because second-order agency can become a powerful form of self-immunization. Every tragic or constrained field could otherwise be answered with the claim that some sufficiently creative transformation must exist.
 
@@ -6985,7 +7134,7 @@ A claim may be considered saturated enough for its current scope where at least 
 4. materially relevant ROT (Rotation) families have been applied;
 5. the source conditions of orientation–enactment separation have been tested where relevant, with derived DIST used only as optional shorthand;
 6. the option field has been mapped at the necessary level;
-7. option invisibility and option illusion have been pressured;
+7. the option field has been pressured for invisibility, unsupported exclusion (Option Blindness), and unsupported inclusion (Option Illusion);
 8. real option-space transformability has been tested;
 9. the relevant consequence topology has been mapped;
 10. at least one serious rival has been allowed real winning conditions;
@@ -8453,11 +8602,31 @@ while, in bounded form:
 
 This is an evidential claim about the present transformation field, not an ontological claim that transformation is impossible.
 
-The claim is not that every difficult situation is tragic. The burden of Chapter 10 still applies: possible transformations must be tested seriously through actor, mechanism, authority/capacity, dependency, window, and evidence. Option invisibility must be challenged. Role and counterfactual rotations may reveal real alternatives. Distributed agency may matter. A newly evidenced option, transformation route, capacity distribution, reopened window, or rival reconstruction can therefore falsify the tragic classification. Imagination alone does not.
+The claim is not that every difficult situation is tragic. The burden of Chapter 10 still applies: possible transformations must be tested seriously through actor, mechanism, authority/capacity, dependency, window, and evidence. Relevant Option Invisibility must be challenged as a discovery problem, and the classification must survive **Option Blindness** pressure: absence of visibility, uncertainty, blockage, or current non-actionability must not have been used to justify stronger exclusion than the evidence supports. Role and counterfactual rotations may reveal real alternatives. Distributed agency may matter. Candidate escape routes must in turn survive the **Option Illusion** test rather than being admitted merely because they can be described. A newly evidenced option, transformation route, capacity distribution, reopened window, or rival reconstruction can therefore falsify the tragic classification. Imagination alone does not.
 
 But the opposite failure is equally serious.
 
 VECTOR calls it **Infinite Option Fantasy**: every tragic structure is answered with another hypothetical alternative until the analyst has defined away the possibility that real constraints remain.
+
+The resulting double boundary is:
+
+\[
+\boxed{
+TragicConstraint
+\neq
+\text{premature option-field closure},
+}
+\]
+
+and:
+
+\[
+\boxed{
+TragicConstraint
+\neq
+\text{failure to invent enough options}.
+}
+\]
 
 A theory of agency must be able to discover new options and to admit when none of the relevant transformations are effectively available.
 
@@ -9999,7 +10168,7 @@ Other new claims include:
 
 - explicit rotational robustness as a condition on directional warrant;
 - the distinction between robustness-bearing rotation and exploratory probe;
-- the paired model of Option Invisibility and Option Illusion;
+- the distinction between Option Invisibility as a legibility condition and Option Blindness / Option Illusion as opposite forms of Option-Field Misrepresentation;
 - Second-order Agency as a typed capacity inside the VECTOR option architecture;
 - Convergence Provenance and Echo Control;
 - Bounded Test-Burden Closure as current-burden closure without final truth or object closure;
@@ -10196,15 +10365,53 @@ A budget can be too small for correction or deliberately spent for reliable comm
 
 ## 18.4 Possibility and Agency Drift
 
-The option architecture can fail by understating agency or by inflating it.
+Possibility and agency drift can take several different forms. Some failures misrepresent the option field itself. Others are mechanisms that can generate such misrepresentation, possibilist pressures that do not yet assign a concrete option status, or downstream attribution errors. These types must not be collapsed.
 
-**Option-space naturalization** treats the current option field as given. The actor becomes a chooser among fixed alternatives even where real second-order transformation is available.
+The central option-field error is **Option-Field Misrepresentation**:
 
-**Option blindness** occurs when a relevantly real or transformably reachable alternative remains invisible because the frame, role, granularity, or learned legibility suppresses it.
+\[
+\boxed{
+OptionFieldMisrepresentation
+=
+UnsupportedExclusion
+\lor
+UnsupportedInclusion.
+}
+\]
 
-**Option illusion** produces the opposite error: an alternative is treated as effective although its required capacity, access, temporal window, authority, or material conditions are absent.
+Its two directions are **Option Blindness** and **Option Illusion**.
 
-**Special-case laundering** occurs when:
+**Option Invisibility is not itself an option-field failure.** An option may be relevantly real or transformably reachable while remaining absent from the current orientation. Invisibility becomes a blindness case only when that lack of visibility is converted into an unsupported exclusion, downgrade, or claim of non-existence, non-availability, or genuine lack of alternatives.
+
+**Option Blindness** is the negative direction of Option-Field Misrepresentation. It occurs when the analysis excludes more current or transformable possibility than the declared frame, role, time, capacity, dependency, and evidence conditions warrant. The paradigmatic move is:
+
+\[
+\neg Visible(o)
+\rightarrow
+\neg Available(o),
+\]
+
+or more strongly:
+
+\[
+\neg Visible(o)
+\rightarrow
+NoAlternative.
+\]
+
+But blindness is not limited to visibility error. It can also arise where `Unknown` is treated as unavailable, where a blocked path is treated as nonexistent, or where present non-actionability is treated as proof that no effective transformation route exists.
+
+**Option Illusion** is the positive direction of Option-Field Misrepresentation. It occurs when an alternative is included in the relevant effective option field although the conditions required for its availability, actionability, viability, or transformability are not supported. Visibility, conceivability, analyst construction, later capacity, or system-level possibility do not by themselves earn effective option status.
+
+A failure mechanism is not automatically identical to the option-field error type it can produce.
+
+**Option-space naturalization** treats the current option field as given. The actor becomes a chooser among fixed alternatives even where real second-order transformation may be available. Naturalization produces Option Blindness when that field assumption is used to exclude a sufficiently supported transformation route. A bounded negative after serious transformability testing is not blindness merely because it leaves the current field constrained.
+
+**Option-creation blindness** is a specialized blindness case concerning Second-Order Agency. Real effective capacity to alter option availability or relations is ignored, and the field is represented as non-transformable despite adequate support for the transformation mechanism, authority or capacity, dependencies, and temporal window.
+
+**Distributed agency erasure** can generate the same negative error where the analysis looks only for individual capacity even though the relevant transformation is available only through coordinated roles. The resulting collective possibility must still be evidenced; distributed agency is not inferred merely because coordination can be imagined.
+
+On the positive side, **Special-case laundering** occurs when:
 
 \[
 o\in\mathcal O(F^*)
@@ -10216,11 +10423,7 @@ is silently imported into:
 o\in\mathcal O(F_0)
 \]
 
-without any real transformation of the original field.
-
-**Infinite Option Fantasy** responds to every tragic or non-integrable configuration with the demand to invent another option. If no good path survives, the theory assumes that analysis or creativity must be deficient. Constraint is thereby defined out of existence.
-
-**Option-creation blindness** is the symmetric error. Real capacity to alter the field is ignored because the analyst treats all constraints as fixed.
+without any real transformation of the original field. The laundering mechanism produces Option Illusion when the constructed alternative is then counted as an effective option under the original frame.
 
 **Capacity inflation** converts conceptual possibility into effective power:
 
@@ -10230,13 +10433,13 @@ conceivable
 capacity.
 \]
 
-This is invalid even when the imagined transformation is attractive.
+This is invalid even when the imagined transformation is attractive. It becomes Option Illusion when the inflated capacity claim is used to promote the imagined route into the relevant effective option field.
 
-**Distributed agency erasure** looks only for individual capacity where the relevant transformation is possible only through coordinated roles.
+**Infinite Option Fantasy** is related but not identical to Option Illusion. It responds to every tragic or non-integrable configuration with the demand that some further alternative must exist. If no good path survives, the theory assumes that analysis or creativity must be deficient. Constraint is thereby defined out of existence. The possibilist pressure may generate Option Illusion when a concrete unsupported alternative is assigned effective status, but the fantasy can occur before any particular option has been so misassigned.
 
-**Distributed responsibility smearing** then overcorrects: because a transformation was collectively possible, every member of the collective is treated as though they possessed equal individual capacity and equal responsibility.
+**Distributed responsibility smearing** is downstream of the option field rather than another form of Option-Field Misrepresentation. Because a transformation was collectively possible, every member of the collective is treated as though they possessed equal individual capacity and equal responsibility. This converts a distributed agency relation into undifferentiated attribution and must remain distinct from the prior question of which options were effectively available to whom.
 
-These failures are unified by one boundary:
+These distinctions preserve a common boundary:
 
 \[
 \boxed{
@@ -10247,6 +10450,8 @@ These failures are unified by one boundary:
 \text{possibilism}.
 }
 \]
+
+Blindness can make a field falsely necessary by contracting possibility beyond the evidence. Illusion or possibilist drift can erase genuine constraint by expanding effective possibility beyond the evidence. Neither direction is licensed merely by the attractiveness of its conclusion.
 
 The actor is not merely carried by the field, but neither is the actor sovereign over the field.
 
@@ -10702,7 +10907,9 @@ This is a genuine architecture reduction rather than a terminological defense of
 
 ## 19.6 Option-Space Discrimination Failure
 
-Chapter 9 distinguishes:
+Chapter 9 now distinguishes several different kinds of option-field relation that must not be collapsed.
+
+The core option-status predicates are:
 
 \[
 conceivable,
@@ -10713,26 +10920,106 @@ available,
 \quad
 actionable,
 \quad
-viable,
+viable.
 \]
 
-alongside blocked, deferred, lost, invisible, and illusory options.
+Branch status is separately represented through relations such as:
 
-These distinctions matter only if their assignment is corrigibly auditable.
+\[
+realized,
+\quad
+rejected,
+\quad
+blocked,
+\quad
+deferred,
+\quad
+lost.
+\]
 
-VECTOR does not require a universal numerical threshold for each status. Non-metric does not mean arbitrary. Analysts should be able to identify the conditions that make an option structurally available but not actionable, visible but illusory, blocked rather than lost, or conceivable only under a changed frame.
+Option Invisibility is different again. It is a legibility condition in which a relevantly real or transformably reachable alternative is absent from the current orientation. Option Blindness and Option Illusion are not additional statuses or branch labels. They are opposite forms of Option-Field Misrepresentation: unsupported exclusion from the relevant current or transformable option field, and unsupported inclusion in the relevant effective option field.
 
-If two careful analyses of the same scene repeatedly produce incompatible option statuses and there is no way to trace the disagreement to frame, evidence, role, temporal position, or capacity assumptions, the option architecture is undercalibrated.
+These distinctions matter only if their assignment is corrigibly auditable. A richer vocabulary does not by itself improve discrimination.
 
-Likewise, if every named alternative can be reclassified after the fact to preserve the preferred conclusion, the taxonomy becomes rhetorical.
+VECTOR does not require a universal numerical threshold for each status. Non-metric does not mean arbitrary. Analysts should be able to identify the conditions that make an option structurally available but not actionable, blocked rather than lost, currently non-actionable but still transformably reachable, or conceivable only under a changed frame. They should also be able to distinguish evidence insufficiency from negative option status:
+
+\[
+\boxed{
+Unknown
+\neq
+Unavailable
+\neq
+Available.
+}
+\]
+
+If two careful analyses of the same scene repeatedly produce incompatible option statuses and there is no way to trace the disagreement to frame, evidence, role, temporal position, capacity, dependency, or calibration assumptions, the option architecture is undercalibrated.
+
+The same burden now applies to the distinction between Option Invisibility and Option Blindness. If VECTOR cannot distinguish a case in which an option was simply not legible from a case in which the analysis converted that lack of legibility into unsupported exclusion, then the Blindness category adds terminology without adding discriminative purchase.
+
+\[
+\boxed{
+OptionInvisibility
+\neq
+OptionBlindness
+}
+\]
+
+must therefore remain an operational distinction, not merely a definition.
+
+A second failure appears if Option Blindness cannot be distinguished from a warranted bounded negative. After relevant option, role, capacity, dependency, temporal, and transformation pressure, an analysis may responsibly conclude:
+
+> **No currently evidenced effective transformation is available within the declared window, capacity field, and relevant dependency structure.**
+
+That conclusion is not Option Blindness merely because it excludes a transformation. Blindness begins where the exclusion outruns the evidence or the relevant pressure actually applied. If every bounded negative can be destabilized by naming another conceivable route, the category has become possibilistically overinclusive and must be narrowed.
+
+The positive side has an equivalent burden. A special-case construction, hypothetical route, or altered-frame alternative may remain analytically valid as a probe without belonging to the effective option field. If VECTOR cannot distinguish:
+
+\[
+Probe(o)
+\]
+
+from:
+
+\[
+EffectiveOption(o),
+\]
+
+then Option Illusion becomes too coarse and analytical construction is penalized merely for being hypothetical. The required boundary remains:
+
+\[
+\boxed{
+invalid\ as\ option
+\not\Rightarrow
+invalid\ as\ probe.
+}
+\]
+
+Option discrimination must also remain bidirectional in practice. A successful Blindness test may require the represented field to expand because a real or transformably reachable alternative was unsupportedly excluded. A successful Illusion test may require the represented field to contract because a merely conceivable, role-inaccessible, temporally unavailable, or otherwise non-effective alternative was unsupportedly included.
+
+Thus:
+
+\[
+\boxed{
+\text{option-field correction must permit both warranted expansion and warranted contraction.}
+}
+\]
+
+A framework that systematically discovers only more options risks possibilism. A framework that systematically removes options risks fatalistic closure. Neither direction is privileged by the taxonomy itself.
+
+The strongest failure condition is reflexive. Option Blindness and Option Illusion must not become post hoc labels by which VECTOR preserves a preferred result regardless of what the option field contains. If one interpretation can always be dismissed as Blindness, the opposite as Illusion, a demand for further search as Infinite Option Fantasy, and a bounded negative as option-space naturalization, then the framework has acquired a stabilization vocabulary rather than a discriminative architecture.
+
+That possibility must be allowed to count against VECTOR. The proper response is not to add another failure label. It is to simplify, narrow, recalibrate, or remove the option distinction that failed to discriminate.
 
 The theory must therefore demonstrate:
 
 \[
 \boxed{
-\text{corrigible option-status discrimination}.
+\text{corrigible bidirectional option-status discrimination}.
 }
 \]
+
+This means more than consistent terminology. The option architecture must be able to expose its evidential basis, change its assignments when pressure succeeds, preserve Unknown where evidence does not resolve status, and lose theoretical complexity where the added distinctions do not survive application.
 
 If it cannot, the option layer must be simplified or scoped more narrowly.
 
@@ -11291,7 +11578,7 @@ ValueToMaximize.
 
 The positive claim is instead that the remaining correction budget is often relevant to how an orientation should be understood, tested, and enacted.
 
-## 20.4 Real and Illusory Possibility
+## 20.4 Bidirectional Possibility Discrimination
 
 VECTOR can distinguish different statuses of possibility:
 
@@ -11307,11 +11594,41 @@ actionable,
 viable.
 \]
 
-It can also distinguish Option Invisibility from Option Illusion.
+It can also distinguish branch status from option status, preserve Unknown where evidence does not resolve the relation, and separate a condition of legibility from an error of option-field representation.
 
-This matters because orientation quality cannot be inferred from the number of alternatives an analyst can name. A field containing many imaginary or role-inaccessible alternatives may be less well understood than a smaller field whose real constraints are correctly typed.
+In particular:
 
-The positive contribution is therefore **possibility discrimination**, not option maximization.
+\[
+\boxed{
+OptionInvisibility
+\neq
+OptionBlindness.
+}
+\]
+
+An alternative may be real or transformably reachable while absent from the current orientation. That divergence is not by itself a failure. Option Blindness begins only when a relevant possibility is unsupportedly excluded, downgraded, or treated as absent. Option Illusion is the opposite error: a possibility is unsupportedly included in the relevant effective option field despite missing frame, role, capacity, temporal, dependency, or other constitutive conditions.
+
+The contribution is therefore bidirectional. VECTOR can pressure a represented option field for unsupported contraction and unsupported expansion:
+
+\[
+\boxed{
+OptionBlindness
+=
+UnsupportedExclusion,
+\qquad
+OptionIllusion
+=
+UnsupportedInclusion.
+}
+\]
+
+This does not mean that VECTOR guarantees correct reconstruction of the real option field. Chapter 19 makes the opposite burden explicit: if the distinctions cannot be calibrated, corrected, distinguished from warranted bounded negatives and legitimate probes, or exposed to rival pressure without becoming post hoc stabilization vocabulary, the option architecture must be reduced.
+
+The gain is narrower. VECTOR provides a typed and corrigible architecture capable of asking whether an apparent absence is evidentially warranted and whether an apparent possibility is effectively supported. It can therefore reveal that a necessity claim excluded too much, that a creativity claim included too much, or that the available evidence warrants neither conclusion and must remain Unknown.
+
+This matters because orientation quality cannot be inferred from the number of alternatives an analyst can name. A larger field may be inflated by imaginary, role-inaccessible, temporally unavailable, or special-case alternatives. A smaller field may be artificially narrowed by invisibility, fixed-field assumptions, ignored distributed capacity, or unsupported necessity claims. Conversely, a genuinely constrained or tragic field need not become defective merely because no further effective option survives appropriate pressure.
+
+The positive contribution is therefore **possibility discrimination, not option maximization**. More precisely, it is the possibility of **corrigible bidirectional option-status discrimination** under declared actor, role, frame, time, capacity, dependency, and evidence conditions.
 
 ## 20.5 Constraint-Bound Second-Order Agency
 
@@ -12501,7 +12818,7 @@ preserved.
 }
 \]
 
-Option Invisibility is the paradigmatic relation:
+Option Invisibility is the paradigmatic legibility relation:
 
 \[
 Available_a(o,t)
@@ -12509,7 +12826,43 @@ Available_a(o,t)
 \neg Visible_a(o,t).
 \]
 
-Option Illusion occurs where an alternative is represented as an effective option although the conditions required for its relevant availability or actionability are absent. No single symbol is required for all forms of illusion; the status failure should be recorded explicitly.
+Option Invisibility records a divergence between option status and current legibility. It does not by itself assign an option-field error.
+
+Option Blindness records unsupported exclusion from the relevant current or realistically transformable option field:
+
+\[
+\boxed{
+OptionBlindness_a(o,t\mid F,Q)
+:=
+UnsupportedExclusion_a(o,t\mid F,Q).
+}
+\]
+
+Option Illusion records unsupported inclusion in the relevant effective option field:
+
+\[
+\boxed{
+OptionIllusion_a(o,t\mid F,Q)
+:=
+UnsupportedInclusion_a(o,t\mid F,Q).
+}
+\]
+
+Accordingly:
+
+\[
+\boxed{
+OptionFieldMisrepresentation
+=
+OptionBlindness
+\lor
+OptionIllusion.
+}
+\]
+
+`Unsupported` means that the represented option-status assignment goes beyond what the declared frame, role, time, capacity, dependency, and evidence conditions currently warrant. The notation does not presuppose access to a complete or final option field. Blindness and Illusion are opposite directions of status error, not claims that their object ranges are otherwise identical: Blindness may concern unsupported exclusion of a current effective possibility or a realistically transformable one, while Illusion concerns unsupported inclusion in the relevant effective option field.
+
+The evidence-status boundary remains active in both directions. Converting `Unknown` into an unsupported negative status can generate Option Blindness; converting it into an unsupported positive effective-option status can generate Option Illusion.
 
 A special-case probe under an altered frame may produce:
 
@@ -12994,15 +13347,20 @@ A DIST label without its source relations adds no warrant.
 
 ### Option Field
 
-For each material option, keep **status** separate from **evidence status**.
+For each material option, keep **option status**, **branch status where relevant**, and **evidence status** distinct.
 
-Possible option statuses include:
+Option-status predicates include:
 
 - conceivable;
 - visible;
 - structurally available;
 - effectively actionable;
-- structurally viable;
+- structurally viable.
+
+Branch status, where material, includes:
+
+- realized;
+- rejected;
 - blocked;
 - deferred;
 - lost.
@@ -13023,7 +13381,12 @@ For actionability, inspect where relevant:
 
 Use viability relationally, e.g. \(Viable_a(o,t\mid G,Q)\), rather than as a free-standing quality label.
 
-Also record Option Invisibility, Option Illusion, and Special-Case Probes where material.
+Also record, where material:
+
+- Option Invisibility as a legibility condition;
+- Option Blindness or Option Illusion as Option-Field Misrepresentation;
+- the specific unsupported exclusion or inclusion claimed;
+- Special-Case Probes separately from effective option status.
 
 ### Transformability / Second-Order Agency
 
@@ -13220,6 +13583,7 @@ vector_record:
     options:
       - option:
         status:
+        branch_status:
         evidence_status:
         authority:
         access:
@@ -13232,7 +13596,11 @@ vector_record:
         procedural_permission:
         viability_relative_to:
     option_invisibility:
-    option_illusion:
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions:
+      illusion:
+        unsupported_inclusions:
     special_case_probes:
 
   transformability:
@@ -13890,6 +14258,8 @@ TragicConstraint(G,R_G).
 }
 \]
 
+The bounded negative is admissible only after relevant Option Invisibility and unsupported exclusion have received pressure appropriate to the claim, including real option-space transformability where material. A candidate route defeats the tragic classification only if its relevant option status is itself supported; merely constructing an escape route does not bypass Option Illusion. Conversely, this burden does not require the analyst to fabricate another alternative where no effective route is evidenced.
+
 The claim remains falsifiable by a newly evidenced real option, a newly evidenced transformation route, a materially different capacity distribution, a reopened window, or a rival account showing that the constraint field was misdescribed. Imagination alone does not falsify it; nor does missing imagination justify it.
 
 \[
@@ -14092,7 +14462,7 @@ The claim would lose if the extra near-miss layer materially reduced reporting q
 
 ### ROT pressure
 
-An affected-role ROT (Rotation) examines the same procedures from the position of staff who bear the safety exposure. The reference, question, and time remain stable. The rotation reveals near-miss exposure that was invisible in \(X\) because no outage occurred. The comparison does not reverse.
+An affected-role ROT (Rotation) examines the same procedures from the position of staff who bear the safety exposure. The reference, question, and time remain stable. The rotation reveals near-miss exposure that \(X\) does not preserve because no outage occurred. The comparison does not reverse.
 
 A temporal ROT (Rotation) then asks whether the difference survives across several review cycles. The relevant result remains: \(Y\)'s additional information continues to support correction rather than accumulating as unused record volume.
 
@@ -14332,6 +14702,20 @@ It is:
 
 > premature enactment relative to available correction space.
 
+For this fixture, the warranted case-level relation is:
+
+\[
+\boxed{
+DIR
+\not\Rightarrow
+E_{immediate}.
+}
+\]
+
+The fixture does **not** itself establish Robust Orientation. The materially relevant affected-role ROT and serious-rival comparison remain open at the pre-binding point, so the stronger robustness label has not yet been earned. That open burden does not prevent the timing diagnosis: public binding occurred before cheap material correction pressure was used.
+
+Chapter 12 preserves the stronger general boundary:
+
 \[
 \boxed{
 DIR_{robust}
@@ -14339,6 +14723,8 @@ DIR_{robust}
 E_{immediate}.
 }
 \]
+
+E05 therefore separates a case-level diagnosis of premature enactment from the stronger general claim about enactment even after Robust Orientation has been earned.
 
 ---
 
@@ -14350,7 +14736,7 @@ A team keeps a reversible pilot under review because it wants one more round of 
 
 The pilot can be extended only before a contractual deadline. The additional review adds little new pressure and the deadline passes.
 
-A formerly available branch becomes:
+A formerly available branch changes branch status:
 
 \[
 Deferred
@@ -14358,7 +14744,9 @@ Deferred
 Lost.
 \]
 
-The failure is not lack of reflection. It is treating continued delay and preserved analytical distance as though they preserved the real option.
+`Deferred` and `Lost` track the trajectory of the extension branch. They do not replace the separate option-status predicates used to type conceivability, visibility, structural availability, effective actionability, or viability.
+
+The failure is not lack of reflection. It is treating continued delay and preserved analytical distance as though they preserved the practical option.
 
 \[
 \boxed{
@@ -14378,25 +14766,29 @@ adequacy\uparrow.
 }
 \]
 
+The post-deadline record therefore marks the extension branch as `Lost` without inventing a new positive option-status predicate for the closed branch.
+
 ---
 
 ## E.7 Option Invisibility
 
 **Type:** Micro-Countercase
 
-Two departments are assumed to face only:
+Two departments' current orientation represents:
 
 \[
 A=\text{keep current process},
 \]
 
-or:
+and:
 
 \[
 B=\text{replace it entirely}.
 \]
 
-An inside/outside rotation reveals that a shared support unit already possesses authority to separate one blocking dependency. This makes a staged transition \(C\) genuinely available.
+The fixture does **not** treat this A/B representation as an exhaustive claim that no further effective option exists. The tempting misclassification is instead that a path made visible by ROT must have been created by ROT.
+
+An inside/outside rotation reveals that a shared support unit already possesses authority to separate one blocking dependency. This makes a staged transition \(C\) genuinely available and actionable in the same organizational scene.
 
 The rotation did not create \(C\).
 
@@ -14412,7 +14804,19 @@ Available(C)
 
 before ROT.
 
-The correct classification is Option Invisibility, not Option Creation.
+The correct classification is **Option Invisibility**, not Option Creation.
+
+Crucially:
+
+\[
+\boxed{
+\neg Visible(C)
+\not\Rightarrow
+\neg Available(C).
+}
+\]
+
+No Option Blindness is diagnosed merely from \(C\)'s prior nonvisibility. Blindness would require an unsupported exclusion of the path from the relevant current or transformably reachable option field.
 
 ---
 
@@ -14436,7 +14840,7 @@ The effective option test asks whether the employee actually possesses:
 
 None of these conditions holds.
 
-The manager's claim is therefore not merely a demanding choice. It is an option-status error.
+The manager's claim therefore does more than describe a difficult visible path. It **unsupportedly includes** that path in the employee's relevant effective option field.
 
 ### Output
 
@@ -14450,7 +14854,15 @@ but:
 \neg Actionable(o).
 \]
 
-The option is illusory for the relevant role under the current frame.
+The positive option-field error is:
+
+\[
+\boxed{
+OptionIllusion
+=
+UnsupportedInclusion.
+}
+\]
 
 ### Rotation
 
@@ -14484,7 +14896,9 @@ available\ to\ A
 available\ to\ B.
 \]
 
-VECTOR can still ask whether second-order agency could change the conditions. But until the relevant authority, resource, or cooperation is actually obtained, the delegation does not belong to the employee's effective option field.
+VECTOR can still ask whether second-order agency could change the conditions. But until the relevant authority, resource, cooperation, or timing condition is actually changed, the delegation does not belong to the employee's effective option field.
+
+Option-Field Misrepresentation does not by itself establish responsibility, blame, obligation, or authority.
 
 ---
 
@@ -14527,7 +14941,9 @@ invalid\ as\ probe.
 }
 \]
 
-The counterfactual increases orientation without increasing the real option set.
+The counterfactual increases orientation without increasing the current effective option field.
+
+The probe does not become an Option Illusion merely by being constructed. Illusion would arise only if the \(F^*\) route were imported into \(F_0\) as an effective option without sufficient support.
 
 ---
 
@@ -14589,7 +15005,7 @@ The team did not merely choose among a fixed set. It altered the relation among 
 
 ### Boundary
 
-The same scenario described only in a hypothetical design document would not yet count as real option-space transformation. Effective capacity, implementation, and relevant conditions matter.
+The same scenario described only in a hypothetical design document would not yet count as real option-space transformation. The positive transformation claim is earned by the supplied mechanism, effective authority/capacity, and implementation; it is not promoted from conceivability alone.
 
 \[
 \boxed{
@@ -14610,6 +15026,8 @@ praxis\ transformation.
 A continuity-critical service has two unattractive current staffing responses during a short absence window. A project lead proposes a third path: temporarily move qualified staff from a neighboring unit and preserve both functions.
 
 The proposal is not absurd. The neighboring unit has people with the relevant skills, and a transfer mechanism exists in the organization. The initial analysis therefore treats the field-transformation claim as a serious candidate rather than dismissing it as imagination.
+
+The stronger baseline claim goes further: it promotes the proposed reassignment into the **current effective option field** and treats it as a third current staffing option.
 
 ### Transformation claim
 
@@ -14637,6 +15055,16 @@ The audit finds:
 
 The proposed third path therefore remains useful as a probe: it identifies an institutional dependency that could be redesigned for future cases. It is not a current effective transformation.
 
+The stronger baseline claim nevertheless includes it in the current effective option field despite the missing constitutive conditions. That promotion is:
+
+\[
+\boxed{
+OptionIllusion=UnsupportedInclusion.
+}
+\]
+
+The probe is not the illusion. The unsupported current-effective-option assignment is.
+
 ### Output
 
 \[
@@ -14657,9 +15085,17 @@ conceivable\ field\ transformation
 }
 \]
 
+After the declared mechanism, authority/capacity, dependency, and timing audit, the bounded negative is warranted:
+
+> **No currently evidenced effective transformation is available within the declared window, capacity field, and relevant dependency structure.**
+
+This is **not Option Blindness**. The exclusion follows from the positively specified failure of the practical conditions within the declared window, not from mere nonvisibility, Unknown, or unsupported exclusion.
+
 ### What does not follow
 
-The collapse does not establish that cross-unit reassignment is impossible in every future case. A changed authorization structure, a reopened window, or evidence of a distributed actor configuration could produce a new transformation claim. The negative result is bounded to the current mechanism, capacity field, and time.
+The collapse does not establish that cross-unit reassignment is impossible in every future case. A changed authorization structure, a reopened window, or evidence of a distributed actor configuration could produce a new transformation claim. The negative result is bounded to the current mechanism, capacity field, dependencies, and time.
+
+A future or changed-condition route may remain a valid probe without being imported into the present effective option field.
 
 ---
 
@@ -14669,23 +15105,48 @@ The collapse does not establish that cross-unit reassignment is impossible in ev
 
 No individual department can authorize, fund, and implement a needed change.
 
-Three departments acting together can.
-
-Thus:
+An individual-only actor model therefore reasons:
 
 \[
 Capacity(a_i)<Requirement
+\quad\forall i
 \]
 
-for each individual unit, while:
+and then concludes:
+
+\[
+NoEffectiveTransformation.
+\]
+
+But three departments acting together can produce the change:
 
 \[
 Capacity(a_1+a_2+a_3)\ge Requirement.
 \]
 
-The field contains distributed second-order agency.
+The individual-only reconstruction has therefore excluded a transformation that the fixture establishes as available at the coordinated actor configuration. The error is an unsupported exclusion through distributed-agency erasure:
 
-But:
+\[
+\boxed{
+DistributedAgencyErasure
+\rightarrow
+OptionBlindness.
+}
+\]
+
+This Blindness result does not require prior Option Invisibility. The error lies in treating individual incapacity as evidence that the effective / transformably reachable field contains no such transformation.
+
+The corrected analysis preserves:
+
+\[
+\boxed{
+distributed\ capacity
+\neq
+equal\ individual\ capacity
+}
+\]
+
+and separately:
 
 \[
 \boxed{
@@ -14695,7 +15156,7 @@ equal\ individual\ responsibility.
 }
 \]
 
-A unit without the relevant authority does not acquire the same attribution merely because the collective could have acted.
+A unit without the relevant authority does not acquire the same attribution merely because the collective could have acted. Option Blindness in the individual-only reconstruction likewise does not by itself establish actor fault, responsibility, or obligation.
 
 ---
 
@@ -14747,7 +15208,7 @@ unseen\neq invented.
 }
 \]
 
-Unknown residue can motivate further inquiry. It cannot function as a universal defeat condition for an otherwise supported DIR or option claim.
+Unknown residue can motivate further inquiry. It cannot function as a universal defeat condition for an otherwise supported DIR or option claim. `Unknown/Residual` here is a consequence-evidence status: it neither establishes a positive consequence nor licenses an option-status inference.
 
 ---
 
@@ -14857,7 +15318,7 @@ OUGHT_{constraint}(G,\{X,Y\}).
 }
 \]
 
-It does not yet select between \(X\) and \(Y\).
+It does not yet select between \(X\) and \(Y\). The response class remains evidentially bounded: a newly evidenced additional effective response satisfying \(G\) would expand \(R_G\), while a merely visible but practically unsupported route may not be inserted into it.
 
 If a later failure removes \(Y\), then:
 
@@ -14871,7 +15332,7 @@ At that point:
 X
 \]
 
-is practically necessary **for maintaining \(G\)**.
+is practically necessary **for maintaining \(G\)**, conditional on the continued operation of \(G\) and on the evidence-typed response field. A newly evidenced additional effective response satisfying \(G\) would defeat the singleton necessity claim; mere visibility alone does not warrant adding a response to \(R_G\).
 
 ### Revision variant
 
@@ -14891,6 +15352,8 @@ costless\ escape.
 }
 \]
 
+`Revision(G)` is not another response satisfying the unchanged \(G\). It changes the constraint architecture and therefore yields a new constraint claim.
+
 ### Boundary
 
 \[
@@ -14901,7 +15364,7 @@ morally\ required.
 }
 \]
 
-VECTOR reconstructs the constraint relation. It does not establish the legitimacy of \(G\) or the moral status of the remaining burden.
+VECTOR reconstructs the constraint relation. It does not establish the legitimacy of \(G\) or the moral status of the remaining burden. The necessity claim is bounded by corrigible bidirectional option-status discrimination: unsupported exclusion can make the response field too narrow, while unsupported inclusion can make it too broad.
 
 ---
 
@@ -14946,17 +15409,37 @@ TragicConstraint(G,R_G).
 
 The output does not tell the institution which loss is morally justified.
 
-It does something prior: it refuses to falsify the option field by pretending that a non-lossful current response exists.
+It does something prior: it refuses both to prematurely contract the option field through unsupported exclusion and to inflate it by pretending that a non-lossful current response exists.
 
 ### Discrimination
 
-The case distinguishes tragedy from option blindness.
+The case distinguishes tragedy from both premature closure and compulsory possibility.
 
-If a real fourth path had been invisible, VECTOR should expose it.
+If a real fourth path had been invisible, VECTOR should expose it. But prior nonvisibility alone is not Option Blindness. Blindness would arise where nonvisibility, Unknown status, blockage, or current non-actionability is used to exclude a real effective or realistically transformable route without sufficient support.
 
-If a real transformation could be produced in time, VECTOR should include it.
+If a real transformation could be produced in time, VECTOR should include it. Hypothetical \(D\), however, remains a legitimate probe rather than a current effective option because its required means are positively unavailable within the declared window. Excluding \(D\) on that bounded evidence is not Option Blindness; promoting it despite those conditions would be Option Illusion.
 
-But where neither is currently evidenced:
+Thus:
+
+\[
+\boxed{
+TragicConstraint
+\neq
+premature\ option\text{-}field\ closure
+}
+\]
+
+and:
+
+\[
+\boxed{
+TragicConstraint
+\neq
+failure\ to\ invent\ enough\ options.
+}
+\]
+
+Successful Blindness pressure does not imply that another effective option must exist. Where no such route is currently evidenced after the declared pressure:
 
 \[
 \boxed{
@@ -15203,7 +15686,7 @@ VECTOR yields the bounded technical question to the rival model. This is a genui
 
 ### What does not follow
 
-The result does not show that the rival answers questions about legitimacy, burden distribution, hidden options, or practical attribution. Nor does VECTOR assimilate the rival as “really a VECTOR model.” The models answer different burdens; for this burden, the rival wins.
+The result does not show that the rival answers questions about legitimacy, burden distribution, option-field legibility or misrepresentation, or practical attribution. Nor does VECTOR assimilate the rival as “really a VECTOR model.” The models answer different burdens; for this burden, the rival wins.
 
 \[
 \boxed{
@@ -15382,7 +15865,7 @@ A\prec_{V,Q}B.
 
 VECTOR may record this externally calibrated relation as a bounded DIR (Direction), but only by declaring the rival calibration as part of its warrant source. Reusing the DIR notation does not transfer the rival's calibration back into VECTOR as endogenous warrant.
 
-More importantly, the rival shows that in this **calibrated, commensurable multi-criteria class**, general ROT (Rotation) does not earn primary standalone status merely because stakeholder priorities differ. Where those differences are already represented by externally supported parameter ranges and sensitivity analysis, ROT contributes additional discrimination only if it exposes a relation not represented in the rival model—for example an omitted role, a false commensurability assumption, an option illusion, or a claim-critical consequence outside the supplied criterion set.
+More importantly, the rival shows that in this **calibrated, commensurable multi-criteria class**, general ROT (Rotation) does not earn primary standalone status merely because stakeholder priorities differ. Where those differences are already represented by externally supported parameter ranges and sensitivity analysis, ROT contributes additional discrimination only if it exposes a relation not represented in the rival model—for example an omitted role, a false commensurability assumption, option-field misrepresentation through unsupported exclusion or unsupported inclusion, or a claim-critical consequence outside the supplied criterion set.
 
 The loss is therefore not merely case-level:
 
@@ -15406,7 +15889,7 @@ StandaloneVECTOR
 }
 \]
 
-VECTOR can still audit whether the criteria omit a claim-critical role, whether the weight elicitation lacks external warrant, whether a non-compensatory relation was wrongly made commensurable, whether the option field is false, or whether a later practical-attribution question exceeds the decision model. Those are different burdens. They do not restore primary DIR–ROT discrimination for the bounded question the rival has already carried better.
+VECTOR can still audit whether the criteria omit a claim-critical role, whether the weight elicitation lacks external warrant, whether a non-compensatory relation was wrongly made commensurable, whether the represented option field exhibits unsupported exclusion or unsupported inclusion, or whether a later practical-attribution question exceeds the decision model. Those are different burdens. They do not restore primary DIR–ROT discrimination for the bounded question the rival has already carried better.
 
 ### What would have defeated the rival
 
@@ -15891,7 +16374,9 @@ This section states positively what PMS–VECTOR introduces rather than searchin
 
 | Claim | Status |
 |---|---:|
-| Paired Option Invisibility / Option Illusion architecture | `N` |
+| `Option Invisibility ≠ Option Blindness`: legibility condition versus unsupported exclusion | `N` |
+| Option Blindness / Option Illusion as opposite forms of Option-Field Misrepresentation | `N` |
+| Exact `UnsupportedExclusion` / `UnsupportedInclusion` audit notation | `P` |
 | Special-case probe versus original-frame option status | `N` |
 | Option field represented through nodes and relations | `N` |
 | Second-order Agency as effective transformation of option availability or relations inside VECTOR | `N` |

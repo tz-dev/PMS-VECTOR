@@ -131,7 +131,11 @@ vector_record:
     actor_or_role: null
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -209,10 +213,11 @@ vector_record:
       - >-
         Scene B can motivate further inquiry, but it remains Unknown/Residual
         until a bearer, temporal relation, mechanism/source, and evidential
-        bridge are supplied.
+        bridge are supplied. Unknown/Residual here is a consequence-evidence
+        status and does not by itself license any option-status inference.
 
   result:
-    status: Bounded Orientation
+    status: Revision Required
     surviving_claim: >-
       Scene A may carry a delayed/downstream consequence as traceably inferred
       because the bearer, temporal relation, mechanism, and evidential bridge

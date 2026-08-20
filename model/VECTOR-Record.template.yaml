@@ -212,16 +212,42 @@ vector_record:
 
   # ---------------------------------------------------------------------------
   # OPTION SPACE
-  # CONDITIONAL — use where possibility, actionability, viability, invisibility,
-  # illusion, or special-case probes are material.
+  # CONDITIONAL — use where possibility, actionability, viability, option
+  # legibility, option-field misrepresentation, branch status, or special-case
+  # probes are material.
   #
-  # Keep OPTION STATUS separate from EVIDENCE STATUS.
+  # Keep OPTION STATUS, BRANCH STATUS, and EVIDENCE STATUS distinct.
+  #
+  # Option-status predicates:
+  #   conceivable; visible; structurally available; effectively actionable;
+  #   structurally viable.
+  #
+  # Branch status where material:
+  #   realized; rejected; blocked; deferred; lost.
+  #
+  # Evidence status remains separate.
   # Unknown != Available.
   # Unknown != Unavailable.
   #
   # No automatic implication ladder is licensed:
   # conceivable -> visible -> structurally available -> effectively actionable
   # -> structurally viable is NOT automatic.
+  #
+  # Option-field firewalls:
+  #   Option Invisibility != Option Blindness.
+  #   Option Invisibility is a legibility condition, not by itself an
+  #   option-field error.
+  #   Unknown != Unavailable.
+  #   Blocked != Nonexistent.
+  #   Not actionable now != not transformably reachable.
+  #   A bounded negative after adequate pressure != Option Blindness by default.
+  #   Visible != EffectiveOption.
+  #   Conceivable != effective capacity.
+  #   Special-case probe != effective option.
+  #   Later capacity != earlier actionability.
+  #
+  # Option-field misrepresentation does not by itself establish responsibility,
+  # blame, obligation, or authority.
   #
   # For actionability, populate material authority/access/means/information/
   # window/dependency/control/cost/permission fields rather than inferring
@@ -232,6 +258,7 @@ vector_record:
     options:
       - option:
         status:
+        branch_status:
         evidence_status:
         authority:
         access:
@@ -244,7 +271,11 @@ vector_record:
         procedural_permission:
         viability_relative_to:
     option_invisibility:
-    option_illusion:
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions:
+      illusion:
+        unsupported_inclusions:
     special_case_probes:
 
   # ---------------------------------------------------------------------------

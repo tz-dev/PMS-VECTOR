@@ -290,7 +290,11 @@ vector_record:
     actor_or_role: null
     options: []
     option_invisibility: null
-    option_illusion: null
+    option_field_misrepresentation:
+      blindness:
+        unsupported_exclusions: []
+      illusion:
+        unsupported_inclusions: []
     special_case_probes: []
 
   transformability:
@@ -360,9 +364,9 @@ vector_record:
       - The admitted weight path is invented or selected only to protect one outcome.
       - A material relation cannot responsibly be represented on the commensurable scale.
       - >-
-        VECTOR exposes an omitted relation, option illusion, false
-        commensurability assumption, or claim-critical consequence outside the
-        supplied criterion set.
+        VECTOR exposes an omitted relation, option-field misrepresentation through
+        unsupported exclusion or unsupported inclusion, false commensurability
+        assumption, or claim-critical consequence outside the supplied criterion set.
 
   result:
     status: Bounded Orientation
