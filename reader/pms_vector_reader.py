@@ -1933,6 +1933,10 @@ class PmsVectorReaderApp(tk.Tk):
         self.bold_italic_font = tkfont.Font(family="Segoe UI", size=10, weight="bold", slant="italic")
         self.mono_font = tkfont.Font(family="Consolas", size=10)
         self.math_font = tkfont.Font(family="Cambria Math", size=11)
+        # Small font used only for blank Markdown source lines.  A regular
+        # body-font newline creates a full text row and makes the reader look
+        # much more vertically spread out than the source structure requires.
+        self.paragraph_gap_font = tkfont.Font(family="Segoe UI", size=4)
         self.heading_font_1 = tkfont.Font(family="Segoe UI", size=18, weight="bold")
         self.heading_font_2 = tkfont.Font(family="Segoe UI", size=15, weight="bold")
         self.heading_font_3 = tkfont.Font(family="Segoe UI", size=13, weight="bold")
@@ -2138,7 +2142,10 @@ class PmsVectorReaderApp(tk.Tk):
 
         ttk.Label(self.toolbar, text="Search").pack(side=tk.LEFT)
         self.search_var = tk.StringVar()
-        self._search_entry = ttk.Entry(self.toolbar, textvariable=self.search_var, width=6)
+        # Keep the search field usable even when the toolbar is crowded.
+        # ttk.Entry width is measured in average characters, so 18 gives a
+        # practical minimum without consuming excessive toolbar space.
+        self._search_entry = ttk.Entry(self.toolbar, textvariable=self.search_var, width=18)
         self._search_entry.pack(side=tk.LEFT, padx=(6, 4))
         self._search_entry.bind("<Return>", lambda event: self.run_search())
         ttk.Button(self.toolbar, text="Search", command=self.run_search).pack(side=tk.LEFT)
@@ -2197,19 +2204,22 @@ class PmsVectorReaderApp(tk.Tk):
         ).pack(side=tk.RIGHT, padx=(0, 6))
 
     def _configure_text_tags(self) -> None:
-        self.text.tag_configure("h1", font=self.heading_font_1, spacing1=22, spacing3=12, lmargin1=14, lmargin2=14)
-        self.text.tag_configure("h2", font=self.heading_font_2, spacing1=20, spacing3=10, lmargin1=14, lmargin2=14)
-        self.text.tag_configure("h3", font=self.heading_font_3, spacing1=16, spacing3=8, lmargin1=14, lmargin2=14)
-        self.text.tag_configure("h4", font=self.heading_font_4, spacing1=14, spacing3=7, lmargin1=14, lmargin2=14)
-        self.text.tag_configure("h5", font=self.heading_font_4, spacing1=12, spacing3=6, lmargin1=14, lmargin2=14)
-        self.text.tag_configure("h6", font=self.heading_font_4, spacing1=12, spacing3=6, lmargin1=14, lmargin2=14)
+        # Compact reader rhythm: headings retain separation, but no longer
+        # stack large tag margins on top of full-height blank source lines.
+        self.text.tag_configure("h1", font=self.heading_font_1, spacing1=14, spacing3=8, lmargin1=14, lmargin2=14)
+        self.text.tag_configure("h2", font=self.heading_font_2, spacing1=12, spacing3=7, lmargin1=14, lmargin2=14)
+        self.text.tag_configure("h3", font=self.heading_font_3, spacing1=10, spacing3=6, lmargin1=14, lmargin2=14)
+        self.text.tag_configure("h4", font=self.heading_font_4, spacing1=8, spacing3=5, lmargin1=14, lmargin2=14)
+        self.text.tag_configure("h5", font=self.heading_font_4, spacing1=7, spacing3=4, lmargin1=14, lmargin2=14)
+        self.text.tag_configure("h6", font=self.heading_font_4, spacing1=7, spacing3=4, lmargin1=14, lmargin2=14)
 
-        self.text.tag_configure("body", font=self.base_font, lmargin1=8, lmargin2=8)
+        self.text.tag_configure("body", font=self.base_font, lmargin1=8, lmargin2=8, spacing1=0, spacing2=0, spacing3=0)
+        self.text.tag_configure("paragraph_gap", font=self.paragraph_gap_font, spacing1=0, spacing2=0, spacing3=0)
         self.text.tag_configure("bold", font=self.bold_font)
         self.text.tag_configure("italic", font=self.italic_font)
         self.text.tag_configure("bold_italic", font=self.bold_italic_font)
-        self.text.tag_configure("list", font=self.base_font, lmargin1=28, lmargin2=46, spacing1=1, spacing3=1)
-        self.text.tag_configure("code", font=self.mono_font, background="#f4f4f4", lmargin1=28, lmargin2=28, spacing1=8, spacing3=8)
+        self.text.tag_configure("list", font=self.base_font, lmargin1=28, lmargin2=46, spacing1=0, spacing3=0)
+        self.text.tag_configure("code", font=self.mono_font, background="#f4f4f4", lmargin1=28, lmargin2=28, spacing1=4, spacing3=4)
         self.text.tag_configure("inline_code", font=self.mono_font, background="#f4f4f4")
         self.text.tag_configure("math_inline", font=self.math_font)
         self.text.tag_configure(
@@ -2219,8 +2229,9 @@ class PmsVectorReaderApp(tk.Tk):
             lmargin1=34,
             lmargin2=34,
             rmargin=34,
-            spacing1=10,
-            spacing3=10,
+            spacing1=3,
+            spacing2=0,
+            spacing3=3,
         )
         self.text.tag_configure("yaml_key", font=self.mono_font, background="#f4f4f4", foreground="#7a3e9d", lmargin1=28, lmargin2=28)
         self.text.tag_configure("yaml_value", font=self.mono_font, background="#f4f4f4", foreground="#555555", lmargin1=28, lmargin2=28)
@@ -2674,6 +2685,7 @@ class PmsVectorReaderApp(tk.Tk):
         self.bold_italic_font.configure(size=size)
         self.mono_font.configure(size=size)
         self.math_font.configure(size=size + 1)
+        self.paragraph_gap_font.configure(size=max(3, round(size * 0.4)))
 
         self.heading_font_1.configure(size=size + 8)
         self.heading_font_2.configure(size=size + 5)
@@ -3227,6 +3239,16 @@ class PmsVectorReaderApp(tk.Tk):
                 continue
 
             stripped_line = raw_line.strip()
+
+            # Preserve Markdown paragraph separation without spending a full
+            # body-font line on every blank source row. This is the main source
+            # of the oversized vertical rhythm visible in prose and around
+            # display equations.
+            if not stripped_line:
+                self.text.insert(tk.END, "\n", ("paragraph_gap",))
+                i += 1
+                continue
+
             if stripped_line == r"\[":
                 math_lines: List[str] = []
                 i += 1
@@ -3447,9 +3469,9 @@ class PmsVectorReaderApp(tk.Tk):
         rendered = latex_to_readable_math(raw, display=True)
         if not rendered:
             return
-        self.text.insert(tk.END, "\n", ("body",))
+        # The math tag supplies a small visual margin; do not add full-height
+        # body-font spacer rows before and after every equation.
         self.text.insert(tk.END, rendered.rstrip() + "\n", ("math_display",))
-        self.text.insert(tk.END, "\n", ("body",))
 
     def _insert_code_block(self, block_lines: List[str], language: str) -> None:
         """Insert a fenced code block without showing the fence markers."""
@@ -3457,18 +3479,12 @@ class PmsVectorReaderApp(tk.Tk):
             self.text.insert(tk.END, "\n", ("code",))
             return
 
-        # Top margin.
-        self.text.insert(tk.END, "\n", ("body",))
-
         if language in {"yaml", "yml"}:
             for raw_line in block_lines:
                 self._insert_yaml_line(raw_line)
         else:
             block = "\n".join(block_lines)
             self.text.insert(tk.END, block + "\n", ("code",))
-
-        # Bottom margin.
-        self.text.insert(tk.END, "\n", ("body",))
 
     def _insert_yaml_line(self, raw_line: str) -> None:
         """Insert one YAML line with lightweight syntax coloring."""
